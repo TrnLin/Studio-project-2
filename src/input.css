@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  [data-theme="light"] {
+    --solid-black: 16, 16, 16;
+
+    --black: 25, 25, 25;
+    --white: 255, 255, 255;
+
+    --orange-100: 255, 173, 114;
+    --orange-200: 56, 37, 25;
+
+    --blue-100: 180, 224, 234;
+    --blue-200: 54, 67, 70;
+
+    --green-100: 212, 230, 181;
+    --green-200: 63, 69, 54;
+
+    --yellow-100: 255, 244, 144;
+    --yellow-200: 58, 49, 33;
+
+    --pink-100: 255, 193, 204;
+    --pink-200: 121, 34, 49;
+
+    --error: 255, 94, 94;
+  }
+
+  [data-theme="dark"] {
+    --solid-black: 16, 16, 16;
+
+    --black: 255, 255, 255;
+    --white: 25, 25, 25;
+
+    --orange-100: 56, 37, 25;
+    --orange-200: 255, 173, 114;
+
+    --blue-100: 54, 67, 70;
+    --blue-200: 180, 224, 234;
+
+    --green-100: 63, 69, 54;
+    --green-200: 212, 230, 181;
+
+    --yellow-100: 58, 49, 33;
+    --yellow-200: 255, 244, 144;
+
+    --pink-100: 121, 34, 49;
+    --pink-200: 255, 193, 204;
+
+    --error: 255, 94, 94;
+  }
+
+  html.transition,
+  html.transition *,
+  html.transition *:before,
+  html.transition *:after {
+    transition: all 500ms !important;
+    transition-delay: 0 !important;
+  }
+}
+
+@media (prefers-color-sheme: dark) {
+  :root {
+    --black: 255, 255, 255;
+    --white: 25, 25, 25;
+
+    --orange-100: 56, 37, 25;
+    --orange-200: 255, 173, 114;
+
+    --blue-100: 54, 67, 70;
+    --blue-200: 180, 224, 234;
+
+    --green-100: 63, 69, 54;
+    --green-200: 212, 230, 181;
+
+    --yellow-100: 58, 49, 33;
+    --yellow-200: 255, 244, 144;
+
+    --pink-100: 121, 34, 49;
+    --pink-200: 255, 193, 204;
+
+    --error: 255, 94, 94;
+  }
+}
+
+.scroll-container {
+  display: flex;
+  width: 300vw;
+}
+
+.transform-3d {
+  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.transform-3d:hover {
+  transform: translate3d(0px, -10%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.translate-xy {
+  transform: translate(50%, 50%);
+}
+
+.-translate-xy {
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap ");
+/*Chopin*/
+@font-face {
+  font-family: "Chopin";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url(./Chopin/Chopin-Trial-Regular.woff2) format("woff"),
+    url(./Chopin/Chopin-Trial-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Chopin";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url(./Chopin/Chopin-Trial-Medium.woff2) format("woff2"),
+    url(./Chopin/Chopin-Trial-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Chopin";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url(./Chopin/Chopin-Trial-Medium.woff) format("woff"),
+    url(./Chopin/Chopin-Trial-Medium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Chopin";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url(./Chopin/Chopin-Trial-Bold.woff2) format("woff2"),
+    url(./Chopin/Chopin-Trial-Bold.woff) format("woff");
+}
+
+/*Transforma Mix*/
+
+@font-face {
+  font-family: "Transforma Mix";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url(./Transformat/TransformaMix_Trial-Regular.woff2) format("woff2"),
+    url(./Transformat/TransformaMix_Trial-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Transforma Mix";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url(./Transformat/TransformaMix_Trial-Medium.woff2) format("woff2"),
+    url(./Transformat/TransformaMix_Trial-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Transforma Mix";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url(./Transformat/TransformaMix_Trial-Medium.woff) format("woff"),
+    url(./Transformat/TransformaMix_Trial-Medium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Transforma Mix";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url(./Transformat/TransformaMix_Trial-SemiBold.woff2) format("woff2"),
+    url(./Transformat/TransformaMix_Trial-SemiBold.woff) format("woff");
+}
