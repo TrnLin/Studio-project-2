@@ -30,52 +30,52 @@ let scrollTween = gsap.to(sections, {
   },
 });
 
-// //set initial state
-// gsap.set(card, {
-//   opacity: 0,
-//   y: 100,
-// });
+//set initial state
+gsap.set(card, {
+  opacity: 0,
+  y: 100,
+});
 
-// gsap.set(nav, {
-//   opacity: 0,
-// });
+gsap.set(nav, {
+  opacity: 0,
+});
 
-// //start the animation sequence
-// gsap.fromTo(
-//   heroCardMiddle,
-//   {
-//     width: " 100vw",
-//     height: "100vh",
-//     borderRadius: 0,
-//   },
-//   {
-//     height: "70vh",
-//     width: "30vw",
-//     borderRadius: 20,
-//     delay: 3,
-//     duration: 2,
-//     ease: "back.out(1)",
-//     onComplete: () => {
-//       //after the card shrink start the animation
-//       heroCard.forEach((element) => {
-//         console.log(card);
+//start the animation sequence
+gsap.fromTo(
+  heroCardMiddle,
+  {
+    width: " 100vw",
+    height: "100vh",
+    borderRadius: 0,
+  },
+  {
+    height: "70vh",
+    width: "30vw",
+    borderRadius: 20,
+    delay: 3,
+    duration: 2,
+    ease: "back.out(1)",
+    onComplete: () => {
+      //after the card shrink start the animation
+      heroCard.forEach((element) => {
+        console.log(card);
 
-//         //card items
-//         gsap.to(card, {
-//           opacity: 1,
-//           y: 0,
-//           duration: 0.7,
-//           stagger: 0.1,
-//           delay: 0.3,
-//         });
-//       });
+        //card items
+        gsap.to(card, {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          stagger: 0.1,
+          delay: 0.3,
+        });
+      });
 
-//       //nav
-//       gsap.to(nav, {
-//         opacity: 1,
-//         duration: 0.7,
-//         delay: 0.3,
-//       });
-//     },
-//   }
-// );
+      //nav
+      gsap.to(nav, {
+        opacity: 1,
+        duration: 0.7,
+        delay: 0.3,
+      });
+    },
+  }
+);
