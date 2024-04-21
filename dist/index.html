@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style/style.css" />
     <title>Darkmode test</title>
   </head>
-  <body class="bg-white font-sans flex justify-center is-loading">
+
+  <!--  TODO: Remember to add disable-scroll to body tag-->
+  <body class="bg-white font-sans flex justify-center">
     <!-- Navbar -->
     <nav
       class="fixed top-3 flex w-[83vw] flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]"
@@ -100,7 +102,7 @@
     <div class="relative overflow-x-hidden">
       <div class="scroll-container">
         <!-- Hero -->
-        <section class="m-h-screen w-screen bg-white">
+        <section class="m-h-screen w-screen bg-white hero-section">
           <div
             class="grid place-items-center grid-cols-3 min-h-screen my-0 mx-auto w-[87vw]"
           >
@@ -125,7 +127,7 @@
               >
             </div>
             <div
-              class="group relative flex items-center justify-center w-[38vw]"
+              class="group relative flex items-center justify-center w-[38vw] hero-card"
             >
               <div
                 class="h-[70vh] w-[30vw] rounded-[20px] bg-blue-100 absolute shadow-lg hero-mid-card"
@@ -172,12 +174,14 @@
           </div>
         </section>
         <!-- Features -->
-        <section class="m-h-screen w-screen bg-white">
+        <section
+          class="m-h-screen w-screen bg-white about-section hero-section"
+        >
           <div
             class="grid place-items-center grid-cols-3 gap-[20px] min-h-screen my-0 mx-auto w-[87vw]"
           >
             <div
-              class="bg-pink-100 h-[70%] flex items-center relative rounded-[20px] justify-center"
+              class="bg-pink-100 h-[70%] flex items-center relative rounded-[20px] justify-center about-card"
             >
               <div
                 class="h-[23vw] absolute w-[23vw] bg-white top-1/2 left-1/2 -translate-xy z-0 rounded-full"
@@ -191,10 +195,12 @@
               </div>
             </div>
             <div class="col-span-2 flex px-5 gap-5 flex-col">
-              <h1 class="text-[64px] font-bold text-black">So why us?</h1>
+              <h1 class="text-[64px] font-bold text-black about-header">
+                So why us?
+              </h1>
               <div class="flex gap-5 flex-col">
                 <div
-                  class="p-5 flex gap-3 flex-col w-[96%] bg-pink-100 text-[#ffffff] rounded-[20px]"
+                  class="p-5 flex gap-3 flex-col w-[96%] bg-pink-100 text-[#ffffff] rounded-[20px] about-text"
                 >
                   <h2 class="text-2xl font-semibold leading-[24px]">
                     1. Free to use
@@ -206,7 +212,9 @@
                     spending a single penny.
                   </p>
                 </div>
-                <div class="p-5 flex gap-3 flex-col w-[96%] text-black">
+                <div
+                  class="p-5 flex gap-3 flex-col w-[96%] text-black about-text"
+                >
                   <h2 class="text-2xl font-semibold leading-[24px]">
                     2. Large community
                   </h2>
@@ -218,7 +226,9 @@
                     is valued.
                   </p>
                 </div>
-                <div class="p-5 flex gap-3 flex-col w-[96%] text-black">
+                <div
+                  class="p-5 flex gap-3 flex-col w-[96%] text-black about-text"
+                >
                   <h2 class="text-2xl font-semibold leading-[24px]">
                     3. Quick and easy
                   </h2>
@@ -230,15 +240,17 @@
                     is valued.
                   </p>
                 </div>
+                <a
+                  href="#"
+                  class="px-[20px] py-[15px] text-[#ffffff] bg-solidblack rounded-md w-fit about-text"
+                  >About Us</a
+                >
               </div>
-              <
             </div>
           </div>
         </section>
         <!-- Forum -->
-        <section
-          class="bg-blue-300 scroll-section-hide scroll-section-show flex h-screen w-screen items-center justify-center"
-        ></section>
+        <section class="m-h-screen w-screen bg-red-300"></section>
       </div>
     </div>
 
