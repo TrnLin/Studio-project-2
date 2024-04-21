@@ -3,6 +3,7 @@ const sections = gsap.utils.toArray(".scroll-container section");
 const heroCard = gsap.utils.toArray(".hero-card");
 const heroCardMiddle = document.querySelector(".hero-mid-card");
 const nav = document.querySelector("nav");
+const card = gsap.utils.toArray(".hero-content");
 console.log(nav);
 console.log(sections);
 
@@ -29,54 +30,52 @@ let scrollTween = gsap.to(sections, {
   },
 });
 
-//hero card middle
-gsap.fromTo(
-  heroCardMiddle,
-  {
-    width: " 100vw",
-    height: "100vh",
-    borderRadius: 0,
-  },
-  {
-    height: "70vh",
-    width: "30vw",
-    borderRadius: 20,
-    delay: 4,
-    duration: 2,
-    ease: "back.out(1)",
-  }
-);
+// //set initial state
+// gsap.set(card, {
+//   opacity: 0,
+//   y: 100,
+// });
 
-//hero content
-heroCard.forEach((element) => {
-  const card = gsap.utils.toArray(".hero-content");
-  console.log(card);
+// gsap.set(nav, {
+//   opacity: 0,
+// });
 
-  gsap.fromTo(
-    card,
-    {
-      opacity: 0,
-      y: 100,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.7,
-      stagger: 0.1,
-      delay: 6.5,
-    }
-  );
-});
+// //start the animation sequence
+// gsap.fromTo(
+//   heroCardMiddle,
+//   {
+//     width: " 100vw",
+//     height: "100vh",
+//     borderRadius: 0,
+//   },
+//   {
+//     height: "70vh",
+//     width: "30vw",
+//     borderRadius: 20,
+//     delay: 3,
+//     duration: 2,
+//     ease: "back.out(1)",
+//     onComplete: () => {
+//       //after the card shrink start the animation
+//       heroCard.forEach((element) => {
+//         console.log(card);
 
-//nav
-gsap.fromTo(
-  nav,
-  {
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    duration: 0.7,
-    delay: 6.5,
-  }
-);
+//         //card items
+//         gsap.to(card, {
+//           opacity: 1,
+//           y: 0,
+//           duration: 0.7,
+//           stagger: 0.1,
+//           delay: 0.3,
+//         });
+//       });
+
+//       //nav
+//       gsap.to(nav, {
+//         opacity: 1,
+//         duration: 0.7,
+//         delay: 0.3,
+//       });
+//     },
+//   }
+// );

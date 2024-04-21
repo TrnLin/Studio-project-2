@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style/style.css" />
     <title>Darkmode test</title>
   </head>
-  <body class="bg-white font-sans flex justify-center">
+  <body class="bg-white font-sans flex justify-center is-loading">
+    <!-- Navbar -->
     <nav
       class="fixed top-3 flex w-[83vw] flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]"
     >
@@ -95,11 +96,11 @@
       >
     </nav>
 
+    <!-- Hero Section -->
     <div class="relative overflow-x-hidden">
       <div class="scroll-container">
-        <section
-          class="scroll-section-hide m-h-screen w-screen items-center justify-center bg-white"
-        >
+        <!-- Hero -->
+        <section class="m-h-screen w-screen bg-white">
           <div
             class="grid place-items-center grid-cols-3 min-h-screen my-0 mx-auto w-[87vw]"
           >
@@ -170,9 +171,71 @@
             </div>
           </div>
         </section>
-        <section
-          class="bg-red-100 scroll-section-hide scroll-section-show flex h-screen w-screen items-center justify-center"
-        ></section>
+        <!-- Features -->
+        <section class="m-h-screen w-screen bg-white">
+          <div
+            class="grid place-items-center grid-cols-3 gap-[20px] min-h-screen my-0 mx-auto w-[87vw]"
+          >
+            <div
+              class="bg-pink-100 h-[70%] flex items-center relative rounded-[20px] justify-center"
+            >
+              <div
+                class="h-[23vw] absolute w-[23vw] bg-white top-1/2 left-1/2 -translate-xy z-0 rounded-full"
+              ></div>
+              <div class="z-[1] grid place-items-center">
+                <img
+                  src="./img/chatbot.png"
+                  alt=""
+                  class="w-[70%] animate-floatting"
+                />
+              </div>
+            </div>
+            <div class="col-span-2 flex px-5 gap-5 flex-col">
+              <h1 class="text-[64px] font-bold text-black">So why us?</h1>
+              <div class="flex gap-5 flex-col">
+                <div
+                  class="p-5 flex gap-3 flex-col w-[96%] bg-pink-100 text-[#ffffff] rounded-[20px]"
+                >
+                  <h2 class="text-2xl font-semibold leading-[24px]">
+                    1. Free to use
+                  </h2>
+                  <p>
+                    We've made sure that our forum is always up to date with the
+                    latest trends, releases, and developments. Stay informed,
+                    stay connected, and stay ahead of the curve—all without
+                    spending a single penny.
+                  </p>
+                </div>
+                <div class="p-5 flex gap-3 flex-col w-[96%] text-black">
+                  <h2 class="text-2xl font-semibold leading-[24px]">
+                    2. Large community
+                  </h2>
+                  <p>
+                    Once you're in, you'll discover a thriving community of
+                    like-minded individuals, eager to share their experiences,
+                    strategies, and tips. From casual gamers to hardcore
+                    enthusiasts, everyone has a place here, and everyone's voice
+                    is valued.
+                  </p>
+                </div>
+                <div class="p-5 flex gap-3 flex-col w-[96%] text-black">
+                  <h2 class="text-2xl font-semibold leading-[24px]">
+                    3. Quick and easy
+                  </h2>
+                  <p>
+                    Once you're in, you'll discover a thriving community of
+                    like-minded individuals, eager to share their experiences,
+                    strategies, and tips. From casual gamers to hardcore
+                    enthusiasts, everyone has a place here, and everyone's voice
+                    is valued.
+                  </p>
+                </div>
+              </div>
+              <
+            </div>
+          </div>
+        </section>
+        <!-- Forum -->
         <section
           class="bg-blue-300 scroll-section-hide scroll-section-show flex h-screen w-screen items-center justify-center"
         ></section>
@@ -194,6 +257,7 @@
     ></script>
     <!--Lenis-->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <!--Ionicons-->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -202,6 +266,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <!--Custom JS-->
     <script src="./js/landingpage.js"></script>
     <script src="./js/script.js"></script>
   </body>

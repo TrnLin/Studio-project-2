@@ -121,3 +121,7 @@
 .-translate-xy {
   transform: translate(-50%, -50%);
 }
+
+.is-loading {
+  overflow: hidden;
+}
