@@ -769,6 +769,10 @@ html.transition,
   width: 38vw;
 }
 
+.w-\[400vw\] {
+  width: 400vw;
+}
+
 .w-\[70\%\] {
   width: 70%;
 }
@@ -876,6 +880,10 @@ html.transition,
   gap: 0.75rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-5 {
   gap: 1.25rem;
 }
@@ -890,10 +898,6 @@ html.transition,
 
 .gap-\[40px\] {
   gap: 40px;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .overflow-hidden {
@@ -960,6 +964,10 @@ html.transition,
   background-color: rgba(var(--green-200));
 }
 
+.bg-orange-100 {
+  background-color: rgba(var(--orange-100));
+}
+
 .bg-pink-100 {
   background-color: rgba(var(--pink-100));
 }
@@ -970,10 +978,6 @@ html.transition,
 
 .bg-white {
   background-color: rgba(var(--white));
-}
-
-.bg-orange-100 {
-  background-color: rgba(var(--orange-100));
 }
 
 .p-5 {
@@ -1046,6 +1050,11 @@ html.transition,
   line-height: 2rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-\[0\.875rem\] {
   font-size: 0.875rem;
 }
@@ -1069,11 +1078,6 @@ html.transition,
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-xl {
@@ -1126,12 +1130,12 @@ html.transition,
   color: rgba(var(--black));
 }
 
-.text-green-200 {
-  color: rgba(var(--green-200));
-}
-
 .text-blue-200 {
   color: rgba(var(--blue-200));
+}
+
+.text-green-200 {
+  color: rgba(var(--green-200));
 }
 
 .text-orange-200 {
@@ -1184,11 +1188,6 @@ html.transition,
     --pink-200: 255, 193, 204;
     --error: 255, 94, 94;
   }
-}
-
-.scroll-container {
-  display: flex;
-  width: 400vw;
 }
 
 .transform-3d {

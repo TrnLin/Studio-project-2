@@ -156,7 +156,7 @@ tl.to(
     y: 0,
     duration: 1,
   },
-  "<"
+  "<",
 );
 
 tl.to(
@@ -167,7 +167,7 @@ tl.to(
     duration: 2,
     stagger: 0.5,
   },
-  "<"
+  "<",
 );
 
 //hide card on scroll for each section
@@ -258,7 +258,7 @@ forumRightTl.to(
     opacity: 1,
     y: 0,
   },
-  "<"
+  "<",
 );
 
 forumRightTl.to(
@@ -267,7 +267,7 @@ forumRightTl.to(
     opacity: 1,
     y: 0,
   },
-  "<"
+  "<",
 );
 
 let forumLeftTl = gsap.timeline({
@@ -287,7 +287,7 @@ forumLeftTl.to(
     opacity: 1,
     y: 0,
   },
-  "<"
+  "<",
 );
 
 forumLeftTl.to(
@@ -296,5 +296,5 @@ forumLeftTl.to(
     opacity: 1,
     y: 0,
   },
-  "<"
+  "<",
 );
