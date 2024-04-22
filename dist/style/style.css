@@ -960,6 +960,14 @@ html.transition,
   border-width: 1px;
 }
 
+.border-8 {
+  border-width: 8px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
 .border-blue-200 {
   border-color: rgba(var(--blue-200));
 }
@@ -974,6 +982,10 @@ html.transition,
 
 .border-pink-200 {
   border-color: rgba(var(--pink-200));
+}
+
+.border-white {
+  border-color: rgba(var(--white));
 }
 
 .bg-blue-100 {
@@ -1255,7 +1267,6 @@ html.transition,
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 8px solid #514b82;
   animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
 }
 
@@ -1537,6 +1548,10 @@ html.transition,
     gap: 1.75rem;
   }
 
+  .sm\:gap-\[40px\] {
+    gap: 40px;
+  }
+
   .sm\:rounded-none {
     border-radius: 0px;
   }
@@ -1559,17 +1574,12 @@ html.transition,
     padding-right: 2.25rem;
   }
 
-  .sm\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  .sm\:pb-5 {
+    padding-bottom: 1.25rem;
   }
 
   .sm\:pt-\[80px\] {
     padding-top: 80px;
-  }
-
-  .sm\:pb-5 {
-    padding-bottom: 1.25rem;
   }
 
   .sm\:text-5xl {

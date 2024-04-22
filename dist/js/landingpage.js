@@ -12,23 +12,12 @@ let mm = gsap.matchMedia();
 console.log(nav);
 console.log(sections);
 
-//smoth scroll
-const lenis = new Lenis();
-
-function raf(time) {
-  lenis.raf(time);
-
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
 // //disable scroll
 //desktop
 mm.add("(min-width: 1400px)", () => {
-  // setTimeout(() => {
-  //   document.body.classList.remove("disable-scroll");
-  // }, 5000);
+  setTimeout(() => {
+    document.body.classList.remove("disable-scroll");
+  }, 5000);
 
   //horizontal scroll
   let scrollTween = gsap.to(sections, {
@@ -43,68 +32,68 @@ mm.add("(min-width: 1400px)", () => {
     },
   });
 
-  // gsap.set(loader, {
-  //   opacity: 1,
-  // });
-  // //set initial state
-  // gsap.set(card, {
-  //   opacity: 0,
-  //   y: 100,
-  // });
+  gsap.set(loader, {
+    opacity: 1,
+  });
+  //set initial state
+  gsap.set(card, {
+    opacity: 0,
+    y: 100,
+  });
 
-  // gsap.set(nav, {
-  //   opacity: 0,
-  // });
+  gsap.set(nav, {
+    opacity: 0,
+  });
 
-  // //start the animation sequence
-  // gsap.fromTo(
-  //   heroCardMiddle,
-  //   {
-  //     width: " 100vw",
-  //     height: "100vh",
-  //     borderRadius: 0,
-  //   },
-  //   {
-  //     height: "70vh",
-  //     width: "30vw",
-  //     borderRadius: 20,
-  //     delay: 2,
-  //     duration: 2,
-  //     ease: "back.out(1)",
-  //     onStart: () => {
-  //       //stop the loader
-  //       gsap.to(loader, {
-  //         opacity: 0,
-  //         duration: 1,
-  //       });
+  //start the animation sequence
+  gsap.fromTo(
+    heroCardMiddle,
+    {
+      width: " 100vw",
+      height: "100vh",
+      borderRadius: 0,
+    },
+    {
+      height: "70vh",
+      width: "30vw",
+      borderRadius: 20,
+      delay: 2,
+      duration: 2,
+      ease: "back.out(1)",
+      onStart: () => {
+        //stop the loader
+        gsap.to(loader, {
+          opacity: 0,
+          duration: 1,
+        });
 
-  //       setTimeout(() => {
-  //         //enable scroll
-  //         loader.style.display = "none";
-  //       }, 3000);
-  //     },
-  //     onComplete: () => {
-  //       //after the card shrink start the animation
-  //       heroCard.forEach((element) => {
-  //         //card items
-  //         gsap.to(card, {
-  //           opacity: 1,
-  //           y: 0,
-  //           duration: 0.7,
-  //           stagger: 0.1,
-  //           delay: 0.5,
-  //         });
-  //       });
+        setTimeout(() => {
+          //enable scroll
+          loader.style.display = "none";
+        }, 3000);
+      },
+      onComplete: () => {
+        //after the card shrink start the animation
+        heroCard.forEach((element) => {
+          //card items
+          gsap.to(card, {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            stagger: 0.1,
+            delay: 0.5,
+          });
+        });
 
-  //       //nav
-  //       gsap.to(nav, {
-  //         opacity: 1,
-  //         duration: 0.7,
-  //         delay: 0.5,
-  //       });
-  //     },
-  //   }
-  // );
+        //nav
+        gsap.to(nav, {
+          opacity: 1,
+          duration: 0.7,
+          delay: 0.5,
+        });
+      },
+    }
+  );
 
   //About section
   const aboutSection = document.querySelector(".about-section");
@@ -250,7 +239,7 @@ mm.add("(min-width: 1400px)", () => {
       start: "-20% center",
       end: "15% center",
       scrub: 1,
-      markers: true,
+      markers: false,
 
       containerAnimation: scrollTween,
     },
@@ -280,7 +269,7 @@ mm.add("(min-width: 1400px)", () => {
       start: "20% center",
       end: "45% center",
       scrub: 1,
-      markers: true,
+      markers: false,
       containerAnimation: scrollTween,
     },
   });
