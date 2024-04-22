@@ -7,6 +7,19 @@ const nav = document.querySelector("nav");
 const card = gsap.utils.toArray(".hero-content");
 const loader = document.querySelector(".loader");
 
+const aboutSection = document.querySelector(".about-section");
+const aboutCard = document.querySelector(".about-card");
+const aboutHeader = document.querySelector(".about-header");
+const aboutText = gsap.utils.toArray(".about-text");
+
+const forumSection = document.querySelector(".forum-section");
+const forumCardRight = document.querySelector(".forum-card-right");
+const forumCardLeft = document.querySelector(".forum-card-left");
+const forumTextRight = document.querySelector(".forum-text-right");
+const forumTextLeft = gsap.utils.toArray(".forum-text-left");
+
+console.log(aboutText);
+
 let mm = gsap.matchMedia();
 
 console.log(nav);
@@ -96,11 +109,6 @@ mm.add("(min-width: 1400px)", () => {
   );
 
   //About section
-  const aboutSection = document.querySelector(".about-section");
-  const aboutCard = document.querySelector(".about-card");
-  const aboutHeader = document.querySelector(".about-header");
-  const aboutText = gsap.utils.toArray(".about-text");
-  console.log(aboutText);
 
   gsap.set(aboutCard, {
     opacity: 0,
@@ -207,11 +215,6 @@ mm.add("(min-width: 1400px)", () => {
   // });
 
   //Forum text
-  const forumSection = document.querySelector(".forum-section");
-  const forumCardRight = document.querySelector(".forum-card-right");
-  const forumCardLeft = document.querySelector(".forum-card-left");
-  const forumTextRight = document.querySelector(".forum-text-right");
-  const forumTextLeft = gsap.utils.toArray(".forum-text-left");
 
   gsap.set(forumCardRight, {
     opacity: 0,
@@ -293,4 +296,8 @@ mm.add("(min-width: 1400px)", () => {
   );
 });
 
-mm.add("max-width: 639px");
+mm.add("max-width: 639px", () => {
+  setTimeout(() => {
+    document.body.classList.remove("disable-scroll");
+  }, 0);
+});

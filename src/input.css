@@ -126,6 +126,13 @@
   overflow-y: scroll;
   width: 100%;
 }
+@media (max-width: 639px) {
+  .disable-scroll {
+    position: unset;
+    overflow-y: unset;
+    width: unset;
+  }
+}
 
 /* HTML: <div class="loader"></div> */
 .loader {

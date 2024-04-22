@@ -830,6 +830,18 @@ html.transition,
   width: 100vw;
 }
 
+.w-\[85vw\] {
+  width: 85vw;
+}
+
+.w-\[82vw\] {
+  width: 82vw;
+}
+
+.w-\[82\.5vw\] {
+  width: 82.5vw;
+}
+
 .max-w-none {
   max-width: none;
 }
@@ -1261,6 +1273,14 @@ html.transition,
   width: 100%;
 }
 
+@media (max-width: 639px) {
+  .disable-scroll {
+    position: unset;
+    overflow-y: unset;
+    width: unset;
+  }
+}
+
 /* HTML: <div class="loader"></div> */
 
 .loader {
@@ -1444,9 +1464,57 @@ html.transition,
   overflow: hidden;
 } */
 
+.hover\:border-blue-100:hover {
+  border-color: rgba(var(--blue-100));
+}
+
+.hover\:border-green-100:hover {
+  border-color: rgba(var(--green-100));
+}
+
+.hover\:border-orange-100:hover {
+  border-color: rgba(var(--orange-100));
+}
+
+.hover\:border-pink-100:hover {
+  border-color: rgba(var(--pink-100));
+}
+
 .hover\:bg-\[\#ffffff\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-blue-200:hover {
+  background-color: rgba(var(--blue-200));
+}
+
+.hover\:bg-green-200:hover {
+  background-color: rgba(var(--green-200));
+}
+
+.hover\:bg-orange-200:hover {
+  background-color: rgba(var(--orange-200));
+}
+
+.hover\:bg-pink-200:hover {
+  background-color: rgba(var(--pink-200));
+}
+
+.hover\:text-blue-100:hover {
+  color: rgba(var(--blue-100));
+}
+
+.hover\:text-green-100:hover {
+  color: rgba(var(--green-100));
+}
+
+.hover\:text-orange-100:hover {
+  color: rgba(var(--orange-100));
+}
+
+.hover\:text-pink-100:hover {
+  color: rgba(var(--pink-100));
 }
 
 .hover\:text-solidblack:hover {
@@ -1550,6 +1618,10 @@ html.transition,
 
   .sm\:gap-\[40px\] {
     gap: 40px;
+  }
+
+  .sm\:gap-8 {
+    gap: 2rem;
   }
 
   .sm\:rounded-none {
