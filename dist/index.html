@@ -16,7 +16,7 @@
       class="fixed top-3 flex w-[83vw] flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]"
     >
       <div
-        class="bg-solidblack flex h-full w-full flex-row justify-between rounded-[10px] px-5 py-[10px] font-normal sm:rounded-none md:gap-5"
+        class="bg-solidblack flex h-full w-full flex-row justify-between rounded-[10px] px-5 py-[10px] font-normal sm:rounded-none md:gap-5 sm:pb-5"
       >
         <ul
           class="flex flex-row items-center gap-5 sm:w-full sm:justify-between"
@@ -100,22 +100,43 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative overflow-x-hidden">
-      <div class="scroll-container flex w-[400vw]">
+    <div class="relative overflow-x-hidden sm:pt-[80px]">
+      <div
+        class="scroll-container flex w-[400vw] sm:w-full sm:min-h-[400lvw] sm:flex-col gap-[40px]"
+      >
         <!-- Hero -->
-        <section class="m-h-lvh w-screen bg-white hero-section">
+        <section class="m-h-lvh w-screen bg-white hero-section sm:px-9">
           <div
-            class="grid place-items-center grid-cols-3 min-h-screen my-0 mx-auto w-[87vw]"
+            class="grid place-items-center grid-cols-3 min-h-screen my-0 mx-auto w-[87vw] sm:grid-cols-1 sm:w-full"
           >
-            <div class="flex flex-col gap-10 hero-card">
+            <div class="flex flex-col gap-10 hero-card sm:gap-7">
               <h1
-                class="text-[4rem] leading-[100%] font-bold text-black hero-content"
+                class="text-[4rem] leading-[100%] font-bold text-black hero-content sm:text-5xl"
               >
                 A FORUM <br />
                 FOR GAMERS BY GAMERS
               </h1>
+              <div class="hidden justify-center items-center sm:flex">
+                <div
+                  class="group hidden items-center justify-center size-[38vh] hero-card sm:flex"
+                >
+                  <div
+                    class="rounded-[20px] bg-blue-100 absolute shadow-lg hero-mid-card sm:size-80"
+                  ></div>
+                  <div
+                    class="size-[285px] bg-white absolute rounded-full"
+                  ></div>
+                  <div class="absolute">
+                    <img
+                      src="./img/switch.png"
+                      alt=""
+                      class="animate-floatting sm:w-[350px]"
+                    />
+                  </div>
+                </div>
+              </div>
               <p
-                class="text-[0.875rem] text-justify w-[85%] text-black word hero-content"
+                class="text-[0.875rem] text-justify w-[85%] text-black word hero-content sm:w-full"
               >
                 Welcome, gamers, to the ultimate digital playground! Whether
                 you're a seasoned strategist or a casual button-masher, this
@@ -123,12 +144,12 @@
               </p>
               <a
                 href="#"
-                class="px-[20px] py-[15px] text-[#ffffff] bg-solidblack rounded-md w-fit hero-content"
+                class="px-[20px] py-[15px] text-[#ffffff] bg-solidblack rounded-md w-fit hero-content sm:text-xs"
                 >Get Started</a
               >
             </div>
             <div
-              class="group relative flex items-center justify-center w-[38vw] hero-card"
+              class="group relative flex items-center justify-center w-[38vw] hero-card sm:hidden"
             >
               <div
                 class="h-[70vh] w-[30vw] rounded-[20px] bg-blue-100 absolute shadow-lg hero-mid-card"
@@ -139,7 +160,9 @@
               </div>
               <div class="loader absolute -bottom-[20vw]"></div>
             </div>
-            <div class="flex flex-col gap-[40px] w-[70%] ml-20 hero-card">
+            <div
+              class="flex flex-col gap-[40px] w-[70%] ml-20 hero-card sm:ml-0 sm:w-full sm:mt-12 sm:gap-6"
+            >
               <div
                 class="flex flex-col gap-2 py-5 px-4 rounded-2xl bg-blue-100 hero-content shadow-md"
               >
@@ -178,10 +201,10 @@
         <!-- Features -->
         <section class="m-h-lvh w-screen bg-white about-section hero-section">
           <div
-            class="grid place-items-center grid-cols-3 gap-[20px] min-h-lvh my-0 mx-auto w-[87vw]"
+            class="grid place-items-center grid-cols-3 gap-[20px] min-h-lvh my-0 mx-auto w-[87vw] sm:flex sm:flex-col sm:w-full"
           >
             <div
-              class="bg-pink-100 h-[70%] flex items-center relative rounded-[20px] justify-center about-card"
+              class="bg-pink-100 h-[70%] flex items-center relative rounded-[20px] justify-center about-card sm:hidden"
             >
               <div
                 class="h-[23vw] absolute w-[23vw] bg-white top-1/2 left-1/2 -translate-xy z-0 rounded-full"
@@ -194,18 +217,34 @@
                 />
               </div>
             </div>
-            <div class="col-span-2 flex px-5 gap-5 flex-col">
-              <h1 class="text-[64px] font-bold text-black about-header">
+            <div class="col-span-2 flex px-5 gap-8 flex-col sm:px-6">
+              <h1
+                class="text-[64px] font-bold text-black about-header sm:text-5xl"
+              >
                 So why us?
               </h1>
-              <div class="flex gap-5 flex-col">
+              <div
+                class="bg-pink-100 size-full aspect-square items-center relative rounded-[20px] justify-center about-card hidden sm:flex"
+              >
                 <div
-                  class="p-5 flex gap-3 flex-col w-[96%] bg-pink-100 text-[#ffffff] rounded-[20px] about-text"
+                  class="size-72 absolute bg-white top-1/2 left-1/2 -translate-xy z-0 rounded-full"
+                ></div>
+                <div class="z-[1] grid place-items-center">
+                  <img
+                    src="./img/chatbot.png"
+                    alt=""
+                    class="w-[70%] animate-floatting"
+                  />
+                </div>
+              </div>
+              <div class="flex gap-10 flex-col">
+                <div
+                  class="p-5 flex gap-3 flex-col w-[96%] sm:w-full bg-pink-100 text-[#ffffff] rounded-[20px] about-text"
                 >
                   <h2 class="text-2xl font-semibold leading-[24px]">
                     1. Free to use
                   </h2>
-                  <p>
+                  <p class="text-sm">
                     We've made sure that our forum is always up to date with the
                     latest trends, releases, and developments. Stay informed,
                     stay connected, and stay ahead of the curve—all without
@@ -213,12 +252,12 @@
                   </p>
                 </div>
                 <div
-                  class="p-5 flex gap-3 flex-col w-[96%] text-black about-text"
+                  class="flex gap-3 flex-col w-[96%] sm:w-full text-black about-text"
                 >
                   <h2 class="text-2xl font-semibold leading-[24px]">
                     2. Large community
                   </h2>
-                  <p>
+                  <p class="text-sm">
                     Once you're in, you'll discover a thriving community of
                     like-minded individuals, eager to share their experiences,
                     strategies, and tips. From casual gamers to hardcore
@@ -227,12 +266,12 @@
                   </p>
                 </div>
                 <div
-                  class="p-5 flex gap-3 flex-col w-[96%] text-black about-text"
+                  class="flex gap-3 flex-col w-[96%] sm:w-full text-black about-text"
                 >
                   <h2 class="text-2xl font-semibold leading-[24px]">
                     3. Quick and easy
                   </h2>
-                  <p>
+                  <p class="text-sm">
                     Once you're in, you'll discover a thriving community of
                     like-minded individuals, eager to share their experiences,
                     strategies, and tips. From casual gamers to hardcore
@@ -242,7 +281,7 @@
                 </div>
                 <a
                   href="#"
-                  class="px-[20px] py-[15px] text-[#ffffff] bg-solidblack rounded-md w-fit about-text"
+                  class="px-[20px] py-[15px] text-[#ffffff] bg-solidblack rounded-md w-fit about-text sm:text-xs"
                   >About Us</a
                 >
               </div>
@@ -253,16 +292,16 @@
         <section class="m-h-lvh w-screen bg-white forum-section">
           <div class="flex justify-center items-center w-full min-h-lvh">
             <div
-              class="grid grid-cols-2 place-items-end my-0 mx-auto w-[87vw] gap-5"
+              class="grid grid-cols-2 place-items-end my-0 mx-auto w-[87vw] gap-5 sm:w-full sm:grid-cols-1 px-6 gap-8"
             >
               <div class="flex flex-col gap-14">
                 <h1
-                  class="text-[64px] leading-[64px] font-bold text-black forum-text-right"
+                  class="text-[64px] leading-[64px] font-bold text-black forum-text-right sm:text-5xl"
                 >
                   A forum created for gamer...
                 </h1>
                 <div
-                  class="relative min-h-[25rem] w-full bg-green-100 rounded-[20px] mockup forum-card-right"
+                  class="relative min-h-[25rem] w-full bg-green-100 rounded-[20px] mockup forum-card-right sm:hidden"
                 >
                   <div
                     class="absolute top-5 left-5 rounded-full bg-white size-[22rem] overflow-hidden"
@@ -293,7 +332,7 @@
                     />
                   </div>
                 </div>
-                <div class="flex gap-8 flex-col p-5">
+                <div class="flex gap-8 flex-col p-5 sm:p-0 sm:mt-6">
                   <p class="text-sm text-black forum-text-left">
                     A game forum serves as a virtual hub where gamers from
                     diverse backgrounds converge to discuss their passion for
@@ -315,7 +354,7 @@
 
         <section class="m-h-lvh w-screen">
           <div class="flex justify-center items-center w-full min-h-lvh">
-            <div class="flex gap-4 flex-col">
+            <div class="flex gap-4 flex-col sm:p-6">
               <p class="text-[64px] font-bold leading-[64px]">Contact</p>
               <div class="">
                 <p class="">
@@ -327,7 +366,7 @@
                 <div class="">
                   <a
                     href="#"
-                    class="p-5 rounded-[20px] border-green-200 text-xl text-green-200 bg-green-100 flex flex-row items-center gap-5 border"
+                    class="p-5 rounded-[20px] border-green-200 text-xl sm:text-sm text-green-200 bg-green-100 flex flex-row items-center gap-5 border"
                     ><ion-icon class="text-3xl" name="call"></ion-icon>1234 -
                     5678 - 0890
                   </a>
@@ -335,7 +374,7 @@
                 <div class="">
                   <a
                     href="#"
-                    class="p-5 rounded-[20px] border-orange-200 text-xl text-orange-200 bg-orange-100 flex flex-row items-center gap-5 border"
+                    class="p-5 rounded-[20px] border-orange-200 text-xl sm:text-sm text-orange-200 bg-orange-100 flex flex-row items-center gap-5 border"
                     ><ion-icon class="text-3xl" name="logo-instagram"></ion-icon
                     >Instagram</a
                   >
@@ -343,7 +382,7 @@
                 <div class="">
                   <a
                     href="#"
-                    class="p-5 rounded-[20px] border-blue-200 text-xl text-blue-200 bg-blue-100 flex flex-row items-center gap-5 border"
+                    class="p-5 rounded-[20px] border-blue-200 text-xl sm:text-sm text-blue-200 bg-blue-100 flex flex-row items-center gap-5 border"
                     ><ion-icon class="text-3xl" name="logo-facebook"></ion-icon
                     >Facebook</a
                   >
@@ -351,7 +390,7 @@
                 <div class="">
                   <a
                     href="#"
-                    class="p-5 rounded-[20px] border-pink-200 text-xl text-pink-200 bg-pink-100 flex flex-row items-center gap-5 border"
+                    class="p-5 rounded-[20px] border-pink-200 text-xl sm:text-sm text-pink-200 bg-pink-100 flex flex-row items-center gap-5 border"
                     ><ion-icon class="text-3xl" name="mail"></ion-icon>Email</a
                   >
                 </div>

@@ -711,14 +711,38 @@ html.transition,
   display: none;
 }
 
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.size-72 {
+  width: 18rem;
+  height: 18rem;
+}
+
 .size-\[22rem\] {
   width: 22rem;
   height: 22rem;
 }
 
+.size-\[285px\] {
+  width: 285px;
+  height: 285px;
+}
+
+.size-\[38vh\] {
+  width: 38vh;
+  height: 38vh;
+}
+
 .size-\[400px\] {
   width: 400px;
   height: 400px;
+}
+
+.size-full {
+  width: 100%;
+  height: 100%;
 }
 
 .h-\[23vw\] {
@@ -999,6 +1023,11 @@ html.transition,
   padding-right: 1.25rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .px-\[15px\] {
   padding-left: 15px;
   padding-right: 15px;
@@ -1227,9 +1256,7 @@ html.transition,
   aspect-ratio: 1;
   border-radius: 50%;
   border: 8px solid #514b82;
-  animation:
-    l20-1 0.8s infinite linear alternate,
-    l20-2 1.6s infinite linear;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
 }
 
 @keyframes l20-1 {
@@ -1445,28 +1472,109 @@ html.transition,
     top: inherit;
   }
 
+  .sm\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .sm\:mt-12 {
+    margin-top: 3rem;
+  }
+
+  .sm\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
   .sm\:block {
     display: block;
+  }
+
+  .sm\:flex {
+    display: flex;
   }
 
   .sm\:hidden {
     display: none;
   }
 
+  .sm\:size-80 {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .sm\:min-h-\[400lvw\] {
+    min-height: 400lvw;
+  }
+
   .sm\:w-\[100vw\] {
     width: 100vw;
+  }
+
+  .sm\:w-\[350px\] {
+    width: 350px;
   }
 
   .sm\:w-full {
     width: 100%;
   }
 
+  .sm\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
   .sm\:justify-between {
     justify-content: space-between;
   }
 
+  .sm\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .sm\:gap-7 {
+    gap: 1.75rem;
+  }
+
   .sm\:rounded-none {
     border-radius: 0px;
+  }
+
+  .sm\:p-0 {
+    padding: 0px;
+  }
+
+  .sm\:p-6 {
+    padding: 1.5rem;
+  }
+
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .sm\:px-9 {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
+  .sm\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .sm\:pt-\[80px\] {
+    padding-top: 80px;
+  }
+
+  .sm\:pb-5 {
+    padding-bottom: 1.25rem;
+  }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .sm\:text-\[0\] {
@@ -1475,5 +1583,15 @@ html.transition,
 
   .sm\:text-\[25px\] {
     font-size: 25px;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
