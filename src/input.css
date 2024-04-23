@@ -241,13 +241,7 @@
     rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
 }
-/* .bento-card-details.reminders {
-  border-bottom-right-radius: 2.5rem;
-  padding-top: 5%;
-  position: absolute;
-  top: 45%;
-  bottom: 0;
-  left: 2rem;
-  right: 0;
-  overflow: hidden;
-} */
+
+.input-box {
+  @apply outline-none focus:border-black  relative transition-all p-[10px] text-[12px] border-[1px] border-solid bg-transparent  placeholder:text-black/50 rounded-[10px] w-full;
+}

@@ -102,74 +102,83 @@
         <div class="grid grid-cols-2 place-items-center my-0 mx-auto w-[83vw]">
           <div class="mx-auto my-0 w-[65%]">
             <div class="flex flex-col gap-5">
-              <h1 class="text-5xl font-semibold">Sign Up</h1>
+              <h1 class="text-5xl font-semibold text-black">Sign Up</h1>
               <p class="leading-[100%] text-base text-black">
                 Welcome to Muck! Please fill out the form to register a new
                 account.
               </p>
 
-              <form action="" class="flex flex-col gap-5">
+              <form action="" class="flex flex-col gap-3" id="">
                 <!-- Username -->
                 <div class="flex flex-col gap-">
-                  <label class="text-base" for="username">Username</label>
+                  <label class="text-base text-black" for="username"
+                    >Username</label
+                  >
                   <div class="">
                     <input
-                      class="p-[10px] text-[12px] border-[1px] border-solid border-[#000000] rounded-[10px] w-full mb-2"
+                      class="input-box border-black/50 mb-1"
                       type="text"
                       name="username"
                       id="username"
                       placeholder="Input your Username"
+                      required
                     />
-                    <p class="text-[10px] leading-[10px] user-valid"></p>
+                    <p
+                      class="text-[10px] leading-[10px] user-valid text-error h-[10px]"
+                    ></p>
                   </div>
                 </div>
 
                 <!-- Email -->
                 <div class="flex flex-col gap-">
-                  <label class="text-base" for="email">Email</label>
+                  <label class="text-base text-black" for="email">Email</label>
                   <div class="">
                     <input
-                      class="p-[10px] text-[12px] border-[1px] border-solid border-[#000000] rounded-[10px] w-full mb-2"
+                      class="input-box border-black/50 mb-1"
                       type="text"
-                      name="eamil"
+                      name="email"
                       id="email"
                       placeholder="Input your Email"
                     />
-                    <p class="text-[10px] leading-[10px] email-valid"></p>
+                    <p
+                      class="text-[10px] leading-[10px] h-[10px] email-valid text-error"
+                    ></p>
                   </div>
                 </div>
 
                 <!-- Password -->
 
                 <div class="flex flex-col gap-">
-                  <label class="text-base" for="password">Password</label>
+                  <label class="text-base text-black" for="password"
+                    >Password</label
+                  >
                   <div class="">
                     <input
-                      class="p-[10px] text-[12px] border-[1px] border-solid border-[#000000] rounded-[10px] w-full mb-2"
+                      class="input-box mb-2"
                       type="password"
                       name="password"
                       id="password"
                       placeholder="Input your password"
                     />
-                    <p class="text-[10px]">
+                    <p class="text-[10px] text-black/80">
                       The first letter should be uppercase
                     </p>
-                    <p class="text-[10px]">
+                    <p class="text-[10px] text-black/80">
                       There should be at least one number
                     </p>
-                    <p class="text-[10px]">
+                    <p class="text-[10px] text-black/80">
                       The password length should be between 17 - 20
                     </p>
                   </div>
                 </div>
 
                 <div class="flex flex-col gap-">
-                  <label class="text-base" for="confirm"
+                  <label class="text-base text-black" for="confirm"
                     >Confirm Password</label
                   >
                   <div class="">
                     <input
-                      class="p-[10px] text-[12px] border-[1px] border-solid border-[#000000] rounded-[10px] mb-2 w-full"
+                      class="input-box mb-2"
                       type="text"
                       name="confirm"
                       id="confirm"
@@ -181,17 +190,20 @@
                 </div>
 
                 <!-- Submit -->
-                <div class="flex flex-col gap-3 justify-center items-center">
+                <div
+                  class="flex flex-col gap-[10px] justify-center items-center"
+                >
                   <button
+                    id="submit"
                     type="submit"
-                    class="py-3 rounded-md w-full text-center bg-solidblack text-[#ffffff]"
+                    class="py-3 rounded-md w-full text-center bg-solidblack text-[#ffffff] hover:bg-[#ffffff] hover:text-solidblack transition"
                   >
                     Sign Up
                   </button>
                   <p>Or</p>
                   <a
                     href=""
-                    class="py-3 rounded-md w-full text-center border-[1px] border-solid border-[#000000]"
+                    class="py-3 rounded-md w-full text-center border-[1px] border-solid border-black text-black hover:bg-solidblack hover:text-[#ffffff] transition"
                   >
                     Already have an Account? Login</a
                   >
@@ -217,5 +229,6 @@
 
     <!-- Custom JS -->
     <script src="../js/script.js"></script>
+    <script src="../js/signup.js"></script>
   </body>
 </html>

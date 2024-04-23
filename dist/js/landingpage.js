@@ -295,9 +295,3 @@ mm.add("(min-width: 1400px)", () => {
     "<",
   );
 });
-
-mm.add("max-width: 639px", () => {
-  setTimeout(() => {
-    document.body.classList.remove("disable-scroll");
-  }, 0);
-});
