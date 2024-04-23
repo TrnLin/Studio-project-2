@@ -38,6 +38,7 @@
     --pink-200: 121, 34, 49;
 
     --error: 255, 94, 94;
+    --success: 34, 187, 51;
   }
 
   [data-theme="dark"] {
@@ -62,6 +63,7 @@
     --pink-200: 255, 193, 204;
 
     --error: 255, 94, 94;
+    --success: 34, 187, 51;
   }
 
   html.transition,
@@ -139,9 +141,7 @@
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  animation:
-    l20-1 0.8s infinite linear alternate,
-    l20-2 1.6s infinite linear;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
 }
 
 @keyframes l20-1 {

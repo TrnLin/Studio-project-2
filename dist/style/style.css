@@ -474,6 +474,7 @@ video {
   --pink-100: 255, 193, 204;
   --pink-200: 121, 34, 49;
   --error: 255, 94, 94;
+  --success: 34, 187, 51;
 }
 
 [data-theme="dark"] {
@@ -491,6 +492,7 @@ video {
   --pink-100: 121, 34, 49;
   --pink-200: 255, 193, 204;
   --error: 255, 94, 94;
+  --success: 34, 187, 51;
 }
 
 html.transition,
@@ -1028,6 +1030,10 @@ html.transition,
   border-color: rgba(var(--white));
 }
 
+.border-success {
+  border-color: rgba(var(--success));
+}
+
 .bg-blue-100 {
   background-color: rgba(var(--blue-100));
 }
@@ -1262,6 +1268,10 @@ html.transition,
   color: rgba(var(--pink-200));
 }
 
+.text-success {
+  color: rgba(var(--success));
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -1350,9 +1360,7 @@ html.transition,
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  animation:
-    l20-1 0.8s infinite linear alternate,
-    l20-2 1.6s infinite linear;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
 }
 
 @keyframes l20-1 {
@@ -1610,6 +1618,10 @@ html.transition,
 
 .hover\:text-solidblack:hover {
   color: rgb(var(--solid-black));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .hover\:ring-1:hover {

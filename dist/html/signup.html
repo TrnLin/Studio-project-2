@@ -154,20 +154,23 @@
                   >
                   <div class="">
                     <input
-                      class="input-box mb-2"
+                      class="input-box border-black/50 mb-2"
                       type="password"
                       name="password"
                       id="password"
                       placeholder="Input your password"
                     />
-                    <p class="text-[10px] text-black/80">
+                    <p
+                      class="text-[10px] text-black/80 text-error pass-valid"
+                    ></p>
+                    <p class="text-[10px] text-black/80 pass-upper-valid">
                       The first letter should be uppercase
                     </p>
-                    <p class="text-[10px] text-black/80">
+                    <p class="text-[10px] text-black/80 pass-number-valid">
                       There should be at least one number
                     </p>
-                    <p class="text-[10px] text-black/80">
-                      The password length should be between 17 - 20
+                    <p class="text-[10px] text-black/80 pass-length-valid">
+                      The password length should be between 8 - 20
                     </p>
                   </div>
                 </div>
@@ -178,14 +181,18 @@
                   >
                   <div class="">
                     <input
-                      class="input-box mb-2"
+                      class="input-box border-black/50 mb-2"
                       type="text"
                       name="confirm"
                       id="confirm"
                       placeholder="Confirm your password"
                     />
-                    <p class="text-[10px] leading-[10px] confirm-valid"></p>
-                    <a href="" class="float-right text-sm">Forgot Password?</a>
+                    <p
+                      class="text-[10px] leading-[10px] text-error h-[10px] confirm-valid"
+                    ></p>
+                    <a href="" class="float-right text-sm hover:underline"
+                      >Forgot Password?</a
+                    >
                   </div>
                 </div>
 

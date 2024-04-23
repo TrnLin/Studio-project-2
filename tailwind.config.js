@@ -41,6 +41,7 @@ module.exports = {
           200: "rgba(var(--yellow-200))",
         },
         error: "rgba(var(--error))",
+        success: "rgba(var(--success))",
       },
 
       fontFamily: {
