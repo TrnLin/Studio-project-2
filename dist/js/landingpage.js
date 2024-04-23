@@ -105,7 +105,7 @@ mm.add("(min-width: 1400px)", () => {
           delay: 0.5,
         });
       },
-    }
+    },
   );
 
   //About section
@@ -157,7 +157,7 @@ mm.add("(min-width: 1400px)", () => {
       y: 0,
       duration: 1,
     },
-    "<"
+    "<",
   );
 
   tl.to(
@@ -168,7 +168,7 @@ mm.add("(min-width: 1400px)", () => {
       duration: 2,
       stagger: 0.5,
     },
-    "<"
+    "<",
   );
 
   //hide card on scroll for each section
@@ -254,7 +254,7 @@ mm.add("(min-width: 1400px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<"
+    "<",
   );
 
   forumRightTl.to(
@@ -263,7 +263,7 @@ mm.add("(min-width: 1400px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<"
+    "<",
   );
 
   let forumLeftTl = gsap.timeline({
@@ -283,7 +283,7 @@ mm.add("(min-width: 1400px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<"
+    "<",
   );
 
   forumLeftTl.to(
@@ -292,7 +292,7 @@ mm.add("(min-width: 1400px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<"
+    "<",
   );
 });
 

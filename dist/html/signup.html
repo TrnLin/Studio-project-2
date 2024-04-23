@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../font/fontface.css" />
     <link rel="stylesheet" href="../style/style.css" />
-    <title>Login</title>
+    <title>Signup</title>
   </head>
   <body class="bg-white font-sans flex justify-center">
     <!-- Nav Bar -->
@@ -100,7 +100,105 @@
     <section class="min-h-lvh w-screen">
       <div class="flex justify-center items-center w-full min-h-lvh">
         <div class="grid grid-cols-2 place-items-center my-0 mx-auto w-[83vw]">
-          <div class=""></div>
+          <div class="mx-auto my-0 w-[65%]">
+            <div class="flex flex-col gap-5">
+              <h1 class="text-5xl font-semibold">Sign Up</h1>
+              <p class="leading-[100%] text-base text-black">
+                Welcome to Muck! Please fill out the form to register a new
+                account.
+              </p>
+
+              <form action="" class="flex flex-col gap-5">
+                <!-- Username -->
+                <div class="flex flex-col gap-">
+                  <label class="text-base" for="username">Username</label>
+                  <div class="">
+                    <input
+                      class="p-[10px] text-[12px] border-[1px] border-solid border-[#000000] rounded-[10px] w-full mb-2"
+                      type="text"
+                      name="username"
+                      id="username"
+                      placeholder="Input your Username"
+                    />
+                    <p class="text-[10px] leading-[10px] user-valid"></p>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex flex-col gap-">
+                  <label class="text-base" for="email">Email</label>
+                  <div class="">
+                    <input
+                      class="p-[10px] text-[12px] border-[1px] border-solid border-[#000000] rounded-[10px] w-full mb-2"
+                      type="text"
+                      name="eamil"
+                      id="email"
+                      placeholder="Input your Email"
+                    />
+                    <p class="text-[10px] leading-[10px] email-valid"></p>
+                  </div>
+                </div>
+
+                <!-- Password -->
+
+                <div class="flex flex-col gap-">
+                  <label class="text-base" for="password">Password</label>
+                  <div class="">
+                    <input
+                      class="p-[10px] text-[12px] border-[1px] border-solid border-[#000000] rounded-[10px] w-full mb-2"
+                      type="password"
+                      name="password"
+                      id="password"
+                      placeholder="Input your password"
+                    />
+                    <p class="text-[10px]">
+                      The first letter should be uppercase
+                    </p>
+                    <p class="text-[10px]">
+                      There should be at least one number
+                    </p>
+                    <p class="text-[10px]">
+                      The password length should be between 17 - 20
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-">
+                  <label class="text-base" for="confirm"
+                    >Confirm Password</label
+                  >
+                  <div class="">
+                    <input
+                      class="p-[10px] text-[12px] border-[1px] border-solid border-[#000000] rounded-[10px] mb-2 w-full"
+                      type="text"
+                      name="confirm"
+                      id="confirm"
+                      placeholder="Confirm your password"
+                    />
+                    <p class="text-[10px] leading-[10px] confirm-valid"></p>
+                    <a href="" class="float-right text-sm">Forgot Password?</a>
+                  </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="flex flex-col gap-3 justify-center items-center">
+                  <button
+                    type="submit"
+                    class="py-3 rounded-md w-full text-center bg-solidblack text-[#ffffff]"
+                  >
+                    Sign Up
+                  </button>
+                  <p>Or</p>
+                  <a
+                    href=""
+                    class="py-3 rounded-md w-full text-center border-[1px] border-solid border-[#000000]"
+                  >
+                    Already have an Account? Login</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
           <div class=""></div>
         </div>
       </div>
