@@ -18,6 +18,9 @@ const passUpperValid = document.querySelector(".pass-upper-valid");
 const passNumValid = document.querySelector(".pass-number-valid");
 const passLengthValid = document.querySelector(".pass-length-valid");
 const passValidText = document.querySelector(".pass-valid");
+let passUpperRegex = /[A-Z]/;
+let passNumRegex = /[0-9]/;
+let passLengthRegex = /^.{8,20}$/;
 
 //Confirm password validation
 const confirmPasswordInput = document.querySelector("#confirm");
@@ -55,9 +58,6 @@ let emailValid = (email) => {
 };
 
 let passwordValid = (password) => {
-  let passUpperRegex = /[A-Z]/;
-  let passNumRegex = /[0-9]/;
-  let passLengthRegex = /^.{8,20}$/;
   let passwordValid = false;
 
   //Password validation
@@ -123,11 +123,17 @@ let passwordValid = (password) => {
 let confirmPasswordValid = (password, confirmPassword) => {
   if (password !== confirmPassword) {
     confirmPasswordInput.classList.add(errorBorder);
+    confirmPasswordInput.classList.remove(successBorder);
     confirmValidText.innerHTML = "Passwords do not match";
+    return false;
+  } else if (confirmPassword === "") {
+    confirmPasswordInput.classList.add(errorBorder);
+    confirmValidText.innerHTML = "Confirm password cannot be empty";
     return false;
   } else {
     confirmValidText.innerHTML = "";
     confirmPasswordInput.classList.remove(errorBorder);
+    confirmPasswordInput.classList.add(successBorder);
     return true;
   }
 };

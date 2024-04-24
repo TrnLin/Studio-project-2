@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../font/fontface.css" />
   <link rel="stylesheet" href="../style/style.css" />
-  <title>Signup</title>
+  <title>Login</title>
 </head>
 
 <body class="bg-white font-sans flex justify-center">
@@ -53,9 +53,7 @@
       </button>
     </div>
 
-    <a href="#"
-      class="bg-solidblack hover:text-solidblack leading-[20px] flex flex-row items-center justify-center gap-3 rounded-[10px] px-[20px] py-4 font-medium transition hover:bg-[#ffffff] hover:ring-1 hover:ring-gray-300 sm:hidden"><ion-icon
-        name="person" class="text-[20px]"></ion-icon>Login</a>
+
   </nav>
 
   <!-- Section -->
@@ -64,13 +62,12 @@
       <div class="grid grid-cols-2 place-items-center my-0 mx-auto w-[83vw]">
         <div class="mx-auto my-0 w-[65%]">
           <div class="flex flex-col gap-5">
-            <h1 class="text-5xl font-semibold text-black">Sign Up</h1>
+            <h1 class="text-5xl font-semibold text-black">Login</h1>
             <p class="leading-[100%] text-base text-black">
-              Welcome to Muck! Please fill out the form to register a new
-              account.
+              Welcome back! please Login to access your account.
             </p>
 
-            <form action="" class="flex flex-col gap-3" id="">
+            <form action="" class="flex flex-col gap-5" id="">
               <!-- Username -->
               <div class="flex flex-col gap-">
                 <label class="text-base text-black" for="username">Username</label>
@@ -81,15 +78,6 @@
                 </div>
               </div>
 
-              <!-- Email -->
-              <div class="flex flex-col gap-">
-                <label class="text-base text-black" for="email">Email</label>
-                <div class="">
-                  <input class="input-box border-black/50 mb-1" type="text" name="email" id="email"
-                    placeholder="Input your Email" />
-                  <p class="text-[10px] leading-[10px] h-[10px] email-valid text-error"></p>
-                </div>
-              </div>
 
               <!-- Password -->
 
@@ -99,38 +87,22 @@
                   <input class="input-box border-black/50 mb-2" type="password" name="password" id="password"
                     placeholder="Input your password" />
                   <p class="text-[10px] text-error pass-valid"></p>
-                  <p class="text-[10px] text-black/80 pass-upper-valid">
-                    The first letter should be uppercase
-                  </p>
-                  <p class="text-[10px] text-black/80 pass-number-valid">
-                    There should be at least one number
-                  </p>
-                  <p class="text-[10px] text-black/80 pass-length-valid">
-                    The password length should be between 8 - 20
-                  </p>
+
                 </div>
               </div>
 
-              <div class="flex flex-col gap-">
-                <label class="text-base text-black" for="confirm">Confirm Password</label>
-                <div class="">
-                  <input class="input-box border-black/50 mb-2" type="text" name="confirm" id="confirm"
-                    placeholder="Confirm your password" />
-                  <p class="text-[10px] leading-[10px] text-error h-[10px] confirm-valid"></p>
-                  <a href="" class="float-right text-sm hover:underline text-black">Forgot Password?</a>
-                </div>
-              </div>
+
 
               <!-- Submit -->
-              <div class="flex flex-col gap-[10px] justify-center items-center">
+              <div class="flex flex-col gap-[10px] justify-center items-center mt-3">
                 <button id="submit" type="submit"
                   class="py-3 rounded-md w-full text-center bg-solidblack text-[#ffffff] hover:bg-[#ffffff] hover:text-solidblack transition">
-                  Sign Up
+                  Login
                 </button>
                 <p class="text-black">Or</p>
-                <a href="./login.html"
+                <a href="./signup.html"
                   class="py-3 rounded-md w-full text-center border-[1px] border-solid border-black text-black hover:bg-solidblack hover:text-[#ffffff] transition">
-                  Already have an Account? Login</a>
+                  Register</a>
               </div>
             </form>
           </div>
@@ -147,7 +119,7 @@
 
   <!-- Custom JS -->
   <script src="../js/script.js"></script>
-  <script src="../js/signup.js"></script>
+
 </body>
 
 </html>
