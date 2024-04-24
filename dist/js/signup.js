@@ -146,10 +146,11 @@ submitBtn.addEventListener("click", (event) => {
 
   let valid;
 
-  valid = userNameValid(userNameVal);
-  valid = emailValid(emailVal);
-  valid = passwordValid(passwordVal);
-  valid = confirmPasswordValid(passwordVal, confirmPasswordVal);
+  valid =
+    userNameValid(userNameVal) &&
+    emailValid(emailVal) &&
+    passwordValid(passwordVal) &&
+    confirmPasswordValid(passwordVal, confirmPasswordVal);
 
   event.preventDefault();
 });
