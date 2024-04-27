@@ -26,7 +26,8 @@ let passLengthRegex = /^.{8,20}$/;
 const confirmPasswordInput = document.querySelector("#confirm");
 const confirmValidText = document.querySelector(".confirm-valid");
 //Submit button
-const submitBtn = document.querySelector("#submit");
+const registerBtn = document.querySelector("#submitRegistration");
+const loginBtn = document.querySelector("#submitLogin");
 const form = document.querySelector("#sign-up-form");
 
 let userNameValid = (name) => {
@@ -83,7 +84,7 @@ let passwordValid = (password) => {
     passUpperValid.classList.add(successText);
     passwordInput.classList.remove(errorBorder);
 
-    passwordValid = true;
+    // passwordValid = true;
   }
 
   //check if password has a number
@@ -98,7 +99,7 @@ let passwordValid = (password) => {
     passwordInput.classList.remove(errorBorder);
     passNumValid.classList.add(successText);
 
-    passwordValid = true;
+    // passwordValid = true;
   }
 
   //check if password length is between 8 and 20
@@ -113,9 +114,13 @@ let passwordValid = (password) => {
     passwordInput.classList.remove(errorBorder);
     passLengthValid.classList.add(successText);
 
-    passwordValid = true;
+    // passwordValid = true;
   }
 
+  passwordValid =
+    passUpperRegex.test(password[0]) &&
+    passNumRegex.test(password) &&
+    passLengthRegex.test(password);
   return passwordValid;
 };
 
@@ -138,19 +143,99 @@ let confirmPasswordValid = (password, confirmPassword) => {
   }
 };
 
-submitBtn.addEventListener("click", (event) => {
-  let userNameVal = userNameInput.value;
-  let emailVal = emailInput.value;
-  let passwordVal = passwordInput.value;
-  let confirmPasswordVal = confirmPasswordInput.value;
+//Event listener for submit button
+if (registerBtn) {
+  registerBtn.addEventListener("click", async (event) => {
+    let userNameVal = userNameInput.value;
+    let emailVal = emailInput.value;
+    let passwordVal = passwordInput.value;
+    let confirmPasswordVal = confirmPasswordInput.value;
 
-  let valid;
+    let valid;
+    let userTemp = userNameValid(userNameVal);
+    let emailTemp = emailValid(emailVal);
+    let passwordTemp = passwordValid(passwordVal);
+    let confirmTemp = confirmPasswordValid(passwordVal, confirmPasswordVal);
 
-  valid =
-    userNameValid(userNameVal) &&
-    emailValid(emailVal) &&
-    passwordValid(passwordVal) &&
-    confirmPasswordValid(passwordVal, confirmPasswordVal);
+    valid = userTemp && emailTemp && passwordTemp && confirmTemp;
 
-  event.preventDefault();
-});
+    event.preventDefault();
+
+    //Create post request to register user
+    if (valid) {
+      try {
+        // Create post request to register user
+        const res = await fetch("/user/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: userNameVal,
+            email: emailVal,
+            password: passwordVal,
+          }),
+        });
+
+        // Check the status code of the response
+        switch (res.status) {
+          case 200:
+            // If the user is registered successfully, redirect to login page
+            alert("User registered successfully");
+            window.location.href = "/user/login";
+            break;
+          default:
+            // If the user is not registered successfully, alert the user
+            const data = await res.json();
+            console.log(`Code ${res.status}: ${data.message}`);
+            alert(data.message);
+            break;
+        }
+      } catch (error) {
+        // If there is an error, it will print the error
+        console.log("Fetch error: ", error);
+      }
+    }
+  });
+}
+
+// Event listener for login button
+if (loginBtn) {
+  loginBtn.addEventListener("click", async (event) => {
+    let userNameVal = userNameInput.value;
+    let passwordVal = passwordInput.value;
+    event.preventDefault();
+
+    try {
+      // Create post request to login user
+      const res = await fetch("/user/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: userNameVal,
+          password: passwordVal,
+        }),
+      });
+
+      // Check the status code of the response
+      switch (res.status) {
+        case 200:
+          // If the user is registered successfully, redirect to login page
+          alert("User logged in successfully");
+          window.location.href = "/";
+          break;
+        default:
+          // If the user is not registered successfully, alert the user
+          const data = await res.json();
+          console.log(`Code ${res.status}: ${data.message}`);
+          alert(data.message);
+          break;
+      }
+    } catch (err) {
+      // If there is an error, it will print the error
+      console.log("Fetch error: ", err);
+    }
+  });
+}

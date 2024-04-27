@@ -1,6 +1,24 @@
 let themeToggle = document.querySelector("#theme-toggle");
 
-themeToggle.addEventListener("click", () => {
+window.onload = async () => {
+  const res = await fetch("/user/style", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (res.ok) {
+    const data = await res.json();
+    document.documentElement.setAttribute("data-theme", data.theme);
+    themeToggle.innerHTML =
+      data.theme === "dark"
+        ? '<ion-icon name="moon" class="text-[20px]"></ion-icon>Dark'
+        : '<ion-icon name="sunny" class="text-[20px]"></ion-icon>Light';
+  }
+};
+
+themeToggle.addEventListener("click", async () => {
   themeToggle.innerHTML =
     document.documentElement.getAttribute("data-theme") === "dark"
       ? '<ion-icon name="sunny" class="text-[20px]"></ion-icon>Light'
@@ -11,6 +29,20 @@ themeToggle.addEventListener("click", () => {
   } else {
     trans();
     document.documentElement.setAttribute("data-theme", "dark");
+  }
+
+  const res = await fetch("/user", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      theme: document.documentElement.getAttribute("data-theme"),
+    }),
+  });
+
+  if (!res.ok) {
+    console.log(await res.json().message);
   }
 });
 
