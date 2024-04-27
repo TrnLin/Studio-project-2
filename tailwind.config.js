@@ -3,9 +3,12 @@
 const defautTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  content: ["./dist/**/*.{html,js}"],
+  content: ["./dist/**/*.{html,js}", "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
+      width: {
+        container: "min(1400px, 100% - 15vw , 100% - 4rem)",
+      },
       keyframes: {
         floatting: {
           "0%, 100%": { transform: "translateY(0)" },
@@ -67,5 +70,5 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

@@ -4,6 +4,8 @@
 
 _npm install -D tailwindcss_
 
+_npm install flowbite_
+
 _npm install -D prettier prettier-plugin-tailwindcss_
 
 ### This is to make sure that you install TailWind and Tailwind Prettier to this repo
