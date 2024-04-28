@@ -63,6 +63,15 @@ let commentLikeButtonFunc = () => {
   return commentLikeButton;
 };
 
+let likeButton = document.querySelector(".likeButton");
+let likeCount = 0;
+
+likeButton.addEventListener("click", function () {
+  likeCount++;
+  likeButton.innerHTML = '<ion-icon name="heart"></ion-icon>';
+  likeButton.innerHTML += likeCount;
+});
+
 submitButton.addEventListener("click", function (event) {
   if (userInput.value === "") {
     userInput.classList.add(errorBorder);
@@ -82,7 +91,3 @@ submitButton.addEventListener("click", function (event) {
 
   event.preventDefault();
 });
-
-let test = userProfileHolderFunc();
-
-console.log(test);

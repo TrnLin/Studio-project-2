@@ -1,185 +1,118 @@
 <!doctype html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../font/fontface.css" />
-    <link rel="stylesheet" href="../style/style.css" />
-    <title>Login</title>
-  </head>
 
-  <body class="bg-white font-sans flex justify-center">
-    <!-- Nav Bar -->
-    <nav
-      class="fixed top-3 flex w-[83vw] flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]"
-    >
-      <div
-        class="bg-solidblack flex h-full w-full flex-row justify-between rounded-[10px] px-5 py-[10px] font-normal sm:rounded-none md:gap-5 sm:pb-5"
-      >
-        <ul
-          class="flex flex-row items-center gap-5 sm:w-full sm:justify-between"
-        >
-          <li class="md:hidden">
-            <a href="../index.html" class="s font-logo text-2xl"
-              ><img src="../img/MUCK.svg" alt="" />
-            </a>
-          </li>
-          <li>
-            <a
-              href=" ../index.html"
-              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
-              >Home
-              <ion-icon
-                name="home"
-                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
-              ></ion-icon
-            ></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
-              >About
-              <ion-icon
-                name="document"
-                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
-              ></ion-icon
-            ></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
-            >
-              Forum<ion-icon
-                name="chatbox"
-                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
-              ></ion-icon
-            ></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
-              >Contact
-              <ion-icon
-                name="information-circle"
-                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
-              ></ion-icon
-            ></a>
-          </li>
-          <li class="hidden sm:block">
-            <a
-              href="#"
-              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
-              >Login
-              <ion-icon
-                name="person"
-                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
-              ></ion-icon
-            ></a>
-          </li>
-        </ul>
-        <button
-          type="button"
-          id="theme-toggle"
-          class="hover:text-solidblack leading-[20px] flex w-24 flex-row items-center gap-2 rounded-md px-3 h-[30px] py-4 transition hover:bg-[#ffffff] sm:hidden"
-        >
-          <ion-icon name="sunny" class="text-[20px]"></ion-icon>
-          Light
-        </button>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../font/fontface.css" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <title>Login</title>
+</head>
 
-    <!-- Section -->
-    <section class="min-h-lvh w-screen">
-      <div class="flex justify-center items-center w-full min-h-lvh">
-        <div class="grid grid-cols-2 place-items-center my-0 mx-auto w-[83vw]">
-          <div class="mx-auto my-0 w-[65%]">
-            <div class="flex flex-col gap-5">
-              <h1 class="text-5xl font-semibold text-black">Login</h1>
-              <p class="leading-[100%] text-base text-black">
-                Welcome back! please Login to access your account.
-              </p>
+<body class="bg-white font-sans flex justify-center">
+  <!-- Nav Bar -->
+  <nav
+    class="fixed top-3 flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]">
+    <div
+      class="bg-solidblack flex h-full w-full flex-row justify-between rounded-[10px] px-5 py-[10px] font-normal sm:rounded-none md:gap-5 sm:pb-5">
+      <ul class="flex flex-row items-center gap-5 sm:w-full sm:justify-between">
+        <li class="md:hidden">
+          <a href="../index.html" class="s font-logo text-2xl"><img src="../img/MUCK.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href=" ../index.html"
+            class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]">Home
+            <ion-icon name="home" class="hidden text-[#ffffff] sm:block sm:text-[25px]"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"
+            class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]">About
+            <ion-icon name="document" class="hidden text-[#ffffff] sm:block sm:text-[25px]"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"
+            class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]">
+            Forum<ion-icon name="chatbox" class="hidden text-[#ffffff] sm:block sm:text-[25px]"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"
+            class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]">Contact
+            <ion-icon name="information-circle" class="hidden text-[#ffffff] sm:block sm:text-[25px]"></ion-icon></a>
+        </li>
+        <li class="hidden sm:block">
+          <a href="#"
+            class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]">Login
+            <ion-icon name="person" class="hidden text-[#ffffff] sm:block sm:text-[25px]"></ion-icon></a>
+        </li>
+      </ul>
+      <button type="button" id="theme-toggle"
+        class="hover:text-solidblack leading-[20px] flex w-24 flex-row items-center gap-2 rounded-md px-3 h-[30px] py-4 transition hover:bg-[#ffffff] sm:hidden">
+        <ion-icon name="sunny" class="text-[20px]"></ion-icon>
+        Light
+      </button>
+    </div>
+  </nav>
 
-              <form action="" class="flex flex-col gap-5" id="">
-                <!-- Username -->
-                <div class="flex flex-col gap-">
-                  <label class="text-base text-black" for="username"
-                    >Username</label
-                  >
-                  <div class="">
-                    <input
-                      class="input-box border-black/50 mb-1"
-                      type="text"
-                      name="username"
-                      id="username"
-                      placeholder="Input your Username"
-                      required
-                    />
-                    <p
-                      class="text-[10px] leading-[10px] user-valid text-error h-[10px]"
-                    ></p>
-                  </div>
+  <!-- Section -->
+  <section class="min-h-lvh w-screen">
+    <div class="flex justify-center items-center w-full min-h-lvh">
+      <div class="grid grid-cols-2 place-items-center my-0 mx-auto w-[83vw]">
+        <div class="mx-auto my-0 w-[65%]">
+          <div class="flex flex-col gap-5">
+            <h1 class="text-5xl font-semibold text-black">Login</h1>
+            <p class="leading-[100%] text-base text-black">
+              Welcome back! please Login to access your account.
+            </p>
+
+            <form action="" class="flex flex-col gap-5" id="">
+              <!-- Username -->
+              <div class="flex flex-col gap-">
+                <label class="text-base text-black" for="username">Username</label>
+                <div class="">
+                  <input class="input-box border-black/50 mb-1" type="text" name="username" id="username"
+                    placeholder="Input your Username" required />
+                  <p class="text-[10px] leading-[10px] user-valid text-error h-[10px]"></p>
                 </div>
+              </div>
 
-                <!-- Password -->
+              <!-- Password -->
 
-                <div class="flex flex-col gap-">
-                  <label class="text-base text-black" for="password"
-                    >Password</label
-                  >
-                  <div class="">
-                    <input
-                      class="input-box border-black/50 mb-2"
-                      type="password"
-                      name="password"
-                      id="password"
-                      placeholder="Input your password"
-                    />
-                    <p class="text-[10px] text-error pass-valid"></p>
-                  </div>
+              <div class="flex flex-col gap-">
+                <label class="text-base text-black" for="password">Password</label>
+                <div class="">
+                  <input class="input-box border-black/50 mb-2" type="password" name="password" id="password"
+                    placeholder="Input your password" />
+                  <p class="text-[10px] text-error pass-valid"></p>
                 </div>
+              </div>
 
-                <!-- Submit -->
-                <div
-                  class="flex flex-col gap-[10px] justify-center items-center mt-3"
-                >
-                  <button
-                    id="submit"
-                    type="submit"
-                    class="py-3 rounded-md w-full text-center bg-solidblack text-[#ffffff] hover:bg-[#ffffff] hover:text-solidblack transition"
-                  >
-                    Login
-                  </button>
-                  <p class="text-black">Or</p>
-                  <a
-                    href="./signup.html"
-                    class="py-3 rounded-md w-full text-center border-[1px] border-solid border-black text-black hover:bg-solidblack hover:text-[#ffffff] transition"
-                  >
-                    Register</a
-                  >
-                </div>
-              </form>
-            </div>
+              <!-- Submit -->
+              <div class="flex flex-col gap-[10px] justify-center items-center mt-3">
+                <button id="submit" type="submit"
+                  class="py-3 rounded-md w-full text-center bg-solidblack text-[#ffffff] hover:bg-[#ffffff] hover:text-solidblack transition">
+                  Login
+                </button>
+                <p class="text-black">Or</p>
+                <a href="./signup.html"
+                  class="py-3 rounded-md w-full text-center border-[1px] border-solid border-black text-black hover:bg-solidblack hover:text-[#ffffff] transition">
+                  Register</a>
+              </div>
+            </form>
           </div>
-          <div class=""></div>
         </div>
+        <div class=""></div>
       </div>
-    </section>
-    <!--Lenis-->
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-    <!--Ionicons-->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    </div>
+  </section>
+  <!--Lenis-->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+  <!--Ionicons-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- Custom JS -->
-    <script src="../js/script.js"></script>
-  </body>
+  <!-- Custom JS -->
+  <script src="../js/script.js"></script>
+</body>
+
 </html>
