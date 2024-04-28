@@ -44,7 +44,7 @@ let userProfileHolderFunc = () => {
 };
 
 let postCommentFunc = () => {
-  let style = ["text-black", "text-base", "w-full"];
+  let style = ["text-black", "text-base", "w-full", "break-words"];
   let postComment = document.createElement("p");
   postComment.classList.add(...style);
 
