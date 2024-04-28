@@ -12,7 +12,7 @@
 <body class="bg-white font-sans flex justify-center">
     <!-- Nav Bar -->
     <nav
-        class="fixed top-3 flex w-[83vw] flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]">
+        class="fixed top-3 flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]">
         <div
             class="bg-solidblack flex h-full w-full flex-row justify-between rounded-[10px] px-5 py-[10px] font-normal sm:rounded-none md:gap-5 sm:pb-5">
             <ul class="flex flex-row items-center gap-5 sm:w-full sm:justify-between">
@@ -136,15 +136,15 @@
                 <div class="flex flex-row gap-3">
                     <button type="button"
                         class="likeButton flex flex-row h-12 rounded-[10px] w-fit px-6 bg-solidblack text-[#fff] justify-center items-center gap-2 text-xl -translate-y-1 shadow-box hover:-translate-y-0 transition duration-200 hover:bg-pink-100 hover:text-pink-200">
-                        <ion-icon name="heart"></ion-icon>4
+                        <ion-icon name="heart"></ion-icon>0
                     </button>
-                    <a href="#"
+                    <a href="#comment-container"
                         class="flex flex-row h-12 rounded-[10px] w-fit px-6 bg-solidblack text-[#fff] justify-center items-center gap-2 text-xl -translate-y-1 shadow-box hover:-translate-y-0 transition duration-200 hover:bg-blue-100 hover:text-blue-200">
                         <ion-icon name="chatbubble"></ion-icon>100
                     </a>
                 </div>
             </div>
-            <div class="">
+            <div id="comment-container">
                 <form action="" id="comment-form" class="flex flex-row gap-5">
                     <input type="text" name="comment" id="comment-input"
                         class="input-box border-black/50 focus:ring-black w-full text-black focus:box-shadow-black/50 hover:ring-1 hover:ring-black"
