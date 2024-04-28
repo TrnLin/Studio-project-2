@@ -80,14 +80,13 @@
             ></a>
           </li>
         </ul>
-        <button
-          type="button"
+        <div
           id="theme-toggle"
           class="hover:text-solidblack leading-[20px] flex w-24 flex-row items-center gap-2 rounded-md px-3 h-[30px] py-4 transition hover:bg-[#ffffff] sm:hidden"
         >
           <ion-icon name="sunny" class="text-[20px]"></ion-icon>
           Light
-        </button>
+        </div>
       </div>
 
       <a
@@ -126,18 +125,17 @@
               </div>
             </div>
             <div class="">
-              <button
+              <div
                 data-popover-target="popover-click"
                 data-popover-trigger="click"
                 data-popover-placement="left"
-                type="button"
                 class="text-black font-medium rounded-md size-9 text-center hover:text-white hover:bg-black flex justify-center items-center duration-300 transition-all"
               >
                 <ion-icon
                   name="ellipsis-vertical"
                   class="text-[25px]"
                 ></ion-icon>
-              </button>
+              </div>
 
               <div
                 data-popover
@@ -147,25 +145,25 @@
               >
                 <ul class="text-black">
                   <li>
-                    <button
-                      class="flex justify-center items-center px-5 py-1 text-lg text-black gap-3"
+                    <div
+                      class="flex justify-items-start items-center px-5 py-1 text-lg text-black gap-3"
                     >
                       <ion-icon name="pencil"></ion-icon>Edit Post
-                    </button>
+                    </div>
                   </li>
                   <li>
-                    <button
+                    <div
                       class="flex justify-center items-center px-5 py-1 text-lg text-black gap-3"
                     >
                       <ion-icon name="archive"></ion-icon>Archive Post
-                    </button>
+                    </div>
                   </li>
                   <li>
-                    <button
+                    <div
                       class="flex justify-center items-center px-5 py-1 text-lg text-error gap-3"
                     >
                       <ion-icon name="trash"></ion-icon>Deleted Post
-                    </button>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -208,17 +206,13 @@
             </div>
           </div>
           <div class="flex flex-row gap-3">
-            <button
-              type="button"
-              class="likeButton flex flex-row h-12 rounded-[10px] w-fit px-6 bg-solidblack text-[#fff] justify-center items-center gap-2 text-xl -translate-y-1 shadow-box hover:-translate-y-0 transition duration-200 hover:bg-pink-100 hover:text-pink-200"
-            >
-              <ion-icon name="heart"></ion-icon>4
-            </button>
+            <div class="likeButton"><ion-icon name="heart"></ion-icon>0</div>
             <a
               href="#"
               class="flex flex-row h-12 rounded-[10px] w-fit px-6 bg-solidblack text-[#fff] justify-center items-center gap-2 text-xl -translate-y-1 shadow-box hover:-translate-y-0 transition duration-200 hover:bg-blue-100 hover:text-blue-200"
             >
-              <ion-icon name="chatbubble"></ion-icon>100
+              <ion-icon name="chatbubble"></ion-icon
+              ><span class="comment-count">0</span>
             </a>
           </div>
         </div>
@@ -232,17 +226,16 @@
               placeholder="Say some fcking things?"
               required
             />
-            <button
-              type="button"
+            <div
               id="commentButton"
               class="flex flex-row h-12 rounded-[10px] w-fit px-6 bg-solidblack text-[#fff] justify-center items-center gap-2 text-base -translate-y-1 shadow-box hover:-translate-y-0 transition duration-200 hover:bg-blue-100 hover:text-blue-200"
             >
               <ion-icon name="chatbubble"></ion-icon>Comment
-            </button>
+            </div>
           </form>
         </div>
         <div class="flex flex-col gap-8 comment-list">
-          <div class="comment-card" id="comment-card">
+          <div class="comment-card">
             <div class="user-profile-holder">
               <img
                 src=""
@@ -263,9 +256,7 @@
               vitae mattis tellus. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-            <button type="button" class="likeButton">
-              <ion-icon name="heart"></ion-icon>4
-            </button>
+            <div class="likeButton"><ion-icon name="heart"></ion-icon>0</div>
           </div>
         </div>
       </div>

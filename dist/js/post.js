@@ -3,6 +3,7 @@ let submitButton = document.querySelector("#commentButton");
 let commentList = document.querySelector(".comment-list");
 const errorBorder = "border-error";
 
+//create comment card func
 let userProfileImgFunc = () => {
   let userProfileImg = document.createElement("img");
   userProfileImg = document.createElement("img");
@@ -83,6 +84,23 @@ submitButton.addEventListener("click", function (event) {
   event.preventDefault();
 });
 
-let test = userProfileHolderFunc();
+//Like button functionality
+let likeButton = document.querySelectorAll(".likeButton");
+console.log(likeButton);
 
-console.log(test);
+likeButton.forEach((button) => {
+  let likeCount = 0;
+  button.addEventListener("click", function () {
+    likeCount++;
+    button.innerHTML = '<ion-icon name="heart"></ion-icon>';
+    button.innerHTML += likeCount;
+  });
+});
+
+//comment function
+let commentCount = document.querySelector(".comment-count");
+
+setInterval(() => {
+  let commentCountNumber = document.querySelectorAll(".comment-card").length;
+  commentCount.innerHTML = commentCountNumber;
+}, 60000);

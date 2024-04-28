@@ -1601,6 +1601,10 @@ html.transition,
   justify-content: space-between;
 }
 
+.justify-items-start {
+  justify-items: start;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
@@ -2329,9 +2333,7 @@ html.transition,
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  animation:
-    l20-1 0.8s infinite linear alternate,
-    l20-2 1.6s infinite linear;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
 }
 
 @keyframes l20-1 {
@@ -2684,10 +2686,6 @@ html.likeButton,
   background-color: rgba(var(--orange-200));
 }
 
-.hover\:bg-pink-100:hover {
-  background-color: rgba(var(--pink-100));
-}
-
 .hover\:bg-pink-200:hover {
   background-color: rgba(var(--pink-200));
 }
@@ -2738,10 +2736,6 @@ html.likeButton,
 
 .hover\:text-pink-100:hover {
   color: rgba(var(--pink-100));
-}
-
-.hover\:text-pink-200:hover {
-  color: rgba(var(--pink-200));
 }
 
 .hover\:text-solidblack:hover {

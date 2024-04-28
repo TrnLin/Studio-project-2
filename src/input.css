@@ -150,9 +150,7 @@
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  animation:
-    l20-1 0.8s infinite linear alternate,
-    l20-2 1.6s infinite linear;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
 }
 
 @keyframes l20-1 {
@@ -275,6 +273,7 @@
 .likeButton {
   @apply flex flex-row h-12 rounded-[10px] w-fit px-6 bg-solidblack text-[#fff] justify-center items-center gap-2 text-xl -translate-y-1 shadow-box hover:-translate-y-0 transition duration-200 hover:bg-pink-100 hover:text-pink-200;
 }
+
 .user-profile-holder {
   @apply flex flex-row items-center gap-3;
 }
