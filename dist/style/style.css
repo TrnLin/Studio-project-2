@@ -2082,10 +2082,6 @@ html.transition,
   line-height: 10px;
 }
 
-.leading-\[12px\] {
-  line-height: 12px;
-}
-
 .leading-\[14px\] {
   line-height: 14px;
 }
@@ -2546,11 +2542,23 @@ html.transition,
   --tw-ring-color: rgba(var(--black), 0.7);
 }
 
-.profile-picture-comment-card {
+.user-profile-picture {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 9999px;
   background-color: rgba(var(--black));
+}
+
+.user-profile-name {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 12px;
+  color: rgba(var(--black));
+}
+
+.user-profile-date {
+  font-size: 10px;
+  color: rgba(var(--black), 0.7);
 }
 
 html.likeButton,

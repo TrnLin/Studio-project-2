@@ -261,10 +261,17 @@
   @apply p-5 flex flex-col gap-4 border-b-2 border-solid border-black/70 transition-all duration-300 hover:ring-2 hover:ring-black/70 hover:rounded-[20px];
 }
 
-.profile-picture-comment-card {
+.user-profile-picture {
   @apply size-10 rounded-full bg-black;
 }
 
+.user-profile-name {
+  @apply text-black text-sm leading-[12px];
+}
+
+.user-profile-date {
+  @apply text-black/70 text-[10px];
+}
 .likeButton {
   @apply flex flex-row h-12 rounded-[10px] w-fit px-6 bg-solidblack text-[#fff] justify-center items-center gap-2 text-xl -translate-y-1 shadow-box hover:-translate-y-0 transition duration-200 hover:bg-pink-100 hover:text-pink-200;
 }

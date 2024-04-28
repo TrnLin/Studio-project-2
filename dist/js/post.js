@@ -3,28 +3,64 @@ let submitButton = document.querySelector("#commentButton");
 let commentList = document.querySelector(".comment-list");
 const errorBorder = "border-error";
 
-const userarr = {
-  user: {
-    username: "Cara56",
-    profileimage: "https://picsum.photos/seed/FQMyFM/640/480",
-    comments:
-      "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-    date: "2022-06-27T18:26:15.934Z",
-  },
-  user: {
-    username: "Cara56",
-    profileimage: "https://picsum.photos/seed/FQMyFM/640/480",
-    comments:
-      "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-    date: "2022-06-27T18:26:15.934Z",
-  },
-  user: {
-    username: "Kian_Berge38",
-    profileimage: "https://loremflickr.com/640/480?lock=5217706299097088",
-    comments:
-      "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-    date: "2022-02-27T18:05:14.618Z",
-  },
+let userProfileImgFunc = () => {
+  let userProfileImg = document.createElement("img");
+  userProfileImg = document.createElement("img");
+  userProfileImg.classList.add("user-profile-picture");
+
+  userProfileImg.setAttribute("src", "#");
+  userProfileImg.setAttribute("alt", "User Profile Picture");
+
+  return userProfileImg;
+};
+
+let userProfileNameFunc = () => {
+  let userProfileNameHolder = document.createElement("div");
+  let style = ["flex", "flex-col", "gap-1"];
+  userProfileNameHolder.classList.add(...style);
+
+  let userProfileName = document.createElement("h3");
+  userProfileName.classList.add("user-profile-name");
+  userProfileName.textContent = "User Name";
+
+  let userProfileDate = document.createElement("h4");
+  userProfileDate.classList.add("user-profile-date");
+  userProfileDate.textContent = "8 hours ago";
+
+  userProfileNameHolder.appendChild(userProfileName);
+  userProfileNameHolder.appendChild(userProfileDate);
+
+  return userProfileNameHolder;
+};
+
+let userProfileHolderFunc = () => {
+  let userProfile = document.createElement("div");
+  userProfile.classList.add("user-profile-holder");
+
+  userProfile.appendChild(userProfileImgFunc());
+  userProfile.appendChild(userProfileNameFunc());
+
+  return userProfile;
+};
+
+let postCommentFunc = () => {
+  let style = ["text-black", "text-base", "w-full"];
+  let postComment = document.createElement("p");
+  postComment.classList.add(...style);
+
+  postComment.innerText = userInput.value;
+  return postComment;
+};
+
+let commentLikeButtonFunc = () => {
+  let commentLikeButton = document.createElement("button");
+  let likeCount = 0;
+
+  commentLikeButton.classList.add("likeButton");
+  commentLikeButton.innerHTML = '<ion-icon name="heart"></ion-icon>';
+  commentLikeButton.innerHTML += likeCount;
+
+  return commentLikeButton;
 };
 
 submitButton.addEventListener("click", function (event) {
@@ -35,5 +71,18 @@ submitButton.addEventListener("click", function (event) {
     userInput.classList.remove(errorBorder);
   }
 
+  let newComment = document.createElement("div");
+  newComment.classList.add("comment-card");
+
+  newComment.appendChild(userProfileHolderFunc());
+  newComment.appendChild(postCommentFunc());
+  newComment.appendChild(commentLikeButtonFunc());
+
+  commentList.appendChild(newComment);
+
   event.preventDefault();
 });
+
+let test = userProfileHolderFunc();
+
+console.log(test);
