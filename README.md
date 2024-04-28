@@ -18,4 +18,3 @@ _npm run dev_
 
 _npm run clean_
 
-## Adrian test push.
