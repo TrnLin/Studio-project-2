@@ -3,6 +3,7 @@ let submitButton = document.querySelector("#commentButton");
 let commentList = document.querySelector(".comment-list");
 const errorBorder = "border-error";
 
+//user cooment
 let userProfileImgFunc = () => {
   let userProfileImg = document.createElement("img");
   userProfileImg = document.createElement("img");
@@ -63,15 +64,6 @@ let commentLikeButtonFunc = () => {
   return commentLikeButton;
 };
 
-let likeButton = document.querySelector(".likeButton");
-let likeCount = 0;
-
-likeButton.addEventListener("click", function () {
-  likeCount++;
-  likeButton.innerHTML = '<ion-icon name="heart"></ion-icon>';
-  likeButton.innerHTML += likeCount;
-});
-
 submitButton.addEventListener("click", function (event) {
   if (userInput.value === "") {
     userInput.classList.add(errorBorder);
@@ -91,3 +83,23 @@ submitButton.addEventListener("click", function (event) {
 
   event.preventDefault();
 });
+
+//like button
+let likeButton = document.querySelectorAll(".likeButton");
+
+likeButton.forEach((button) => {
+  let likeCount = 0;
+  button.addEventListener("click", function () {
+    likeCount++;
+    button.innerHTML = '<ion-icon name="heart"></ion-icon>';
+    button.innerHTML += likeCount;
+  });
+});
+
+//comment count
+setInterval(() => {
+  let commentCount = document.querySelector(".comment-count");
+  let commentCard = document.querySelectorAll(".comment-card");
+
+  commentCount.innerHTML = commentCard.length;
+}, 60000);
