@@ -104,3 +104,32 @@ setInterval(() => {
   let commentCountNumber = document.querySelectorAll(".comment-card").length;
   commentCount.innerHTML = commentCountNumber;
 }, 60000);
+
+//edit post function front end
+
+let title = document.querySelector("#post-title");
+let content = document.querySelector("#post-content");
+let titleEdit = document.getElementById("edit-post-title");
+let contentEdit = document.getElementById("edit-post-content");
+let editButton = document.querySelector("#edit-post-button");
+
+let contentDetail = content.textContent.trim();
+
+let removeExtraSpaces = (text) => {
+  return text.replace(/\s{2,}/g, " ");
+};
+
+editButton.addEventListener("click", function () {
+  titleEdit.value = title.textContent.trim();
+  contentEdit.value = removeExtraSpaces(contentDetail);
+});
+
+//submit edit post function
+let submitEditButton = document.querySelector("#submit-edit-button");
+
+submitEditButton.addEventListener("click", function (event) {
+  title.textContent = titleEdit.value;
+  content.textContent = contentEdit.value;
+
+  event.preventDefault();
+});

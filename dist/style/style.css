@@ -1358,8 +1358,20 @@ html.transition,
   height: 70vh;
 }
 
+.h-\[calc\(100\%-1rem\)\] {
+  height: calc(100% - 1rem);
+}
+
 .h-full {
   height: 100%;
+}
+
+.h-modal {
+  height: min(500px, 100% - 4rem);
+}
+
+.max-h-full {
+  max-height: 100%;
 }
 
 .min-h-\[25rem\] {
@@ -1446,6 +1458,10 @@ html.transition,
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-modal {
+  width: min(750px, 100% - 4rem);
 }
 
 .w-screen {
@@ -1535,6 +1551,10 @@ html.transition,
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.resize-none {
+  resize: none;
 }
 
 .resize {
@@ -1633,6 +1653,10 @@ html.transition,
   gap: 1.25rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .gap-8 {
   gap: 2rem;
 }
@@ -1661,6 +1685,10 @@ html.transition,
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .overflow-x-hidden {
@@ -1884,6 +1912,10 @@ html.transition,
   padding: 1.25rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1991,6 +2023,11 @@ html.transition,
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-5xl {
@@ -2524,7 +2561,7 @@ html.transition,
 }
 
 .input-box:focus {
-  border-color: rgba(var(--black));
+  --tw-ring-color: rgba(var(--black));
 }
 
 .comment-card {
@@ -2765,6 +2802,10 @@ html.likeButton,
   --tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity));
 }
 
+.focus\:border-black:focus {
+  border-color: rgba(var(--black));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2887,6 +2928,10 @@ html.likeButton,
 }
 
 @media (max-width: 768px) {
+  .md\:inset-0 {
+    inset: 0px;
+  }
+
   .md\:hidden {
     display: none;
   }

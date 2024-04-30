@@ -252,7 +252,7 @@
 }
 
 .input-box {
-  @apply outline-none focus:border-black  relative transition-all p-[10px] text-[12px] border-[1px] border-solid bg-transparent  placeholder:text-black/50 rounded-[10px] w-full;
+  @apply outline-none focus:ring-black  relative transition-all p-[10px] text-[12px] border-[1px] border-solid bg-transparent  placeholder:text-black/50 rounded-[10px] w-full;
 }
 
 .comment-card {
