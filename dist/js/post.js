@@ -54,7 +54,7 @@ let postCommentFunc = () => {
 };
 
 let commentLikeButtonFunc = () => {
-  let commentLikeButton = document.createElement("button");
+  let commentLikeButton = document.createElement("div");
   let likeCount = 0;
 
   commentLikeButton.classList.add("likeButton");
@@ -86,7 +86,6 @@ submitButton.addEventListener("click", function (event) {
 
 //Like button functionality
 let likeButton = document.querySelectorAll(".likeButton");
-console.log(likeButton);
 
 likeButton.forEach((button) => {
   let likeCount = 0;
@@ -103,7 +102,7 @@ let commentCount = document.querySelector(".comment-count");
 setInterval(() => {
   let commentCountNumber = document.querySelectorAll(".comment-card").length;
   commentCount.innerHTML = commentCountNumber;
-}, 60000);
+}, 6000);
 
 //edit post function front end
 

@@ -1366,10 +1366,6 @@ html.transition,
   height: 100%;
 }
 
-.h-modal {
-  height: min(500px, 100% - 4rem);
-}
-
 .max-h-full {
   max-height: 100%;
 }
@@ -1723,6 +1719,10 @@ html.transition,
   border-radius: 0.375rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .rounded-e-lg {
   border-start-end-radius: 0.5rem;
   border-end-end-radius: 0.5rem;
@@ -1916,6 +1916,10 @@ html.transition,
   padding: 2rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1989,6 +1993,11 @@ html.transition,
 .py-\[15px\] {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .pt-2 {
@@ -2085,6 +2094,16 @@ html.transition,
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -2249,6 +2268,10 @@ html.transition,
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
+.ring-inset {
+  --tw-ring-inset: inset;
+}
+
 .ring-black\/10 {
   --tw-ring-color: rgba(var(--black), 0.1);
 }
@@ -2259,6 +2282,10 @@ html.transition,
 
 .ring-black\/70 {
   --tw-ring-color: rgba(var(--black), 0.7);
+}
+
+.ring-black {
+  --tw-ring-color: rgba(var(--black));
 }
 
 .blur {
@@ -2370,7 +2397,9 @@ html.transition,
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
+  animation:
+    l20-1 0.8s infinite linear alternate,
+    l20-2 1.6s infinite linear;
 }
 
 @keyframes l20-1 {
