@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../font/fontface.css" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Post</title>
+  </head>
+
+  <body class="bg-white font-sans flex justify-center">
+    <!-- Nav Bar -->
+    <nav
+      class="fixed top-3 flex w-[83vw] flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]"
+    >
+      <div
+        class="bg-solidblack flex h-full w-full flex-row justify-between rounded-[10px] px-5 py-[10px] font-normal sm:rounded-none md:gap-5 sm:pb-5"
+      >
+        <ul
+          class="flex flex-row items-center gap-5 sm:w-full sm:justify-between"
+        >
+          <li class="md:hidden">
+            <a href="../index.html" class="s font-logo text-2xl"
+              ><img src="../img/MUCK.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a
+              href=" ../index.html"
+              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
+              >Home
+              <ion-icon
+                name="home"
+                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
+              >About
+              <ion-icon
+                name="document"
+                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
+            >
+              Forum<ion-icon
+                name="chatbox"
+                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
+              >Contact
+              <ion-icon
+                name="information-circle"
+                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
+              ></ion-icon
+            ></a>
+          </li>
+          <li class="hidden sm:block">
+            <a
+              href="#"
+              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
+              >Login
+              <ion-icon
+                name="person"
+                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
+              ></ion-icon
+            ></a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          id="theme-toggle"
+          class="hover:text-solidblack leading-[20px] flex w-24 flex-row items-center gap-2 rounded-md px-3 h-[30px] py-4 transition hover:bg-[#ffffff] sm:hidden"
+        >
+          <ion-icon name="sunny" class="text-[20px]"></ion-icon>
+          Light
+        </button>
+      </div>
+
+      <a
+        href="#"
+        class="bg-solidblack hover:text-solidblack leading-[20px] flex flex-row items-center justify-center gap-3 rounded-[10px] px-[20px] py-4 font-medium transition hover:bg-[#ffffff] hover:ring-1 hover:ring-gray-300 sm:hidden"
+        ><ion-icon name="person" class="text-[20px]"></ion-icon>Login</a
+      >
+    </nav>
+
+    <!-- Section Forum Posts -->
+    <section class="min-h-lvh w-screen">
+      <div class="mx-auto my-24 w-container h-full flex flex-col gap-8">
+        <div class="flex flex-col gap-[30px]">
+          <div class="flex flex-col gap-5">
+            <h1 class="text-[2rem] text-black leading-8" id="blockTitle">
+              Admin Dashboard
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Material Ui -->
+    <script
+      type="module"
+      src="../../node_modules/flowbite/dist/flowbite.min.js"
+    ></script>
+    <!--Lenis-->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <!--Ionicons-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+   
+  </body>
+</html>
