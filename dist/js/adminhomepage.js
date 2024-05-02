@@ -13,7 +13,7 @@ async function getTotalUsers(adminAPI){
         const data = await res.json();
         return data;
     } catch (error){
-        console.log("Fetch error: ", error);
+        console.log("Error Occured: ", error);
     }
 
 }
@@ -22,11 +22,12 @@ async function getTotalUsers(adminAPI){
 document.getElementById(adminTotalUsers).innerHTML = getTotalUsers(adminAPI).totalUsers;
 
 //Display total posts
-document.getElementById(adminTotalUsers).innerHTML = getTotalUsers(adminAPI).totalPosts;
+document.getElementById(adminTotalPosts).innerHTML = getTotalUsers(adminAPI).totalPosts;
 
 //Display traffic this month
-document.getElementById(adminTotalUsers).innerHTML = getTotalUsers(adminAPI).thisMonthTraffic;
+document.getElementById(adminTrafficThisMonth).innerHTML = getTotalUsers(adminAPI).thisMonthTraffic;
 
 //Display new users this month
-document.getElementById(adminTotalUsers).innerHTML = getTotalUsers(adminAPI).newUsersThisMonth;
+document.getElementById(adminNewUsersThisMonth).innerHTML = getTotalUsers(adminAPI).newUsersThisMonth;
 
+//Things need to be done: Api call for the user count graph
