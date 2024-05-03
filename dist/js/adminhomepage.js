@@ -10,47 +10,66 @@ const adminHomeAPI = "";
 
 //Retreive data from AdminAPI
 
-async function adminAPICall(adminHomeAPI){
-    
-    try{
-        const res = await fetch(adminHomeAPI);
-        const data = await res.json();
-        return data;
-    } catch (error){
-        console.log("Error Occured: ", error);
+(async function() {
+
+    async function adminAPICall(adminHomeAPI) {
+        try {
+            const res = await fetch(adminHomeAPI);
+            const data = await res.json();
+            return data;
+        } catch (error) {
+            console.log("Error Occurred: ", error);
+            return null; // return null in case of error
+        }
     }
 
-}
+    // Await the adminAPICall and then access its data
+    const apiData = await adminAPICall(adminHomeAPI);
 
-//Display total users
-document.getElementById(adminTotalUsers).innerHTML = adminAPICall(adminHomeAPI).totalUsers;
+    if (apiData) {
+        // Display total users
+        document.getElementById(adminTotalUsers).innerHTML = apiData.totalUsers;
 
-//Display total posts
-document.getElementById(adminTotalPosts).innerHTML = adminAPICall(adminHomeAPI).totalPosts;
+        // Display total posts
+        document.getElementById(adminTotalPosts).innerHTML = apiData.totalPosts;
 
-//Display traffic this month
-document.getElementById(adminTrafficThisMonth).innerHTML = adminAPICall(adminHomeAPI).thisMonthTraffic;
+        // Display traffic this month
+        document.getElementById(adminTrafficThisMonth).innerHTML = apiData.thisMonthTraffic;
 
-//Display new users this month
-document.getElementById(adminNewUsersThisMonth).innerHTML = adminAPICall(adminHomeAPI).newUsersThisMonth;
+        // Display new users this month
+        document.getElementById(adminNewUsersThisMonth).innerHTML = apiData.newUsersThisMonth;
+    }
 
-//Things need to be done: Api call for the user count graph
+})();
+
+//User count graph
+
 (async function() {
-    const data = adminAPICall(adminHomeAPI).graphData;
+
+    const graphAPIResponse = await adminAPICall(adminHomeAPI);
+    const graphResData = graphAPIResponse.graphData;
+
+    if (!graphResData) {
+        console.error('Graph data not available');
+        return;
+      }
+    
   
     new Chart(
       document.getElementById(adminGraphElement),
       {
         type: 'line',
         data: {
-          labels: data.map(row => row.months),
+          labels: graphResData.map(row => row.months),
           datasets: [
             {
               label: 'Users by Months',
-              data: data.map(row => row.counts)
+              data: graphResData.map(row => row.counts)
             }
           ]
         }
       }
     );
   })();
+
+  
