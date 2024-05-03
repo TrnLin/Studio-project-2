@@ -1,15 +1,19 @@
+import Chart from 'chart.js/auto';
+
 //Constant declarations for admin homepage
 const adminTotalUsers = "";
 const adminTotalPosts = "";
 const adminTrafficThisMonth = "";
 const adminNewUsersThisMonth = "";
-const adminAPI = "";
+const adminGraphElement = '';
+const adminHomeAPI = "";
 
 //Retreive data from AdminAPI
 
-async function getTotalUsers(adminAPI){
+async function adminAPICall(adminHomeAPI){
+    
     try{
-        const res = await fetch(adminAPI);
+        const res = await fetch(adminHomeAPI);
         const data = await res.json();
         return data;
     } catch (error){
@@ -19,15 +23,34 @@ async function getTotalUsers(adminAPI){
 }
 
 //Display total users
-document.getElementById(adminTotalUsers).innerHTML = getTotalUsers(adminAPI).totalUsers;
+document.getElementById(adminTotalUsers).innerHTML = adminAPICall(adminHomeAPI).totalUsers;
 
 //Display total posts
-document.getElementById(adminTotalPosts).innerHTML = getTotalUsers(adminAPI).totalPosts;
+document.getElementById(adminTotalPosts).innerHTML = adminAPICall(adminHomeAPI).totalPosts;
 
 //Display traffic this month
-document.getElementById(adminTrafficThisMonth).innerHTML = getTotalUsers(adminAPI).thisMonthTraffic;
+document.getElementById(adminTrafficThisMonth).innerHTML = adminAPICall(adminHomeAPI).thisMonthTraffic;
 
 //Display new users this month
-document.getElementById(adminNewUsersThisMonth).innerHTML = getTotalUsers(adminAPI).newUsersThisMonth;
+document.getElementById(adminNewUsersThisMonth).innerHTML = adminAPICall(adminHomeAPI).newUsersThisMonth;
 
 //Things need to be done: Api call for the user count graph
+(async function() {
+    const data = adminAPICall(adminHomeAPI).graphData;
+  
+    new Chart(
+      document.getElementById(adminGraphElement),
+      {
+        type: 'line',
+        data: {
+          labels: data.map(row => row.months),
+          datasets: [
+            {
+              label: 'Users by Months',
+              data: data.map(row => row.counts)
+            }
+          ]
+        }
+      }
+    );
+  })();
