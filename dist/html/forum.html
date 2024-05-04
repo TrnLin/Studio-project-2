@@ -12,12 +12,12 @@
 <body class="bg-white font-sans flex justify-center">
     <!-- Nav Bar -->
     <nav
-        class="fixed top-3 flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]">
+        class="fixed top-3 flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[900]">
         <div
-            class="bg-solidblack flex h-full w-full flex-row justify-between rounded-[10px] px-5 py-[10px] font-normal sm:rounded-none md:gap-5 sm:pb-5">
-            <ul class="flex flex-row items-center gap-5 sm:w-full sm:justify-between">
+            class="bg-solidblack flex h-full w-full flex-row justify-between rounded-[10px] px-5 py-[10px] lg:py-1 font-normal sm:rounded-none md:gap-5 sm:pb-5">
+            <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
                 <li class="md:hidden">
-                    <a href="../index.html" class="s font-logo text-2xl"><img src="../img/MUCK.svg" alt="" />
+                    <a href="../index.html" class=""><img src="../img/MUCK.svg" class="lg:w-[80%]" alt="" />
                     </a>
                 </li>
                 <li>
@@ -49,51 +49,145 @@
                 </li>
             </ul>
             <div id="theme-toggle"
-                class="hover:text-solidblack leading-[20px] flex w-24 flex-row items-center gap-2 rounded-md px-3 h-[30px] py-4 transition hover:bg-[#ffffff] sm:hidden">
+                class="hover:text-solidblack leading-[20px] flex w-24 flex-row items-center gap-2 rounded-md px-3 h-[30px] py-4 transition hover:bg-[#ffffff] lg:text-[13px] lg:w-20 sm:hidden">
                 <ion-icon name="sunny" class="text-[20px]"></ion-icon>
                 Light
             </div>
         </div>
 
         <a href="#"
-            class="bg-solidblack hover:text-solidblack leading-[20px] flex flex-row items-center justify-center gap-3 rounded-[10px] px-[20px] py-4 font-medium transition hover:bg-[#ffffff] hover:ring-1 hover:ring-gray-300 sm:hidden"><ion-icon
-                name="person" class="text-[20px]"></ion-icon>Login</a>
+            class="bg-solidblack hover:text-solidblack leading-[20px] flex flex-row items-center justify-center gap-3 rounded-[10px] px-[20px] py-4 font-medium transition hover:bg-[#ffffff] lg:py-1 hover:ring-1 lg:font-normal lg:px-3 hover:ring-gray-300 lg:text-[13px] sm:hidden"><ion-icon
+                name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
     </nav>
 
+    <div id="alert-success"
+        class="fixed top-12 left-1/2 z-[999] text-green-200 -translate-xy text-base hidden justify-between items-center gap-4 bg-green-100 px-5 py-4 rounded-md lg:text-sm lg:gap-2">
+        <ion-icon name="checkmark" class="text-2xl"></ion-icon>The Post has been
+        published
+    </div>
 
-    <!---->
+    <!--New Post Modal-->
+    <div id="new-post-modal" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden overflow-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div
+            class="p-8 rounded-[20px] bg-white w-modal h- flex flex-col gap-6 sm:h-full sm:rounded-none sm:p-0 sm:px-8 sm:py-20 xs:py-10">
+            <div class="flex flex-row justify-between items-center sm:w-full">
+                <h2 class="text-4xl text-black lg:text-3xl" aria-label="Edit post">
+                    Create Post
+                </h2>
+                <div class="modal-close flex justify-center items-center text-2xl size-9 bg-white text-black hover:bg-pink-200 hover:text-pink-100 transition-all duration-300 rounded-md"
+                    aria-label="Close modal" data-modal-hide="new-post-modal">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+            </div>
+            <form action=""
+                class="flex flex-col gap-6 lg:gap-4 sm:w-full sm:items-center sm:justify-center sm:h-full sm:mb-10 xs:gap-2">
+                <div class="flex flex-col gap-2 sm:w-full">
+                    <label class="text-base leading-[100%] text-black" for="Title">Give me a title</label>
+                    <div>
+                        <input type="text" name="Title" class="input-box border-black/50"
+                            placeholder="Type in your title" id="post-title-input" required />
+                        <p class="description-alert text-[10px] h-3 text-error" id="title-error"></p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 sm:w-full">
+                    <label class="text-base leading-[100%] text-black" for="Description">What's on your mind</label>
+                    <div class="flex flex-col">
+                        <textarea name="" id="post-description-input"
+                            class="input-box h-full border-black/50 resize-none" placeholder="Type in your description"
+                            rows="5"></textarea>
+                        <!-- <input type="text" name="Description" class="input-box border-black/50"
+                            placeholder="Type in your description" required /> -->
+                        <p class="description-alert text-[10px] h-3 text-error" id="content-error"></p>
+                    </div>
+                </div>
+                <div class="flex justify-center rounded-lg border border-dashed border-black/35 px-6 py-10 lg:px-3 lg:py-5 sm:w-full sm:py-8 xs:py-4"
+                    id="dropzone">
+                    <div class="text-center">
+                        <ion-icon name="image" class="text-7xl text-black/70 lg:text-5xl"></ion-icon>
+                        <div class="flex text-sm leading-6 text-black/70">
+                            <label for="file-upload"
+                                class="relative cursor-pointer rounded-md bg-white transition-all duration-200 font-semibold text-error focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-error/70">
+                                <span>Upload a file</span>
+                                <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+                            </label>
+                            <p class="pl-1">or drag and drop</p>
+                        </div>
+                        <p class="text-xs leading-5 text-black/60">
+                            PNG, JPG, GIF up to 10MB
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="" class="mt-4 mx-auto max-h-40 hidden" id="preview" />
+                </div>
+                <div class="flex flex-row gap-4 sm:w-full sm:flex-col">
+                    <div id="new-post-button"
+                        class="text-center p-4 w-full bg-solidblack text-[#fff] text-base rounded-lg hover:bg-orange-200 hover:text-orange-100 transition-all duration-300 lg:p-3">
+                        Post
+                    </div>
+                    <div data-modal-hide="new-post-modal"
+                        class="px-12 bg-white ring-2 ring-black/70 ring-inset flex justify-center items-center rounded-lg hover:bg-black hover:text-white transition-all duration-300 text-base text-black sm:py-3 lg:text-sm">
+                        Cancel
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <!-- Section -->
     <section class="min-h-lvh w-screen">
         <div class="mx-auto my-24 w-container h-full flex flex-col gap-6">
             <div class="flex flex-col gap-2">
-
-                <h1 class="text-5xl text-black">Forum</h1>
-                <div class="flex flex-row gap-4 ">
-                    <div
-                        class="px-[20px] min-w-36 py-3 flex flex-row justify-center items-center gap-3 text-sm rounded-[10px] leading-[100%] bg-solidblack text-[#fff] hover:bg-blue-100 hover:text-blue-200 transition-all duration-200 ">
-                        <ion-icon name="add-outline" class="text-2xl"></ion-icon>New Post
+                <h1 class="text-5xl text-black lg:text-4xl">Forum</h1>
+                <div class="flex flex-row gap-4 lg:flex-col">
+                    <div data-modal-target="new-post-modal" data-modal-toggle="new-post-modal"
+                        class="px-[20px] min-w-36 py-3 flex flex-row justify-center items-center gap-3 text-sm rounded-[10px] leading-[100%] bg-solidblack text-[#fff] hover:bg-blue-100 hover:text-blue-200 transition-all lg:px-1 lg:py-[6px] lg:min-w-28 lg:text-[12px] duration-200 sm:text-sm sm:p-3">
+                        <ion-icon name="add-outline" class="text-2xl sm:text-lg"></ion-icon>New Post
                     </div>
                     <form action="">
                         <div
-                            class="px-[20px]  py-3 flex flex-row justify-center items-center gap-3 text-sm rounded-[10px] leading-[100%] bg-solidblack text-[#fff] hover:bg-green-100 hover:text-green-200 transition-all duration-200 ">
-                            <ion-icon name="time" class="text-2xl"></ion-icon>Latest
+                            class="px-[20px] py-3 flex flex-row justify-center items-center gap-3 text-sm rounded-[10px] leading-[100%] bg-solidblack text-[#fff] hover:bg-green-100 hover:text-green-200 transition-all lg:px-1 lg:py-[6px] lg:min-w-28 lg:text-[12px] duration-200 sm:text-sm sm:p-3">
+                            <ion-icon name="time" class="text-2xl sm:text-lg"></ion-icon>Latest
                         </div>
                     </form>
 
                     <form action="" class="w-full">
                         <input type="text" name="" id="" placeholder="Looking for something?"
-                            class="input-box ring-black/50 h-full focus:ring-1 focus:border-black/70 transition duration-200 text-black">
+                            class="input-box ring-black/50 h-full focus:ring-1 focus:border-black/70 transition duration-200 text-black" />
                     </form>
                 </div>
             </div>
-            <div></div>
+            <div>
+                <div id="post-list" class="flex flex-col gap-5">
+                    <a href="#" class="post-card">
+                        <div class="flex flex-col gap-4 lg:gap-2">
+                            <h1 class="post-title" id="post-title">
+                                Lorem ipsum dolor sit amet.
+                            </h1>
+                            <p class="post-description" id="post-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+                                massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
+                                sapien fringilla, mattis ligula consectetur, ultrices mauris.
+                                Maecenas vitae mattis tellus.
+                            </p>
+                        </div>
 
-
+                        <div class="flex flex-row gap-4">
+                            <div class="flex flex-row gap-2 justify-center items-center text-lg text-black">
+                                <ion-icon name="heart"></ion-icon><span id="like-count">0</span>
+                            </div>
+                            <div class="flex flex-row gap-2 justify-center items-center text-lg text-black">
+                                <ion-icon name="chatbubble"></ion-icon><span id="comment-count">0</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Material Ui -->
-    <script type="module" src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <!--Lenis-->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
     <!--Ionicons-->
@@ -102,7 +196,7 @@
 
     <!-- Custom JS -->
     <script src="../js/script.js"></script>
-    <script src="../js/post.js"></script>
+    <script src="../js/forum.js"></script>
 </body>
 
 </html>

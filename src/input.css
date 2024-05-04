@@ -254,7 +254,7 @@
 }
 
 .input-box {
-  @apply outline-none focus:ring-black  relative transition-all p-[10px] text-[12px] border-[1px] border-solid bg-transparent  placeholder:text-black/50 rounded-[10px] w-full;
+  @apply outline-none focus:ring-black  relative transition-all p-[10px] text-[12px] border-[1px] border-solid bg-transparent  placeholder:text-black/50 rounded-[10px] w-full focus:border-black text-black lg:p-[8px] lg:text-[11px] text-wrap sm:p-3;
 }
 
 .comment-card {
@@ -279,6 +279,19 @@
 .user-profile-holder {
   @apply flex flex-row items-center gap-3;
 }
+
+.post-card {
+  @apply p-5 flex flex-col gap-8 hover:ring-inset hover:ring-1 hover:ring-black transition-all duration-300 hover:border-b-4 hover:border-black border-b-2 lg:p-2 lg:gap-4;
+}
+
+.post-title {
+  @apply text-2xl leading-[100%] font-medium text-black break-words lg:text-xl;
+}
+
+.post-description {
+  @apply text-ellipsis overflow-hidden whitespace-nowrap leading-[100%] text-black lg:text-sm;
+}
+
 .shadow-box {
   box-shadow: 0 4px rgba(var(--black), 0.5);
 }

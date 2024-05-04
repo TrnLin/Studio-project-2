@@ -10,8 +10,8 @@ module.exports = {
         modal: "min(500px, 100% - 4rem)",
       },
       width: {
-        container: "min(1400px, 100% - 15vw , 100% - 4rem)",
-        modal: "min(750px, 100% - 4rem)",
+        container: "min(1400px, 100% - 4rem)",
+        modal: "min(750px, 100% )",
       },
       keyframes: {
         floatting: {
@@ -64,7 +64,7 @@ module.exports = {
       xl: { max: "1279px" },
       // => @media (max-width: 1279px) { ... }
 
-      lg: { max: "1023px" },
+      lg: { max: "1030px" },
       // => @media (max-width: 1023px) { ... }
 
       md: { max: "768px" },
@@ -72,6 +72,8 @@ module.exports = {
 
       sm: { max: "639px" },
       // => @media (max-width: 639px) { ... }
+
+      xs: { max: "375px" },
     },
   },
   plugins: [require("flowbite/plugin")],
