@@ -27,7 +27,7 @@ console.log(sections);
 
 // //disable scroll
 //desktop
-mm.add("(min-width: 1400px)", () => {
+mm.add("(min-width: 786px)", () => {
   setTimeout(() => {
     document.body.classList.remove("disable-scroll");
   }, 5000);
@@ -69,6 +69,7 @@ mm.add("(min-width: 1400px)", () => {
     {
       height: "70vh",
       width: "30vw",
+
       borderRadius: 20,
       delay: 2,
       duration: 2,
@@ -98,6 +99,7 @@ mm.add("(min-width: 1400px)", () => {
           });
         });
 
+        heroCardMiddle.style.maxWidth = "432px";
         //nav
         gsap.to(nav, {
           opacity: 1,
@@ -105,7 +107,7 @@ mm.add("(min-width: 1400px)", () => {
           delay: 0.5,
         });
       },
-    },
+    }
   );
 
   //About section
@@ -157,7 +159,7 @@ mm.add("(min-width: 1400px)", () => {
       y: 0,
       duration: 1,
     },
-    "<",
+    "<"
   );
 
   tl.to(
@@ -168,7 +170,7 @@ mm.add("(min-width: 1400px)", () => {
       duration: 2,
       stagger: 0.5,
     },
-    "<",
+    "<"
   );
 
   //hide card on scroll for each section
@@ -254,7 +256,7 @@ mm.add("(min-width: 1400px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<",
+    "<"
   );
 
   forumRightTl.to(
@@ -263,7 +265,7 @@ mm.add("(min-width: 1400px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<",
+    "<"
   );
 
   let forumLeftTl = gsap.timeline({
@@ -283,7 +285,7 @@ mm.add("(min-width: 1400px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<",
+    "<"
   );
 
   forumLeftTl.to(
@@ -292,6 +294,6 @@ mm.add("(min-width: 1400px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<",
+    "<"
   );
 });

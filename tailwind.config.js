@@ -9,6 +9,11 @@ module.exports = {
       height: {
         modal: "min(500px, 100% - 4rem)",
       },
+      maxWidth: {
+        container: "min(1400px, 100% - 4rem)",
+        modal: "min(750px, 100% )",
+      },
+
       width: {
         container: "min(1400px, 100% - 4rem)",
         modal: "min(750px, 100% )",

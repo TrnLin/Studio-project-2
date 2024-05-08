@@ -1327,6 +1327,11 @@ html.transition,
   height: 285px;
 }
 
+.size-\[332px\] {
+  width: 332px;
+  height: 332px;
+}
+
 .size-\[38vh\] {
   width: 38vh;
   height: 38vh;
@@ -1364,10 +1369,6 @@ html.transition,
 
 .h-\[10px\] {
   height: 10px;
-}
-
-.h-\[23vw\] {
-  height: 23vw;
 }
 
 .h-\[30px\] {
@@ -1430,10 +1431,6 @@ html.transition,
   width: 16rem;
 }
 
-.w-\[23vw\] {
-  width: 23vw;
-}
-
 .w-\[30vw\] {
   width: 30vw;
 }
@@ -1462,8 +1459,8 @@ html.transition,
   width: 85%;
 }
 
-.w-\[87vw\] {
-  width: 87vw;
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .w-\[96\%\] {
@@ -1498,6 +1495,14 @@ html.transition,
 
 .min-w-36 {
   min-width: 9rem;
+}
+
+.max-w-\[548px\] {
+  max-width: 548px;
+}
+
+.max-w-container {
+  max-width: min(1400px, 100% - 4rem);
 }
 
 .max-w-none {
@@ -1607,6 +1612,10 @@ html.transition,
 
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -2097,10 +2106,6 @@ html.transition,
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
-}
-
-.text-\[0\.875rem\] {
-  font-size: 0.875rem;
 }
 
 .text-\[10px\] {
@@ -3132,12 +3137,48 @@ html.likeButton,
 }
 
 @media (max-width: 1030px) {
+  .lg\:ml-14 {
+    margin-left: 3.5rem;
+  }
+
+  .lg\:size-56 {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .lg\:size-60 {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .lg\:size-64 {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .lg\:size-72 {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .lg\:h-\[22rem\] {
+    height: 22rem;
+  }
+
+  .lg\:min-h-72 {
+    min-height: 18rem;
+  }
+
   .lg\:w-20 {
     width: 5rem;
   }
 
   .lg\:w-\[80\%\] {
     width: 80%;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:min-w-28 {
@@ -3148,12 +3189,24 @@ html.likeButton,
     flex-direction: column;
   }
 
+  .lg\:gap-1 {
+    gap: 0.25rem;
+  }
+
   .lg\:gap-2 {
     gap: 0.5rem;
   }
 
   .lg\:gap-4 {
     gap: 1rem;
+  }
+
+  .lg\:gap-7 {
+    gap: 1.75rem;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
   }
 
   .lg\:p-3 {
@@ -3173,6 +3226,11 @@ html.likeButton,
   .lg\:py-1 {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+  }
+
+  .lg\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .lg\:py-5 {
@@ -3208,9 +3266,28 @@ html.likeButton,
     font-size: 13px;
   }
 
+  .lg\:text-\[2\.5rem\] {
+    font-size: 2.5rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .lg\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 
   .lg\:font-normal {
@@ -3330,10 +3407,6 @@ html.likeButton,
     gap: 40px;
   }
 
-  .sm\:gap-4 {
-    gap: 1rem;
-  }
-
   .sm\:rounded-none {
     border-radius: 0px;
   }
@@ -3350,19 +3423,14 @@ html.likeButton,
     padding: 1.5rem;
   }
 
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .sm\:px-9 {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
   }
 
   .sm\:py-20 {
