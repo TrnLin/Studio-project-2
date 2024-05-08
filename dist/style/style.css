@@ -1541,6 +1541,26 @@ html.transition,
   min-width: 9rem;
 }
 
+.min-w-11 {
+  min-width: 2.75rem;
+}
+
+.min-w-\[300px\] {
+  min-width: 300px;
+}
+
+.min-w-\[700px\] {
+  min-width: 700px;
+}
+
+.min-w-\[800px\] {
+  min-width: 800px;
+}
+
+.min-w-\[1000px\] {
+  min-width: 1000px;
+}
+
 .max-w-\[548px\] {
   max-width: 548px;
 }
@@ -1718,6 +1738,10 @@ html.transition,
   justify-items: start;
 }
 
+.justify-items-center {
+  justify-items: center;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
@@ -1776,6 +1800,14 @@ html.transition,
 
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-7 {
+  gap: 1.75rem;
+}
+
+.gap-9 {
+  gap: 2.25rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -3484,6 +3516,22 @@ html.likeButton,
 
   .sm\:gap-\[40px\] {
     gap: 40px;
+  }
+
+  .sm\:gap-5 {
+    gap: 1.25rem;
+  }
+
+  .sm\:gap-9 {
+    gap: 2.25rem;
+  }
+
+  .sm\:gap-12 {
+    gap: 3rem;
+  }
+
+  .sm\:gap-10 {
+    gap: 2.5rem;
   }
 
   .sm\:rounded-none {
