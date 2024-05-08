@@ -143,6 +143,37 @@ let confirmPasswordValid = (password, confirmPassword) => {
   }
 };
 
+//show password
+const showPassword = document.querySelector("#show-password");
+const showConfirmPassword = document.querySelector("#show-confirm");
+
+console.log(showPassword);
+
+if (showPassword) {
+  showPassword.addEventListener("click", (event) => {
+    let password = passwordInput;
+    if (password.type === "password") {
+      password.type = "text";
+      showPassword.innerHTML = `<ion-icon name="eye-outline"></ion-icon>`;
+    } else {
+      password.type = "password";
+      showPassword.innerHTML = `<ion-icon name="eye-off-outline"></ion-icon>`;
+    }
+  });
+}
+
+if (showConfirmPassword) {
+  showConfirmPassword.addEventListener("click", (event) => {
+    let password = confirmPasswordInput;
+    if (password.type === "password") {
+      password.type = "text";
+      showConfirmPassword.innerHTML = `<ion-icon name="eye-outline"></ion-icon>`;
+    } else {
+      password.type = "password";
+      showConfirmPassword.innerHTML = `<ion-icon name="eye-off-outline"></ion-icon>`;
+    }
+  });
+}
 //Event listener for submit button
 if (registerBtn) {
   registerBtn.addEventListener("click", async (event) => {

@@ -254,7 +254,7 @@
 }
 
 .input-box {
-  @apply outline-none focus:ring-black  relative transition-all p-[10px] text-[12px] border-[1px] border-solid bg-transparent  placeholder:text-black/50 rounded-[10px] w-full focus:border-black text-black lg:p-[8px] lg:text-[11px] text-wrap sm:p-3;
+  @apply outline-none focus:ring-0  relative transition-all p-[10px] text-[12px] border-[1px] border-none bg-transparent  placeholder:text-black/50 rounded-[10px] w-full  text-black lg:p-[8px] lg:text-[11px] text-wrap sm:p-3;
 }
 
 .comment-card {
