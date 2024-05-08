@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../font/fontface.css" />
-    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../../font/fontface.css" />
+    <link rel="stylesheet" href="../../style/style.css" />
     <title>Admin Home Page</title>
   </head>
 
-  <body class="bg-white font-sans flex justify-center">
+  <body class="bg-neutral-400 font-sans flex justify-center">
     <!-- Nav Bar -->
     <nav
       class="fixed top-3 flex w-[83vw] flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]"
@@ -21,7 +21,7 @@
         >
           <li class="md:hidden">
             <a href="../index.html" class="s font-logo text-2xl"
-              ><img src="../img/MUCK.svg" alt="" />
+              ><img src="../../img/MUCK.svg" alt="" />
             </a>
           </li>
           <li>
@@ -97,18 +97,44 @@
       >
     </nav>
 
-    <!-- Section Forum Posts -->
+    <!-- Admin Homepage Body -->
     <section class="min-h-lvh w-screen">
       <div class="mx-auto my-24 w-container h-full flex flex-col gap-8">
         <h1 class="text-[2rem] text-black leading-8" id="blockTitle">
           Admin Dashboard
         </h1>
+        <div class="flex flex-col justify-between gap-5">
+          <div class="flex flex-wrap justify-between">
+            <div class="bg-white rounded-lg shadow-md py-3 px-3 flex flex-col gap-2">
+              <div class="flex flex-row gap-3"><span class="inline-block">Total Users</span><ion-icon class="inline-block" name="people-outline"></ion-icon></div>
+              <div><b>1080,1080</b></div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md py-3 px-3 flex flex-col gap-2">
+              <div class="flex flex-row gap-3"><span class="inline-block">Total Posts</span><ion-icon class="inline-block" name="chatbox-outline"></ion-icon></div>
+              <div><b>1080,1080</b></div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md py-3 px-3 flex flex-col gap-2">
+              <div class="flex flex-row gap-3"><span class="inline-block">Traffic This Month</span><ion-icon class="inline-block" name="analytics-outline"></ion-icon></div>
+              <div><b>1080,1080</b></div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md py-3 px-3 flex flex-col gap-2">
+              <div class="flex flex-row gap-3"><span class="inline-block">New Users This Month</span><ion-icon class="inline-block" name="person-outline"></ion-icon></div>
+              <div><b>1080,1080</b></div>
+            </div>
+          </div>
+          <div>
+            This is for the graph
+          </div>
+        </div>
       </div>
     </section>
     <!-- Material Ui -->
     <script
       type="module"
-      src="../../node_modules/flowbite/dist/flowbite.min.js"
+      src="../../../node_modules/flowbite/dist/flowbite.min.js"
     ></script>
     <!--Lenis-->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
@@ -123,6 +149,7 @@
     ></script>
 
     <!-- Custom JS -->
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/adminhomepage.js"></script>
   </body>
 </html>
