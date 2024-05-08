@@ -8,7 +8,7 @@
     <title>Admin Home Page</title>
   </head>
 
-  <body class="bg-neutral-400 font-sans flex justify-center">
+  <body class="bg-neutral font-sans flex justify-center">
     <!-- Nav Bar -->
     <nav
       class="fixed top-3 flex w-[83vw] flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]"
@@ -98,8 +98,8 @@
     </nav>
 
     <!-- Admin Homepage Body -->
-    <section class="min-h-lvh w-screen">
-      <div class="mx-auto my-24 w-container h-full flex flex-col gap-8">
+    <section class="min-h-lvh w-[83vw] pt-24">
+      <div class="mx-auto my-auto w-container h-full flex flex-col gap-8">
         <h1 class="text-[2rem] text-black leading-8" id="blockTitle">
           Admin Dashboard
         </h1>
@@ -107,26 +107,26 @@
           <div class="flex flex-wrap justify-between">
             <div class="bg-white rounded-lg shadow-md py-3 px-3 flex flex-col gap-2">
               <div class="flex flex-row gap-3"><span class="inline-block">Total Users</span><ion-icon class="inline-block" name="people-outline"></ion-icon></div>
-              <div><b>1080,1080</b></div>
+              <div><b id="totalUsers"></b></div>
             </div>
             
             <div class="bg-white rounded-lg shadow-md py-3 px-3 flex flex-col gap-2">
               <div class="flex flex-row gap-3"><span class="inline-block">Total Posts</span><ion-icon class="inline-block" name="chatbox-outline"></ion-icon></div>
-              <div><b>1080,1080</b></div>
+              <div><b id="totalPosts"></b></div>
             </div>
 
             <div class="bg-white rounded-lg shadow-md py-3 px-3 flex flex-col gap-2">
               <div class="flex flex-row gap-3"><span class="inline-block">Traffic This Month</span><ion-icon class="inline-block" name="analytics-outline"></ion-icon></div>
-              <div><b>1080,1080</b></div>
+              <div><b id="trafficThisMonth"></b></div>
             </div>
 
             <div class="bg-white rounded-lg shadow-md py-3 px-3 flex flex-col gap-2">
               <div class="flex flex-row gap-3"><span class="inline-block">New Users This Month</span><ion-icon class="inline-block" name="person-outline"></ion-icon></div>
-              <div><b>1080,1080</b></div>
+              <div><b id="newUserThisMonth"></b></div>
             </div>
           </div>
           <div>
-            This is for the graph
+            <canvas id="adminChart"></canvas>
           </div>
         </div>
       </div>
@@ -147,6 +147,8 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <!--ChartJS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Custom JS -->
     <script src="../../js/script.js"></script>
