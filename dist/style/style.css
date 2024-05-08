@@ -1251,6 +1251,41 @@ html.transition,
   margin-bottom: auto;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.mx-11 {
+  margin-left: 2.75rem;
+  margin-right: 2.75rem;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.mx-12 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.mx-9 {
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1498,6 +1533,10 @@ html.transition,
   width: 100vw;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .min-w-36 {
   min-width: 9rem;
 }
@@ -1524,6 +1563,10 @@ html.transition,
 
 .shrink {
   flex-shrink: 1;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .-translate-x-full {
@@ -1725,6 +1768,14 @@ html.transition,
 
 .gap-\[40px\] {
   gap: 40px;
+}
+
+.gap-11 {
+  gap: 2.75rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
