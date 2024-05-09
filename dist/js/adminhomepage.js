@@ -4,7 +4,7 @@ const adminTotalPosts = "totalPosts";
 const adminTrafficThisMonth = "trafficThisMonth";
 const adminNewUsersThisMonth = "newUserThisMonth";
 const adminGraphElement = "adminChart";
-const adminHomeAPI = "adminChart";
+const adminHomeAPI = "";
 
 //Retreive data from AdminAPI
 async function adminAPICall(adminHomeAPI) {
