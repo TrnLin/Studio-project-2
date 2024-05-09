@@ -8,16 +8,16 @@
     <title>Admin Home Page</title>
   </head>
 
-  <body class="bg-white font-sans flex justify-center">
+  <body class="flex justify-center bg-white font-sans">
     <!-- Nav Bar -->
     <nav
-      class="fixed top-3 flex w-[83vw] flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[999]"
+      class="fixed top-3 z-[999] flex w-[83vw] flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]"
     >
       <div
-        class="bg-solidblack flex h-full w-full flex-row justify-between rounded-[10px] px-5 py-[10px] font-normal sm:rounded-none md:gap-5 sm:pb-5"
+        class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal md:gap-5 sm:rounded-none sm:pb-5"
       >
         <ul
-          class="flex flex-row items-center gap-5 sm:w-full sm:justify-between text-center"
+          class="flex flex-row items-center gap-5 text-center sm:w-full sm:justify-between"
         >
           <li class="md:hidden">
             <img src="../../img/MUCK.svg" alt="" />
@@ -25,7 +25,7 @@
           <li>
             <a
               href="#"
-              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:text-[0]"
               >Admin Dashboard
               <ion-icon
                 name="home"
@@ -36,7 +36,7 @@
           <li>
             <a
               href="#"
-              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:text-[0]"
               >Users Management
               <ion-icon
                 name="document"
@@ -47,7 +47,7 @@
           <li>
             <a
               href="#"
-              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:text-[0]"
             >
               Archived Posts<ion-icon
                 name="chatbox"
@@ -58,7 +58,7 @@
           <li>
             <a
               href="#"
-              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:text-[0]"
               >Deleted Posts
               <ion-icon
                 name="information-circle"
@@ -69,7 +69,7 @@
           <li>
             <a
               href="#"
-              class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:text-[0]"
               >Homepage
               <ion-icon
                 name="person"
@@ -82,36 +82,68 @@
 
       <a
         href="#"
-        class="bg-solidblack hover:text-solidblack leading-[20px] flex flex-row items-center justify-center gap-3 rounded-[10px] px-[20px] py-4 font-medium transition hover:bg-[#ffffff] hover:ring-1 hover:ring-gray-300 sm:hidden"
+        class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 sm:hidden"
         ><ion-icon name="person" class="text-[20px]"></ion-icon>Login</a
       >
     </nav>
 
     <!-- Admin Homepage Body -->
     <section class="min-h-lvh w-[83vw] pt-24">
-      <div class="mx-auto my-auto w-container h-full flex flex-col gap-8">
-        <h1 class="text-[2rem] text-black leading-8" id="blockTitle">
+      <div class="mx-auto my-auto flex h-full w-container flex-col gap-8">
+        <h1 class="text-[2rem] leading-8 text-black" id="blockTitle">
           Admin Dashboard
         </h1>
         <div class="flex flex-col justify-between gap-12">
           <div class="flex flex-row justify-between sm:flex-col sm:gap-5">
-            <div class="bg-white rounded-lg shadow-md py-5 px-5 flex flex-col gap-2">
-              <div class="flex flex-row gap-3 justify-center"><span class="inline-block">Total Users</span><ion-icon class="inline-block" name="people-outline"></ion-icon></div>
+            <div
+              class="flex flex-col gap-2 rounded-lg bg-white px-5 py-5 shadow-md"
+            >
+              <div class="flex flex-row justify-center gap-3">
+                <span class="inline-block">Total Users</span
+                ><ion-icon
+                  class="inline-block"
+                  name="people-outline"
+                ></ion-icon>
+              </div>
               <div class="text-center"><b id="totalUsers"></b></div>
             </div>
-            
-            <div class="bg-white rounded-lg shadow-md py-5 px-5 flex flex-col gap-2">
-              <div class="flex flex-row gap-3 justify-center"><span class="inline-block">Total Posts</span><ion-icon class="inline-block" name="chatbox-outline"></ion-icon></div>
+
+            <div
+              class="flex flex-col gap-2 rounded-lg bg-white px-5 py-5 shadow-md"
+            >
+              <div class="flex flex-row justify-center gap-3">
+                <span class="inline-block">Total Posts</span
+                ><ion-icon
+                  class="inline-block"
+                  name="chatbox-outline"
+                ></ion-icon>
+              </div>
               <div class="text-center"><b id="totalPosts"></b></div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-md py-5 px-5 flex flex-col gap-2">
-              <div class="flex flex-row gap-3 justify-center"><span class="inline-block">Traffic This Month</span><ion-icon class="inline-block" name="analytics-outline"></ion-icon></div>
+            <div
+              class="flex flex-col gap-2 rounded-lg bg-white px-5 py-5 shadow-md"
+            >
+              <div class="flex flex-row justify-center gap-3">
+                <span class="inline-block">Traffic This Month</span
+                ><ion-icon
+                  class="inline-block"
+                  name="analytics-outline"
+                ></ion-icon>
+              </div>
               <div class="text-center"><b id="trafficThisMonth"></b></div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-md py-5 px-5 flex flex-col gap-2">
-              <div class="flex flex-row gap-3 justify-center"><span class="inline-block">New Users This Month</span><ion-icon class="inline-block" name="person-outline"></ion-icon></div>
+            <div
+              class="flex flex-col gap-2 rounded-lg bg-white px-5 py-5 shadow-md"
+            >
+              <div class="flex flex-row justify-center gap-3">
+                <span class="inline-block">New Users This Month</span
+                ><ion-icon
+                  class="inline-block"
+                  name="person-outline"
+                ></ion-icon>
+              </div>
               <div class="text-center"><b id="newUserThisMonth"></b></div>
             </div>
           </div>

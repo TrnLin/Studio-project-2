@@ -20,7 +20,6 @@ async function adminAPICall(adminHomeAPI) {
 
 //Display data on Admin Homepage
 (async function () {
-
   // Await the adminAPICall and then access its data
   //const apiData = await adminAPICall(adminHomeAPI);
   //Pseudo Test Json Data, uncomment the above line to fetch data from API
@@ -41,9 +40,9 @@ async function adminAPICall(adminHomeAPI) {
       { months: "September 2024", counts: 35 },
       { months: "October 2024", counts: 5 },
       { months: "November 2024", counts: 27 },
-      { months: "December 2024", counts: 9 }
-    ]
-  }
+      { months: "December 2024", counts: 9 },
+    ],
+  };
 
   if (apiData) {
     // Display total users
@@ -53,10 +52,12 @@ async function adminAPICall(adminHomeAPI) {
     document.getElementById(adminTotalPosts).innerHTML = apiData.totalPosts;
 
     // Display traffic this month
-    document.getElementById(adminTrafficThisMonth).innerHTML = apiData.thisMonthTraffic;
+    document.getElementById(adminTrafficThisMonth).innerHTML =
+      apiData.thisMonthTraffic;
 
     // Display new users this month
-    document.getElementById(adminNewUsersThisMonth).innerHTML = apiData.newUsersThisMonth;
+    document.getElementById(adminNewUsersThisMonth).innerHTML =
+      apiData.newUsersThisMonth;
 
     //User count graph
     const graphResData = apiData.graphData;
@@ -64,7 +65,7 @@ async function adminAPICall(adminHomeAPI) {
     if (!graphResData) {
       console.error("Graph data not available");
       return;
-    };
+    }
 
     new Chart(document.getElementById(adminGraphElement), {
       type: "line",
@@ -78,5 +79,5 @@ async function adminAPICall(adminHomeAPI) {
         ],
       },
     });
-  };
+  }
 })();

@@ -1,303 +1,490 @@
 <!doctype html>
 <html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./font/fontface.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Darkmode test</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./font/fontface.css" />
-  <link rel="stylesheet" href="style/style.css" />
-  <title>Darkmode test</title>
-</head>
+  <!--  TODO: Remember to add disable-scroll to body tag-->
 
-<!--  TODO: Remember to add disable-scroll to body tag-->
+  <body class="flex justify-center bg-white font-sans">
+    <!-- Nav Bar -->
+    <nav
+      class="fixed top-3 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]"
+    >
+      <div
+        class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6"
+      >
+        <ul
+          class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between"
+        >
+          <li class="md:hidden">
+            <a href="./index.html" class=""
+              ><img src="./img/MUCK.svg" class="lg:w-[80%]" alt="" />
+            </a>
+          </li>
+          <li>
+            <a
+              href=" ./index.html"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+              >Home
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="home"></ion-icon>
+                Home
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+              >Store
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
+                Store
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./html/forum.html"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            >
+              forum
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon
+                  class="text-2xl"
+                  name="chatbubbles-outline"
+                ></ion-icon>
+                Forum
+              </div>
+            </a>
+          </li>
+          <li class="sm:hidden">
+            <a
+              href="#"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+              >Contact
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="call-outline"></ion-icon>
+                Contact
+              </div>
+            </a>
+          </li>
+          <li class="hidden sm:block">
+            <a
+              href="./html/login.html"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+              >Login
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="person-outline"></ion-icon>
+                Account
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div
+          id="theme-toggle"
+          class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden"
+        >
+          <ion-icon name="sunny" class="text-[20px]"></ion-icon>
+          Light
+        </div>
+      </div>
 
-<body class="bg-white font-sans flex justify-center disable-scroll">
-  <!-- Nav Bar -->
-  <nav
-    class="fixed top-3 flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw] z-[900]">
-    <div
-      class="bg-solidblack flex h-full w-full flex-row justify-between rounded-[10px] px-5 py-[10px] lg:py-1 font-normal sm:rounded-none md:gap-5 sm:pb-5">
-      <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
-        <li class="md:hidden">
-          <a href="./index.html" class=""><img src="./img/MUCK.svg" class="lg:w-[80%]" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href=" ./index.html"
-            class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]">Home
-            <ion-icon name="home" class="hidden text-[#ffffff] sm:block sm:text-[25px]"></ion-icon></a>
-        </li>
-        <li>
-          <a href="#"
-            class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]">About
-            <ion-icon name="document" class="hidden text-[#ffffff] sm:block sm:text-[25px]"></ion-icon></a>
-        </li>
-        <li>
-          <a href="./html/forum.html"
-            class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]">
-            Forum<ion-icon name="chatbox" class="hidden text-[#ffffff] sm:block sm:text-[25px]"></ion-icon></a>
-        </li>
-        <li>
-          <a href="#"
-            class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]">Contact
-            <ion-icon name="information-circle" class="hidden text-[#ffffff] sm:block sm:text-[25px]"></ion-icon></a>
-        </li>
-        <li class="hidden sm:block">
-          <a href="./html/login.html"
-            class="hover:text-solidblack leading-[10px] block text-[14px] rounded-md px-[15px] py-[10px] transition hover:bg-[#ffffff] sm:text-[0]">Login
-            <ion-icon name="person" class="hidden text-[#ffffff] sm:block sm:text-[25px]"></ion-icon></a>
-        </li>
-      </ul>
-      <div id="theme-toggle"
-        class="hover:text-solidblack leading-[20px] flex w-24 flex-row items-center gap-2 rounded-md px-3 h-[30px] py-4 transition hover:bg-[#ffffff] lg:text-[13px] lg:w-20 sm:hidden">
-        <ion-icon name="sunny" class="text-[20px]"></ion-icon>
-        Light
+      <a
+        href="#"
+        class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
+        ><ion-icon name="person" class="text-[20px] lg:text-sm"></ion-icon
+        >Login</a
+      >
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative overflow-x-hidden sm:pt-[80px]">
+      <div
+        class="scroll-container flex w-[400vw] sm:min-h-[400lvw] sm:w-full sm:flex-col sm:gap-[40px]"
+      >
+        <!-- Hero -->
+        <section class="m-h-lvh hero-section w-screen bg-white">
+          <div
+            class="mx-auto my-0 grid min-h-screen w-[90%] max-w-container grid-cols-3 place-items-center sm:w-full sm:grid-cols-1"
+          >
+            <div class="hero-card flex flex-col gap-10 lg:gap-7 sm:gap-7">
+              <h1
+                class="hero-content text-[4rem] font-bold leading-[100%] text-black xl:text-5xl lg:text-[2.5rem] sm:text-5xl"
+              >
+                A FORUM <br />
+                FOR GAMERS BY GAMERS
+              </h1>
+              <div class="hidden items-center justify-center sm:flex">
+                <div
+                  class="group hidden size-[38vh] items-center justify-center sm:flex"
+                >
+                  <div
+                    class="absolute rounded-[20px] bg-blue-100 shadow-lg sm:size-[330px]"
+                  ></div>
+                  <div
+                    class="absolute size-[285px] rounded-full bg-white"
+                  ></div>
+                  <div class="absolute">
+                    <img
+                      src="./img/switch.png"
+                      alt=""
+                      class="animate-floatting sm:w-[350px]"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p
+                class="word hero-content w-[85%] text-justify text-sm text-black xl:text-sm sm:w-full"
+              >
+                Welcome, gamers, to the ultimate digital playground! Whether
+                you're a seasoned strategist or a casual button-masher, this
+                forum is your hub for all things gaming. Let the games begin!
+              </p>
+              <a
+                href="#"
+                class="hero-content w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] hover:bg-blue-100 hover:text-blue-200 xl:px-3 xl:py-3 xl:text-xs sm:text-sm"
+                >Get Started</a
+              >
+            </div>
+            <div
+              class="hero-card group relative flex w-[38vw] items-center justify-center sm:hidden"
+            >
+              <div
+                class="hero-mid-card absolute h-[70vh] w-[30vw] rounded-[20px] bg-blue-100 shadow-lg"
+              ></div>
+              <div
+                class="absolute size-[400px] rounded-full bg-white xl:size-80 lg:size-72"
+              ></div>
+              <div class="absolute">
+                <img
+                  src="./img/switch.png"
+                  alt=""
+                  class="w-full max-w-[548px] animate-floatting"
+                />
+              </div>
+              <div
+                class="loader absolute -bottom-[20vw] border-8 border-solid border-white"
+              ></div>
+            </div>
+            <div
+              class="hero-card ml-20 flex w-[70%] flex-col gap-[40px] xl:w-10/12 lg:ml-14 lg:w-full lg:gap-7 sm:ml-0 sm:mt-12 sm:w-full sm:gap-6"
+            >
+              <div
+                class="hero-content flex flex-col gap-2 rounded-2xl bg-blue-100 px-4 py-5 shadow-md lg:gap-1"
+              >
+                <h1
+                  class="text-2xl font-semibold leading-[24px] text-[#ffffff] xl:text-lg"
+                >
+                  Free to Use
+                </h1>
+                <p class="text-[#ffffff] xl:text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div
+                class="hero-content flex flex-col gap-2 rounded-2xl px-4 py-5 lg:gap-1"
+              >
+                <h1
+                  class="w-full text-2xl font-semibold leading-[24px] text-black xl:text-lg lg:text-lg"
+                >
+                  Large community
+                </h1>
+                <p class="text-black xl:text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div
+                class="hero-content flex flex-col gap-2 rounded-2xl px-4 py-5 lg:gap-1"
+              >
+                <h1
+                  class="text-2xl font-semibold leading-[24px] text-black xl:text-lg lg:text-lg"
+                >
+                  Quick and easy to <br />
+                  get started
+                </h1>
+                <p class="text-black xl:text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Features -->
+        <section class="m-h-lvh about-section hero-section w-screen bg-white">
+          <div
+            class="mx-auto my-0 grid min-h-lvh max-w-container grid-cols-3 place-items-center gap-[20px] sm:flex sm:w-full sm:flex-col"
+          >
+            <div
+              class="about-card relative flex h-[70%] max-h-[712px] items-center justify-center rounded-[20px] bg-pink-100 sm:hidden"
+            >
+              <div
+                class="-translate-xy absolute left-1/2 top-1/2 z-0 size-[332px] rounded-full bg-white lg:size-60"
+              ></div>
+              <div class="z-[1] grid place-items-center">
+                <img
+                  src="./img/chatbot.png"
+                  alt=""
+                  class="w-[70%] animate-floatting"
+                />
+              </div>
+            </div>
+            <div class="col-span-2 flex flex-col gap-8 px-5 xl:gap-6 sm:px-0">
+              <h1
+                class="about-header text-[64px] font-bold text-black xl:text-5xl"
+              >
+                So why us?
+              </h1>
+              <div
+                class="about-card relative hidden aspect-square size-full items-center justify-center rounded-[20px] bg-pink-100 sm:flex"
+              >
+                <div
+                  class="-translate-xy absolute left-1/2 top-1/2 z-0 size-72 rounded-full bg-white lg:size-56"
+                ></div>
+                <div class="z-[1] grid place-items-center">
+                  <img
+                    src="./img/chatbot.png"
+                    alt=""
+                    class="w-[70%] animate-floatting"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col gap-10 xl:gap-6">
+                <div
+                  class="sm:w-ful l about-text flex w-[96%] flex-col gap-2 rounded-[20px] bg-pink-100 p-5 text-[#ffffff] lg:gap-2"
+                >
+                  <h2 class="text-2xl font-semibold leading-[24px] xl:text-xl">
+                    1. Free to use
+                  </h2>
+                  <p class="text-sm sm:text-xs">
+                    We've made sure that our forum is always up to date with the
+                    latest trends, releases, and developments. Stay informed,
+                    stay connected, and stay ahead of the curve—all without
+                    spending a single penny.
+                  </p>
+                </div>
+                <div
+                  class="about-text flex w-[96%] flex-col gap-2 text-black lg:gap-2 sm:w-full"
+                >
+                  <h2 class="text-2xl font-semibold leading-[24px] xl:text-xl">
+                    2. Large community
+                  </h2>
+                  <p class="text-sm sm:text-sm">
+                    Once you're in, you'll discover a thriving community of
+                    like-minded individuals, eager to share their experiences,
+                    strategies, and tips. From casual gamers to hardcore
+                    enthusiasts, everyone has a place here, and everyone's voice
+                    is valued.
+                  </p>
+                </div>
+                <div
+                  class="about-text flex w-[96%] flex-col gap-2 text-black lg:gap-2 sm:w-full"
+                >
+                  <h2 class="text-2xl font-semibold leading-[24px] xl:text-xl">
+                    3. Quick and easy
+                  </h2>
+                  <p class="text-sm lg:text-xs">
+                    Once you're in, you'll discover a thriving community of
+                    like-minded individuals, eager to share their experiences,
+                    strategies, and tips. From casual gamers to hardcore
+                    enthusiasts, everyone has a place here, and everyone's voice
+                    is valued.
+                  </p>
+                </div>
+              </div>
+              <a
+                href="#"
+                class="about-text w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] hover:bg-pink-100 hover:text-pink-200 xl:p-3 xl:text-xs"
+                >About Us</a
+              >
+            </div>
+          </div>
+        </section>
+        <!-- Forum -->
+        <section class="m-h-lvh forum-section w-screen bg-white">
+          <div class="flex min-h-lvh w-full items-center justify-center">
+            <div
+              class="mx-auto my-0 grid max-w-container grid-cols-2 place-items-end gap-5 px-6 sm:w-full sm:grid-cols-1 sm:gap-8 sm:px-0"
+            >
+              <div class="flex flex-col gap-14">
+                <h1
+                  class="forum-text-right text-[64px] font-bold leading-[64px] text-black xl:text-6xl lg:text-5xl"
+                >
+                  A forum created for gamer...
+                </h1>
+                <div
+                  class="mockup forum-card-right relative min-h-[25rem] w-full rounded-[20px] bg-green-100 xl:min-h-80 lg:min-h-72 sm:hidden"
+                >
+                  <div
+                    class="absolute left-5 top-5 size-[22rem] overflow-hidden rounded-full bg-white"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-[20%] right-0 top-[20%] overflow-hidden rounded-br-[20px] pt-[5%]"
+                  >
+                    <img
+                      src="./img/MacBook Pro 16.png"
+                      alt=""
+                      class="translate3d w-full max-w-none transition-all"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-5">
+                <div
+                  class="forum-card-left relative flex min-h-[25rem] items-center justify-center rounded-[20px] bg-green-200 xl:min-h-80 lg:min-h-72"
+                >
+                  <div
+                    class="-translate-xy absolute left-1/2 top-1/2 size-[22rem] rounded-full bg-white xl:size-72 lg:size-64"
+                  ></div>
+                  <div class="absolute bottom-0">
+                    <img
+                      src="./img/Saly-39.svg"
+                      alt=""
+                      class="animate-floatting xl:h-96 lg:h-[22rem]"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col gap-8 p-5 sm:mt-6 sm:p-0">
+                  <p class="forum-text-left text-sm text-black lg:text-xs">
+                    A game forum serves as a virtual hub where gamers from
+                    diverse backgrounds converge to discuss their passion for
+                    gaming. Within its digital corridors, users exchange
+                    strategies, share experiences, and forge connections with
+                    like-minded individuals, fostering a sense of community and
+                    camaraderie.
+                  </p>
+                  <a
+                    href="#"
+                    class="forum-text-left w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] xl:px-4 xl:py-4 xl:text-xs"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="m-h-lvh w-screen">
+          <div class="flex min-h-lvh w-full items-center justify-center">
+            <div class="flex flex-col gap-4 sm:p-6">
+              <p
+                class="text-[64px] font-bold leading-[64px] text-black xl:text-5xl"
+              >
+                Contact
+              </p>
+              <div class="text-black">
+                <p class="xl:text-sm">
+                  It is better to know more about each other. Let get in touch!
+                </p>
+                <p class="lg:text-sm">You can easily find us at:</p>
+              </div>
+              <div class="flex flex-col gap-5">
+                <div class="">
+                  <a
+                    href="#"
+                    class="flex flex-row items-center gap-5 rounded-[20px] border border-green-200 bg-green-100 p-5 text-xl text-green-200 transition-all hover:border-green-100 hover:bg-green-200 hover:text-green-100 lg:text-sm sm:text-sm"
+                    ><ion-icon
+                      class="text-3xl lg:text-xl"
+                      name="call"
+                    ></ion-icon
+                    >1234 - 5678 - 0890
+                  </a>
+                </div>
+                <div class="">
+                  <a
+                    href="#"
+                    class="flex flex-row items-center gap-5 rounded-[20px] border border-orange-200 bg-orange-100 p-5 text-xl text-orange-200 transition-all hover:border-orange-100 hover:bg-orange-200 hover:text-orange-100 lg:text-sm sm:text-sm"
+                    ><ion-icon
+                      class="text-3xl lg:text-xl"
+                      name="logo-instagram"
+                    ></ion-icon
+                    >Instagram</a
+                  >
+                </div>
+                <div class="">
+                  <a
+                    href="#"
+                    class="flex flex-row items-center gap-5 rounded-[20px] border border-blue-200 bg-blue-100 p-5 text-xl text-blue-200 transition-all hover:border-blue-100 hover:bg-blue-200 hover:text-blue-100 lg:text-sm sm:text-sm"
+                    ><ion-icon
+                      class="text-3xl lg:text-xl"
+                      name="logo-facebook"
+                    ></ion-icon
+                    >Facebook</a
+                  >
+                </div>
+                <div class="">
+                  <a
+                    href="#"
+                    class="flex flex-row items-center gap-5 rounded-[20px] border border-pink-200 bg-pink-100 p-5 text-xl text-pink-200 transition-all hover:border-pink-100 hover:bg-pink-200 hover:text-pink-100 lg:text-sm sm:text-sm"
+                    ><ion-icon
+                      class="text-3xl lg:text-xl"
+                      name="mail"
+                    ></ion-icon
+                    >Email</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="area">
+            <ul class="circles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </section>
       </div>
     </div>
 
-    <a href="#"
-      class="bg-solidblack hover:text-solidblack leading-[20px] flex flex-row items-center justify-center gap-3 rounded-[10px] px-[20px] py-4 font-medium transition hover:bg-[#ffffff] lg:py-1 hover:ring-1 lg:font-normal lg:px-3 hover:ring-gray-300 lg:text-[13px] sm:hidden"><ion-icon
-        name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
-  </nav>
-
-  <div class=""></div>
-
-  <!-- Hero Section -->
-  <div class="relative overflow-x-hidden sm:pt-[80px]">
-    <div class="scroll-container flex w-[400vw] sm:w-full sm:min-h-[400lvw] sm:flex-col sm:gap-[40px]">
-      <!-- Hero -->
-      <section class="m-h-lvh w-screen bg-white hero-section ">
-        <div
-          class="grid place-items-center grid-cols-3 min-h-screen my-0 mx-auto max-w-container w-[90%] sm:grid-cols-1 sm:w-full">
-          <div class="flex flex-col gap-10 hero-card lg:gap-7 sm:gap-7">
-            <h1 class="text-[4rem] leading-[100%] font-bold text-black hero-content sm:text-5xl lg:text-[2.5rem]">
-              A FORUM <br />
-              FOR GAMERS BY GAMERS
-            </h1>
-            <div class="hidden justify-center items-center sm:flex">
-              <div class="group hidden items-center justify-center size-[38vh] sm:flex">
-                <div class="rounded-[20px] bg-blue-100 absolute shadow-lg sm:size-80"></div>
-                <div class="size-[285px] bg-white absolute rounded-full"></div>
-                <div class="absolute">
-                  <img src="./img/switch.png" alt="" class="animate-floatting sm:w-[350px]" />
-                </div>
-              </div>
-            </div>
-            <p class="text-sm text-justify w-[85%] text-black word hero-content lg:text-xs sm:w-full">
-              Welcome, gamers, to the ultimate digital playground! Whether
-              you're a seasoned strategist or a casual button-masher, this
-              forum is your hub for all things gaming. Let the games begin!
-            </p>
-            <a href="#"
-              class="px-[20px] py-[15px] text-[#ffffff] bg-solidblack rounded-md w-fit hero-content lg:px-3 lg:py-3 lg:text-xs sm:text-xs">Get
-              Started</a>
-          </div>
-          <div class="group relative flex items-center justify-center w-[38vw] hero-card sm:hidden">
-            <div class="h-[70vh] w-[30vw] rounded-[20px] bg-blue-100 absolute shadow-lg hero-mid-card">
-            </div>
-            <div class="size-[400px] bg-white absolute rounded-full lg:size-72"></div>
-            <div class="absolute">
-              <img src="./img/switch.png" alt="" class="animate-floatting max-w-[548px] w-full" />
-            </div>
-            <div class="loader absolute -bottom-[20vw] border-8 border-solid border-white"></div>
-          </div>
-          <div
-            class="flex flex-col gap-[40px] w-[70%] ml-20 hero-card lg:w-full lg:gap-7 lg:ml-14 sm:ml-0 sm:w-full sm:mt-12 sm:gap-6">
-            <div class="flex flex-col gap-2 py-5 px-4 rounded-2xl bg-blue-100 hero-content shadow-md lg:gap-1">
-              <h1 class="text-2xl leading-[24px] font-semibold lg:text-lg text-[#ffffff]">
-                Free to Use
-              </h1>
-              <p class="text-[#ffffff] lg:text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              </p>
-            </div>
-            <div class="flex flex-col gap-2 py-5 px-4 rounded-2xl hero-content lg:gap-1">
-              <h1 class="text-2xl leading-[24px] font-semibold lg:text-lg text-black w-full">
-                Large community
-              </h1>
-              <p class="text-black lg:text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              </p>
-            </div>
-            <div class="flex flex-col gap-2 py-5 px-4 rounded-2xl hero-content lg:gap-1">
-              <h1 class="text-2xl leading-[24px] font-semibold lg:text-lg text-black">
-                Quick and easy to get started
-              </h1>
-              <p class="text-black lg:text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Features -->
-      <section class="m-h-lvh w-screen bg-white about-section hero-section">
-        <div
-          class="grid place-items-center grid-cols-3 gap-[20px] min-h-lvh my-0 mx-auto max-w-container sm:flex sm:flex-col sm:w-full">
-          <div
-            class="bg-pink-100 h-[70%] flex items-center relative rounded-[20px] justify-center about-card sm:hidden">
-            <div class="size-[332px] absolute bg-white top-1/2 left-1/2 -translate-xy z-0 rounded-full lg:size-60">
-            </div>
-            <div class="z-[1] grid place-items-center">
-              <img src="./img/chatbot.png" alt="" class="w-[70%] animate-floatting" />
-            </div>
-          </div>
-          <div class="col-span-2 flex px-5 gap-8 flex-col sm:px-0">
-            <h1 class="text-[64px] font-bold text-black about-header lg:text-5xl sm:text-5xl">
-              So why us?
-            </h1>
-            <div
-              class="bg-pink-100 size-full aspect-square items-center relative rounded-[20px] justify-center about-card hidden sm:flex">
-              <div class="size-72 absolute bg-white top-1/2 left-1/2 -translate-xy z-0 rounded-full lg:size-56"></div>
-              <div class="z-[1] grid place-items-center">
-                <img src="./img/chatbot.png" alt="" class="w-[70%] animate-floatting" />
-              </div>
-            </div>
-            <div class="flex gap-10 flex-col lg:gap-8">
-              <div
-                class="p-5 flex gap-3 flex-col w-[96%] lg:gap-2 sm:w-ful l bg-pink-100 text-[#ffffff] rounded-[20px] about-text">
-                <h2 class="text-2xl font-semibold leading-[24px] lg:text-xl">
-                  1. Free to use
-                </h2>
-                <p class="text-sm lg:text-xs">
-                  We've made sure that our forum is always up to date with the
-                  latest trends, releases, and developments. Stay informed,
-                  stay connected, and stay ahead of the curve—all without
-                  spending a single penny.
-                </p>
-              </div>
-              <div class="flex gap-3 flex-col w-[96%] lg:gap-2 sm:w-full text-black about-text">
-                <h2 class="text-2xl font-semibold leading-[24px] lg:text-xl">
-                  2. Large community
-                </h2>
-                <p class="text-sm lg:text-xs">
-                  Once you're in, you'll discover a thriving community of
-                  like-minded individuals, eager to share their experiences,
-                  strategies, and tips. From casual gamers to hardcore
-                  enthusiasts, everyone has a place here, and everyone's voice
-                  is valued.
-                </p>
-              </div>
-              <div class="flex gap-3 flex-col w-[96%] lg:gap-2 sm:w-full text-black about-text">
-                <h2 class="text-2xl font-semibold leading-[24px] lg:text-xl">
-                  3. Quick and easy
-                </h2>
-                <p class="text-sm lg:text-xs">
-                  Once you're in, you'll discover a thriving community of
-                  like-minded individuals, eager to share their experiences,
-                  strategies, and tips. From casual gamers to hardcore
-                  enthusiasts, everyone has a place here, and everyone's voice
-                  is valued.
-                </p>
-              </div>
-              <a href="#"
-                class="px-[20px] py-[15px] text-[#ffffff] bg-solidblack rounded-md w-fit about-text lg:text-xs sm:text-xs">About
-                Us</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Forum -->
-      <section class="m-h-lvh w-screen bg-white forum-section">
-        <div class="flex justify-center items-center w-full min-h-lvh">
-          <div
-            class="grid grid-cols-2 place-items-end my-0 mx-auto max-w-container  gap-5 sm:w-full sm:grid-cols-1 px-6 sm:px-0 sm:gap-8">
-            <div class="flex flex-col gap-14">
-              <h1 class="text-[64px] leading-[64px] font-bold text-black forum-text-right lg:text-5xl sm:text-5xl">
-                A forum created for gamer...
-              </h1>
-              <div
-                class="relative min-h-[25rem] w-full bg-green-100 rounded-[20px] mockup forum-card-right lg:min-h-72 sm:hidden">
-                <div class="absolute top-5 left-5 rounded-full bg-white size-[22rem] overflow-hidden"></div>
-                <div class="absolute overflow-hidden right-0 bottom-0 top-[20%] left-[20%] pt-[5%] rounded-br-[20px]">
-                  <img src="./img/MacBook Pro 16.png" alt="" class="translate3d w-full max-w-none transition-all" />
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col gap-5">
-              <div
-                class="relative flex justify-center items-center bg-green-200 min-h-[25rem] rounded-[20px] lg:min-h-72 forum-card-left">
-                <div class="absolute top-1/2 left-1/2 rounded-full bg-white size-[22rem] lg:size-64 -translate-xy">
-                </div>
-                <div class="absolute bottom-0">
-                  <img src="./img/Saly-39.svg" alt="" class="animate-floatting lg:h-[22rem]" />
-                </div>
-              </div>
-              <div class="flex gap-8 flex-col p-5 sm:p-0 sm:mt-6">
-                <p class="text-sm text-black forum-text-left lg:text-xs">
-                  A game forum serves as a virtual hub where gamers from
-                  diverse backgrounds converge to discuss their passion for
-                  gaming. Within its digital corridors, users exchange
-                  strategies, share experiences, and forge connections with
-                  like-minded individuals, fostering a sense of community and
-                  camaraderie.
-                </p>
-                <a href="#"
-                  class="px-[20px] py-[15px] text-[#ffffff] bg-solidblack rounded-md w-fit lg:text-xs forum-text-left ">Get
-                  Started</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="m-h-lvh w-screen">
-        <div class="flex justify-center items-center w-full min-h-lvh">
-          <div class="flex gap-4 flex-col sm:p-6">
-            <p class="text-[64px] font-bold leading-[64px] lg:text-5xl text-black">
-              Contact
-            </p>
-            <div class="text-black">
-              <p class="lg:text-sm">
-                It is better to know more about each other. Let get in touch!
-              </p>
-              <p class="lg:text-sm">You can easily find us at:</p>
-            </div>
-            <div class="flex flex-col gap-5">
-              <div class="">
-                <a href="#"
-                  class="p-5 rounded-[20px] transition-all border-green-200 text-xl lg:text-sm sm:text-sm hover:text-green-100 hover:bg-green-200 hover:border-green-100 text-green-200 bg-green-100 flex flex-row items-center gap-5 border"><ion-icon
-                    class="text-3xl lg:text-xl" name="call"></ion-icon>1234 -
-                  5678 - 0890
-                </a>
-              </div>
-              <div class="">
-                <a href="#"
-                  class="p-5 rounded-[20px] transition-all border-orange-200 text-xl lg:text-sm sm:text-sm hover:text-orange-100 hover:bg-orange-200 hover:border-orange-100 text-orange-200 bg-orange-100 flex flex-row items-center gap-5 border"><ion-icon
-                    class="text-3xl lg:text-xl" name="logo-instagram"></ion-icon>Instagram</a>
-              </div>
-              <div class="">
-                <a href="#"
-                  class="p-5 rounded-[20px] transition-all border-blue-200 text-xl lg:text-sm sm:text-sm hover:text-blue-100 hover:bg-blue-200 hover:border-blue-100 text-blue-200 bg-blue-100 flex flex-row items-center gap-5 border"><ion-icon
-                    class="text-3xl lg:text-xl" name="logo-facebook"></ion-icon>Facebook</a>
-              </div>
-              <div class="">
-                <a href="#"
-                  class="p-5 rounded-[20px] transition-all border-pink-200 text-xl lg:text-sm sm:text-sm hover:text-pink-100 hover:bg-pink-200 hover:border-pink-100 text-pink-200 bg-pink-100 flex flex-row items-center gap-5 border"><ion-icon
-                    class="text-3xl lg:text-xl" name="mail"></ion-icon>Email</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-
-  <!--GSAP-->
-  <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
-    integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
-    integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!--Lenis-->
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-  <!--Ionicons-->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <!--Custom JS-->
-  <script src="./js/landingpage.js"></script>
-  <script src="./js/script.js"></script>
-</body>
-
+    <!--GSAP-->
+    <script
+      src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+      integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!--Lenis-->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <!--Ionicons-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!--Custom JS-->
+    <script src="./js/landingpage.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

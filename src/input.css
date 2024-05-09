@@ -254,11 +254,11 @@
 }
 
 .input-box {
-  @apply outline-none focus:ring-0  relative transition-all p-[10px] text-[12px] border-[1px] border-none bg-transparent  placeholder:text-black/50 rounded-[10px] w-full  text-black lg:p-[8px] lg:text-[11px] text-wrap sm:p-3;
+  @apply relative w-full  text-wrap rounded-[10px] border-[1px] border-none bg-transparent p-[10px] text-[12px]  text-black outline-none transition-all  placeholder:text-black/50 focus:ring-0 lg:p-[8px] lg:text-[11px] sm:p-3;
 }
 
 .comment-card {
-  @apply p-5 flex flex-col gap-4 border-b-2 border-solid border-black/70 transition-all duration-300 hover:ring-2 hover:ring-black/70 hover:rounded-[20px];
+  @apply flex flex-col gap-4 border-b-2 border-solid border-black/70 p-5 transition-all duration-300 hover:rounded-[20px] hover:ring-2 hover:ring-black/70;
 }
 
 .user-profile-picture {
@@ -266,14 +266,14 @@
 }
 
 .user-profile-name {
-  @apply text-black text-sm leading-[12px];
+  @apply text-sm leading-[12px] text-black;
 }
 
 .user-profile-date {
-  @apply text-black/70 text-[10px];
+  @apply text-[10px] text-black/70;
 }
 .likeButton {
-  @apply flex flex-row h-12 rounded-[10px] w-fit px-6 bg-solidblack text-[#fff] justify-center items-center gap-2 text-xl -translate-y-1 shadow-box hover:-translate-y-0 transition duration-200 hover:bg-pink-100 hover:text-pink-200;
+  @apply shadow-box flex h-12 w-fit -translate-y-1 flex-row items-center justify-center gap-2 rounded-[10px] bg-solidblack px-6 text-xl text-[#fff] transition duration-200 hover:-translate-y-0 hover:bg-pink-100 hover:text-pink-200;
 }
 
 .user-profile-holder {
@@ -281,15 +281,15 @@
 }
 
 .post-card {
-  @apply p-5 flex flex-col gap-8 hover:ring-inset hover:ring-1 hover:ring-black transition-all duration-300 hover:border-b-4 hover:border-black border-b-2 lg:p-2 lg:gap-4;
+  @apply flex flex-col gap-8 border-b-2 p-5 transition-all duration-300 hover:border-b-4 hover:border-black hover:ring-1 hover:ring-inset hover:ring-black lg:gap-4 lg:p-2;
 }
 
 .post-title {
-  @apply text-2xl leading-[100%] font-medium text-black break-words lg:text-xl;
+  @apply break-words text-2xl font-medium leading-[100%] text-black lg:text-xl;
 }
 
 .post-description {
-  @apply text-ellipsis overflow-hidden whitespace-nowrap leading-[100%] text-black lg:text-sm;
+  @apply overflow-hidden text-ellipsis whitespace-nowrap leading-[100%] text-black lg:text-sm;
 }
 
 .shadow-box {
@@ -298,4 +298,118 @@
 
 .shadow-box:hover {
   box-shadow: 0 0 rgba(var(--black), 0.5);
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-width: 1px;
+  border-style: solid;
+  animation: animate 25s linear infinite;
+  filter: blur(0px);
+  bottom: -150px;
+  transition: 2000ms;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
 }

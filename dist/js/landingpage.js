@@ -45,70 +45,71 @@ mm.add("(min-width: 786px)", () => {
     },
   });
 
-  gsap.set(loader, {
-    opacity: 1,
-  });
-  //set initial state
-  gsap.set(card, {
-    opacity: 0,
-    y: 100,
-  });
+  // gsap.set(loader, {
+  //   opacity: 1,
+  // });
+  // //set initial state
+  // gsap.set(card, {
+  //   opacity: 0,
+  //   y: 100,
+  // });
 
-  gsap.set(nav, {
-    opacity: 0,
-  });
+  // gsap.set(nav, {
+  //   opacity: 0,
+  // });
 
-  //start the animation sequence
-  gsap.fromTo(
-    heroCardMiddle,
-    {
-      width: " 100vw",
-      height: "100vh",
-      borderRadius: 0,
-    },
-    {
-      height: "70vh",
-      width: "30vw",
+  // //start the animation sequence
+  // gsap.fromTo(
+  //   heroCardMiddle,
+  //   {
+  //     width: " 100vw",
+  //     height: "100vh",
+  //     borderRadius: 0,
+  //   },
+  //   {
+  //     height: "70vh",
+  //     width: "30vw",
 
-      borderRadius: 20,
-      delay: 2,
-      duration: 2,
-      ease: "back.out(1)",
-      onStart: () => {
-        //stop the loader
-        gsap.to(loader, {
-          opacity: 0,
-          duration: 1,
-        });
+  //     borderRadius: 20,
+  //     delay: 2,
+  //     duration: 2,
+  //     ease: "back.out(1)",
+  //     onStart: () => {
+  //       //stop the loader
+  //       gsap.to(loader, {
+  //         opacity: 0,
+  //         duration: 1,
+  //       });
 
-        setTimeout(() => {
-          //enable scroll
-          loader.style.display = "none";
-        }, 3000);
-      },
-      onComplete: () => {
-        //after the card shrink start the animation
-        heroCard.forEach((element) => {
-          //card items
-          gsap.to(card, {
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            stagger: 0.1,
-            delay: 0.5,
-          });
-        });
+  //       setTimeout(() => {
+  //         //enable scroll
+  //         loader.style.display = "none";
+  //       }, 3000);
+  //     },
+  //     onComplete: () => {
+  //       //after the card shrink start the animation
+  //       heroCard.forEach((element) => {
+  //         //card items
+  //         gsap.to(card, {
+  //           opacity: 1,
+  //           y: 0,
+  //           duration: 0.7,
+  //           stagger: 0.1,
+  //           delay: 0.5,
+  //         });
+  //       });
 
-        heroCardMiddle.style.maxWidth = "432px";
-        //nav
-        gsap.to(nav, {
-          opacity: 1,
-          duration: 0.7,
-          delay: 0.5,
-        });
-      },
-    }
-  );
+  //       heroCardMiddle.style.maxWidth = "432px";
+  //       heroCardMiddle.style.maxHeight = "712px";
+  //       //nav
+  //       gsap.to(nav, {
+  //         opacity: 1,
+  //         duration: 0.7,
+  //         delay: 0.5,
+  //       });
+  //     },
+  //   },
+  // );
 
   //About section
 
@@ -159,7 +160,7 @@ mm.add("(min-width: 786px)", () => {
       y: 0,
       duration: 1,
     },
-    "<"
+    "<",
   );
 
   tl.to(
@@ -170,7 +171,7 @@ mm.add("(min-width: 786px)", () => {
       duration: 2,
       stagger: 0.5,
     },
-    "<"
+    "<",
   );
 
   //hide card on scroll for each section
@@ -256,7 +257,7 @@ mm.add("(min-width: 786px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<"
+    "<",
   );
 
   forumRightTl.to(
@@ -265,7 +266,7 @@ mm.add("(min-width: 786px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<"
+    "<",
   );
 
   let forumLeftTl = gsap.timeline({
@@ -285,7 +286,7 @@ mm.add("(min-width: 786px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<"
+    "<",
   );
 
   forumLeftTl.to(
@@ -294,6 +295,79 @@ mm.add("(min-width: 786px)", () => {
       opacity: 1,
       y: 0,
     },
-    "<"
+    "<",
   );
 });
+
+let colorslight = [
+  {
+    bg: "#D4E6B5",
+    text: "#3F4536",
+  },
+  {
+    bg: "#FFC1CC",
+    text: "#44141C",
+  },
+  {
+    bg: "#B4E0EA",
+    text: "#364346",
+  },
+  {
+    bg: "#FFF490",
+    text: "#3A3121",
+  },
+  {
+    bg: "#FFAD72",
+    text: "#382519",
+  },
+];
+
+let colorsdark = [
+  {
+    bg: "#3F4536",
+    text: "#D4E6B5",
+  },
+  {
+    bg: "#44141C",
+    text: "#FFC1CC",
+  },
+  {
+    bg: "#364346",
+    text: "#B4E0EA",
+  },
+  {
+    bg: "#3A3121",
+    text: "#FFF490",
+  },
+  {
+    bg: "#382519",
+    text: "#FFAD72",
+  },
+];
+
+let circles = document.querySelector(".circles").querySelectorAll("li");
+
+let colorTheme = document.documentElement.getAttribute("data-theme");
+if (colorTheme === "dark") {
+  let colors = colorsdark;
+  circles.forEach((square) => {
+    let randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    square.style.backgroundColor = randomColor.bg;
+    square.style.borderColor = randomColor.text;
+  });
+} else {
+  let colors = colorslight;
+  circles.forEach((square) => {
+    let randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    square.style.backgroundColor = randomColor.bg;
+    square.style.borderColor = randomColor.text;
+  });
+}
+
+circles.forEach((square) => {
+  square.style.left = `${Math.floor(Math.random() * 100)}%`;
+});
+
+console.log(circles);
