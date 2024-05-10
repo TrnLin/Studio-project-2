@@ -9,7 +9,7 @@ let userProfileImgFunc = () => {
   userProfileImg = document.createElement("img");
   userProfileImg.classList.add("user-profile-picture");
 
-  userProfileImg.setAttribute("src", "#");
+  userProfileImg.setAttribute("src", "#"); //Todo: Add user profile picture url
   userProfileImg.setAttribute("alt", "User Profile Picture");
 
   return userProfileImg;
@@ -22,11 +22,11 @@ let userProfileNameFunc = () => {
 
   let userProfileName = document.createElement("h3");
   userProfileName.classList.add("user-profile-name");
-  userProfileName.textContent = "User Name";
+  userProfileName.textContent = "User Name"; // Todo: Add user name
 
   let userProfileDate = document.createElement("h4");
   userProfileDate.classList.add("user-profile-date");
-  userProfileDate.textContent = "8 hours ago";
+  userProfileDate.textContent = "8 hours ago"; //Todo: Add date
 
   userProfileNameHolder.appendChild(userProfileName);
   userProfileNameHolder.appendChild(userProfileDate);
@@ -44,24 +44,81 @@ let userProfileHolderFunc = () => {
   return userProfile;
 };
 
+let commentHeaderFunc = () => {
+  let commentHeader = document.createElement("div");
+  commentHeader.classList.add("comment-header");
+
+  commentHeader.appendChild(userProfileHolderFunc());
+  commentHeader.appendChild(popoverFunc());
+
+  return commentHeader;
+};
+
+let popoverFunc = () => {
+  let popover = document.createElement("div");
+  popover.classList.add("popover");
+  popover.setAttribute("data-popover-target", "comment-popover");
+  popover.setAttribute("data-popover-trigger", "click");
+  popover.setAttribute("data-popover-placement", "left");
+
+  popover.innerHTML =
+    '<ion-icon name="ellipsis-vertical" class="text-[25px]"></ion-icon>';
+
+  return popover;
+};
+
 let postCommentFunc = () => {
   let style = ["text-black", "text-base", "w-full", "break-words"];
   let postComment = document.createElement("p");
   postComment.classList.add(...style);
 
+  // or can be load with json fetch
+
   postComment.innerText = userInput.value;
   return postComment;
 };
 
-let commentLikeButtonFunc = () => {
-  let commentLikeButton = document.createElement("div");
-  let likeCount = 0;
+let replyButtonFunc = () => {
+  let replyHolder = `<form action="" class="reply-form flex flex-row gap-5">
+  <div
+    class="w-full flex flex-row justify-center items-center rounded-[10px] ring-2 ring-inset ring-black/50 hover:ring-black text-black/50 hover:text-black transition duration-200 grou">
 
-  commentLikeButton.classList.add("likeButton");
-  commentLikeButton.innerHTML = '<ion-icon name="heart"></ion-icon>';
-  commentLikeButton.innerHTML += likeCount;
+    <input type="text" name="reply"
+      class="input-box reply-input h-full text-black ring-black/50 transition duration-200 focus:border-black/70 focus:ring-0 group-hover:placeholder:text-black"
+      placeholder="Reply to..." required />
+  </div>
+  <div id="replytButton"
+    class="shadow-box flex h-12 w-fit -translate-y-1 flex-row items-center justify-center gap-2 rounded-[10px] bg-solidblack px-6 text-base text-[#fff] transition duration-200 hover:-translate-y-0 hover:bg-blue-100 hover:text-blue-200 cursor-pointer">
+    <ion-icon name="chatbubbles"></ion-icon>Reply
+  </div>
+</form>`;
 
-  return commentLikeButton;
+  return replyHolder;
+};
+
+//create reply card func
+
+let replyContainerFunc = () => {
+  let replyContainer = document.createElement("div");
+  replyContainer.classList.add("reply-container");
+
+  let replyHolder = document.createElement("div");
+  replyHolder.classList.add("reply-holder");
+
+  let replyList = document.createElement("div");
+  replyList.classList.add("reply-list");
+  replyList.style.display = "none";
+
+  let readmore = document.createElement("div");
+  readmore.classList.add("readmore");
+  readmore.textContent = "Read More";
+
+  replyHolder.appendChild(replyList);
+  replyHolder.appendChild(readmore);
+
+  replyContainer.appendChild(replyHolder);
+
+  return replyContainer;
 };
 
 submitButton.addEventListener("click", function (event) {
@@ -72,15 +129,24 @@ submitButton.addEventListener("click", function (event) {
     userInput.classList.remove(errorBorder);
   }
 
+  let commentHolder = document.createElement("div");
+  commentHolder.classList.add("comment-holder");
+
   let newComment = document.createElement("div");
   newComment.classList.add("comment-card");
 
-  newComment.appendChild(userProfileHolderFunc());
+  //create comment card
+  newComment.appendChild(commentHeaderFunc());
   newComment.appendChild(postCommentFunc());
-  newComment.appendChild(commentLikeButtonFunc());
+  newComment.innerHTML += replyButtonFunc();
 
-  commentList.appendChild(newComment);
+  //add comment card to comment list
+  commentHolder.appendChild(newComment);
+  commentHolder.appendChild(replyContainerFunc());
 
+  commentList.appendChild(commentHolder);
+
+  console.log(commentHolder);
   event.preventDefault();
 });
 
@@ -131,4 +197,29 @@ submitEditButton.addEventListener("click", function (event) {
   content.textContent = contentEdit.value;
 
   event.preventDefault();
+});
+
+//readmore button functionality
+//some how not working probaly because of the querySelectorAll
+
+let commentHolder = document.querySelectorAll(".comment-holder");
+
+commentHolder.forEach((comment) => {
+  //Read More Button
+  let readMoreButton = comment.querySelector(".readmore");
+  let replyList = comment.querySelector(".reply-list");
+  replyList.style.display = "none";
+
+  readMoreButton.addEventListener("click", function () {
+    if (replyList.style.display === "none") {
+      replyList.style.display = "flex";
+      readMoreButton.textContent = "Read Less";
+    } else if ((replyList.style.display = "block")) {
+      replyList.style.display = "none";
+      readMoreButton.textContent = "Read More";
+    } else {
+      replyList.style.display = "none";
+      readMoreButton.textContent = "Read More";
+    }
+  });
 });

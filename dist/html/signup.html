@@ -14,7 +14,7 @@
       class="fixed top-3 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]"
     >
       <div
-        class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-5"
+        class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6"
       >
         <ul
           class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between"
@@ -27,57 +27,71 @@
           <li>
             <a
               href=" ../index.html"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:text-[0]"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
               >Home
-              <ion-icon
-                name="home"
-                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
-              ></ion-icon
-            ></a>
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="home"></ion-icon>
+                Home
+              </div>
+            </a>
           </li>
           <li>
             <a
               href="#"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:text-[0]"
-              >About
-              <ion-icon
-                name="document"
-                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
-              ></ion-icon
-            ></a>
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+              >Store
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
+                Store
+              </div>
+            </a>
           </li>
           <li>
             <a
               href="./forum.html"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:text-[0]"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
             >
-              Forum<ion-icon
-                name="chatbox"
-                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
-              ></ion-icon
-            ></a>
+              forum
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon
+                  class="text-2xl"
+                  name="chatbubbles-outline"
+                ></ion-icon>
+                Forum
+              </div>
+            </a>
           </li>
-          <li>
+          <li class="sm:hidden">
             <a
               href="#"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:text-[0]"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
               >Contact
-              <ion-icon
-                name="information-circle"
-                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
-              ></ion-icon
-            ></a>
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="call-outline"></ion-icon>
+                Contact
+              </div>
+            </a>
           </li>
           <li class="hidden sm:block">
             <a
               href="./login.html"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:text-[0]"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
               >Login
-              <ion-icon
-                name="person"
-                class="hidden text-[#ffffff] sm:block sm:text-[25px]"
-              ></ion-icon
-            ></a>
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="person-outline"></ion-icon>
+                Account
+              </div>
+            </a>
           </li>
         </ul>
         <div
@@ -125,10 +139,11 @@
                   >
                   <div class="">
                     <div
+                      id="username-holder"
                       class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black"
                     >
                       <input
-                        class="input-box group-hover:placeholder:text-black"
+                        class="input-box focus:ring-0 group-hover:placeholder:text-black"
                         type="text"
                         name="username"
                         id="username"
@@ -156,10 +171,11 @@
                   >
                   <div class="">
                     <div
+                      id="email-holder"
                       class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black"
                     >
                       <input
-                        class="input-box group-hover:placeholder:text-black"
+                        class="input-box focus:ring-0 group-hover:placeholder:text-black"
                         type="text"
                         name="email"
                         id="email"
@@ -186,10 +202,11 @@
                   >
                   <div class="">
                     <div
+                      id="password-holder"
                       class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black"
                     >
                       <input
-                        class="input-box"
+                        class="input-box focus:ring-0"
                         type="password"
                         name="password"
                         id="password"
@@ -221,10 +238,11 @@
                   >
                   <div class="">
                     <div
+                      id="confirm-holder"
                       class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black"
                     >
                       <input
-                        class="input-box border-black/50"
+                        class="input-box border-black/50 focus:ring-0"
                         type="password"
                         name="confirm"
                         id="confirm"

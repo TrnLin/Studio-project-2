@@ -254,11 +254,39 @@
 }
 
 .input-box {
-  @apply relative w-full  text-wrap rounded-[10px] border-[1px] border-none bg-transparent p-[10px] text-[12px]  text-black outline-none transition-all  placeholder:text-black/50 focus:ring-0 lg:p-[8px] lg:text-[11px] sm:p-3;
+  @apply relative w-full  text-wrap rounded-[10px] border-[1px] border-none bg-transparent p-[10px] text-[12px]  text-black outline-none transition-all  placeholder:text-black/50 lg:p-[8px] lg:text-[11px] sm:p-3;
 }
 
 .comment-card {
-  @apply flex flex-col gap-4 border-b-2 border-solid border-black/70 p-5 transition-all duration-300 hover:rounded-[20px] hover:ring-2 hover:ring-black/70;
+  @apply flex flex-col gap-4 border-b-2 border-solid border-black/50 p-5 transition-all duration-300 hover:rounded-[20px] hover:ring-2 hover:ring-black/70;
+}
+
+.comment-holder {
+  @apply flex flex-col gap-4;
+}
+
+.reply-container {
+  @apply ml-12 flex flex-row items-center gap-2 border-l-2 border-solid border-black/50 pl-6;
+}
+
+.comment-header {
+  @apply flex w-full flex-row items-center justify-between;
+}
+
+.reply-card {
+  @apply flex w-full flex-col gap-4  border-b-2 border-solid border-black/50 p-4 transition-all duration-300 hover:rounded-[20px] hover:ring-2 hover:ring-black/70;
+}
+
+.reply-holder {
+  @apply flex flex-col justify-center gap-8;
+}
+
+.reply-list {
+  @apply flex-col gap-6;
+}
+
+.readmore {
+  @apply cursor-pointer text-black underline hover:no-underline;
 }
 
 .user-profile-picture {
@@ -270,12 +298,12 @@
 }
 
 .user-profile-date {
-  @apply text-[10px] text-black/70;
-}
-.likeButton {
-  @apply shadow-box flex h-12 w-fit -translate-y-1 flex-row items-center justify-center gap-2 rounded-[10px] bg-solidblack px-6 text-xl text-[#fff] transition duration-200 hover:-translate-y-0 hover:bg-pink-100 hover:text-pink-200;
+  @apply text-[12px] text-black/70;
 }
 
+.likeButton {
+  @apply shadow-box flex h-12 w-fit -translate-y-1 cursor-pointer flex-row items-center justify-center gap-2 rounded-[10px] bg-solidblack px-6 text-xl text-[#fff] transition duration-200 hover:-translate-y-0 hover:bg-pink-100 hover:text-pink-200;
+}
 .user-profile-holder {
   @apply flex flex-row items-center gap-3;
 }
@@ -292,6 +320,10 @@
   @apply overflow-hidden text-ellipsis whitespace-nowrap leading-[100%] text-black lg:text-sm;
 }
 
+.popover {
+  @apply flex size-9 cursor-pointer items-center justify-center rounded-md text-center font-medium text-black transition-all duration-300 hover:bg-black hover:text-white;
+}
+
 .shadow-box {
   box-shadow: 0 4px rgba(var(--black), 0.5);
 }
@@ -301,13 +333,7 @@
 }
 
 .circles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
+  @apply absolute left-0 top-0 z-[-1] h-full w-full overflow-hidden;
 }
 
 .circles li {

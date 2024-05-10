@@ -234,18 +234,135 @@
           </h1>
         </div>
         <form action="" class="flex flex-row gap-4">
-          <button
-            type="submit"
+          <div
             id="delete-post-button"
             class="w-full rounded-lg bg-solidblack p-4 text-base text-[#fff] transition-all duration-300 hover:bg-orange-200 hover:text-orange-100"
           >
-            Yes
-          </button>
+            Delete Post
+          </div>
           <div
             data-modal-hide="delete-post-modal"
             class="flex items-center justify-center rounded-lg bg-white px-12 text-base ring-2 ring-inset ring-black/70 transition-all duration-300 hover:bg-black hover:text-white"
           >
-            No
+            Cancel
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Comment Popover Modal -->
+    <div
+      data-popover
+      id="comment-popover"
+      role="tooltip"
+      class="invisible absolute z-10 inline-block w-max rounded-[20px] bg-white p-5 shadow-lg ring-2 ring-black/5 transition-opacity duration-300"
+    >
+      <ul class="text-black">
+        <li>
+          <div
+            data-modal-target="edit-comment-modal"
+            data-modal-toggle="edit-comment-modal"
+            id="edit-comment-button"
+            class="flex items-center justify-items-start gap-3 px-5 py-1 text-lg text-black"
+          >
+            <ion-icon name="pencil"></ion-icon>Edit Comment
+          </div>
+        </li>
+        <li>
+          <div
+            data-modal-target="delete-comment-modal"
+            data-modal-toggle="delete-comment-modal"
+            class="flex items-center justify-center gap-3 px-5 py-1 text-lg text-error"
+          >
+            <ion-icon name="trash"></ion-icon>Deleted Comment
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Comment Edit Modal -->
+    <div
+      data-popover
+      id="edit-comment-modal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-hidden overflow-y-auto overflow-x-hidden md:inset-0"
+    >
+      <div class="h- flex w-modal flex-col gap-6 rounded-[20px] bg-white p-8">
+        <div class="flex flex-row items-center justify-between">
+          <h2 class="text-4xl text-black" aria-label="Edit post">
+            Edit Comment
+          </h2>
+          <div
+            class="modal-close flex size-9 items-center justify-center rounded-md bg-white text-2xl text-black transition-all duration-300 hover:bg-pink-200 hover:text-pink-100"
+            aria-label="Close modal"
+            data-modal-hide="edit-comment-modal"
+          >
+            <ion-icon name="close-outline"></ion-icon>
+          </div>
+        </div>
+
+        <form action="" class="flex flex-col gap-4">
+          <textarea
+            name=""
+            id="edit-comment-input"
+            class="input-box h-full resize-none ring-2 ring-inset ring-black/35 transition-all duration-200 placeholder:text-black/50 hover:border-black/50 hover:ring-inset hover:ring-black hover:placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-black focus:placeholder:text-black/50"
+            placeholder=" Type in your description"
+            rows="5"
+          ></textarea>
+          <div
+            id="edit-comment-button"
+            class="w-full rounded-lg bg-solidblack p-4 text-center text-base text-[#fff] transition-all duration-300 hover:bg-orange-200 hover:text-orange-100"
+          >
+            Edit Comment
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Comment Delete Modal-->
+    <div
+      data-popover
+      id="delete-comment-modal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-hidden overflow-y-auto overflow-x-hidden md:inset-0"
+    >
+      <div class="h- flex w-modal flex-col gap-6 rounded-[20px] bg-white p-8">
+        <div class="flex flex-row items-center justify-between">
+          <h2 class="text-4xl text-black" aria-label="Edit post">
+            Delete Comment
+          </h2>
+          <div
+            class="modal-close flex size-9 items-center justify-center rounded-md bg-white text-2xl text-black transition-all duration-300 hover:bg-pink-200 hover:text-pink-100"
+            aria-label="Close modal"
+            data-modal-hide="delete-comment-modal"
+          >
+            <ion-icon name="close-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <ion-icon
+            name="trash-outline"
+            class="text-7xl text-black/80"
+          ></ion-icon>
+          <h1 class="text-base text-black/70">
+            Are you sure you want to <span class="text-error">delete</span> this
+            comment?
+          </h1>
+        </div>
+        <form action="" class="flex flex-row gap-4">
+          <div
+            id="delete-comment-button"
+            class="w-full rounded-lg bg-solidblack p-4 text-center text-base text-[#fff] transition-all duration-300 hover:bg-orange-200 hover:text-orange-100"
+          >
+            Delete Post
+          </div>
+          <div
+            data-modal-hide="delete-comment-modal"
+            class="flex items-center justify-center rounded-lg bg-white px-12 text-base ring-2 ring-inset ring-black/70 transition-all duration-300 hover:bg-black hover:text-white"
+          >
+            Cancel
           </div>
         </form>
       </div>
@@ -260,8 +377,8 @@
           ><ion-icon name="chevron-back-outline"></ion-icon>Back</a
         >
 
-        <!-- Post -->
         <div class="flex flex-col gap-6">
+          <!-- Post -->
           <div
             class="relative z-[1] flex flex-col gap-[30px] rounded-[20px] p-10 ring-2 ring-black/70"
           >
@@ -387,17 +504,21 @@
           <!-- Comment Form -->
           <div class="">
             <form action="" id="comment-form" class="flex flex-row gap-5">
-              <input
-                type="text"
-                name="comment"
-                id="comment-input"
-                class="input-box focus:box-shadow-black/50 w-full border-black/50 text-black hover:ring-1 hover:ring-black focus:ring-black"
-                placeholder="Say some fcking things?"
-                required
-              />
+              <div
+                class="grou flex w-full flex-row items-center justify-center rounded-[10px] text-black/50 ring-2 ring-inset ring-black/50 transition duration-200 hover:text-black hover:ring-black"
+              >
+                <input
+                  type="text"
+                  name="comment"
+                  id="comment-input"
+                  class="input-box h-full text-black ring-black/50 transition duration-200 focus:border-black/70 focus:ring-0 group-hover:placeholder:text-black"
+                  placeholder="Say some fcking things?"
+                  required
+                />
+              </div>
               <div
                 id="commentButton"
-                class="shadow-box flex h-12 w-fit -translate-y-1 flex-row items-center justify-center gap-2 rounded-[10px] bg-solidblack px-6 text-base text-[#fff] transition duration-200 hover:-translate-y-0 hover:bg-blue-100 hover:text-blue-200"
+                class="shadow-box flex h-12 w-fit -translate-y-1 cursor-pointer flex-row items-center justify-center gap-2 rounded-[10px] bg-solidblack px-6 text-base text-[#fff] transition duration-200 hover:-translate-y-0 hover:bg-blue-100 hover:text-blue-200"
               >
                 <ion-icon name="chatbubble"></ion-icon>Comment
               </div>
@@ -405,28 +526,102 @@
           </div>
           <!-- Comment -->
           <div class="comment-list flex flex-col gap-8">
-            <div class="comment-card">
-              <div class="user-profile-holder">
-                <img
-                  src=""
-                  alt="User profile picture"
-                  class="user-profile-picture"
-                />
-                <div class="flex flex-col gap-1">
-                  <h3 class="user-profile-name" id="username">
-                    UserAccountName123
-                  </h3>
-                  <h4 class="user-profile-date" id="timePost">8hrs ago</h4>
+            <div class="comment-holder">
+              <div class="comment-card">
+                <div class="comment-header">
+                  <div class="user-profile-holder">
+                    <img
+                      src=""
+                      alt="User profile picture"
+                      class="user-profile-picture"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <h3 class="user-profile-name" id="username">
+                        UserAccountName123
+                      </h3>
+                      <h4 class="user-profile-date" id="timePost">8hrs ago</h4>
+                    </div>
+                  </div>
+
+                  <div
+                    data-popover-target="comment-popover"
+                    data-popover-trigger="click"
+                    data-popover-placement="left"
+                    class="popover"
+                  >
+                    <ion-icon
+                      name="ellipsis-vertical"
+                      class="text-[25px]"
+                    ></ion-icon>
+                  </div>
+                </div>
+
+                <p class="w-full text-base text-black" id="user-comment">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+                  massa mi. Aliquam in hendrerit urna.d Pellentesque sit amet
+                  sapien fringilla, mattis ligula consectetur, ultrices mauris.
+                  Maecenas vitae mattis tellus. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit.
+                </p>
+                <form action="" class="reply-form flex flex-row gap-5">
+                  <div
+                    class="grou flex w-full flex-row items-center justify-center rounded-[10px] text-black/50 ring-2 ring-inset ring-black/50 transition duration-200 hover:text-black hover:ring-black"
+                  >
+                    <input
+                      type="text"
+                      name="reply"
+                      class="input-box reply-input h-full text-black ring-black/50 transition duration-200 focus:border-black/70 focus:ring-0 group-hover:placeholder:text-black"
+                      placeholder="Reply to..."
+                      required
+                    />
+                  </div>
+                  <div
+                    id="replytButton"
+                    class="shadow-box flex h-12 w-fit -translate-y-1 cursor-pointer flex-row items-center justify-center gap-2 rounded-[10px] bg-solidblack px-6 text-base text-[#fff] transition duration-200 hover:-translate-y-0 hover:bg-blue-100 hover:text-blue-200"
+                  >
+                    <ion-icon name="chatbubbles"></ion-icon>Reply
+                  </div>
+                </form>
+              </div>
+
+              <div class="reply-container">
+                <div class="reply-holder">
+                  <div class="reply-list hidden">
+                    <div class="reply-card">
+                      <div class="comment-header">
+                        <div class="user-profile-holder">
+                          <img
+                            src=""
+                            alt="User profile picture"
+                            class="user-profile-picture"
+                          />
+                          <div class="flex flex-col gap-1">
+                            <h3 class="user-profile-name" id="username">
+                              UserAccountName123
+                            </h3>
+                            <h4 class="user-profile-date" id="timePost">
+                              8hrs ago
+                            </h4>
+                          </div>
+                        </div>
+
+                        <!-- <div data-popover-target="comment-popover" data-popover-trigger="click"
+                        data-popover-placement="left" class="popover">
+                        <ion-icon name="ellipsis-vertical" class="text-[25px]"></ion-icon>
+                      </div> -->
+                      </div>
+                      <p class="" id="user-reply">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Ut et massa mi. Aliquam in hendrerit urna.d Pellentesque
+                        sit amet sapien fringilla, mattis ligula consectetur,
+                        ultrices mauris. Maecenas vitae mattis tellus. Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="readmore">Read More</div>
                 </div>
               </div>
-              <p class="w-full text-base text-black" id="user-comment">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
-                sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                Maecenas vitae mattis tellus. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </p>
-              <div class="likeButton"><ion-icon name="heart"></ion-icon>0</div>
             </div>
           </div>
         </div>

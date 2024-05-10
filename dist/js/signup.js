@@ -1,4 +1,4 @@
-const errorBorder = "border-error";
+const errorBorder = "ring-error";
 const errorText = "text-error";
 const successText = "text-success";
 const successBorder = "border-success";
@@ -6,10 +6,12 @@ const successBorder = "border-success";
 //Username validation
 const userNameInput = document.querySelector("#username");
 const userValidText = document.querySelector(".user-valid");
+const userNameHolder = document.querySelector("#username-holder");
 
 //Email validation
 const emailInput = document.querySelector("#email");
 const emailValidText = document.querySelector(".email-valid");
+const emailHolder = document.querySelector("#email-holder");
 let emailValidRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 //Password validation
@@ -18,6 +20,7 @@ const passUpperValid = document.querySelector(".pass-upper-valid");
 const passNumValid = document.querySelector(".pass-number-valid");
 const passLengthValid = document.querySelector(".pass-length-valid");
 const passValidText = document.querySelector(".pass-valid");
+const passHolder = document.querySelector("#password-holder");
 let passUpperRegex = /[A-Z]/;
 let passNumRegex = /[0-9]/;
 let passLengthRegex = /^.{8,20}$/;
@@ -25,6 +28,8 @@ let passLengthRegex = /^.{8,20}$/;
 //Confirm password validation
 const confirmPasswordInput = document.querySelector("#confirm");
 const confirmValidText = document.querySelector(".confirm-valid");
+const confirmPasswordHolder = document.querySelector("#confirm-holder");
+
 //Submit button
 const registerBtn = document.querySelector("#submitRegistration");
 const loginBtn = document.querySelector("#submitLogin");
@@ -32,7 +37,7 @@ const form = document.querySelector("#sign-up-form");
 
 let userNameValid = (name) => {
   if (name === "") {
-    userNameInput.classList.add(errorBorder);
+    userNameHolder.classList.add(errorBorder);
     userValidText.innerHTML = "Username cannot be empty";
     return false;
   } else {
@@ -44,16 +49,16 @@ let userNameValid = (name) => {
 
 let emailValid = (email) => {
   if (email === "") {
-    emailInput.classList.add(errorBorder);
+    emailHolder.classList.add(errorBorder);
     emailValidText.innerHTML = "Email cannot be empty";
     return false;
   } else if (!emailValidRegex.test(email)) {
-    emailInput.classList.add(errorBorder);
+    emailHolder.classList.add(errorBorder);
     emailValidText.innerHTML = "Invalid email format";
     return false;
   } else {
     emailValidText.innerHTML = "";
-    emailInput.classList.remove(errorBorder);
+    emailHolder.classList.remove(errorBorder);
     return true;
   }
 };
@@ -64,7 +69,7 @@ let passwordValid = (password) => {
   //Password validation
   //check if password is empty
   if (password === "") {
-    passwordInput.classList.add(errorBorder);
+    passHolder.classList.add(errorBorder);
     passValidText.innerHTML = "Password cannot be empty";
 
     return false;
@@ -74,13 +79,13 @@ let passwordValid = (password) => {
 
   //check if password has uppercase letter
   if (!passUpperRegex.test(password[0])) {
-    passwordInput.classList.add(errorBorder);
+    passHolder.classList.add(errorBorder);
     passUpperValid.classList.add(errorText);
     passUpperValid.classList.remove(successText);
 
     passwordValid = false;
   } else {
-    passUpperValid.classList.remove(errorText);
+    passHolder.classList.remove(errorText);
     passUpperValid.classList.add(successText);
     passwordInput.classList.remove(errorBorder);
 
@@ -127,18 +132,18 @@ let passwordValid = (password) => {
 //Confirm password validation
 let confirmPasswordValid = (password, confirmPassword) => {
   if (password !== confirmPassword) {
-    confirmPasswordInput.classList.add(errorBorder);
-    confirmPasswordInput.classList.remove(successBorder);
+    confirmPasswordHolder.classList.add(errorBorder);
+    confirmPasswordHolder.classList.remove(successBorder);
     confirmValidText.innerHTML = "Passwords do not match";
     return false;
   } else if (confirmPassword === "") {
-    confirmPasswordInput.classList.add(errorBorder);
+    confirmPasswordHolder.classList.add(errorBorder);
     confirmValidText.innerHTML = "Confirm password cannot be empty";
     return false;
   } else {
     confirmValidText.innerHTML = "";
-    confirmPasswordInput.classList.remove(errorBorder);
-    confirmPasswordInput.classList.add(successBorder);
+    confirmPasswordHolder.classList.remove(errorBorder);
+    confirmPasswordHolder.classList.add(successBorder);
     return true;
   }
 };
