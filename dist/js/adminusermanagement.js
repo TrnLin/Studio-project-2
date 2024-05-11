@@ -3,62 +3,125 @@ const userNameContainer = "userContainer";
 const userFormContainer = "userNameSearch";
 const textFieldForm = "userNameSearchInput";
 
+//Declare delete users function
+function deleteUsersFunction(userIDInput) {
+    console.log("Delete User: ", userIDInput);
+};
+
+//Declare ban users function
+function banUsersFunction(userIDInput) {
+    console.log("Ban User: ", userIDInput);
+};
+//Declare unban users function
+function unbanUsersFunction(userIDInput) {
+    console.log("Unban User: ", userIDInput);
+};
+
+//Declaire handler functions
+function handleUnbanUser(event) {
+    let userID = event.target.dataset.userId;
+    unbanUsersFunction(userID);
+};
+
+function handleBanUser(event) {
+    let userID = event.target.dataset.userId;
+    banUsersFunction(userID);
+};
+
+function handleDeleteUser(event) {
+    let userID = event.target.dataset.userId;
+    deleteUsersFunction(userID);
+};
+
+//Add Global Event Listener to listen for dynamic buttons.
+
+document.body.addEventListener('click', function(event) {
+    if (event.target.classList.contains('deleteUserButton')) {
+      handleDeleteUser(event);
+    } else if (event.target.classList.contains('banUserButton')) {
+      handleBanUser(event);
+    } else if (event.target.classList.contains('unbanUserButton')) {
+      handleUnbanUser(event);
+    };
+
+  });
+
 async function returnUserSearch(userName) {
-  try {
-    //Refresh the innerHTML
-    document.getElementById(userNameContainer).innerHTML = "";
 
-    // Construct the URL with the userName parameter
-    const url = `${adminUserAPI}?userName=${encodeURIComponent(userName)}`;
+    try {
+      
+      //Refresh the innerHTML
+      document.getElementById(userNameContainer).innerHTML = "";
+      
+      // Construct the URL with the userName parameter
+      let url = `${adminUserAPI}?userName=${encodeURIComponent(userName)}`;
+      
+      // Make the API call with the constructed URL
+      let res = await fetch(url);
+  
+      // Parse the response JSON
+      let data = await res.json();
 
-    // Make the API call with the constructed URL
-    const res = await fetch(url);
-
-    // Parse the response JSON
-    const data = await res.json();
-
-    let contentHtml = "";
+      let contentHtml = "";
 
     // Loop through the data and construct the innerHTML
 
     for (let key in data) {
-      if (data[key].banned == true) {
-        contentHtml += `<div class='bg-red-400 flex flex-row border-b-[1px] border-solidblack justify-between mt-5'>
-            <div id='${data[key].userId}' class='my-auto'>${data[key].userName}</div>
+        if (data[key].banned) {
+          contentHtml += `<div class='bg-red-400 flex flex-row border-b-1 border-solid black justify-between mt-5'>
+            <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
             <div class='flex flex-row gap-5'>
-            <form id="" class="deleteUser">
-              <input type="text" class="hidden" id="${data[key].userId}" name="${data[key].userId}" value="${data[key].userId}">
-              <input type="submit" value="Delete User" class="cursor-pointer min-w-[150px] border-solidblack border-[1px] m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">
-            </form>
-                <form id="" class="unBanButton">
-              <input type="text" class="hidden" id="${data[key].userId}" name="${data[key].userId}" value="${data[key].userId}">
-              <input type="submit" value="Unban User" class="bg-blue-500 text-white min-w-[150px] cursor-pointer border-solidblack border-[1px] m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">
-            </form>
+      
+      
+                <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Delete User</div>
+      
+      
+                <div id="${data[key].userId}UnbanUser" class="unbanUserButton bg-blue-500 text-white min-w-[150px] cursor-pointer border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Unban User</div>
+      
             </div>
-            </div>`;
-      } else {
-        contentHtml += `<div class='flex flex-row border-b-[1px] border-solidblack justify-between mt-5'>
-            <div id='${data[key].userId}' class='my-auto'>${data[key].userName}</div>
+          </div>`;
+        } else {
+          contentHtml += `<div class='flex flex-row border-b-1 border-solid black justify-between mt-5'>
+            <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
             <div class='flex flex-row gap-5'>
-            <form id="" class="deleteUser">
-            <input type="text" class="hidden" id="${data[key].userId}" name="${data[key].userId}" value="${data[key].userId}">
-            <input type="submit" value="Delete User" class="cursor-pointer min-w-[150px] border-solidblack border-[1px] m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">
-          </form>
-                <form id="" class="banButton">
-              <input type="text" class="hidden" id="${data[key].userId}" name="${data[key].userId}" value="${data[key].userId}">
-              <input type="submit" value="Ban User" class="bg-red-500 text-white min-w-[150px] cursor-pointer border-solidblack border-[1px] m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">
-            </form>
+             
+              <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Delete User</div>
+      
+      
+              <div id="${data[key].userId}BanUser" class="banUserButton bg-red-500 text-white min-w-[150px] cursor-pointer border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Ban User</div>
+      
             </div>
-            </div>`;
-      }
-    }
+          </div>`;
+        }
+      };
+      
+      //Display the innerHTML
+      document.getElementById(userNameContainer).innerHTML = contentHtml;
 
-    document.getElementById(userNameContainer).innerHTML = contentHtml;
-  } catch (error) {
-    console.log("Error Occurred: ", error);
-    return null; // return null in case of error
-  }
-}
+      //attach userID into divs
+      for (let key in data){
+        
+        let elemIdPrefix = data[key].userId;
+
+      if (data[key].banned) {
+        let unbanElement = document.getElementById(elemIdPrefix + 'UnbanUser');
+        unbanElement.dataset.userId = elemIdPrefix;
+      } else {
+        let banElement = document.getElementById(elemIdPrefix + 'BanUser');
+        banElement.dataset.userId = elemIdPrefix;
+      };
+
+      let deleteElement = document.getElementById(elemIdPrefix + 'DeleteUser');
+      deleteElement.dataset.userId = elemIdPrefix;
+      };
+
+    } catch (error) {
+      console.log("Error Occurred: ", error);
+      return null; // return null in case of error
+    };
+  };
+  
+
 
 // Return the user search
 document
@@ -73,31 +136,19 @@ document
     // Call the function to make the API call
     returnUserSearch(userInput);
 
-    //Attach listeners to results
-    let banButtonsVar = document.getElementsByClassName("banButton");
-    let unBanButtonsVar = document.getElementsByClassName("unBanButton");
-    let deleteUserButtonsVar = document.getElementsByClassName("deleteUser");
-
-    for (let i = 0; i < banButtonsVar.length; i++) {
-      banButtonsVar[i].addEventListener("submit", function (event) {
-        event.preventDefault();
-      });
-    }
-
-    for (let i = 0; i < unBanButtonsVar.length; i++) {
-      unBanButtonsVar[i].addEventListener("submit", function (event) {
-        event.preventDefault();
-      });
-    }
-
-    for (let i = 0; i < deleteUserButtonsVar.length; i++) {
-      deleteUserButtonsVar[i].addEventListener("submit", function (event) {
-        event.preventDefault();
-      });
-    }
+  
   });
 
-//Pseudo Data Test
+
+
+
+
+// Pseudo Data Test
+
+
+(async () => {
+
+
 
 data = {
   result1: {
@@ -105,74 +156,69 @@ data = {
     userId: "1",
     banned: true,
   },
-
   result2: {
     username: "User2",
     userId: "2",
     banned: false,
   },
-
   result3: {
     username: "User3",
     userId: "3",
     banned: true,
   },
 };
-let contentHtml = "";
+
+let contentHtml = "";  
 
 for (let key in data) {
-  if (data[key].banned == true) {
-    contentHtml += `<div class='bg-red-400 flex flex-row border-b-[1px] border-solidblack justify-between mt-5'>
-        <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
-        <div class='flex flex-row gap-5'>
-        <form id="" class="deleteUser">
-        <input type="text" class="hidden" id="${data[key].userId}" name="${data[key].userId}" value="${data[key].userId}">
-        <input type="submit" value="Delete User" class="cursor-pointer min-w-[150px] border-solidblack border-[1px] m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">
-      </form>
-            <form id="" class="unBanButton">
-          <input type="text" class="hidden" id="${data[key].userId}" name="${data[key].userId}" value="${data[key].userId}">
-          <input type="submit" value="Unban User" class="bg-blue-500 text-white min-w-[150px] cursor-pointer border-solidblack border-[1px] m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">
-        </form>
-        </div>
-        </div>`;
+  if (data[key].banned) {
+    contentHtml += `<div class='bg-red-400 flex flex-row border-b-1 border-solid black justify-between mt-5'>
+      <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
+      <div class='flex flex-row gap-5'>
+
+
+          <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Delete User</div>
+
+
+          <div id="${data[key].userId}UnbanUser" class="unbanUserButton bg-blue-500 text-white min-w-[150px] cursor-pointer border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Unban User</div>
+
+      </div>
+    </div>`;
   } else {
-    contentHtml += `<div class='flex flex-row border-b-[1px] border-solidblack justify-between mt-5'>
-        <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
-        <div class='flex flex-row gap-5'>
-        <form id="" class="deleteUser">
-        <input type="text" class="hidden" id="${data[key].userId}" name="${data[key].userId}" value="${data[key].userId}">
-        <input type="submit" value="Delete User" class="cursor-pointer min-w-[150px] border-solidblack border-[1px] m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">
-      </form>
-            <form id="" class="banButton">
-          <input type="text" class="hidden" id="${data[key].userId}" name="${data[key].userId}" value="${data[key].userId}">
-          <input type="submit" value="Ban User" class="bg-red-500 text-white min-w-[150px] cursor-pointer border-solidblack border-[1px] m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">
-        </form>
-        </div>
-        </div>`;
+    contentHtml += `<div class='flex flex-row border-b-1 border-solid black justify-between mt-5'>
+      <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
+      <div class='flex flex-row gap-5'>
+       
+        <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Delete User</div>
+
+
+        <div id="${data[key].userId}BanUser" class="banUserButton bg-red-500 text-white min-w-[150px] cursor-pointer border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Ban User</div>
+
+      </div>
+    </div>`;
   }
-}
+};
+
+
+
 
 document.getElementById(userNameContainer).innerHTML = contentHtml;
 
-//Attach listeners to results
-let banButtonsVar = document.getElementsByClassName("banButton");
-let unBanButtonsVar = document.getElementsByClassName("unBanButton");
-let deleteUserButtonsVar = document.getElementsByClassName("deleteUser");
 
-for (let i = 0; i < banButtonsVar.length; i++) {
-  banButtonsVar[i].addEventListener("submit", function (event) {
-    event.preventDefault();
-  });
-}
+//attach userID into divs
+for (let key in data){
+        
+    let elemIdPrefix = data[key].userId;
 
-for (let i = 0; i < unBanButtonsVar.length; i++) {
-  unBanButtonsVar[i].addEventListener("submit", function (event) {
-    event.preventDefault();
-  });
-}
+    if (data[key].banned) {
+        let unbanElement = document.getElementById(elemIdPrefix + 'UnbanUser');
+        unbanElement.dataset.userId = elemIdPrefix;
+    } else {
+        let banElement = document.getElementById(elemIdPrefix + 'BanUser');
+        banElement.dataset.userId = elemIdPrefix;
+    };
+    let deleteElement = document.getElementById(elemIdPrefix + 'DeleteUser');
+    deleteElement.dataset.userId = elemIdPrefix;
 
-for (let i = 0; i < deleteUserButtonsVar.length; i++) {
-  deleteUserButtonsVar[i].addEventListener("submit", function (event) {
-    event.preventDefault();
-  });
-}
+};
+})();
