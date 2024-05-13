@@ -49,6 +49,15 @@ document.body.addEventListener('click', function(event) {
 async function returnUserSearch(userName) {
 
     try {
+
+      // Clear any dataset attached to the divs
+      let divs = document.querySelectorAll('div');
+
+      divs.forEach((div) => {
+        for (let key in div.dataset) {
+            delete div.dataset[key];
+        };
+    });
       
       //Refresh the innerHTML
       document.getElementById(userNameContainer).innerHTML = "";
@@ -124,9 +133,7 @@ async function returnUserSearch(userName) {
 
 
 // Return the user search
-document
-  .getElementById(userFormContainer)
-  .addEventListener("submit", function (event) {
+document.getElementById(userFormContainer).addEventListener("submit", function (event) {
     // Prevent the default form submission behavior
     event.preventDefault();
 
@@ -168,7 +175,7 @@ data = {
   },
 };
 
-let contentHtml = "";  
+let contentHtml = "";
 
 for (let key in data) {
   if (data[key].banned) {
@@ -198,8 +205,6 @@ for (let key in data) {
     </div>`;
   }
 };
-
-
 
 
 document.getElementById(userNameContainer).innerHTML = contentHtml;
