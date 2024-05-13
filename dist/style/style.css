@@ -1877,10 +1877,6 @@ html.transition,
   border-width: 1px;
 }
 
-.border-b-\[1px\] {
-  border-bottom-width: 1px;
-}
-
 .border-solid {
   border-style: solid;
 }
@@ -1944,10 +1940,6 @@ html.transition,
 
 .border-pink-200 {
   border-color: rgba(var(--pink-200));
-}
-
-.border-solidblack {
-  border-color: rgb(var(--solid-black));
 }
 
 .border-success {
@@ -2811,11 +2803,12 @@ html.transition,
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-  --tw-ring-color: rgba(var(--black), 0.7);
+  --tw-ring-color: rgba(var(--black));
 }
 
 .comment-holder {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 1rem;
 }
@@ -2864,6 +2857,7 @@ html.transition,
 
 .reply-holder {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
@@ -2872,6 +2866,83 @@ html.transition,
 .reply-list {
   flex-direction: column;
   gap: 1.5rem;
+}
+
+html.reply-btn,
+  html.reply-btn *,
+  html.reply-btn *:before,
+  html.reply-btn *:after {
+  transition: all 500ms;
+  transition-delay: 0;
+}
+
+.reply-btn {
+  display: flex;
+  height: 3rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 10px;
+  background-color: rgb(var(--solid-black));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.reply-btn:hover {
+  --tw-translate-y: -0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  background-color: rgba(var(--blue-100));
+  color: rgba(var(--blue-200));
+}
+
+html.reply-input,
+  html.reply-input *,
+  html.reply-input *:before,
+  html.reply-input *:after {
+  transition: all 500ms;
+  transition-delay: 0;
+}
+
+.reply-input {
+  height: 100%;
+  width: 100%;
+  color: rgba(var(--black));
+  --tw-ring-color: rgba(var(--black), 0.5);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.reply-input:focus {
+  border-color: rgba(var(--black), 0.7);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.group:hover .reply-input::-moz-placeholder {
+  color: rgba(var(--black));
+}
+
+.group:hover .reply-input::placeholder {
+  color: rgba(var(--black));
 }
 
 .readmore {

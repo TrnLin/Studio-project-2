@@ -1,7 +1,7 @@
 let userInput = document.querySelector("#comment-input");
 let submitButton = document.querySelector("#commentButton");
 let commentList = document.querySelector(".comment-list");
-const errorBorder = "border-error";
+const errorBorder = "ring-error";
 
 //create comment card func
 let userProfileImgFunc = () => {
@@ -34,6 +34,7 @@ let userProfileNameFunc = () => {
   return userProfileNameHolder;
 };
 
+//dont need to modify this
 let userProfileHolderFunc = () => {
   let userProfile = document.createElement("div");
   userProfile.classList.add("user-profile-holder");
@@ -44,28 +45,29 @@ let userProfileHolderFunc = () => {
   return userProfile;
 };
 
+//dont need to modify this
 let commentHeaderFunc = () => {
   let commentHeader = document.createElement("div");
   commentHeader.classList.add("comment-header");
 
   commentHeader.appendChild(userProfileHolderFunc());
-  commentHeader.appendChild(popoverFunc());
+  // commentHeader.appendChild(popoverFunc());
 
   return commentHeader;
 };
 
-let popoverFunc = () => {
-  let popover = document.createElement("div");
-  popover.classList.add("popover");
-  popover.setAttribute("data-popover-target", "comment-popover");
-  popover.setAttribute("data-popover-trigger", "click");
-  popover.setAttribute("data-popover-placement", "left");
+// let popoverFunc = () => {
+//   let popover = document.createElement("div");
+//   popover.classList.add("popover");
+//   popover.setAttribute("data-popover-target", "comment-popover");
+//   popover.setAttribute("data-popover-trigger", "click");
+//   popover.setAttribute("data-popover-placement", "left");
 
-  popover.innerHTML =
-    '<ion-icon name="ellipsis-vertical" class="text-[25px]"></ion-icon>';
+//   popover.innerHTML =
+//     '<ion-icon name="ellipsis-vertical" class="text-[25px]"></ion-icon>';
 
-  return popover;
-};
+//   return popover;
+// };
 
 let postCommentFunc = () => {
   let style = ["text-black", "text-base", "w-full", "break-words"];
@@ -78,17 +80,17 @@ let postCommentFunc = () => {
   return postComment;
 };
 
+//dont need to modify this
 let replyButtonFunc = () => {
   let replyHolder = `<form action="" class="reply-form flex flex-row gap-5">
   <div
-    class="w-full flex flex-row justify-center items-center rounded-[10px] ring-2 ring-inset ring-black/50 hover:ring-black text-black/50 hover:text-black transition duration-200 grou">
-
+    class="group flex w-full flex-row items-center justify-center rounded-[10px] text-black/50 ring-2 ring-inset ring-black/50 transition duration-200 hover:text-black hover:ring-black">
     <input type="text" name="reply"
-      class="input-box reply-input h-full text-black ring-black/50 transition duration-200 focus:border-black/70 focus:ring-0 group-hover:placeholder:text-black"
+      class="input-box reply-input "
       placeholder="Reply to..." required />
   </div>
-  <div id="replytButton"
-    class="shadow-box flex h-12 w-fit -translate-y-1 flex-row items-center justify-center gap-2 rounded-[10px] bg-solidblack px-6 text-base text-[#fff] transition duration-200 hover:-translate-y-0 hover:bg-blue-100 hover:text-blue-200 cursor-pointer">
+  <div 
+    class="shadow-box reply-btn" onclick="javascript:replyFunc(this)">
     <ion-icon name="chatbubbles"></ion-icon>Reply
   </div>
 </form>`;
@@ -97,7 +99,7 @@ let replyButtonFunc = () => {
 };
 
 //create reply card func
-
+//dont need to modify this
 let replyContainerFunc = () => {
   let replyContainer = document.createElement("div");
   replyContainer.classList.add("reply-container");
@@ -109,9 +111,12 @@ let replyContainerFunc = () => {
   replyList.classList.add("reply-list");
   replyList.style.display = "none";
 
+  replyList.innerHTML = replyButtonFunc();
+
   let readmore = document.createElement("div");
   readmore.classList.add("readmore");
-  readmore.textContent = "Read More";
+  readmore.setAttribute("onclick", "javascript:readMoreFunc(this)");
+  readmore.textContent = "Hide Comments";
 
   replyHolder.appendChild(replyList);
   replyHolder.appendChild(readmore);
@@ -121,6 +126,7 @@ let replyContainerFunc = () => {
   return replyContainer;
 };
 
+//need modify this
 submitButton.addEventListener("click", function (event) {
   if (userInput.value === "") {
     userInput.classList.add(errorBorder);
@@ -138,7 +144,6 @@ submitButton.addEventListener("click", function (event) {
   //create comment card
   newComment.appendChild(commentHeaderFunc());
   newComment.appendChild(postCommentFunc());
-  newComment.innerHTML += replyButtonFunc();
 
   //add comment card to comment list
   commentHolder.appendChild(newComment);
@@ -199,27 +204,109 @@ submitEditButton.addEventListener("click", function (event) {
   event.preventDefault();
 });
 
-//readmore button functionality
-//some how not working probaly because of the querySelectorAll
+let replyList = document.querySelectorAll(".reply-list");
 
-let commentHolder = document.querySelectorAll(".comment-holder");
-
-commentHolder.forEach((comment) => {
-  //Read More Button
-  let readMoreButton = comment.querySelector(".readmore");
-  let replyList = comment.querySelector(".reply-list");
-  replyList.style.display = "none";
-
-  readMoreButton.addEventListener("click", function () {
-    if (replyList.style.display === "none") {
-      replyList.style.display = "flex";
-      readMoreButton.textContent = "Read Less";
-    } else if ((replyList.style.display = "block")) {
-      replyList.style.display = "none";
-      readMoreButton.textContent = "Read More";
-    } else {
-      replyList.style.display = "none";
-      readMoreButton.textContent = "Read More";
-    }
-  });
+replyList.forEach((reply) => {
+  reply.style.display = "none";
 });
+
+function readMoreFunc(element) {
+  let replyList = element.parentNode.querySelector(".reply-list");
+
+  if (replyList.style.display === "none") {
+    replyList.style.display = "flex";
+    element.textContent = "Hide Comments";
+  } else if ((replyList.style.display = "flex")) {
+    replyList.style.display = "none";
+    element.textContent = "Show Comments";
+  } else {
+    replyList.style.display = "none";
+    element.textContent = "Show Comments";
+  }
+}
+
+//create reply card header
+
+let replyCardHeader = () => {
+  let replyHeader = document.createElement("div");
+  replyHeader.classList.add("comment-header");
+
+  replyHeader.appendChild(userProfileHolderFunc());
+
+  return replyHeader;
+};
+
+//create reply card func
+let userProfileImgReplyFunc = () => {
+  let userProfileImg = document.createElement("img");
+  userProfileImg = document.createElement("img");
+  userProfileImg.classList.add("user-profile-picture");
+
+  userProfileImg.setAttribute("src", "#"); //Todo: Add user profile picture url
+  userProfileImg.setAttribute("alt", "User Profile Picture");
+
+  return userProfileImg;
+};
+
+let userProfileNameReplyFunc = () => {
+  let userProfileNameHolder = document.createElement("div");
+  let style = ["flex", "flex-col", "gap-1"];
+  userProfileNameHolder.classList.add(...style);
+
+  let userProfileName = document.createElement("h3");
+  userProfileName.classList.add("user-profile-name");
+  userProfileName.textContent = "User Name"; // Todo: Add user name
+
+  let userProfileDate = document.createElement("h4");
+  userProfileDate.classList.add("user-profile-date");
+  userProfileDate.textContent = "8 hours ago"; //Todo: Add date
+
+  userProfileNameHolder.appendChild(userProfileName);
+  userProfileNameHolder.appendChild(userProfileDate);
+
+  return userProfileNameHolder;
+};
+
+//dont need to modify this
+let userProfileHolderReplyFunc = () => {
+  let userProfile = document.createElement("div");
+  userProfile.classList.add("user-profile-holder");
+
+  userProfile.appendChild(userProfileImgReplyFunc());
+  userProfile.appendChild(userProfileNameReplyFunc());
+
+  return userProfile;
+};
+
+let userReplyfunc = (userInput) => {
+  let style = ["text-black", "text-base", "w-full", "break-words"];
+  let replyComment = document.createElement("p");
+  replyComment.classList.add(...style);
+
+  // or can be load with json fetch
+
+  replyComment.innerText = userInput.value;
+  return replyComment;
+};
+
+function replyFunc(element) {
+  let replyInput = element.parentNode.querySelector(".reply-input");
+  let replyList =
+    element.parentNode.parentNode.parentNode.querySelector(".reply-list");
+
+  if (replyInput.value === "") {
+    replyInput.classList.add(errorBorder);
+    return;
+  } else {
+    replyInput.classList.remove(errorBorder);
+  }
+  let replyCard = document.createElement("div");
+  replyCard.classList.add("reply-card");
+
+  replyCard.appendChild(replyCardHeader());
+  replyCard.appendChild(userReplyfunc(replyInput));
+
+  replyList.appendChild(replyCard);
+
+  replyInput.value = "";
+}
