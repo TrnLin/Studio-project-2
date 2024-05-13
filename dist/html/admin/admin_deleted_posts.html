@@ -91,22 +91,67 @@
     <section class="min-h-lvh w-[83vw] pt-24">
       <div class="mx-auto my-auto flex h-full w-container flex-col gap-8">
         <h1 class="text-[2rem] leading-8 text-black" id="blockTitle">
-          User Management
+          Deleted Posts
         </h1>
 
         <div class="flex flex-col gap-5">
-          <form action="" id="userNameSearch" class="w-full">
+
+          <form action="" id="postSearch" class="w-full">
             <input
               type="text"
-              name="userNameSearchInput"
-              id="userNameSearchInput"
-              placeholder="Username Search"
-              class="input-box h-full border border-solid border-black text-black ring-black/50 transition duration-200 focus:border-black/70 focus:ring-1"
+              name="postSearchInput"
+              id="postSearchInput"
+              placeholder="Deleted Posts Search"
+              class="input-box h-full text-black ring-black/50 transition duration-200 focus:border-black/70 focus:ring-1"
             />
           </form>
 
-          <div id="userContainer" class="flex flex-col gap-5"></div>
+          <div id="postContainer">
+
+
+            <div class="postItem">
+              <div class="flex flex-col gap-4 lg:gap-2">
+                <h1 class="post-title" id="">
+                  Lorem ipsum dolor sit amet.
+                </h1>
+                <p class="post-body" id="">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+                  massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
+                  sapien fringilla, mattis ligula consectetur, ultrices mauris.
+                  Maecenas vitae mattis tellus.
+                </p>
+              </div>
+              <div class="flex flex-row justify-between">
+                <div class="flex flex-row gap-4">
+                  <div
+                  class="flex flex-row items-center justify-center gap-2 text-lg text-black"
+                >
+                  <ion-icon name="heart"></ion-icon
+                  ><span id="like-count">0</span>
+                </div>
+                <div
+                  class="flex flex-row items-center justify-center gap-2 text-lg text-black"
+                >
+                  <ion-icon name="chatbubble"></ion-icon
+                  ><span id="comment-count">0</span>
+                </div>
+                </div>
+                
+
+                <div class="buttonContainer flex flex-row gap-4">
+                  <div class="restorePostButton min-w-[150px] cursor-pointer border-black border-[1px] m-1 p-2 rounded-lg flex flex-row justify-center items-center" id="">Restore Post</div>
+                  <div class="archivePostButton min-w-[150px] cursor-pointer border-black border-[1px] m-1 p-2 rounded-lg flex flex-row justify-center items-center" id="">Delete Post</div>
+                </div>
+              
+              </div>
+            </div>
+
+
+
+          </div>
+
         </div>
+
       </div>
     </section>
     <!-- Material Ui -->
@@ -128,6 +173,6 @@
 
     <!-- Custom JS -->
     <script src="../../js/script.js"></script>
-    <script src="../../js/adminusermanagement.js"></script>
+    <script src="../../js/admindeletedposts.js"></script>
   </body>
 </html>

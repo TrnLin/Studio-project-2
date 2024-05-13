@@ -63,7 +63,7 @@ async function returnUserSearch(userName) {
       document.getElementById(userNameContainer).innerHTML = "";
       
       // Construct the URL with the userName parameter
-      let url = `${adminUserAPI}?userName=${encodeURIComponent(userName)}`;
+      let url = `${adminUserAPI}?userNameSearch=${encodeURIComponent(userName)}`;
       
       // Make the API call with the constructed URL
       let res = await fetch(url);
@@ -77,12 +77,12 @@ async function returnUserSearch(userName) {
 
     for (let key in data) {
         if (data[key].banned) {
-          contentHtml += `<div class='bg-red-400 flex flex-row border-b-1 border-solid black justify-between mt-5'>
+          contentHtml += `<div class='bg-red-400 flex flex-row border-b-1 border-solid black justify-between'>
             <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
             <div class='flex flex-row gap-5'>
       
       
-                <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Delete User</div>
+                <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-black border-[1px] m-2 p-2 rounded-lg flex flex-row justify-center items-center">Delete User</div>
       
       
                 <div id="${data[key].userId}UnbanUser" class="unbanUserButton bg-blue-500 text-white min-w-[150px] cursor-pointer border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Unban User</div>
@@ -90,11 +90,11 @@ async function returnUserSearch(userName) {
             </div>
           </div>`;
         } else {
-          contentHtml += `<div class='flex flex-row border-b-1 border-solid black justify-between mt-5'>
+          contentHtml += `<div class='flex flex-row border-b-1 border-solid black justify-between'>
             <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
             <div class='flex flex-row gap-5'>
              
-              <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Delete User</div>
+              <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-black border-[1px] m-2 p-2 rounded-lg flex flex-row justify-center items-center">Delete User</div>
       
       
               <div id="${data[key].userId}BanUser" class="banUserButton bg-red-500 text-white min-w-[150px] cursor-pointer border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Ban User</div>
@@ -179,12 +179,12 @@ let contentHtml = "";
 
 for (let key in data) {
   if (data[key].banned) {
-    contentHtml += `<div class='bg-red-400 flex flex-row border-b-1 border-solid black justify-between mt-5'>
+    contentHtml += `<div class='bg-red-400 flex flex-row border-b-1 border-solid black justify-between'>
       <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
       <div class='flex flex-row gap-5'>
 
 
-          <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Delete User</div>
+          <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-black border-[1px] m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Delete User</div>
 
 
           <div id="${data[key].userId}UnbanUser" class="unbanUserButton bg-blue-500 text-white min-w-[150px] cursor-pointer border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Unban User</div>
@@ -192,11 +192,11 @@ for (let key in data) {
       </div>
     </div>`;
   } else {
-    contentHtml += `<div class='flex flex-row border-b-1 border-solid black justify-between mt-5'>
+    contentHtml += `<div class='flex flex-row border-b-1 border-solid black justify-between'>
       <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
       <div class='flex flex-row gap-5'>
        
-        <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Delete User</div>
+        <div id="${data[key].userId}DeleteUser" class="deleteUserButton cursor-pointer min-w-[150px] border-black border-[1px] m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Delete User</div>
 
 
         <div id="${data[key].userId}BanUser" class="banUserButton bg-red-500 text-white min-w-[150px] cursor-pointer border-solid black border-1 m-2 p-2 rounded-lg flex flex-row gap-2 justify-center items-center">Ban User</div>
