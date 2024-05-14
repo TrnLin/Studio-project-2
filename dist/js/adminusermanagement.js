@@ -5,79 +5,76 @@ const textFieldForm = "userNameSearchInput";
 
 //Declare delete users function
 function deleteUsersFunction(userIDInput) {
-    console.log("Delete User: ", userIDInput);
-};
+  console.log("Delete User: ", userIDInput);
+}
 
 //Declare ban users function
 function banUsersFunction(userIDInput) {
-    console.log("Ban User: ", userIDInput);
-};
+  console.log("Ban User: ", userIDInput);
+}
 //Declare unban users function
 function unbanUsersFunction(userIDInput) {
-    console.log("Unban User: ", userIDInput);
-};
+  console.log("Unban User: ", userIDInput);
+}
 
 //Declaire handler functions
 function handleUnbanUser(event) {
-    let userID = event.target.dataset.userId;
-    unbanUsersFunction(userID);
-};
+  let userID = event.target.dataset.userId;
+  unbanUsersFunction(userID);
+}
 
 function handleBanUser(event) {
-    let userID = event.target.dataset.userId;
-    banUsersFunction(userID);
-};
+  let userID = event.target.dataset.userId;
+  banUsersFunction(userID);
+}
 
 function handleDeleteUser(event) {
-    let userID = event.target.dataset.userId;
-    deleteUsersFunction(userID);
-};
+  let userID = event.target.dataset.userId;
+  deleteUsersFunction(userID);
+}
 
 //Add Global Event Listener to listen for dynamic buttons.
 
-document.body.addEventListener('click', function(event) {
-    if (event.target.classList.contains('deleteUserButton')) {
-      handleDeleteUser(event);
-    } else if (event.target.classList.contains('banUserButton')) {
-      handleBanUser(event);
-    } else if (event.target.classList.contains('unbanUserButton')) {
-      handleUnbanUser(event);
-    };
-
-  });
+document.body.addEventListener("click", function (event) {
+  if (event.target.classList.contains("deleteUserButton")) {
+    handleDeleteUser(event);
+  } else if (event.target.classList.contains("banUserButton")) {
+    handleBanUser(event);
+  } else if (event.target.classList.contains("unbanUserButton")) {
+    handleUnbanUser(event);
+  }
+});
 
 async function returnUserSearch(userName) {
+  try {
+    // Clear any dataset attached to the divs
+    let divs = document.querySelectorAll("div");
 
-    try {
-
-      // Clear any dataset attached to the divs
-      let divs = document.querySelectorAll('div');
-
-      divs.forEach((div) => {
-        for (let key in div.dataset) {
-            delete div.dataset[key];
-        };
+    divs.forEach((div) => {
+      for (let key in div.dataset) {
+        delete div.dataset[key];
+      }
     });
-      
-      //Refresh the innerHTML
-      document.getElementById(userNameContainer).innerHTML = "";
-      
-      // Construct the URL with the userName parameter
-      let url = `${adminUserAPI}?userNameSearch=${encodeURIComponent(userName)}`;
-      
-      // Make the API call with the constructed URL
-      let res = await fetch(url);
-  
-      // Parse the response JSON
-      let data = await res.json();
 
-      let contentHtml = "";
+    //Refresh the innerHTML
+    document.getElementById(userNameContainer).innerHTML = "";
+
+    // Construct the URL with the userName parameter
+    let url = `${adminUserAPI}?userNameSearch=${encodeURIComponent(userName)}`;
+
+    // Make the API call with the constructed URL
+    let res = await fetch(url);
+
+    // Parse the response JSON
+    let data = await res.json();
+
+    let contentHtml = "";
 
     // Loop through the data and construct the innerHTML
 
     for (let key in data) {
-        if (data[key].banned) {
-          contentHtml += `<div class='bg-red-400 flex flex-row border-b-1 border-solid black justify-between'>
+      if (data[key].banned) {
+        contentHtml += `<div class='bg-red-400 flex flex-row border-b-1 border-solid black justify-between'>
             <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
             <div class='flex flex-row gap-5'>
       
@@ -89,8 +86,8 @@ async function returnUserSearch(userName) {
       
             </div>
           </div>`;
-        } else {
-          contentHtml += `<div class='flex flex-row border-b-1 border-solid black justify-between'>
+      } else {
+        contentHtml += `<div class='flex flex-row border-b-1 border-solid black justify-between'>
             <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
             <div class='flex flex-row gap-5'>
              
@@ -101,39 +98,37 @@ async function returnUserSearch(userName) {
       
             </div>
           </div>`;
-        }
-      };
-      
-      //Display the innerHTML
-      document.getElementById(userNameContainer).innerHTML = contentHtml;
+      }
+    }
 
-      //attach userID into divs
-      for (let key in data){
-        
-        let elemIdPrefix = data[key].userId;
+    //Display the innerHTML
+    document.getElementById(userNameContainer).innerHTML = contentHtml;
+
+    //attach userID into divs
+    for (let key in data) {
+      let elemIdPrefix = data[key].userId;
 
       if (data[key].banned) {
-        let unbanElement = document.getElementById(elemIdPrefix + 'UnbanUser');
+        let unbanElement = document.getElementById(elemIdPrefix + "UnbanUser");
         unbanElement.dataset.userId = elemIdPrefix;
       } else {
-        let banElement = document.getElementById(elemIdPrefix + 'BanUser');
+        let banElement = document.getElementById(elemIdPrefix + "BanUser");
         banElement.dataset.userId = elemIdPrefix;
-      };
+      }
 
-      let deleteElement = document.getElementById(elemIdPrefix + 'DeleteUser');
+      let deleteElement = document.getElementById(elemIdPrefix + "DeleteUser");
       deleteElement.dataset.userId = elemIdPrefix;
-      };
-
-    } catch (error) {
-      console.log("Error Occurred: ", error);
-      return null; // return null in case of error
-    };
-  };
-  
-
+    }
+  } catch (error) {
+    console.log("Error Occurred: ", error);
+    return null; // return null in case of error
+  }
+}
 
 // Return the user search
-document.getElementById(userFormContainer).addEventListener("submit", function (event) {
+document
+  .getElementById(userFormContainer)
+  .addEventListener("submit", function (event) {
     // Prevent the default form submission behavior
     event.preventDefault();
 
@@ -142,44 +137,34 @@ document.getElementById(userFormContainer).addEventListener("submit", function (
 
     // Call the function to make the API call
     returnUserSearch(userInput);
-
-  
   });
-
-
-
-
 
 // Pseudo Data Test
 
-
 (async () => {
+  data = {
+    result1: {
+      username: "User1",
+      userId: "1",
+      banned: true,
+    },
+    result2: {
+      username: "User2",
+      userId: "2",
+      banned: false,
+    },
+    result3: {
+      username: "User3",
+      userId: "3",
+      banned: true,
+    },
+  };
 
+  let contentHtml = "";
 
-
-data = {
-  result1: {
-    username: "User1",
-    userId: "1",
-    banned: true,
-  },
-  result2: {
-    username: "User2",
-    userId: "2",
-    banned: false,
-  },
-  result3: {
-    username: "User3",
-    userId: "3",
-    banned: true,
-  },
-};
-
-let contentHtml = "";
-
-for (let key in data) {
-  if (data[key].banned) {
-    contentHtml += `<div class='bg-red-400 flex flex-row border-b-1 border-solid black justify-between'>
+  for (let key in data) {
+    if (data[key].banned) {
+      contentHtml += `<div class='bg-red-400 flex flex-row border-b-1 border-solid black justify-between'>
       <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
       <div class='flex flex-row gap-5'>
 
@@ -191,8 +176,8 @@ for (let key in data) {
 
       </div>
     </div>`;
-  } else {
-    contentHtml += `<div class='flex flex-row border-b-1 border-solid black justify-between'>
+    } else {
+      contentHtml += `<div class='flex flex-row border-b-1 border-solid black justify-between'>
       <div id='${data[key].userId}' class='my-auto'>${data[key].username}</div>
       <div class='flex flex-row gap-5'>
        
@@ -203,27 +188,23 @@ for (let key in data) {
 
       </div>
     </div>`;
+    }
   }
-};
 
+  document.getElementById(userNameContainer).innerHTML = contentHtml;
 
-document.getElementById(userNameContainer).innerHTML = contentHtml;
-
-
-//attach userID into divs
-for (let key in data){
-        
+  //attach userID into divs
+  for (let key in data) {
     let elemIdPrefix = data[key].userId;
 
     if (data[key].banned) {
-        let unbanElement = document.getElementById(elemIdPrefix + 'UnbanUser');
-        unbanElement.dataset.userId = elemIdPrefix;
+      let unbanElement = document.getElementById(elemIdPrefix + "UnbanUser");
+      unbanElement.dataset.userId = elemIdPrefix;
     } else {
-        let banElement = document.getElementById(elemIdPrefix + 'BanUser');
-        banElement.dataset.userId = elemIdPrefix;
-    };
-    let deleteElement = document.getElementById(elemIdPrefix + 'DeleteUser');
+      let banElement = document.getElementById(elemIdPrefix + "BanUser");
+      banElement.dataset.userId = elemIdPrefix;
+    }
+    let deleteElement = document.getElementById(elemIdPrefix + "DeleteUser");
     deleteElement.dataset.userId = elemIdPrefix;
-
-};
+  }
 })();

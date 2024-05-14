@@ -258,7 +258,7 @@
 }
 
 .comment-card {
-  @apply flex flex-col gap-4 border-b-2 border-solid border-black/50 p-5 transition-all duration-300 hover:rounded-[20px] hover:ring-2 hover:ring-black sm:p-0 sm:py-5;
+  @apply flex flex-col gap-4 border-b-2 border-solid border-black/50 p-5 transition-all duration-300 hover:rounded-[20px] hover:ring-2 hover:ring-black sm:p-0 sm:py-5 sm:hover:rounded-none sm:hover:ring-0;
 }
 
 .comment-holder {
@@ -274,7 +274,7 @@
 }
 
 .reply-card {
-  @apply flex w-full flex-col gap-4  border-b-2 border-solid border-black/50 p-4 transition-all duration-300 hover:rounded-[20px] hover:ring-2 hover:ring-black/70 sm:p-0 sm:py-4;
+  @apply flex w-full flex-col gap-4  border-b-2 border-solid border-black/50 p-4 transition-all duration-300 hover:rounded-[20px] hover:ring-2 hover:ring-black/70 sm:p-0 sm:py-4 sm:hover:rounded-none sm:hover:ring-0;
 }
 
 .reply-holder {

@@ -1,228 +1,349 @@
 <!doctype html>
 <html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../font/fontface.css" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Signup</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../font/fontface.css" />
-  <link rel="stylesheet" href="../style/style.css" />
-  <title>Signup</title>
-</head>
-
-<body class="flex justify-center bg-white font-sans">
-  <!-- Nav Bar -->
-  <nav
-    class="fixed top-3 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
-    <div
-      class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6">
-      <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
-        <li class="md:hidden">
-          <a href="../index.html" class=""><img src="../img/MUCK.svg" class="lg:w-[80%]" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href=" ../index.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Home
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="home"></ion-icon>
-              Home
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Store
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
-              Store
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="./forum.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">
-            forum
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="chatbubbles-outline"></ion-icon>
-              Forum
-            </div>
-          </a>
-        </li>
-        <li class="sm:hidden">
-          <a href="#"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Contact
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="call-outline"></ion-icon>
-              Contact
-            </div>
-          </a>
-        </li>
-        <li class="hidden sm:block">
-          <a href="./login.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Login
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="person-outline"></ion-icon>
-              Account
-            </div>
-          </a>
-        </li>
-      </ul>
-      <div id="theme-toggle"
-        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden">
-        <ion-icon name="sunny" class="text-[20px]"></ion-icon>
-        Light
-      </div>
-    </div>
-
-    <a href="./login.html"
-      class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"><ion-icon
-        name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
-  </nav>
-
-  <!-- Section -->
-  <section class="min-h-lvh w-screen">
-    <div class="flex min-h-lvh w-full items-center justify-center">
-      <div class="mx-auto my-0 grid w-container grid-cols-2 place-items-center sm:grid-cols-1">
-        <div class="mx-auto my-0 w-signForm xs:pb-32 xs:pt-10 ">
-          <div class="flex flex-col gap-4 lg:gap-2">
-            <h1 class="text-5xl font-semibold text-black lg:text-4xl">
-              Sign Up
-            </h1>
-            <p class="text-base leading-[100%] text-black lg:text-xs">
-              Welcome to Muck! Please fill out the form to register a new
-              account.
-            </p>
-
-            <form action="/user/register" method="POST" class="flex flex-col gap-3 lg:gap-2">
-              <!-- Username -->
-              <div class="gap- flex flex-col">
-                <label class="text-base text-black lg:text-sm" for="username">Username</label>
-                <div class="">
-                  <div id="username-holder"
-                    class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
-                    <input class="input-box sm:py-2 focus:ring-0 group-hover:placeholder:text-black" type="text"
-                      name="username" id="username" placeholder="Input your Username" required />
-                    <div id="user-name" class="grid place-items-center px-3 text-black/50 group-hover:text-black">
-                      <ion-icon name="person-outline"></ion-icon>
-                    </div>
-                  </div>
-
-                  <p class="user-valid h-[10px] text-[10px] leading-[10px] text-error"></p>
-                </div>
+  <body class="flex justify-center bg-white font-sans">
+    <!-- Nav Bar -->
+    <nav
+      class="fixed top-3 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]"
+    >
+      <div
+        class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6"
+      >
+        <ul
+          class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between"
+        >
+          <li class="md:hidden">
+            <a href="../index.html" class=""
+              ><img src="../img/MUCK.svg" class="lg:w-[80%]" alt="" />
+            </a>
+          </li>
+          <li>
+            <a
+              href=" ../index.html"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+              >Home
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="home"></ion-icon>
+                Home
               </div>
-
-              <!-- Email -->
-              <div class="gap- flex flex-col">
-                <label class="text-base text-black lg:text-sm" for="email">Email</label>
-                <div class="">
-                  <div id="email-holder"
-                    class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
-                    <input class="input-box sm:py-2 focus:ring-0 group-hover:placeholder:text-black" type="text"
-                      name="email" id="email" placeholder="Input your Email" />
-                    <div id="mail" class="grid place-items-center px-3 text-black/50 group-hover:text-black">
-                      <ion-icon name="mail-outline"></ion-icon>
-                    </div>
-                  </div>
-                  <p class="email-valid h-[10px] text-[10px] leading-[10px] text-error"></p>
-                </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+              >Store
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
+                Store
               </div>
-
-              <!-- Password -->
-
-              <div class="gap- flex flex-col">
-                <label class="text-base text-black lg:text-sm" for="password">Password</label>
-                <div class="">
-                  <div id="password-holder"
-                    class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
-                    <input class="input-box sm:py-2 focus:ring-0" type="password" name="password" id="password"
-                      placeholder="Input your password" />
-                    <div id="show-password" class="grid place-items-center p-3 text-black/50 group-hover:text-black">
-                      <ion-icon name="eye-off-outline"></ion-icon>
-                    </div>
-                  </div>
-                  <p class="pass-valid text-[10px] text-error"></p>
-                  <p class="pass-upper-valid text-[10px] text-black/80">
-                    The first letter should be uppercase
-                  </p>
-                  <p class="pass-number-valid text-[10px] text-black/80">
-                    There should be at least one number
-                  </p>
-                  <p class="pass-length-valid text-[10px] text-black/80">
-                    The password length should be between 8 - 20
-                  </p>
-                </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./forum.html"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            >
+              forum
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col"
+              >
+                <ion-icon
+                  class="text-2xl"
+                  name="chatbubbles-outline"
+                ></ion-icon>
+                Forum
               </div>
-
-              <div class="gap- flex flex-col">
-                <label class="text-base text-black lg:text-sm" for="confirm">Confirm Password</label>
-                <div class="">
-                  <div id="confirm-holder"
-                    class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
-                    <input class="input-box sm:py-2 border-black/50 focus:ring-0" type="password" name="confirm"
-                      id="confirm" placeholder="Confirm your password" />
-                    <div id="show-confirm" class="grid place-items-center px-3 text-black/50 group-hover:text-black">
-                      <ion-icon name="eye-off-outline"></ion-icon>
-                    </div>
-                  </div>
-                  <p class="confirm-valid h-[10px] text-[10px] leading-[10px] text-error"></p>
-                </div>
+            </a>
+          </li>
+          <li class="sm:hidden">
+            <a
+              href="./contact.html"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+              >Contact
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="call-outline"></ion-icon>
+                Contact
               </div>
-
-              <!-- Submit -->
-              <div class="flex flex-col items-center justify-center gap-[10px] lg:gap-1">
-                <button id="submitRegistration" type="submit"
-                  class="w-full rounded-md bg-solidblack py-3 text-center text-base text-[#ffffff] transition hover:bg-[#ffffff] hover:text-solidblack lg:text-sm">
-                  Sign Up
-                </button>
-                <p class="text-black lg:text-sm">Or</p>
-                <a href="./login.html"
-                  class="w-full rounded-md border-[1px] border-solid border-black py-3 text-center text-base leading-[100%] text-black transition hover:bg-solidblack hover:text-[#ffffff] lg:text-sm">
-                  Already have an Account? Login</a>
+            </a>
+          </li>
+          <li class="hidden sm:block">
+            <a
+              href="./login.html"
+              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+              >Login
+              <div
+                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
+              >
+                <ion-icon class="text-2xl" name="person-outline"></ion-icon>
+                Account
               </div>
-            </form>
-          </div>
-        </div>
-        <div class="grid grid-cols-3 grid-rows-3 place-items-center gap-5 lg:grid-cols-2 sm:hidden">
-          <div
-            class="relative col-span-2 row-span-2 aspect-square min-h-96 rounded-[20px] bg-blue-100 lg:min-h-[310px]">
-            <div class="-translate-xy absolute left-1/2 top-1/2 size-[350px] rounded-full bg-white lg:size-72"></div>
-            <div class="absolute bottom-3">
-              <img src="../img/UI/floatingitem.svg" alt="" />
-            </div>
-          </div>
-          <div class="relative row-span-2 h-full w-full rounded-[20px] bg-orange-100 lg:hidden">
-            <div class="-translate-xy absolute left-1/2 top-1/2 size-[150px] rounded-full bg-white lg:size-32"></div>
-            <div class="absolute translate-y-1/2">
-              <img src="../img/UI/Saly-12.svg" alt="" />
-            </div>
-          </div>
-          <div class="relative col-span-2 h-full w-full rounded-[20px] bg-yellow-100">
-            <div class="absolute bottom-1/2 right-4 size-[150px] translate-y-1/2 rounded-full bg-white lg:size-32">
-            </div>
-            <div class="absolute -bottom-[35%] -right-1 lg:-bottom-[45%]">
-              <img src="../img/UI/Saly-38.svg" alt="" />
-            </div>
-          </div>
-          <div
-            class="relative flex size-[182px] h-full w-full items-center justify-center rounded-[20px] bg-green-100 lg:hidden">
-            <div class="-translate-xy absolute left-1/2 top-1/2 size-[150px] rounded-full bg-white lg:size-32"></div>
-            <div class="absolute">
-              <img src="../img/UI/doodle-3 1.svg" alt="" />
-            </div>
-          </div>
+            </a>
+          </li>
+        </ul>
+        <div
+          id="theme-toggle"
+          class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden"
+        >
+          <ion-icon name="sunny" class="text-[20px]"></ion-icon>
+          Light
         </div>
       </div>
-    </div>
-  </section>
-  <!--Lenis-->
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-  <!--Ionicons-->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <!-- Custom JS -->
-  <script src="../js/script.js"></script>
-  <script src="../js/signup.js"></script>
-</body>
+      <a
+        href="./login.html"
+        class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
+        ><ion-icon name="person" class="text-[20px] lg:text-sm"></ion-icon
+        >Login</a
+      >
+    </nav>
 
+    <!-- Section -->
+    <section class="min-h-lvh w-screen">
+      <div class="flex min-h-lvh w-full items-center justify-center">
+        <div
+          class="mx-auto my-0 grid w-container grid-cols-2 place-items-center sm:grid-cols-1"
+        >
+          <div class="mx-auto my-0 w-signForm xs:pb-32 xs:pt-10">
+            <div class="flex flex-col gap-4 lg:gap-2">
+              <h1 class="text-5xl font-semibold text-black lg:text-4xl">
+                Sign Up
+              </h1>
+              <p class="text-base leading-[100%] text-black lg:text-xs">
+                Welcome to Muck! Please fill out the form to register a new
+                account.
+              </p>
+
+              <form
+                action="/user/register"
+                method="POST"
+                class="flex flex-col gap-3 lg:gap-2"
+              >
+                <!-- Username -->
+                <div class="gap- flex flex-col">
+                  <label class="text-base text-black lg:text-sm" for="username"
+                    >Username</label
+                  >
+                  <div class="">
+                    <div
+                      id="username-holder"
+                      class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black"
+                    >
+                      <input
+                        class="input-box focus:ring-0 group-hover:placeholder:text-black sm:py-2"
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Input your Username"
+                        required
+                      />
+                      <div
+                        id="user-name"
+                        class="grid place-items-center px-3 text-black/50 group-hover:text-black"
+                      >
+                        <ion-icon name="person-outline"></ion-icon>
+                      </div>
+                    </div>
+
+                    <p
+                      class="user-valid h-[10px] text-[10px] leading-[10px] text-error"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="gap- flex flex-col">
+                  <label class="text-base text-black lg:text-sm" for="email"
+                    >Email</label
+                  >
+                  <div class="">
+                    <div
+                      id="email-holder"
+                      class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black"
+                    >
+                      <input
+                        class="input-box focus:ring-0 group-hover:placeholder:text-black sm:py-2"
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Input your Email"
+                      />
+                      <div
+                        id="mail"
+                        class="grid place-items-center px-3 text-black/50 group-hover:text-black"
+                      >
+                        <ion-icon name="mail-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <p
+                      class="email-valid h-[10px] text-[10px] leading-[10px] text-error"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Password -->
+
+                <div class="gap- flex flex-col">
+                  <label class="text-base text-black lg:text-sm" for="password"
+                    >Password</label
+                  >
+                  <div class="">
+                    <div
+                      id="password-holder"
+                      class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black"
+                    >
+                      <input
+                        class="input-box focus:ring-0 sm:py-2"
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Input your password"
+                      />
+                      <div
+                        id="show-password"
+                        class="grid place-items-center p-3 text-black/50 group-hover:text-black"
+                      >
+                        <ion-icon name="eye-off-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <p class="pass-valid text-[10px] text-error"></p>
+                    <p class="pass-upper-valid text-[10px] text-black/80">
+                      The first letter should be uppercase
+                    </p>
+                    <p class="pass-number-valid text-[10px] text-black/80">
+                      There should be at least one number
+                    </p>
+                    <p class="pass-length-valid text-[10px] text-black/80">
+                      The password length should be between 8 - 20
+                    </p>
+                  </div>
+                </div>
+
+                <div class="gap- flex flex-col">
+                  <label class="text-base text-black lg:text-sm" for="confirm"
+                    >Confirm Password</label
+                  >
+                  <div class="">
+                    <div
+                      id="confirm-holder"
+                      class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black"
+                    >
+                      <input
+                        class="input-box border-black/50 focus:ring-0 sm:py-2"
+                        type="password"
+                        name="confirm"
+                        id="confirm"
+                        placeholder="Confirm your password"
+                      />
+                      <div
+                        id="show-confirm"
+                        class="grid place-items-center px-3 text-black/50 group-hover:text-black"
+                      >
+                        <ion-icon name="eye-off-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <p
+                      class="confirm-valid h-[10px] text-[10px] leading-[10px] text-error"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Submit -->
+                <div
+                  class="flex flex-col items-center justify-center gap-[10px] lg:gap-1"
+                >
+                  <button
+                    id="submitRegistration"
+                    type="submit"
+                    class="w-full rounded-md bg-solidblack py-3 text-center text-base text-[#ffffff] transition hover:bg-[#ffffff] hover:text-solidblack lg:text-sm"
+                  >
+                    Sign Up
+                  </button>
+                  <p class="text-black lg:text-sm">Or</p>
+                  <a
+                    href="./login.html"
+                    class="w-full rounded-md border-[1px] border-solid border-black py-3 text-center text-base leading-[100%] text-black transition hover:bg-solidblack hover:text-[#ffffff] lg:text-sm"
+                  >
+                    Already have an Account? Login</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-3 grid-rows-3 place-items-center gap-5 lg:grid-cols-2 sm:hidden"
+          >
+            <div
+              class="relative col-span-2 row-span-2 aspect-square min-h-96 rounded-[20px] bg-blue-100 lg:min-h-[310px]"
+            >
+              <div
+                class="-translate-xy absolute left-1/2 top-1/2 size-[350px] rounded-full bg-white lg:size-72"
+              ></div>
+              <div class="absolute bottom-3">
+                <img src="../img/UI/floatingitem.svg" alt="" />
+              </div>
+            </div>
+            <div
+              class="relative row-span-2 h-full w-full rounded-[20px] bg-orange-100 lg:hidden"
+            >
+              <div
+                class="-translate-xy absolute left-1/2 top-1/2 size-[150px] rounded-full bg-white lg:size-32"
+              ></div>
+              <div class="absolute translate-y-1/2">
+                <img src="../img/UI/Saly-12.svg" alt="" />
+              </div>
+            </div>
+            <div
+              class="relative col-span-2 h-full w-full rounded-[20px] bg-yellow-100"
+            >
+              <div
+                class="absolute bottom-1/2 right-4 size-[150px] translate-y-1/2 rounded-full bg-white lg:size-32"
+              ></div>
+              <div class="absolute -bottom-[35%] -right-1 lg:-bottom-[45%]">
+                <img src="../img/UI/Saly-38.svg" alt="" />
+              </div>
+            </div>
+            <div
+              class="relative flex size-[182px] h-full w-full items-center justify-center rounded-[20px] bg-green-100 lg:hidden"
+            >
+              <div
+                class="-translate-xy absolute left-1/2 top-1/2 size-[150px] rounded-full bg-white lg:size-32"
+              ></div>
+              <div class="absolute">
+                <img src="../img/UI/doodle-3 1.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Lenis-->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <!--Ionicons-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/signup.js"></script>
+  </body>
 </html>
