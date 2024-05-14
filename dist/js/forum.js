@@ -47,7 +47,15 @@ let postHolderFunc = () => {
 
   holder.classList.add(...style);
 
-  holder.appendChild(postTitleFunc());
+  let header = document.createElement("div");
+  let headerStyle = ["flex", "flex-row", "justify-between", "items-center"];
+
+  header.classList.add(...headerStyle);
+
+  header.appendChild(postTitleFunc());
+  header.appendChild(postDateFunc());
+
+  holder.appendChild(header);
   holder.appendChild(postContentFunc());
 
   return holder;
@@ -61,6 +69,15 @@ let postTitleFunc = () => {
 
   title.innerText = userTitleInput.value;
   return title;
+};
+
+let postDateFunc = () => {
+  let date = document.createElement("p");
+
+  date.classList.add("post-date");
+
+  date.innerText = new Date().toLocaleDateString();
+  return date;
 };
 
 let postContentFunc = () => {

@@ -321,7 +321,11 @@
 }
 
 .post-title {
-  @apply break-words text-2xl font-medium leading-[100%] text-black lg:text-xl;
+  @apply break-words text-2xl font-medium leading-[100%] text-black lg:text-xl sm:text-lg;
+}
+
+.post-date {
+  @apply text-black/70 sm:text-sm;
 }
 
 .post-description {

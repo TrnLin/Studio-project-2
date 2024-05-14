@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
@@ -79,16 +79,134 @@
                 name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
     </nav>
 
-    <section class="min-h-lvh w-screen">
-        <div class="mx-auto my-24 flex h-full w-container flex-col gap-6 sm:w-11/12 items-center">
-            <div
-                class="flex w-smContainer flex-col p-8 ring-inset ring-black ring-2 rounded-[20px] border-b-4 border-solid border-black">
-                <div class="size-28 rounded-full bg- ring-inset ring-2 ring-black">
-                    <img src="#" alt="User's avatar" class="rounded-full w-full h-full">
+    <section class="m-h-lvh w-screen">
+        <div class="flex min-h-lvh w-full items-center justify-center">
+            <div class="flex flex-col gap-4 sm:p-6">
+                <p class="text-[64px] font-bold leading-[64px] text-black xl:text-5xl">
+                    Contact
+                </p>
+                <div class="text-black">
+                    <p class="xl:text-sm">
+                        It is better to know more about each other. Let get in touch!
+                    </p>
+                    <p class="lg:text-sm">You can easily find us at:</p>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div class="">
+                        <a href="#"
+                            class="flex flex-row items-center gap-5 rounded-[20px] border border-green-200 bg-green-100 p-5 text-xl text-green-200 transition-all hover:border-green-100 hover:bg-green-200 hover:text-green-100 lg:text-sm sm:text-sm"><ion-icon
+                                class="text-3xl lg:text-xl" name="call"></ion-icon>1234 - 5678 - 0890
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="#"
+                            class="flex flex-row items-center gap-5 rounded-[20px] border border-orange-200 bg-orange-100 p-5 text-xl text-orange-200 transition-all hover:border-orange-100 hover:bg-orange-200 hover:text-orange-100 lg:text-sm sm:text-sm"><ion-icon
+                                class="text-3xl lg:text-xl" name="logo-instagram"></ion-icon>Instagram</a>
+                    </div>
+                    <div class="">
+                        <a href="#"
+                            class="flex flex-row items-center gap-5 rounded-[20px] border border-blue-200 bg-blue-100 p-5 text-xl text-blue-200 transition-all hover:border-blue-100 hover:bg-blue-200 hover:text-blue-100 lg:text-sm sm:text-sm"><ion-icon
+                                class="text-3xl lg:text-xl" name="logo-facebook"></ion-icon>Facebook</a>
+                    </div>
+                    <div class="">
+                        <a href="#"
+                            class="flex flex-row items-center gap-5 rounded-[20px] border border-pink-200 bg-pink-100 p-5 text-xl text-pink-200 transition-all hover:border-pink-100 hover:bg-pink-200 hover:text-pink-100 lg:text-sm sm:text-sm"><ion-icon
+                                class="text-3xl lg:text-xl" name="mail"></ion-icon>Email</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
     </section>
+
+    <script>
+        let colorslight = [
+            {
+                bg: "#D4E6B5",
+                text: "#3F4536",
+            },
+            {
+                bg: "#FFC1CC",
+                text: "#44141C",
+            },
+            {
+                bg: "#B4E0EA",
+                text: "#364346",
+            },
+            {
+                bg: "#FFF490",
+                text: "#3A3121",
+            },
+            {
+                bg: "#FFAD72",
+                text: "#382519",
+            },
+        ];
+
+        let colorsdark = [
+            {
+                bg: "#3F4536",
+                text: "#D4E6B5",
+            },
+            {
+                bg: "#44141C",
+                text: "#FFC1CC",
+            },
+            {
+                bg: "#364346",
+                text: "#B4E0EA",
+            },
+            {
+                bg: "#3A3121",
+                text: "#FFF490",
+            },
+            {
+                bg: "#382519",
+                text: "#FFAD72",
+            },
+        ];
+
+        let circles = document.querySelector(".circles").querySelectorAll("li");
+
+        let colorTheme = document.documentElement.getAttribute("data-theme");
+        if (colorTheme === "dark") {
+            let colors = colorsdark;
+            circles.forEach((square) => {
+                let randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+                square.style.backgroundColor = randomColor.bg;
+                square.style.borderColor = randomColor.text;
+            });
+        } else {
+            let colors = colorslight;
+            circles.forEach((square) => {
+                let randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+                square.style.backgroundColor = randomColor.bg;
+                square.style.borderColor = randomColor.text;
+            });
+        }
+
+        circles.forEach((square) => {
+            square.style.left = `${Math.floor(Math.random() * 100)}%`;
+        });
+
+        console.log(circles);
+
+    </script>
 
     <!-- Material Ui -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>

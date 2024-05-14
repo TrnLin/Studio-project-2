@@ -17,7 +17,8 @@ module.exports = {
       width: {
         container: "min(1400px, 100% - 4rem)",
         modal: "min(750px, 100% )",
-        signForm: "min(380px, 100% - 2rem)",
+        signForm: "min(380px, 100% - 1rem)",
+        smContainer: "min(1000px, 100% - 4rem)",
       },
       keyframes: {
         floatting: {
