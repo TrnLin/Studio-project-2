@@ -51,13 +51,22 @@ async function returnPostSearch(postInput) {
 
     let contentHtml = "";
 
-    for (let key in data) {
-    }
-  } catch (error) {
-    console.log("Error Occurred: ", error);
-    return null;
-  }
-}
+
+
+    for (let key in data){
+
+        
+
+    };
+
+
+    } catch(error){
+        console.log("Error Occurred: ", error);
+        return null;
+    };
+
+};
+
 
 // Return the user search
 document.getElementById(postForm).addEventListener("submit", function (event) {
