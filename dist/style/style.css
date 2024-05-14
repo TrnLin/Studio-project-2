@@ -1251,12 +1251,12 @@ html.transition,
   grid-row: span 2 / span 2;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
 .m-1 {
   margin: 0.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
 }
 
 .mx-auto {
@@ -1303,10 +1303,6 @@ html.transition,
   margin-top: 1rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
 .block {
   display: block;
 }
@@ -1342,6 +1338,11 @@ html.transition,
 .size-10 {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.size-28 {
+  width: 7rem;
+  height: 7rem;
 }
 
 .size-72 {
@@ -1554,7 +1555,11 @@ html.transition,
 }
 
 .w-signForm {
-  width: min(380px, 100% - 2rem);
+  width: min(380px, 100% - 1rem);
+}
+
+.w-smContainer {
+  width: min(1000px, 100% - 4rem);
 }
 
 .min-w-36 {
@@ -1624,8 +1629,33 @@ html.transition,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-x-2 {
+  --tw-translate-x: 0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-2 {
+  --tw-translate-y: 0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-\[2px\] {
+  --tw-translate-y: -2px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .rotate-180 {
   --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-45 {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-rotate-45 {
+  --tw-rotate: -45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1879,6 +1909,10 @@ html.transition,
 
 .border-\[1px\] {
   border-width: 1px;
+}
+
+.border-b-4 {
+  border-bottom-width: 4px;
 }
 
 .border-solid {
@@ -2157,6 +2191,10 @@ html.transition,
 
 .pl-1 {
   padding-left: 0.25rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
 }
 
 .pt-2 {
@@ -2447,6 +2485,10 @@ html.transition,
 
 .ring-inset {
   --tw-ring-inset: inset;
+}
+
+.ring-black {
+  --tw-ring-color: rgba(var(--black));
 }
 
 .ring-black\/10 {
@@ -2810,6 +2852,14 @@ html.transition,
   --tw-ring-color: rgba(var(--black));
 }
 
+@media (max-width: 639px) {
+  .comment-card {
+    padding: 0px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
 .comment-holder {
   display: flex;
   width: 100%;
@@ -2827,6 +2877,13 @@ html.transition,
   border-style: solid;
   border-color: rgba(var(--black), 0.5);
   padding-left: 1.5rem;
+}
+
+@media (max-width: 639px) {
+  .reply-container {
+    margin-left: 0px;
+    padding-left: 0.75rem;
+  }
 }
 
 .comment-header {
@@ -2857,6 +2914,14 @@ html.transition,
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   --tw-ring-color: rgba(var(--black), 0.7);
+}
+
+@media (max-width: 639px) {
+  .reply-card {
+    padding: 0px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .reply-holder {
@@ -3070,6 +3135,24 @@ html.likeButton,
   .post-title {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .post-title {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.post-date {
+  color: rgba(var(--black), 0.7);
+}
+
+@media (max-width: 639px) {
+  .post-date {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -3617,6 +3700,11 @@ html.likeButton,
 }
 
 @media (max-width: 1279px) {
+  .xl\:my-12 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
   .xl\:size-72 {
     width: 18rem;
     height: 18rem;
@@ -3639,8 +3727,16 @@ html.likeButton,
     width: 83.333333%;
   }
 
+  .xl\:gap-5 {
+    gap: 1.25rem;
+  }
+
   .xl\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .xl\:p-0 {
+    padding: 0px;
   }
 
   .xl\:p-3 {
@@ -3665,6 +3761,11 @@ html.likeButton,
   .xl\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .xl\:text-5xl {
@@ -3696,6 +3797,12 @@ html.likeButton,
     font-size: 0.75rem;
     line-height: 1rem;
   }
+
+  .xl\:ring-0 {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
 }
 
 @media (max-width: 1030px) {
@@ -3705,6 +3812,10 @@ html.likeButton,
 
   .lg\:ml-14 {
     margin-left: 3.5rem;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 
   .lg\:size-32 {
@@ -3758,6 +3869,10 @@ html.likeButton,
 
   .lg\:min-w-28 {
     min-width: 7rem;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:flex-col {
@@ -3870,18 +3985,26 @@ html.likeButton,
     display: none;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:gap-5 {
     gap: 1.25rem;
   }
 }
 
 @media (max-width: 639px) {
+  .sm\:fixed {
+    position: fixed;
+  }
+
   .sm\:bottom-0 {
     bottom: 0px;
+  }
+
+  .sm\:right-5 {
+    right: 1.25rem;
+  }
+
+  .sm\:top-11 {
+    top: 2.75rem;
   }
 
   .sm\:top-\[inherit\] {
@@ -3929,6 +4052,10 @@ html.likeButton,
     min-height: 400lvw;
   }
 
+  .sm\:w-11\/12 {
+    width: 91.666667%;
+  }
+
   .sm\:w-\[100vw\] {
     width: 100vw;
   }
@@ -3949,6 +4076,10 @@ html.likeButton,
     flex-direction: column;
   }
 
+  .sm\:items-start {
+    align-items: flex-start;
+  }
+
   .sm\:items-center {
     align-items: center;
   }
@@ -3959,6 +4090,10 @@ html.likeButton,
 
   .sm\:justify-between {
     justify-content: space-between;
+  }
+
+  .sm\:gap-3 {
+    gap: 0.75rem;
   }
 
   .sm\:gap-5 {
@@ -4012,6 +4147,11 @@ html.likeButton,
     padding-bottom: 0px;
   }
 
+  .sm\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
   .sm\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -4043,6 +4183,11 @@ html.likeButton,
     padding-top: 80px;
   }
 
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -4066,6 +4211,11 @@ html.likeButton,
     line-height: 1.25rem;
   }
 
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .sm\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -4085,6 +4235,14 @@ html.likeButton,
   .xs\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .xs\:pb-32 {
+    padding-bottom: 8rem;
+  }
+
+  .xs\:pt-10 {
+    padding-top: 2.5rem;
   }
 }
 

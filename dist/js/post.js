@@ -70,7 +70,13 @@ let commentHeaderFunc = () => {
 // };
 
 let postCommentFunc = () => {
-  let style = ["text-black", "text-base", "w-full", "break-words"];
+  let style = [
+    "text-black",
+    "text-base",
+    "w-full",
+    "break-words",
+    "xl:text-sm",
+  ];
   let postComment = document.createElement("p");
   postComment.classList.add(...style);
 
@@ -82,16 +88,15 @@ let postCommentFunc = () => {
 
 //dont need to modify this
 let replyButtonFunc = () => {
-  let replyHolder = `<form action="" class="reply-form flex flex-row gap-5">
+  let replyHolder = `<form action="" class="reply-form flex flex-row gap-5 sm:flex-col">
   <div
     class="group flex w-full flex-row items-center justify-center rounded-[10px] text-black/50 ring-2 ring-inset ring-black/50 transition duration-200 hover:text-black hover:ring-black">
-    <input type="text" name="reply"
-      class="input-box reply-input "
-      placeholder="Reply to..." required />
+    <input type="text" name="reply" class="input-box reply-input sm:text-sm" placeholder="Reply to..."
+      required />
   </div>
-  <div 
-    class="shadow-box reply-btn" onclick="javascript:replyFunc(this)">
-    <ion-icon name="chatbubbles"></ion-icon>Reply
+  <div class="shadow-box reply-btn flex justify-center items-center sm:w-full "
+    onclick="javascript:replyFunc(this)">
+    <ion-icon name="send" class="-rotate-45 -translate-y-[2px]"></ion-icon>Reply
   </div>
 </form>`;
 
@@ -279,7 +284,13 @@ let userProfileHolderReplyFunc = () => {
 };
 
 let userReplyfunc = (userInput) => {
-  let style = ["text-black", "text-base", "w-full", "break-words"];
+  let style = [
+    "text-black",
+    "text-base",
+    "w-full",
+    "break-words",
+    "xl:text-sm",
+  ];
   let replyComment = document.createElement("p");
   replyComment.classList.add(...style);
 
