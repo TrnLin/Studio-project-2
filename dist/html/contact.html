@@ -1,278 +1,222 @@
 <!doctype html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../font/fontface.css" />
-    <link rel="stylesheet" href="../style/style.css" />
-    <title>Post</title>
-  </head>
 
-  <body class="flex justify-center bg-white font-sans">
-    <!-- Nav Bar -->
-    <nav
-      class="fixed top-3 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]"
-    >
-      <div
-        class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6"
-      >
-        <ul
-          class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between"
-        >
-          <li class="md:hidden">
-            <a href="../index.html" class=""
-              ><img src="../img/MUCK.svg" class="lg:w-[80%]" alt="" />
-            </a>
-          </li>
-          <li>
-            <a
-              href=" ../index.html"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
-              >Home
-              <div
-                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
-              >
-                <ion-icon class="text-2xl" name="home"></ion-icon>
-                Home
-              </div>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
-              >Store
-              <div
-                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
-              >
-                <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
-                Store
-              </div>
-            </a>
-          </li>
-          <li>
-            <a
-              href="./forum.html"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
-            >
-              forum
-              <div
-                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
-              >
-                <ion-icon
-                  class="text-2xl"
-                  name="chatbubbles-outline"
-                ></ion-icon>
-                Forum
-              </div>
-            </a>
-          </li>
-          <li class="sm:hidden">
-            <a
-              href="#"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
-              >Contact
-              <div
-                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
-              >
-                <ion-icon class="text-2xl" name="call-outline"></ion-icon>
-                Contact
-              </div>
-            </a>
-          </li>
-          <li class="hidden sm:block">
-            <a
-              href="./login.html"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
-              >Login
-              <div
-                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
-              >
-                <ion-icon class="text-2xl" name="person-outline"></ion-icon>
-                Account
-              </div>
-            </a>
-          </li>
-        </ul>
-        <div
-          id="theme-toggle"
-          class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden"
-        >
-          <ion-icon name="sunny" class="text-[20px]"></ion-icon>
-          Light
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../font/fontface.css" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <title>Post</title>
+</head>
+
+<body class=" bg-white font-sans">
+  <!-- Nav Bar -->
+  <nav
+    class="fixed top-3 right-1/2 translate-x-1/2 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
+    <div
+      class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6">
+      <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
+        <li class="md:hidden">
+          <a href="../index.html" class=""><img src="../img/MUCK.svg" class="lg:w-[80%]" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href=" ../index.html"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Home
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="home"></ion-icon>
+              Home
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Store
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
+              Store
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./forum.html"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">
+            forum
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="chatbubbles-outline"></ion-icon>
+              Forum
+            </div>
+          </a>
+        </li>
+        <li class="sm:hidden">
+          <a href="#"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Contact
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="call-outline"></ion-icon>
+              Contact
+            </div>
+          </a>
+        </li>
+        <li class="hidden sm:block">
+          <a href="./login.html"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Login
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="person-outline"></ion-icon>
+              Account
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div id="theme-toggle"
+        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden">
+        <ion-icon name="sunny" class="text-[20px]"></ion-icon>
+        Light
       </div>
+    </div>
 
-      <a
-        href="./html/login.html"
-        class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
-        ><ion-icon name="person" class="text-[20px] lg:text-sm"></ion-icon
-        >Login</a
-      >
-    </nav>
+    <a href="./html/login.html"
+      class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"><ion-icon
+        name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
+  </nav>
 
-    <section class="m-h-lvh w-screen">
-      <div class="flex min-h-lvh w-full items-center justify-center">
-        <div class="flex flex-col gap-4 sm:p-6">
-          <p
-            class="text-[64px] font-bold leading-[64px] text-black xl:text-5xl"
-          >
-            Contact
+  <section class="m-h-lvh w-screen">
+    <div class="flex min-h-lvh w-full items-center justify-center">
+      <div class="flex flex-col gap-4 sm:p-6">
+        <p class="text-[64px] font-bold leading-[64px] text-black xl:text-5xl">
+          Contact
+        </p>
+        <div class="text-black">
+          <p class="xl:text-sm">
+            It is better to know more about each other. Let get in touch!
           </p>
-          <div class="text-black">
-            <p class="xl:text-sm">
-              It is better to know more about each other. Let get in touch!
-            </p>
-            <p class="lg:text-sm">You can easily find us at:</p>
+          <p class="lg:text-sm">You can easily find us at:</p>
+        </div>
+        <div class="flex flex-col gap-5">
+          <div class="">
+            <a href="#"
+              class="flex flex-row items-center gap-5 rounded-[20px] border border-green-200 bg-green-100 p-5 text-xl text-green-200 transition-all hover:border-green-100 hover:bg-green-200 hover:text-green-100 lg:text-sm sm:text-sm"><ion-icon
+                class="text-3xl lg:text-xl" name="call"></ion-icon>1234 - 5678 - 0890
+            </a>
           </div>
-          <div class="flex flex-col gap-5">
-            <div class="">
-              <a
-                href="#"
-                class="flex flex-row items-center gap-5 rounded-[20px] border border-green-200 bg-green-100 p-5 text-xl text-green-200 transition-all hover:border-green-100 hover:bg-green-200 hover:text-green-100 lg:text-sm sm:text-sm"
-                ><ion-icon class="text-3xl lg:text-xl" name="call"></ion-icon
-                >1234 - 5678 - 0890
-              </a>
-            </div>
-            <div class="">
-              <a
-                href="#"
-                class="flex flex-row items-center gap-5 rounded-[20px] border border-orange-200 bg-orange-100 p-5 text-xl text-orange-200 transition-all hover:border-orange-100 hover:bg-orange-200 hover:text-orange-100 lg:text-sm sm:text-sm"
-                ><ion-icon
-                  class="text-3xl lg:text-xl"
-                  name="logo-instagram"
-                ></ion-icon
-                >Instagram</a
-              >
-            </div>
-            <div class="">
-              <a
-                href="#"
-                class="flex flex-row items-center gap-5 rounded-[20px] border border-blue-200 bg-blue-100 p-5 text-xl text-blue-200 transition-all hover:border-blue-100 hover:bg-blue-200 hover:text-blue-100 lg:text-sm sm:text-sm"
-                ><ion-icon
-                  class="text-3xl lg:text-xl"
-                  name="logo-facebook"
-                ></ion-icon
-                >Facebook</a
-              >
-            </div>
-            <div class="">
-              <a
-                href="#"
-                class="flex flex-row items-center gap-5 rounded-[20px] border border-pink-200 bg-pink-100 p-5 text-xl text-pink-200 transition-all hover:border-pink-100 hover:bg-pink-200 hover:text-pink-100 lg:text-sm sm:text-sm"
-                ><ion-icon class="text-3xl lg:text-xl" name="mail"></ion-icon
-                >Email</a
-              >
-            </div>
+          <div class="">
+            <a href="#"
+              class="flex flex-row items-center gap-5 rounded-[20px] border border-orange-200 bg-orange-100 p-5 text-xl text-orange-200 transition-all hover:border-orange-100 hover:bg-orange-200 hover:text-orange-100 lg:text-sm sm:text-sm"><ion-icon
+                class="text-3xl lg:text-xl" name="logo-instagram"></ion-icon>Instagram</a>
+          </div>
+          <div class="">
+            <a href="#"
+              class="flex flex-row items-center gap-5 rounded-[20px] border border-blue-200 bg-blue-100 p-5 text-xl text-blue-200 transition-all hover:border-blue-100 hover:bg-blue-200 hover:text-blue-100 lg:text-sm sm:text-sm"><ion-icon
+                class="text-3xl lg:text-xl" name="logo-facebook"></ion-icon>Facebook</a>
+          </div>
+          <div class="">
+            <a href="#"
+              class="flex flex-row items-center gap-5 rounded-[20px] border border-pink-200 bg-pink-100 p-5 text-xl text-pink-200 transition-all hover:border-pink-100 hover:bg-pink-200 hover:text-pink-100 lg:text-sm sm:text-sm"><ion-icon
+                class="text-3xl lg:text-xl" name="mail"></ion-icon>Email</a>
           </div>
         </div>
       </div>
-      <div class="area">
-        <ul class="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </section>
+    </div>
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </section>
 
-    <script>
-      let colorslight = [
-        {
-          bg: "#D4E6B5",
-          text: "#3F4536",
-        },
-        {
-          bg: "#FFC1CC",
-          text: "#44141C",
-        },
-        {
-          bg: "#B4E0EA",
-          text: "#364346",
-        },
-        {
-          bg: "#FFF490",
-          text: "#3A3121",
-        },
-        {
-          bg: "#FFAD72",
-          text: "#382519",
-        },
-      ];
+  <script>
+    let colorslight = [
+      {
+        bg: "#D4E6B5",
+        text: "#3F4536",
+      },
+      {
+        bg: "#FFC1CC",
+        text: "#44141C",
+      },
+      {
+        bg: "#B4E0EA",
+        text: "#364346",
+      },
+      {
+        bg: "#FFF490",
+        text: "#3A3121",
+      },
+      {
+        bg: "#FFAD72",
+        text: "#382519",
+      },
+    ];
 
-      let colorsdark = [
-        {
-          bg: "#3F4536",
-          text: "#D4E6B5",
-        },
-        {
-          bg: "#44141C",
-          text: "#FFC1CC",
-        },
-        {
-          bg: "#364346",
-          text: "#B4E0EA",
-        },
-        {
-          bg: "#3A3121",
-          text: "#FFF490",
-        },
-        {
-          bg: "#382519",
-          text: "#FFAD72",
-        },
-      ];
+    let colorsdark = [
+      {
+        bg: "#3F4536",
+        text: "#D4E6B5",
+      },
+      {
+        bg: "#44141C",
+        text: "#FFC1CC",
+      },
+      {
+        bg: "#364346",
+        text: "#B4E0EA",
+      },
+      {
+        bg: "#3A3121",
+        text: "#FFF490",
+      },
+      {
+        bg: "#382519",
+        text: "#FFAD72",
+      },
+    ];
 
-      let circles = document.querySelector(".circles").querySelectorAll("li");
+    let circles = document.querySelector(".circles").querySelectorAll("li");
 
-      let colorTheme = document.documentElement.getAttribute("data-theme");
-      if (colorTheme === "dark") {
-        let colors = colorsdark;
-        circles.forEach((square) => {
-          let randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-          square.style.backgroundColor = randomColor.bg;
-          square.style.borderColor = randomColor.text;
-        });
-      } else {
-        let colors = colorslight;
-        circles.forEach((square) => {
-          let randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-          square.style.backgroundColor = randomColor.bg;
-          square.style.borderColor = randomColor.text;
-        });
-      }
-
+    let colorTheme = document.documentElement.getAttribute("data-theme");
+    if (colorTheme === "dark") {
+      let colors = colorsdark;
       circles.forEach((square) => {
-        square.style.left = `${Math.floor(Math.random() * 100)}%`;
+        let randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+        square.style.backgroundColor = randomColor.bg;
+        square.style.borderColor = randomColor.text;
       });
+    } else {
+      let colors = colorslight;
+      circles.forEach((square) => {
+        let randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-      console.log(circles);
-    </script>
+        square.style.backgroundColor = randomColor.bg;
+        square.style.borderColor = randomColor.text;
+      });
+    }
 
-    <!-- Material Ui -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <!--Lenis-->
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-    <!--Ionicons-->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    circles.forEach((square) => {
+      square.style.left = `${Math.floor(Math.random() * 100)}%`;
+    });
 
-    <!-- Custom JS -->
-    <script src="../js/script.js"></script>
-  </body>
+    console.log(circles);
+  </script>
+
+  <!-- Material Ui -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <!--Lenis-->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+  <!--Ionicons-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- Custom JS -->
+  <script src="../js/script.js"></script>
+</body>
+
 </html>
