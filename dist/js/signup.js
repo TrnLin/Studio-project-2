@@ -35,6 +35,13 @@ const registerBtn = document.querySelector("#submitRegistration");
 const loginBtn = document.querySelector("#submitLogin");
 const form = document.querySelector("#sign-up-form");
 
+//alert
+const alertSuc = document.querySelector("#alert-success");
+const alertSucMsg = alertSuc.querySelector(".alert-sc-msg");
+
+const alertErr = document.querySelector("#alert-error");
+const alertErrMsg = alertErr.querySelector(".alert-er-msg");
+
 let userNameValid = (name) => {
   if (name === "") {
     userNameHolder.classList.add(errorBorder);
@@ -217,14 +224,32 @@ if (registerBtn) {
         switch (res.status) {
           case 200:
             // If the user is registered successfully, redirect to login page
-            alert("User registered successfully");
-            window.location.href = "/user/login";
+            //Show success alert
+            alertSuccess.style.display = "flex";
+            alertScMsg.innerHTML = "User registered successfully";
+
+            setTimeout(() => {
+              alertSuccess.style.display = "none";
+              alertScMsg.innerHTML = "";
+            }, 1500);
+
+            setTimeout(() => {
+              window.location.href = "/user/login";
+            }, 2000);
             break;
           default:
             // If the user is not registered successfully, alert the user
             const data = await res.json();
             console.log(`Code ${res.status}: ${data.message}`);
-            alert(data.message);
+
+            alertError.style.display = "flex";
+            alertErMsg.innerHTML = "User registration failed";
+
+            setTimeout(() => {
+              alertError.style.display = "none";
+              alertErMsg.innerHTML = "";
+            }, 2000);
+
             break;
         }
       } catch (error) {
@@ -260,13 +285,27 @@ if (loginBtn) {
         case 200:
           // If the user is registered successfully, redirect to login page
           alert("User logged in successfully");
-          window.location.href = "/";
+
+          alertSuccess.style.display = "flex";
+          alertScMsg.innerHTML = "User logged in successfully";
+
+          setTimeout(() => {
+            alertSuccess.style.display = "none";
+            alertScMsg.innerHTML = "";
+          }, 1500);
+
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 2000);
           break;
         default:
           // If the user is not registered successfully, alert the user
           const data = await res.json();
           console.log(`Code ${res.status}: ${data.message}`);
-          alert(data.message);
+
+          alertError.style.display = "flex";
+          alertErMsg.innerHTML = "User login failed";
+
           break;
       }
     } catch (err) {
