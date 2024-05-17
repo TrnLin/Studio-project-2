@@ -37,10 +37,10 @@ const form = document.querySelector("#sign-up-form");
 
 //alert
 const alertSuc = document.querySelector("#alert-success");
-const alertSucMsg = alertSuc.querySelector(".alert-sc-msg");
+const alertSucMsg = document.querySelector(".alert-sc-msg");
 
 const alertErr = document.querySelector("#alert-error");
-const alertErrMsg = alertErr.querySelector(".alert-er-msg");
+const alertErrMsg = document.querySelector(".alert-er-msg");
 
 let userNameValid = (name) => {
   if (name === "") {
