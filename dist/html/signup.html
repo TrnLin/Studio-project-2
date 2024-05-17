@@ -9,29 +9,32 @@
   <title>Signup</title>
 </head>
 
-<body class=" bg-white font-sans">
+<body class="bg-white font-sans">
   <!-- Nav Bar -->
-  <nav id="navbar"
-    class="fixed top-3 transition-all duration-300 right-1/2 translate-x-1/2 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
+  <nav id="navbar" role="navigation" aria-label="Main navigation"
+    class="fixed right-1/2 top-3 z-[900] flex w-container translate-x-1/2 flex-row gap-5 text-[#ffffff] transition-all duration-300 sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
     <div
       class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6">
       <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
         <li class="md:hidden">
-          <a href="../index.html" class=""><img src="../img/MUCK.svg" class="lg:w-[80%]" alt="" />
+          <a href="../index.html" class="" aria-label="MUCK logo"><img src="../img/MUCK.svg" class="lg:w-[80%]"
+              alt="" />
           </a>
         </li>
         <li>
           <a href=" ../index.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Home
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Home">Home
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="home"></ion-icon>
+              <ion-icon class="text-2xl" name="home-outline"></ion-icon>
               Home
             </div>
           </a>
         </li>
         <li>
           <a href="#"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Store
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Store">Store
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
               <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
               Store
@@ -40,7 +43,8 @@
         </li>
         <li>
           <a href="./forum.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Forum">
             forum
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
               <ion-icon class="text-2xl" name="chatbubbles-outline"></ion-icon>
@@ -49,8 +53,9 @@
           </a>
         </li>
         <li class="sm:hidden">
-          <a href="./contact.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Contact
+          <a href="#"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Contact">Contact
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
               <ion-icon class="text-2xl" name="call-outline"></ion-icon>
               Contact
@@ -59,34 +64,36 @@
         </li>
         <li class="hidden sm:block">
           <a href="./login.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Login
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Login">Login
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="person-outline"></ion-icon>
+              <ion-icon class="text-2xl" name="person"></ion-icon>
               Account
             </div>
           </a>
         </li>
       </ul>
       <div id="theme-toggle"
-        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden">
+        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden"
+        aria-label="Theme toggle">
         <ion-icon name="sunny" class="text-[20px]"></ion-icon>
         Light
       </div>
     </div>
 
     <a href="./login.html"
-      class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"><ion-icon
-        name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
+      class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
+      aria-label="Login"><ion-icon name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
   </nav>
 
   <!-- Alert Success-->
-  <div id="alert-success"
+  <div id="alert-success" role="alert" aria-live="polite"
     class="-translate-xy fixed left-1/2 top-12 z-[999] hidden items-center justify-between gap-4 rounded-md bg-green-100 px-5 py-4 text-base text-green-200 lg:gap-2 lg:text-sm">
     <ion-icon name="checkmark" class="text-2xl"></ion-icon><span class="alert-sc-msg">a test msg</span>
   </div>
 
   <!-- Alert Error-->
-  <div id="alert-error"
+  <div id="alert-error" role="alert" aria-live="polite"
     class="-translate-xy fixed left-1/2 top-12 z-[999] hidden items-center justify-between gap-4 rounded-md bg-pink-100 px-5 py-4 text-base text-pink-200 lg:gap-2 lg:text-sm">
     <ion-icon name="close" class="text-2xl"></ion-icon><span class="alert-er-msg">a test msg</span>
   </div>
@@ -105,7 +112,7 @@
               account.
             </p>
 
-            <form action="/user/register" method="POST" class="flex flex-col gap-3 lg:gap-2">
+            <form action="/user/register" method="POST" class="flex flex-col gap-3 lg:gap-2" aria-label="Sign Up Form">
               <!-- Username -->
               <div class="gap- flex flex-col">
                 <label class="text-base text-black lg:text-sm" for="username">Username</label>
@@ -113,9 +120,9 @@
                   <div id="username-holder"
                     class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
                     <input class="input-box focus:ring-0 group-hover:placeholder:text-black sm:py-2" type="text"
-                      name="username" id="username" placeholder="Input your Username" required />
+                      name="username" id="username" placeholder="Input your Username" required aria-required="true" />
                     <div id="user-name" class="grid place-items-center px-3 text-black/50 group-hover:text-black">
-                      <ion-icon name="person-outline"></ion-icon>
+                      <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
                     </div>
                   </div>
 
@@ -130,9 +137,9 @@
                   <div id="email-holder"
                     class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
                     <input class="input-box focus:ring-0 group-hover:placeholder:text-black sm:py-2" type="text"
-                      name="email" id="email" placeholder="Input your Email" />
+                      name="email" id="email" placeholder="Input your Email" required aria-required="true" />
                     <div id="mail" class="grid place-items-center px-3 text-black/50 group-hover:text-black">
-                      <ion-icon name="mail-outline"></ion-icon>
+                      <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
                     </div>
                   </div>
                   <p class="email-valid h-[10px] text-[10px] leading-[10px] text-error"></p>
@@ -147,9 +154,9 @@
                   <div id="password-holder"
                     class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
                     <input class="input-box focus:ring-0 sm:py-2" type="password" name="password" id="password"
-                      placeholder="Input your password" />
+                      placeholder="Input your password" required aria-required="true" />
                     <div id="show-password" class="grid place-items-center p-3 text-black/50 group-hover:text-black">
-                      <ion-icon name="eye-off-outline"></ion-icon>
+                      <ion-icon name="eye-off-outline" aria-hidden="true"></ion-icon>
                     </div>
                   </div>
                   <p class="pass-valid text-[10px] text-error"></p>
@@ -171,9 +178,9 @@
                   <div id="confirm-holder"
                     class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
                     <input class="input-box border-black/50 focus:ring-0 sm:py-2" type="password" name="confirm"
-                      id="confirm" placeholder="Confirm your password" />
+                      id="confirm" placeholder="Confirm your password" required aria-required="true" />
                     <div id="show-confirm" class="grid place-items-center px-3 text-black/50 group-hover:text-black">
-                      <ion-icon name="eye-off-outline"></ion-icon>
+                      <ion-icon name="eye-off-outline" aria-required="true"></ion-icon>
                     </div>
                   </div>
                   <p class="confirm-valid h-[10px] text-[10px] leading-[10px] text-error"></p>
@@ -187,14 +194,14 @@
                   Sign Up
                 </button>
                 <p class="text-black lg:text-sm">Or</p>
-                <a href="./login.html"
+                <a href="./login.html" role="button"
                   class="w-full rounded-md border-[1px] border-solid border-black py-3 text-center text-base leading-[100%] text-black transition hover:bg-solidblack hover:text-[#ffffff] lg:text-sm">
                   Already have an Account? Login</a>
               </div>
             </form>
           </div>
         </div>
-        <div class="grid grid-cols-3 grid-rows-3 place-items-center gap-5 lg:grid-cols-2 sm:hidden">
+        <div class="grid grid-cols-3 grid-rows-3 place-items-center gap-5 lg:grid-cols-2 sm:hidden" aria-hidden="true">
           <div
             class="relative col-span-2 row-span-2 aspect-square min-h-96 rounded-[20px] bg-blue-100 lg:min-h-[310px]">
             <div class="-translate-xy absolute left-1/2 top-1/2 size-[350px] rounded-full bg-white lg:size-72"></div>
@@ -228,56 +235,54 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-solidblack p-12 flex flex-col gap-10 w-full sm:p-10 sm:gap-5 sm:pb-28">
+  <footer class="flex w-full flex-col gap-10 bg-solidblack p-12 sm:gap-5 sm:p-10 sm:pb-28">
     <div>
-      <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
+      <a href="" aria-label="Follow us on Instagram"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
           name="logo-instagram"></ion-icon></a>
-      <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
+      <a href="" aria-label="Follow us on Facebook"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
           name="logo-facebook"></ion-icon></a>
-      <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
-          name="mail"></ion-icon></a>
+      <a href="" aria-label="Email us"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]" name="mail"></ion-icon></a>
     </div>
-    <div class="flex flex-row gap-36 sm:flex-col sm:gap-12 ">
+    <div class="flex flex-row gap-36 sm:flex-col sm:gap-12">
       <div class="flex flex-col gap-7">
         <p class="text-[#fff]/70">Resource</p>
         <div class="flex flex-col gap-3">
           <a href="https://github.com/RMIT-Vietnam-Teaching/group-project-cosc3060-2024a-muck.git"
-            class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline">Our github
-            repo</a>
+            class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">Our github repo</a>
           <a href="https://www.figma.com/design/LlNaiGaV4zkrd18EGHROEH/Project-Studio-2?node-id=6%3A7&t=Al8yx4NQHUrzqioF-1"
-            class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline">
+            class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">
             Our design document</a>
         </div>
       </div>
-      <div class="flex flex-col  gap-7">
+      <div class="flex flex-col gap-7">
         <p class="text-[#fff]/70">About MUCK</p>
         <div class="flex flex-col gap-3">
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline" href="../index.html">About
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="../index.html">About
             MUCK</a>
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline" href="#">Store</a>
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="#">Store</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
             href="./forum.html">Forum</a>
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
-            href="./contact.html">Contact
-            Us</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
+            href="./contact.html">Contact Us</a>
         </div>
       </div>
-      <div class="flex flex-col  gap-7">
+      <div class="flex flex-col gap-7">
         <p class="text-[#fff]/70">Account Management</p>
         <div class="flex flex-col gap-3">
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
             href="../index.html">Login</a>
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline" href="#">Become a
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="#">Become a
             Member</a>
-
         </div>
       </div>
     </div>
-    <div class="flex flex-row w-full justify-between sm:flex-col sm:gap-10">
+    <div class="flex w-full flex-row justify-between sm:flex-col sm:gap-10">
       <p class="text-[#fff]/70">© 2024 MuckTeam All rights reserved</p>
-      <img src="../img/MUCK.svg" alt="" class="sm:w-24">
+      <img src="../img/MUCK.svg" alt="Muck logo" class="sm:w-24" />
     </div>
-
   </footer>
 
   <!--Lenis-->

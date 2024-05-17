@@ -11,81 +11,96 @@
 
 <!--  TODO: Remember to add disable-scroll to body tag-->
 
-<body class="disable-scroll  bg-white font-sans">
+<body class="bg-white font-sans">
   <!-- Nav Bar -->
-  <nav id="navbar"
-    class="fixed top-3 transition-all duration-300 right-1/2 translate-x-1/2 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
+  <nav id="navbar" role="navigation" aria-label="Main navigation" class=" fixed right-1/2 top-3 z-[900] flex w-container translate-x-1/2 flex-row gap-5 text-[#ffffff] transition-all
+    duration-300 sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
     <div
       class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6">
       <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
         <li class="md:hidden">
-          <a href="./index.html" class=""><img src="./img/MUCK.svg" class="lg:w-[80%]" alt="" />
+          <a href="./index.html" class="" aria-label="MUCK logo"><img src="./img/MUCK.svg" class="lg:w-[80%]"
+              alt="MUCK logo" />
           </a>
         </li>
         <li>
           <a href=" ./index.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Home
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Home">
+            Home
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="home"></ion-icon>
+              <ion-icon class="text-2xl" name="home" aria-hidden="true"></ion-icon>
               Home
             </div>
           </a>
         </li>
         <li>
           <a href="#"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Store
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Store">
+            Store
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
+              <ion-icon class="text-2xl" name="cart-outline" aria-hidden="true"></ion-icon>
               Store
             </div>
           </a>
         </li>
         <li>
           <a href="./html/forum.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Forum">
             forum
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="chatbubbles-outline"></ion-icon>
+              <ion-icon class="text-2xl" name="chatbubbles-outline" aria-hidden="true"></ion-icon>
               Forum
             </div>
           </a>
         </li>
         <li class="sm:hidden">
           <a href="./html/contact.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Contact
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Contact">
+            Contact
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="call-outline"></ion-icon>
+              <ion-icon class="text-2xl" name="call-outline" aria-hidden="true"></ion-icon>
               Contact
             </div>
           </a>
         </li>
         <li class="hidden sm:block">
           <a href="./html/login.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Login
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Login">
+            Login
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="person-outline"></ion-icon>
+              <ion-icon class="text-2xl" name="person-outline" aria-hidden="true"></ion-icon>
               Account
             </div>
           </a>
         </li>
       </ul>
       <div id="theme-toggle"
-        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden">
-        <ion-icon name="sunny" class="text-[20px]"></ion-icon>
+        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden"
+        aria-label="Theme toggle">
+        <ion-icon name="sunny" class="text-[20px]" aria-hidden="true"></ion-icon>
         Light
       </div>
     </div>
 
     <a href="./html/login.html"
-      class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"><ion-icon
-        name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
+      class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
+      aria-label="Login">
+      <ion-icon name="person" class="text-[20px] lg:text-sm" aria-hidden="true"></ion-icon>
+      Login
+    </a>
   </nav>
 
   <!-- Hero Section -->
-  <div class="relative overflow-x-hidden sm:pt-[80px]">
+  <main class="relative overflow-x-hidden sm:pt-[80px]">
     <div class="scroll-container flex w-[400vw] sm:min-h-[400lvw] sm:w-full sm:flex-col sm:gap-[40px]">
+
       <!-- Hero -->
-      <section class="m-h-lvh hero-section w-screen bg-white">
+      <section class="m-h-lvh hero-section w-screen bg-white" aria-label="Hero section">
         <div
           class="mx-auto my-0 grid min-h-screen w-[90%] max-w-container grid-cols-3 place-items-center sm:w-full sm:grid-cols-1">
           <div class="hero-card flex flex-col gap-10 lg:gap-7 sm:gap-7">
@@ -108,15 +123,16 @@
               you're a seasoned strategist or a casual button-masher, this
               forum is your hub for all things gaming. Let the games begin!
             </p>
-            <a href="#"
-              class="hero-content w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] hover:bg-blue-100 hover:text-blue-200 xl:px-3 xl:py-3 xl:text-xs sm:text-sm">Get
+            <a href="./html/forum.html" aria-label="Get Started"
+              class="hero-content w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] hover:bg-blue-100 hover:text-blue-200 xl:px-3 xl:py-3 xl:text-xs transition-all duration-200 sm:text-sm">Get
               Started</a>
           </div>
-          <div class="hero-card group relative flex w-[38vw] items-center justify-center sm:hidden">
+          <div class="hero-card group relative flex w-[38vw] items-center justify-center sm:hidden"
+            aria-label="Hero card image">
             <div class="hero-mid-card absolute h-[70vh] w-[30vw] rounded-[20px] bg-blue-100 shadow-lg"></div>
             <div class="absolute size-[400px] rounded-full bg-white xl:size-80 lg:size-72"></div>
             <div class="absolute">
-              <img src="./img/switch.png" alt="" class="w-full max-w-[548px] animate-floatting" />
+              <img src="./img/switch.png" alt="hero image" class="w-full max-w-[548px] animate-floatting" />
             </div>
             <div class="loader absolute -bottom-[20vw] border-8 border-solid border-white"></div>
           </div>
@@ -150,8 +166,9 @@
           </div>
         </div>
       </section>
+
       <!-- Features -->
-      <section class="m-h-lvh about-section hero-section w-screen bg-white">
+      <section class="m-h-lvh about-section hero-section w-screen bg-white" aria-labelledby="Features">
         <div
           class="mx-auto my-0 grid min-h-lvh max-w-container grid-cols-3 place-items-center gap-[20px] sm:flex sm:w-full sm:flex-col">
           <div
@@ -212,13 +229,15 @@
               </div>
             </div>
             <a href="#"
-              class="about-text w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] hover:bg-pink-100 hover:text-pink-200 xl:p-3 xl:text-xs">About
+              class="about-text w-fit transition-all duration-200 rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] hover:bg-pink-100 hover:text-pink-200 xl:p-3 xl:text-xs"
+              aria-label="About Us" role="button">About
               Us</a>
           </div>
         </div>
       </section>
+
       <!-- Forum -->
-      <section class="m-h-lvh forum-section w-screen bg-white">
+      <section class="m-h-lvh forum-section w-screen bg-white" aria-labelledby="Forum">
         <div class="flex min-h-lvh w-full items-center justify-center">
           <div
             class="mx-auto my-0 grid max-w-container grid-cols-2 place-items-end gap-5 px-6 sm:w-full sm:grid-cols-1 sm:gap-8 sm:px-0">
@@ -230,7 +249,8 @@
                 class="mockup forum-card-right relative min-h-[25rem] w-full rounded-[20px] bg-green-100 xl:min-h-80 lg:min-h-72 sm:hidden">
                 <div class="absolute left-5 top-5 size-[22rem] overflow-hidden rounded-full bg-white"></div>
                 <div class="absolute bottom-0 left-[20%] right-0 top-[20%] overflow-hidden rounded-br-[20px] pt-[5%]">
-                  <img src="./img/MacBook Pro 16.png" alt="" class="translate3d w-full max-w-none transition-all" />
+                  <img src="./img/MacBook Pro 16.png" alt="Mockup"
+                    class="translate3d w-full max-w-none transition-all" />
                 </div>
               </div>
             </div>
@@ -241,7 +261,7 @@
                   class="-translate-xy absolute left-1/2 top-1/2 size-[22rem] rounded-full bg-white xl:size-72 lg:size-64">
                 </div>
                 <div class="absolute bottom-0">
-                  <img src="./img/Saly-39.svg" alt="" class="animate-floatting xl:h-96 lg:h-[22rem]" />
+                  <img src="./img/Saly-39.svg" alt="A Robot" class="animate-floatting xl:h-96 lg:h-[22rem]" />
                 </div>
               </div>
               <div class="flex flex-col gap-8 p-5 sm:mt-6 sm:p-0">
@@ -253,8 +273,9 @@
                   like-minded individuals, fostering a sense of community and
                   camaraderie.
                 </p>
-                <a href="#"
-                  class="forum-text-left w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] xl:px-4 xl:py-4 xl:text-xs">Get
+                <a href="./html/forum.html"
+                  class="forum-text-left transition-all duration-200 w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] xl:px-4 xl:py-4 xl:text-xs"
+                  aria-label="Get Started">Get
                   Started</a>
               </div>
             </div>
@@ -262,7 +283,8 @@
         </div>
       </section>
 
-      <section class="m-h-lvh w-screen">
+      <!-- Contact -->
+      <section class="m-h-lvh w-screen" aria-labelledby="Contact">
         <div class="flex min-h-lvh w-full items-center justify-center">
           <div class="flex flex-col gap-4 sm:p-6">
             <p class="text-[64px] font-bold leading-[64px] text-black xl:text-5xl">
@@ -276,30 +298,30 @@
             </div>
             <div class="flex flex-col gap-5">
               <div class="">
-                <a href="#"
+                <a href="#" aria-label="Call us at 1234 - 5678 - 0890" target="_blank"
                   class="flex flex-row items-center gap-5 rounded-[20px] border border-green-200 bg-green-100 p-5 text-xl text-green-200 transition-all hover:border-green-100 hover:bg-green-200 hover:text-green-100 lg:text-sm sm:text-sm">
                   <ion-icon class="text-3xl lg:text-xl" name="call"></ion-icon>1234 - 5678 - 0890
                 </a>
               </div>
               <div class="">
-                <a href="#"
+                <a href="#" aria-label="Follow us on Instagram" target="_blank"
                   class="flex flex-row items-center gap-5 rounded-[20px] border border-orange-200 bg-orange-100 p-5 text-xl text-orange-200 transition-all hover:border-orange-100 hover:bg-orange-200 hover:text-orange-100 lg:text-sm sm:text-sm">
                   <ion-icon class="text-3xl lg:text-xl" name="logo-instagram"></ion-icon>Instagram</a>
               </div>
               <div class="">
-                <a href="#"
+                <a href="#" aria-label="Follow us on Facebook" target="_blank"
                   class="flex flex-row items-center gap-5 rounded-[20px] border border-blue-200 bg-blue-100 p-5 text-xl text-blue-200 transition-all hover:border-blue-100 hover:bg-blue-200 hover:text-blue-100 lg:text-sm sm:text-sm">
                   <ion-icon class="text-3xl lg:text-xl" name="logo-facebook"></ion-icon>Facebook</a>
               </div>
               <div class="">
-                <a href="#"
+                <a href="#" aria-label="Email us" target="_blank"
                   class="flex flex-row items-center gap-5 rounded-[20px] border border-pink-200 bg-pink-100 p-5 text-xl text-pink-200 transition-all hover:border-pink-100 hover:bg-pink-200 hover:text-pink-100 lg:text-sm sm:text-sm">
                   <ion-icon class="text-3xl lg:text-xl" name="mail"></ion-icon>Email</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="area">
+        <div class="area" aria-hidden="true">
           <ul class="circles">
             <li></li>
             <li></li>
@@ -315,58 +337,56 @@
         </div>
       </section>
     </div>
-  </div>
+  </main>
   <!-- Footer -->
-  <footer class="bg-solidblack p-12 flex flex-col gap-10 w-full sm:p-10 sm:gap-5 sm:pb-28">
+  <footer class="flex w-full flex-col gap-10 bg-solidblack p-12 sm:gap-5 sm:p-10 sm:pb-28">
     <div>
-      <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
+      <a href="#" aria-label="Follow us on Instagram"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
           name="logo-instagram"></ion-icon></a>
-      <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
+      <a href="#" aria-label="Follow us on Facebook"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
           name="logo-facebook"></ion-icon></a>
-      <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
-          name="mail"></ion-icon></a>
+      <a href="#" aria-label="Email us"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]" name="mail"></ion-icon></a>
     </div>
-    <div class="flex flex-row gap-36 sm:flex-col sm:gap-12 ">
+    <div class="flex flex-row gap-36 sm:flex-col sm:gap-12">
       <div class="flex flex-col gap-7">
         <p class="text-[#fff]/70">Resource</p>
         <div class="flex flex-col gap-3">
           <a href="https://github.com/RMIT-Vietnam-Teaching/group-project-cosc3060-2024a-muck.git"
-            class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline">Our github
-            repo</a>
+            class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">Our github repo</a>
           <a href="https://www.figma.com/design/LlNaiGaV4zkrd18EGHROEH/Project-Studio-2?node-id=6%3A7&t=Al8yx4NQHUrzqioF-1"
-            class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline">
+            class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">
             Our design document</a>
         </div>
       </div>
-      <div class="flex flex-col  gap-7">
+      <div class="flex flex-col gap-7">
         <p class="text-[#fff]/70">About MUCK</p>
         <div class="flex flex-col gap-3">
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline" href="./index.html">About
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="./index.html">About
             MUCK</a>
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline" href="#">Store</a>
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="#">Store</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
             href="./html/forum.html">Forum</a>
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
-            href="./html/contact.html">Contact
-            Us</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
+            href="./html/contact.html">Contact Us</a>
         </div>
       </div>
-      <div class="flex flex-col  gap-7">
+      <div class="flex flex-col gap-7">
         <p class="text-[#fff]/70">Account Management</p>
         <div class="flex flex-col gap-3">
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
             href="./index.html">Login</a>
-          <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline" href="#">Become a
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="#">Become a
             Member</a>
-
         </div>
       </div>
     </div>
-    <div class="flex flex-row w-full justify-between sm:flex-col sm:gap-10">
+    <div class="flex w-full flex-row justify-between sm:flex-col sm:gap-10">
       <p class="text-[#fff]/70">© 2024 MuckTeam All rights reserved</p>
-      <img src="./img/MUCK.svg" alt="" class="sm:w-24">
+      <img src="./img/MUCK.svg" alt="Muck logo" class="sm:w-24" />
     </div>
-
   </footer>
 
   <!--GSAP-->

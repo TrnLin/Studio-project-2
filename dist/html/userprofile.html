@@ -2,199 +2,204 @@
 <html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../font/fontface.css" />
-    <link rel="stylesheet" href="../style/style.css" />
-    <title>Post</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../font/fontface.css" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <title>Post</title>
 </head>
 
-<body class=" bg-white font-sans">
-    <!-- Nav Bar -->
-    <nav id="navbar"
-        class="fixed top-3 transition-all duration-300 right-1/2 translate-x-1/2 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
-        <div
-            class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6">
-            <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
-                <li class="md:hidden">
-                    <a href="../index.html" class=""><img src="../img/MUCK.svg" class="lg:w-[80%]" alt="" />
-                    </a>
-                </li>
-                <li>
-                    <a href=" ../index.html"
-                        class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Home
-                        <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-                            <ion-icon class="text-2xl" name="home"></ion-icon>
-                            Home
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Store
-                        <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-                            <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
-                            Store
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="./forum.html"
-                        class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">
-                        forum
-                        <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-                            <ion-icon class="text-2xl" name="chatbubbles-outline"></ion-icon>
-                            Forum
-                        </div>
-                    </a>
-                </li>
-                <li class="sm:hidden">
-                    <a href="#"
-                        class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Contact
-                        <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-                            <ion-icon class="text-2xl" name="call-outline"></ion-icon>
-                            Contact
-                        </div>
-                    </a>
-                </li>
-                <li class="hidden sm:block">
-                    <a href="./login.html"
-                        class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Login
-                        <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-                            <ion-icon class="text-2xl" name="person-outline"></ion-icon>
-                            Account
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <div id="theme-toggle"
-                class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden">
-                <ion-icon name="sunny" class="text-[20px]"></ion-icon>
-                Light
+<body class="bg-white font-sans">
+  <!-- Nav Bar -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation"
+    class="fixed right-1/2 top-3 z-[900] flex w-container translate-x-1/2 flex-row gap-5 text-[#ffffff] transition-all duration-300 sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
+    <div
+      class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6">
+      <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
+        <li class="md:hidden">
+          <a href="../index.html" class="" aria-label="MUCK logo"><img src="../img/MUCK.svg" class="lg:w-[80%]"
+              alt="" />
+          </a>
+        </li>
+        <li>
+          <a href=" ../index.html"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Home">Home
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="home-outline"></ion-icon>
+              Home
             </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Store">Store
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
+              Store
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./forum.html"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Forum">
+            forum
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="chatbubbles-outline"></ion-icon>
+              Forum
+            </div>
+          </a>
+        </li>
+        <li class="sm:hidden">
+          <a href="#"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Contact">Contact
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="call-outline"></ion-icon>
+              Contact
+            </div>
+          </a>
+        </li>
+        <li class="hidden sm:block">
+          <a href="./login.html"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Login">Login
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="person"></ion-icon>
+              Account
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div id="theme-toggle"
+        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden"
+        aria-label="Theme toggle">
+        <ion-icon name="sunny" class="text-[20px]"></ion-icon>
+        Light
+      </div>
+    </div>
+
+    <a href="./login.html"
+      class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
+      aria-label="Login"><ion-icon name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
+  </nav>
+
+  <section class="min-h-lvh w-screen" role="region" aria-label="User Profile">
+    <div class="mx-auto my-24 flex h-full w-container flex-col items-center gap-6 sm:w-11/12">
+      <div
+        class="flex w-smContainer flex-row justify-between rounded-[20px] border-b-4 border-solid border-black p-7 ring-2 ring-inset ring-black sm:w-full sm:flex-col sm:gap-5 sm:rounded-none sm:border-0 sm:p-0 sm:ring-0"
+        role="form" aria-label="User Information">
+        <div class="flex flex-row items-center justify-center gap-6 sm:w-full sm:justify-start">
+          <div class="bg- size-36 rounded-full ring-2 ring-inset ring-black sm:size-28">
+            <img src="#" alt="User's avatar" class="h-full w-full rounded-full" />
+          </div>
+          <div class="">
+            <h1 class="mb-3 text-3xl font-semibold text-black sm:text-xl" id="username">
+              Username123
+            </h1>
+            <p class="text-black">Since <span>1/1/2024</span></p>
+            <p class="text-black"><span id="post-number">10</span> posts</p>
+          </div>
         </div>
-
-        <a href="./html/login.html"
-            class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"><ion-icon
-                name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
-    </nav>
-
-    <section class="min-h-lvh w-screen">
-        <div class="mx-auto my-24 flex h-full w-container flex-col items-center gap-6 sm:w-11/12">
-            <div
-                class="flex w-smContainer flex-row justify-between rounded-[20px] border-b-4 border-solid border-black p-7 ring-2 ring-inset ring-black sm:flex-col sm:gap-5 sm:p-0 sm:ring-0 sm:rounded-none sm:border-0 sm:w-full">
-                <div class="flex flex-row items-center justify-center gap-6 sm:justify-start sm:w-full">
-                    <div class="bg- size-36 rounded-full ring-2 ring-inset ring-black sm:size-28">
-                        <img src="#" alt="User's avatar" class="h-full w-full rounded-full" />
-                    </div>
-                    <div class="">
-                        <h1 class="text-black text-3xl font-semibold mb-3 sm:text-xl" id="username">Username123</h1>
-                        <p class="text-black">Since <span>1/1/2024</span></p>
-                        <p class="text-black"><span id="post-number">10</span> posts</p>
-                    </div>
-                </div>
-                <div
-                    class="flex flex-row justify-center items-center px-5 py-3 text-[#fff] text-base gap-2 bg-solidblack rounded-lg h-min hover:text-solidblack hover:bg-[#fff] transition-all duration-200">
-                    Edit
-                    Profile
-                </div>
+        <button
+          class="flex h-min flex-row items-center justify-center gap-2 rounded-lg bg-solidblack px-5 py-3 text-base text-[#fff] transition-all duration-200 hover:bg-[#fff] hover:text-solidblack"
+          aria-label="Edit Profile">
+          Edit Profile
+        </button>
+      </div>
+      <div id="user-post-list" class="flex w-smContainer flex-col gap-5 sm:w-full" role="list" aria-label="User Posts">
+        <a href="./post.html" class="post-card" role="listitem">
+          <div class="flex flex-col gap-4 lg:gap-2">
+            <div class="flex flex-row items-center justify-between">
+              <h1 class="post-title" id="post-title">
+                Lorem ipsum dolor sit amet.
+              </h1>
+              <p class="post-date">1/1/2024</p>
             </div>
-            <div id="user-post-list" class="flex flex-col gap-5 w-smContainer sm:w-full">
-                <a href="./post.html" class="post-card">
-                    <div class="flex flex-col gap-4 lg:gap-2">
-                        <div class="flex flex-row items-center justify-between">
-                            <h1 class="post-title" id="post-title">
-                                Lorem ipsum dolor sit amet.
-                            </h1>
-                            <p class="post-date">1/1/2024</p>
-                        </div>
-                        <p class="post-description" id="post-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                            massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
-                            sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                            Maecenas vitae mattis tellus.
-                        </p>
-                    </div>
+            <p class="post-description" id="post-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+              massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
+              sapien fringilla, mattis ligula consectetur, ultrices mauris.
+              Maecenas vitae mattis tellus.
+            </p>
+          </div>
 
-                    <div class="flex flex-row gap-4">
-                        <div class="flex flex-row items-center justify-center gap-2 text-lg text-black">
-                            <ion-icon name="heart"></ion-icon><span id="like-count">0</span>
-                        </div>
-                        <div class="flex flex-row items-center justify-center gap-2 text-lg text-black">
-                            <ion-icon name="chatbubble"></ion-icon><span id="comment-count">0</span>
-                        </div>
-                    </div>
-                </a>
+          <div class="flex flex-row gap-4">
+            <div class="flex flex-row items-center justify-center gap-2 text-lg text-black">
+              <ion-icon name="heart" aria-hidden="true"></ion-icon><span id="like-count">0</span>
             </div>
+            <div class="flex flex-row items-center justify-center gap-2 text-lg text-black">
+              <ion-icon name="chatbubble" aria-hidden="true"></ion-icon><span id="comment-count">0</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="flex w-full flex-col gap-10 bg-solidblack p-12 sm:gap-5 sm:p-10 sm:pb-28">
+    <div>
+      <a href="" aria-label="Follow us on Instagram"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
+          name="logo-instagram"></ion-icon></a>
+      <a href="" aria-label="Follow us on Facebook"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
+          name="logo-facebook"></ion-icon></a>
+      <a href="" aria-label="Email us"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]" name="mail"></ion-icon></a>
+    </div>
+    <div class="flex flex-row gap-36 sm:flex-col sm:gap-12">
+      <div class="flex flex-col gap-7">
+        <p class="text-[#fff]/70">Resource</p>
+        <div class="flex flex-col gap-3">
+          <a href="https://github.com/RMIT-Vietnam-Teaching/group-project-cosc3060-2024a-muck.git"
+            class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">Our github repo</a>
+          <a href="https://www.figma.com/design/LlNaiGaV4zkrd18EGHROEH/Project-Studio-2?node-id=6%3A7&t=Al8yx4NQHUrzqioF-1"
+            class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">
+            Our design document</a>
         </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="bg-solidblack p-12 flex flex-col gap-10 w-full sm:p-10 sm:gap-5 sm:pb-28">
-        <div>
-            <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
-                    name="logo-instagram"></ion-icon></a>
-            <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
-                    name="logo-facebook"></ion-icon></a>
-            <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
-                    name="mail"></ion-icon></a>
+      </div>
+      <div class="flex flex-col gap-7">
+        <p class="text-[#fff]/70">About MUCK</p>
+        <div class="flex flex-col gap-3">
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="../index.html">About
+            MUCK</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="#">Store</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
+            href="./forum.html">Forum</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
+            href="./contact.html">Contact Us</a>
         </div>
-        <div class="flex flex-row gap-36 sm:flex-col sm:gap-12 ">
-            <div class="flex flex-col gap-7">
-                <p class="text-[#fff]/70">Resource</p>
-                <div class="flex flex-col gap-3">
-                    <a href="https://github.com/RMIT-Vietnam-Teaching/group-project-cosc3060-2024a-muck.git"
-                        class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline">Our github
-                        repo</a>
-                    <a href="https://www.figma.com/design/LlNaiGaV4zkrd18EGHROEH/Project-Studio-2?node-id=6%3A7&t=Al8yx4NQHUrzqioF-1"
-                        class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline">
-                        Our design document</a>
-                </div>
-            </div>
-            <div class="flex flex-col  gap-7">
-                <p class="text-[#fff]/70">About MUCK</p>
-                <div class="flex flex-col gap-3">
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
-                        href="../index.html">About
-                        MUCK</a>
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
-                        href="#">Store</a>
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
-                        href="./forum.html">Forum</a>
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
-                        href="./contact.html">Contact
-                        Us</a>
-                </div>
-            </div>
-            <div class="flex flex-col  gap-7">
-                <p class="text-[#fff]/70">Account Management</p>
-                <div class="flex flex-col gap-3">
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
-                        href="../index.html">Login</a>
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline" href="#">Become a
-                        Member</a>
-
-                </div>
-            </div>
+      </div>
+      <div class="flex flex-col gap-7">
+        <p class="text-[#fff]/70">Account Management</p>
+        <div class="flex flex-col gap-3">
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
+            href="../index.html">Login</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="#">Become a
+            Member</a>
         </div>
-        <div class="flex flex-row w-full justify-between sm:flex-col sm:gap-10">
-            <p class="text-[#fff]/70">© 2024 MuckTeam All rights reserved</p>
-            <img src="../img/MUCK.svg" alt="" class="sm:w-24">
-        </div>
+      </div>
+    </div>
+    <div class="flex w-full flex-row justify-between sm:flex-col sm:gap-10">
+      <p class="text-[#fff]/70">© 2024 MuckTeam All rights reserved</p>
+      <img src="../img/MUCK.svg" alt="Muck logo" class="sm:w-24" />
+    </div>
+  </footer>
 
-    </footer>
+  <!-- Material Ui -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <!--Lenis-->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+  <!--Ionicons-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- Material Ui -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <!--Lenis-->
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-    <!--Ionicons-->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <!-- Custom JS -->
-    <script src="../js/script.js"></script>
+  <!-- Custom JS -->
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

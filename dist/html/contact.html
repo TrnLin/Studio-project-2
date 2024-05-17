@@ -9,30 +9,33 @@
   <title>Post</title>
 </head>
 
-<body class=" bg-white font-sans">
+<body class="bg-white font-sans">
   <!-- Nav Bar -->
-  <nav id="navbar"
-    class="fixed top-3 transition-all duration-300 right-1/2 translate-x-1/2 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
+  <nav id="navbar" role="navigation" aria-label="Main navigation"
+    class="fixed right-1/2 top-3 z-[900] flex w-container translate-x-1/2 flex-row gap-5 text-[#ffffff] transition-all duration-300 sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
     <div
       class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6">
       <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
         <li class="md:hidden">
-          <a href="../index.html" class=""><img src="../img/MUCK.svg" class="lg:w-[80%]" alt="" />
+          <a href="../index.html" class="" aria-label="MUCK logo"><img src="../img/MUCK.svg" class="lg:w-[80%]"
+              alt="" />
           </a>
         </li>
         <li>
           <a href=" ../index.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Home
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="home"></ion-icon>
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Home">Home
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="home-outline"></ion-icon>
               Home
             </div>
           </a>
         </li>
         <li>
           <a href="#"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Store
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Store">Store
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
               <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
               Store
             </div>
@@ -40,9 +43,10 @@
         </li>
         <li>
           <a href="./forum.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Forum">
             forum
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
               <ion-icon class="text-2xl" name="chatbubbles-outline"></ion-icon>
               Forum
             </div>
@@ -50,8 +54,9 @@
         </li>
         <li class="sm:hidden">
           <a href="#"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Contact
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Contact">Contact
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
               <ion-icon class="text-2xl" name="call-outline"></ion-icon>
               Contact
             </div>
@@ -59,8 +64,9 @@
         </li>
         <li class="hidden sm:block">
           <a href="./login.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Login
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Login">Login
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
               <ion-icon class="text-2xl" name="person-outline"></ion-icon>
               Account
             </div>
@@ -68,20 +74,22 @@
         </li>
       </ul>
       <div id="theme-toggle"
-        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden">
+        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden"
+        aria-label="Theme toggle">
         <ion-icon name="sunny" class="text-[20px]"></ion-icon>
         Light
       </div>
     </div>
 
-    <a href="./html/login.html"
-      class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"><ion-icon
-        name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
+    <a href="./login.html"
+      class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
+      aria-label="Login"><ion-icon name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
   </nav>
 
-  <section class="m-h-lvh w-screen">
+
+  <section class="m-h-lvh w-screen" role="region" aria-label="Contact Section">
     <div class="flex min-h-lvh w-full items-center justify-center">
-      <div class="flex flex-col gap-4 sm:p-6">
+      <div class="flex flex-col gap-4 sm:p-6" role="form" aria-label="Contact Information">
         <p class="text-[64px] font-bold leading-[64px] text-black xl:text-5xl">
           Contact
         </p>
@@ -91,32 +99,32 @@
           </p>
           <p class="lg:text-sm">You can easily find us at:</p>
         </div>
-        <div class="flex flex-col gap-5">
-          <div class="">
+        <div class="flex flex-col gap-5" role="list" aria-label="Contact Methods">
+          <div class="" role="listitem">
             <a href="#"
               class="flex flex-row items-center gap-5 rounded-[20px] border border-green-200 bg-green-100 p-5 text-xl text-green-200 transition-all hover:border-green-100 hover:bg-green-200 hover:text-green-100 lg:text-sm sm:text-sm"><ion-icon
-                class="text-3xl lg:text-xl" name="call"></ion-icon>1234 - 5678 - 0890
+                class="text-3xl lg:text-xl" name="call" aria-hidden="true"></ion-icon>1234 - 5678 - 0890
             </a>
           </div>
-          <div class="">
+          <div class="" role="listitem">
             <a href="#"
               class="flex flex-row items-center gap-5 rounded-[20px] border border-orange-200 bg-orange-100 p-5 text-xl text-orange-200 transition-all hover:border-orange-100 hover:bg-orange-200 hover:text-orange-100 lg:text-sm sm:text-sm"><ion-icon
-                class="text-3xl lg:text-xl" name="logo-instagram"></ion-icon>Instagram</a>
+                class="text-3xl lg:text-xl" name="logo-instagram" aria-hidden="true"></ion-icon>Instagram</a>
           </div>
-          <div class="">
+          <div class="" role="listitem">
             <a href="#"
               class="flex flex-row items-center gap-5 rounded-[20px] border border-blue-200 bg-blue-100 p-5 text-xl text-blue-200 transition-all hover:border-blue-100 hover:bg-blue-200 hover:text-blue-100 lg:text-sm sm:text-sm"><ion-icon
-                class="text-3xl lg:text-xl" name="logo-facebook"></ion-icon>Facebook</a>
+                class="text-3xl lg:text-xl" name="logo-facebook" aria-hidden="true"></ion-icon>Facebook</a>
           </div>
-          <div class="">
+          <div class="" role="listitem">
             <a href="#"
               class="flex flex-row items-center gap-5 rounded-[20px] border border-pink-200 bg-pink-100 p-5 text-xl text-pink-200 transition-all hover:border-pink-100 hover:bg-pink-200 hover:text-pink-100 lg:text-sm sm:text-sm"><ion-icon
-                class="text-3xl lg:text-xl" name="mail"></ion-icon>Email</a>
+                class="text-3xl lg:text-xl" name="mail" aria-hidden="true"></ion-icon>Email</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="area">
+    <div class="area" aria-hidden="true">
       <ul class="circles">
         <li></li>
         <li></li>
@@ -131,7 +139,6 @@
       </ul>
     </div>
   </section>
-
   <script>
     let colorslight = [
       {

@@ -11,18 +11,20 @@
 
 <body class="bg-white font-sans">
   <!-- Nav Bar -->
-  <nav id="navbar"
-    class="fixed right-1/2 transition-all duration-300 translate-x-1/2 top-3 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
+  <nav id="navbar" role="navigation" aria-label="Main navigation"
+    class="fixed right-1/2 top-3 z-[900] flex w-container translate-x-1/2 flex-row gap-5 text-[#ffffff] transition-all duration-300 sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
     <div
       class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6">
       <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
         <li class="md:hidden">
-          <a href="../index.html" class=""><img src="../img/MUCK.svg" class="lg:w-[80%]" alt="" />
+          <a href="../index.html" class="" aria-label="MUCK logo"><img src="../img/MUCK.svg" class="lg:w-[80%]"
+              alt="" />
           </a>
         </li>
         <li>
           <a href=" ../index.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Home
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Home">Home
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
               <ion-icon class="text-2xl" name="home-outline"></ion-icon>
               Home
@@ -31,7 +33,8 @@
         </li>
         <li>
           <a href="#"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Store
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Store">Store
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
               <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
               Store
@@ -40,18 +43,20 @@
         </li>
         <li>
           <a href="./forum.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Forum">
             forum
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
-              <ion-icon class="text-2xl" name="chatbubbles-outline"></ion-icon>
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="chatbubbles"></ion-icon>
               Forum
             </div>
           </a>
         </li>
         <li class="sm:hidden">
-          <a href="./contact.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Contact
-            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+          <a href="#"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Contact">Contact
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
               <ion-icon class="text-2xl" name="call-outline"></ion-icon>
               Contact
             </div>
@@ -59,7 +64,8 @@
         </li>
         <li class="hidden sm:block">
           <a href="./login.html"
-            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]">Login
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Login">Login
             <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
               <ion-icon class="text-2xl" name="person-outline"></ion-icon>
               Account
@@ -68,27 +74,29 @@
         </li>
       </ul>
       <div id="theme-toggle"
-        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden">
+        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden"
+        aria-label="Theme toggle">
         <ion-icon name="sunny" class="text-[20px]"></ion-icon>
         Light
       </div>
     </div>
 
     <a href="./login.html"
-      class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"><ion-icon
-        name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
+      class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
+      aria-label="Login"><ion-icon name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
   </nav>
 
   <!-- Edit Post Modal -->
-  <div id="edit-post-modal" tabindex="-1" aria-hidden="true"
+  <div id="edit-post-modal" tabindex="-1" aria-hidden="true" aria-hidden="true" role="dialog"
+    aria-labelledby="edit-post-title"
     class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-hidden overflow-y-auto overflow-x-hidden md:inset-0">
     <div class="h- flex w-modal flex-col gap-6 rounded-[20px] bg-white p-8">
       <div class="flex flex-row items-center justify-between">
-        <h2 class="text-4xl text-black" aria-label="Edit post">Edit Post</h2>
+        <h2 class="text-4xl text-black" aria-label="Edit post" id="edit-post-title">Edit Post</h2>
         <div
           class="modal-close flex size-9 items-center justify-center rounded-md bg-white text-2xl text-black transition-all duration-300 hover:bg-pink-200 hover:text-pink-100"
-          aria-label="Close modal" data-modal-hide="edit-post-modal">
-          <ion-icon name="close-outline"></ion-icon>
+          aria-label="Close modal" data-modal-hide="edit-post-modal" aria-label="Close modal">
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </div>
       </div>
 
@@ -115,17 +123,17 @@
   </div>
 
   <!-- Archive Post Modal -->
-  <div id="archive-post-modal" tabindex="-1" aria-hidden="true"
+  <div id="archive-post-modal" tabindex="-1" aria-hidden="true" role="dialog" aria-labelledby="archive-post-title"
     class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-hidden overflow-y-auto overflow-x-hidden md:inset-0">
     <div class="h- flex w-modal flex-col gap-6 rounded-[20px] bg-white p-8">
       <div class="flex flex-row items-center justify-between">
-        <h2 class="text-4xl text-black" aria-label="Edit post">
+        <h2 class="text-4xl text-black" aria-label="Edit post" id="archive-post-title">
           Archive Post
         </h2>
         <div
           class="modal-close flex size-9 items-center justify-center rounded-md bg-white text-2xl text-black transition-all duration-300 hover:bg-pink-200 hover:text-pink-100"
           aria-label="Close modal" data-modal-hide="archive-post-modal">
-          <ion-icon name="close-outline"></ion-icon>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center gap-2">
@@ -148,17 +156,17 @@
   </div>
 
   <!-- Delete Post Modal -->
-  <div id="delete-post-modal" tabindex="-1" aria-hidden="true"
+  <div id="delete-post-modal" tabindex="-1" aria-hidden="true" role="dialog" aria-labelledby="delete-post-title"
     class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-hidden overflow-y-auto overflow-x-hidden md:inset-0">
     <div class="h- flex w-modal flex-col gap-6 rounded-[20px] bg-white p-8">
       <div class="flex flex-row items-center justify-between">
-        <h2 class="text-4xl text-black" aria-label="Edit post">
+        <h2 class="text-4xl text-black" aria-label="Edit post" id="delete-post-title">
           Delete Post
         </h2>
         <div
           class="modal-close flex size-9 items-center justify-center rounded-md bg-white text-2xl text-black transition-all duration-300 hover:bg-pink-200 hover:text-pink-100"
           aria-label="Close modal" data-modal-hide="delete-post-modal">
-          <ion-icon name="close-outline"></ion-icon>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center gap-2">
@@ -182,36 +190,37 @@
   </div>
 
   <!-- Comment Popover Modal -->
-  <div data-popover id="comment-popover" role="tooltip"
+  <div data-popover id="comment-popover" role="tooltip" aria-hidden="true"
     class="invisible absolute z-10 inline-block w-max rounded-[20px] bg-white p-5 shadow-lg ring-2 ring-black/5 transition-opacity duration-300">
     <ul class="text-black">
       <li>
         <div data-modal-target="edit-comment-modal" data-modal-toggle="edit-comment-modal" id="edit-comment-button"
           class="flex items-center justify-items-start gap-3 px-5 py-1 text-lg text-black">
-          <ion-icon name="pencil"></ion-icon>Edit Comment
+          <ion-icon name="pencil" aria-hidden="true"></ion-icon>Edit Comment
         </div>
       </li>
       <li>
         <div data-modal-target="delete-comment-modal" data-modal-toggle="delete-comment-modal"
           class="flex items-center justify-center gap-3 px-5 py-1 text-lg text-error">
-          <ion-icon name="trash"></ion-icon>Deleted Comment
+          <ion-icon name="trash" aria-hidden="true"></ion-icon>Deleted Comment
         </div>
       </li>
     </ul>
   </div>
 
   <!-- Comment Edit Modal -->
-  <div data-popover id="edit-comment-modal" tabindex="-1" aria-hidden="true"
+  <div data-popover id="edit-comment-modal" tabindex="-1" aria-hidden="true" role="dialog"
+    aria-labelledby="edit-comment-title"
     class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-hidden overflow-y-auto overflow-x-hidden md:inset-0">
     <div class="h- flex w-modal flex-col gap-6 rounded-[20px] bg-white p-8">
       <div class="flex flex-row items-center justify-between">
-        <h2 class="text-4xl text-black" aria-label="Edit post">
+        <h2 class="text-4xl text-black" aria-label="Edit post" id="edit-comment-title">
           Edit Comment
         </h2>
         <div
           class="modal-close flex size-9 items-center justify-center rounded-md bg-white text-2xl text-black transition-all duration-300 hover:bg-pink-200 hover:text-pink-100"
           aria-label="Close modal" data-modal-hide="edit-comment-modal">
-          <ion-icon name="close-outline"></ion-icon>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </div>
       </div>
 
@@ -262,12 +271,12 @@
   </div>
 
   <!-- Section -->
-  <section class="min-h-lvh w-screen">
+  <section class="min-h-lvh w-screen" aria-label="Post section">
     <div class="mx-auto my-24 flex h-full w-container flex-col gap-6 xl:my-12 xl:gap-5 sm:pb-20">
-      <a href="./forum.html" class="flex w-fit flex-row items-center justify-center gap-3 p-1 text-black"><ion-icon
-          name="chevron-back-outline"></ion-icon>Back</a>
+      <a href="./forum.html" class="flex w-fit flex-row items-center justify-center gap-3 p-1 text-black"
+        aria-label="Back to forum"><ion-icon name="chevron-back-outline"></ion-icon>Back</a>
 
-      <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-6" aria-label="Post content">
         <!-- Post -->
         <div class="relative z-[1] flex flex-col gap-[30px] rounded-[20px] p-10 ring-2 ring-black/70 xl:p-0 xl:ring-0">
           <div class="flex w-full flex-row items-center justify-between">
@@ -282,7 +291,7 @@
                 </h4>
               </div>
             </div>
-            <div class="sm:fixed sm:right-5 sm:top-11 sm:rounded sm:bg-black">
+            <div class="sm:fixed sm:right-5 sm:top-11 sm:rounded sm:bg-black" aria-label="Post options">
               <div data-popover-target="popover-click" data-popover-trigger="click" data-popover-placement="left-start"
                 class="flex size-9 items-center justify-center rounded-md text-center font-medium text-black transition-all duration-300 hover:bg-black hover:text-white sm:text-white">
                 <ion-icon name="ellipsis-vertical" class="text-[25px]"></ion-icon>
@@ -330,7 +339,7 @@
             </p>
           </div>
           <div class="grid grid-cols-2 place-items-center gap-5 sm:grid-cols-1">
-            <div class="group h-[421px] w-full rounded-[20px] ring-2 ring-black/10">
+            <div class="group h-[421px] w-full rounded-[20px] ring-2 ring-black/10" aria-label="Post images">
               <img src="../img/IMG_4491.jpg" alt="User pic" class="h-full w-full rounded-[20px] object-cover"
                 id="picPost1" srcset="" loading="lazy" />
             </div>
@@ -339,7 +348,7 @@
                 id="picPost2" loading="lazy" />
             </div>
           </div>
-          <div class="flex flex-row gap-3 sm:w-full">
+          <div class="flex flex-row gap-3 sm:w-full" aria-label="Post actions">
             <div class="likeButton"><ion-icon name="heart"></ion-icon>0</div>
             <a href="#comment-form"
               class="shadow-box sm flex h-12 w-fit -translate-y-1 flex-row items-center justify-center gap-2 rounded-[10px] bg-solidblack px-6 text-xl text-[#fff] transition duration-200 hover:-translate-y-0 hover:bg-blue-100 hover:text-blue-200">
@@ -363,7 +372,7 @@
           </form>
         </div>
         <!-- Comment -->
-        <div class="comment-list flex flex-col gap-8">
+        <div class="comment-list flex flex-col gap-8" aria-label="Comments">
           <div class="comment-holder">
             <div class="comment-card">
               <div class="comment-header">
@@ -442,6 +451,7 @@
       </div>
     </div>
   </section>
+
   <!-- Material Ui -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   <!--Lenis-->

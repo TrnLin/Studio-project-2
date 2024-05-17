@@ -9,10 +9,10 @@
     <title>Post</title>
 </head>
 
-<body class=" bg-white font-sans">
+<body class="bg-white font-sans">
     <!-- Nav Bar -->
     <nav id="navbar"
-        class="fixed transition-all duration-300 top-3 right-1/2 translate-x-1/2 z-[900] flex w-container flex-row gap-5 text-[#ffffff] sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
+        class="fixed right-1/2 top-3 z-[900] flex w-container translate-x-1/2 flex-row gap-5 text-[#ffffff] transition-all duration-300 sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
         <div
             class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6">
             <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
@@ -82,72 +82,78 @@
     <section class="min-h-lvh w-screen">
         <div class="mx-auto my-24 flex h-full w-smContainer flex-col gap-6 sm:w-11/12">
             <div class="">
-                <h1 class="text-5xl text-black mb-3">User Account Setting</h1>
-                <p class="text-black/80">This is your private information so don't share it with anyone</p>
+                <h1 class="mb-3 text-5xl text-black">User Account Setting</h1>
+                <p class="text-black/80">
+                    This is your private information so don't share it with anyone
+                </p>
             </div>
             <div class="">
                 <div class="">
                     <h1>Basic Account Information</h1>
+                    <p>
+                        Basic Information about yourself, let the everyone know about you!
+                    </p>
+                </div>
+                <div class="flex flex-row items-center gap-3">
+                    <div class="size-16 rounded-full bg-black">
+                        <img id="profile-pic-preview" src="" class="aspect-square w-full rounded-full" />
+                    </div>
+                    <input type="file" id="profile-pic" accept="image/*" onchange="previewProfilePic(event)"
+                        class="bg-white text-black" />
                 </div>
             </div>
         </div>
     </section>
 
-
-
     <!-- Footer -->
-    <footer class="bg-solidblack p-12 flex flex-col gap-10 w-full sm:p-10 sm:gap-5 sm:pb-28">
+    <footer class="flex w-full flex-col gap-10 bg-solidblack p-12 sm:gap-5 sm:p-10 sm:pb-28">
         <div>
-            <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
+            <a href=""><ion-icon class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
                     name="logo-instagram"></ion-icon></a>
-            <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
+            <a href=""><ion-icon class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
                     name="logo-facebook"></ion-icon></a>
-            <a href=""><ion-icon class="text-3xl text-[#fff]/70  hover:text-[#fff] transition-all duration-200"
+            <a href=""><ion-icon class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
                     name="mail"></ion-icon></a>
         </div>
-        <div class="flex flex-row gap-36 sm:flex-col sm:gap-12 ">
+        <div class="flex flex-row gap-36 sm:flex-col sm:gap-12">
             <div class="flex flex-col gap-7">
                 <p class="text-[#fff]/70">Resource</p>
                 <div class="flex flex-col gap-3">
                     <a href="https://github.com/RMIT-Vietnam-Teaching/group-project-cosc3060-2024a-muck.git"
-                        class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline">Our github
+                        class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">Our github
                         repo</a>
                     <a href="https://www.figma.com/design/LlNaiGaV4zkrd18EGHROEH/Project-Studio-2?node-id=6%3A7&t=Al8yx4NQHUrzqioF-1"
-                        class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline">
+                        class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">
                         Our design document</a>
                 </div>
             </div>
-            <div class="flex flex-col  gap-7">
+            <div class="flex flex-col gap-7">
                 <p class="text-[#fff]/70">About MUCK</p>
                 <div class="flex flex-col gap-3">
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
-                        href="../index.html">About
-                        MUCK</a>
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
+                    <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
+                        href="../index.html">About MUCK</a>
+                    <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
                         href="#">Store</a>
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
+                    <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
                         href="./forum.html">Forum</a>
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
-                        href="./contact.html">Contact
-                        Us</a>
+                    <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
+                        href="./contact.html">Contact Us</a>
                 </div>
             </div>
-            <div class="flex flex-col  gap-7">
+            <div class="flex flex-col gap-7">
                 <p class="text-[#fff]/70">Account Management</p>
                 <div class="flex flex-col gap-3">
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline"
+                    <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
                         href="../index.html">Login</a>
-                    <a class="text-[#fff] text-sm hover:text-[#fff]/70 transition-all hover:underline" href="#">Become a
+                    <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="#">Become a
                         Member</a>
-
                 </div>
             </div>
         </div>
-        <div class="flex flex-row w-full justify-between sm:flex-col sm:gap-10">
+        <div class="flex w-full flex-row justify-between sm:flex-col sm:gap-10">
             <p class="text-[#fff]/70">© 2024 MuckTeam All rights reserved</p>
-            <img src="../img/MUCK.svg" alt="" class="sm:w-24">
+            <img src="../img/MUCK.svg" alt="" class="sm:w-24" />
         </div>
-
     </footer>
 
     <!-- Material Ui -->
@@ -160,6 +166,7 @@
 
     <!-- Custom JS -->
     <script src="../js/script.js"></script>
+    <script src="../js/usersetting.js"></script>
 </body>
 
 </html>
