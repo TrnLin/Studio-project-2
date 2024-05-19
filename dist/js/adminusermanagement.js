@@ -126,9 +126,7 @@ async function returnUserSearch(userName) {
 }
 
 // Return the user search
-document
-  .getElementById(userFormContainer)
-  .addEventListener("submit", function (event) {
+document.getElementById(userFormContainer).addEventListener("submit", function (event) {
     // Prevent the default form submission behavior
     event.preventDefault();
 

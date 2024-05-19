@@ -8,9 +8,9 @@ function restorePost(postIdIn) {
   console.log("Restore Post: ", postIdIn);
 }
 
-//Declair function to archive post
-function archivePost(postIdIn) {
-  console.log("Archive Post: ", postIdIn);
+//Declair function to delete post
+function deletePost(postIdIn) {
+  console.log("Delete Post: ", postIdIn);
 }
 
 //Declair handler function for restore post
@@ -19,17 +19,17 @@ function restorePostHandler(event) {
   restorePost(postId);
 }
 
-//Declair handler function for archive post
-function archivePostHandler(event) {
+//Declair handler function for delete post
+function deletePostHandler(event) {
   let postId = event.target.dataset.postID;
-  archivePost(postId);
+  deletePost(postId);
 }
 
 document.body.addEventListener("click", function (event) {
   if (event.target.classList.contains("restorePostButton")) {
     restorePostHandler(event);
-  } else if (event.target.classList.contains("archivePostButton")) {
-    archivePostHandler(event);
+  } else if (event.target.classList.contains("deletePostButton")) {
+    deletePostHandler(event);
   };
 });
 
@@ -64,7 +64,7 @@ async function returnPostSearch(postInput) {
 
     for (let key in data){
 
-      if (data[key].deleted) {
+      if (data[key].archived) {
         contentHtml += `<div class="postItem">
         <div class="flex flex-col gap-4 lg:gap-2">
           <h1 class="post-title" id="">
@@ -98,10 +98,10 @@ async function returnPostSearch(postInput) {
               Restore Post
             </div>
             <div
-              class="archivePostButton m-1 flex min-w-[150px] cursor-pointer flex-row items-center justify-center rounded-lg border-[1px] border-black p-2"
-              id="${data[key].postId}Archive"
+              class="deletePostButton m-1 flex min-w-[150px] cursor-pointer flex-row items-center justify-center rounded-lg border-[1px] border-black p-2"
+              id="${data[key].postId}Delete"
             >
-              Archive Post
+              Delete Post
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@ async function returnPostSearch(postInput) {
         restoreElement.dataset.postID = elemIdPrefix;
 
 
-        let archiveElement = document.getElementById(elemIdPrefix + "Archive");
+        let archiveElement = document.getElementById(elemIdPrefix + "Delete");
         archiveElement.dataset.postID = elemIdPrefix;
       };
         

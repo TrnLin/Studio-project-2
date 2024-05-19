@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../font/fontface.css" />
     <link rel="stylesheet" href="../../style/style.css" />
-    <title>User Management</title>
+    <title>Archived Posts</title>
   </head>
 
   <body class="flex justify-center bg-white font-sans">
@@ -91,21 +91,23 @@
     <section class="min-h-lvh w-[83vw] pt-24">
       <div class="mx-auto my-auto flex h-full w-container flex-col gap-8">
         <h1 class="text-[2rem] leading-8 text-black" id="blockTitle">
-          User Management
+          Archived Posts
         </h1>
 
         <div class="flex flex-col gap-5">
-          <form action="" id="userNameSearch" class="w-full">
+          <form action="" id="postSearch" class="w-full">
             <input
               type="text"
-              name="userNameSearchInput"
-              id="userNameSearchInput"
-              placeholder="Username Search"
-              class="input-box h-full border border-solid border-black text-black ring-black/50 transition duration-200 focus:border-black/70 focus:ring-1"
+              name="postSearchInput"
+              id="postSearchInput"
+              placeholder="Archived Posts Title Search"
+              class="input-box h-full text-black ring-black/50 transition duration-200 focus:border-black/70 focus:ring-1"
             />
           </form>
 
-          <div id="userContainer" class="flex flex-col gap-5"></div>
+          <div id="postContainer">
+
+          </div>
         </div>
       </div>
     </section>
@@ -128,6 +130,6 @@
 
     <!-- Custom JS -->
     <script src="../../js/script.js"></script>
-    <script src="../../js/adminusermanagement.js"></script>
+    <script src="../../js/admindeletedposts.js"></script>
   </body>
 </html>
