@@ -74,34 +74,323 @@
             </div>
         </div>
 
-        <a href="./html/login.html"
+        <a href="./login.html"
             class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"><ion-icon
                 name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
     </nav>
 
+    <!-- Change Pass Modal -->
+    <div id="change-pass-modal" tabindex="-1" aria-hidden="true" aria-hidden="true" role="dialog"
+        aria-labelledby="change-pass-title"
+        class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-hidden overflow-y-auto overflow-x-hidden md:inset-0">
+        <div class="h- flex w-modal flex-col gap-6 rounded-[20px] bg-white p-8">
+            <div class="flex flex-row items-center justify-between">
+                <h2 class="text-4xl text-black" aria-label="Edit post" id="edit-post-title">Change Password</h2>
+                <div class="modal-close flex size-9 items-center justify-center rounded-md bg-white text-2xl text-black transition-all duration-300 hover:bg-pink-200 hover:text-pink-100"
+                    aria-label="Close modal" data-modal-hide="change-pass-modal" aria-label="Close modal">
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </div>
+            </div>
+
+            <form action="" id="edit-form" class="relative flex h-full flex-col gap-5">
+                <div class="gap- flex flex-col">
+                    <label class="text-base text-black lg:text-sm" for="confirm">Old Password</label>
+                    <div class="">
+                        <div id="confirm-holder"
+                            class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
+                            <input class="input-box border-black/50 focus:ring-0 sm:py-2" type="password" name="confirm"
+                                id="old-pass-input" placeholder="Input your old password" required
+                                aria-required="true" />
+                            <div id="show-password"
+                                class="grid place-items-center px-3 text-black/50 group-hover:text-black h-full">
+                                <ion-icon name="eye-off-outline" aria-required="true"></ion-icon>
+                            </div>
+                        </div>
+                        <p class="confirm-valid h-[10px] text-[10px] leading-[10px] text-error"></p>
+                    </div>
+                </div>
+                <div class="gap- flex flex-col">
+                    <label class="text-base text-black lg:text-sm" for="confirm">New Password</label>
+                    <div class="">
+                        <div id="confirm-holder"
+                            class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
+                            <input class="input-box border-black/50 focus:ring-0 sm:py-2" type="password" name="confirm"
+                                id="new-pass-input" placeholder="Input your new password" required
+                                aria-required="true" />
+                            <div id="show-new-password"
+                                class="grid place-items-center px-3 text-black/50 group-hover:text-black h-full">
+                                <ion-icon name="eye-off-outline" aria-required="true"></ion-icon>
+                            </div>
+                        </div>
+                        <p class="confirm-valid h-[10px] text-[10px] leading-[10px] text-error"></p>
+                    </div>
+                </div>
+                <div class="gap- flex flex-col">
+                    <label class="text-base text-black lg:text-sm" for="confirm">Confirm Password</label>
+                    <div class="">
+                        <div id="confirm-holder"
+                            class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
+                            <input class="input-box border-black/50 focus:ring-0 sm:py-2" type="password" name="confirm"
+                                id="confirm-pass-input" placeholder="Confirm your password" required
+                                aria-required="true" />
+                            <div id="show-confirm"
+                                class="grid place-items-center px-3 text-black/50 group-hover:text-black h-full">
+                                <ion-icon name="eye-off-outline" aria-required="true"></ion-icon>
+                            </div>
+                        </div>
+                        <p class="confirm-valid h-[10px] text-[10px] leading-[10px] text-error"></p>
+                    </div>
+                </div>
+                <div class="block">
+                    <button type="submit" data-modal-hide="change-pass-modal" id="submit-edit-button"
+                        class="w-full rounded-md bg-solidblack p-4 text-center text-base leading-[100%] text-[#fff] transition-all duration-300 hover:bg-orange-200 hover:text-orange-100">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Change Info Modal -->
+    <div id="change-info-modal" tabindex="-1" aria-hidden="true" aria-hidden="true" role="dialog"
+        aria-labelledby="change-info-title"
+        class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-hidden overflow-y-auto overflow-x-hidden md:inset-0">
+        <div class="h- flex w-modal flex-col gap-6 rounded-[20px] bg-white p-8">
+            <div class="flex flex-row items-center justify-between">
+                <h2 class="text-4xl text-black" aria-label="Edit post" id="edit-post-title">Change Account Information
+                </h2>
+                <div class="modal-close flex size-9 items-center justify-center rounded-md bg-white text-2xl text-black transition-all duration-300 hover:bg-pink-200 hover:text-pink-100"
+                    aria-label="Close modal" data-modal-hide="change-info-modal" aria-label="Close modal">
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </div>
+            </div>
+
+            <form action="" id="edit-form" class="relative flex h-full flex-col gap-5">
+                <!--Username-->
+                <div class="gap- flex flex-col">
+                    <label class="text-base text-black" for="username">Username</label>
+                    <div class="">
+                        <div
+                            class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
+                            <div id="user-name"
+                                class="grid place-items-center px-3 text-black/50 group-hover:text-black">
+                                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                            </div>
+                            <input class="input-box focus:ring-0 group-hover:placeholder:text-black" type="text"
+                                name="username" id="username-setting" placeholder="Input your Username" required
+                                aria-required="true" />
+
+                        </div>
+                        <p class="user-valid h-[10px] text-[10px] leading-[10px] text-error"></p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="gap- flex flex-col">
+                    <label class="text-base text-black lg:text-sm" for="email">Email</label>
+                    <div class="">
+                        <div id="email-holder"
+                            class="group group mb-1 flex flex-row items-center justify-between rounded-[10px] ring-1 ring-black/50 transition-all duration-200 hover:ring-black">
+                            <div id="mail" class="grid place-items-center px-3 text-black/50 group-hover:text-black">
+                                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                            </div>
+                            <input class="input-box focus:ring-0 group-hover:placeholder:text-black sm:py-2 ring-0"
+                                type="text" name="email" id="email-setting" placeholder="Input your Email" required
+                                aria-required="true" />
+
+                        </div>
+                        <p class="email-valid h-[10px] text-[10px] leading-[10px] text-error"></p>
+                    </div>
+                </div>
+                <div class="block">
+                    <button type="submit" id="submit-edit-info-btn"
+                        class="w-full rounded-md bg-solidblack p-4 text-center text-base leading-[100%] text-[#fff] transition-all duration-300 hover:bg-orange-200 hover:text-orange-100">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Archive Account Modal -->
+    <div id="archive-account-modal" tabindex="-1" aria-hidden="true" role="dialog"
+        aria-labelledby="archive-account-title"
+        class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-hidden overflow-y-auto overflow-x-hidden md:inset-0">
+        <div class="h- flex w-modal flex-col gap-6 rounded-[20px] bg-white p-8">
+            <div class="flex flex-row items-center justify-between">
+                <h2 class="text-4xl text-black" aria-label="Edit post" id="delete-post-title">
+                    Archive Account
+                </h2>
+                <div class="modal-close flex size-9 items-center justify-center rounded-md bg-white text-2xl text-black transition-all duration-300 hover:bg-pink-200 hover:text-pink-100"
+                    aria-label="Close modal" data-modal-hide="archive-account-modal">
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-2">
+                <ion-icon name="archive" class="text-7xl text-black/80"></ion-icon>
+                <h1 class="text-base text-black/70">
+                    Are you sure you want to <span class="text-error">Archive</span> this
+                    account?
+                </h1>
+            </div>
+            <form action="" class="flex flex-row gap-4">
+                <div id="delete-post-button"
+                    class="w-full rounded-lg bg-solidblack p-4 text-base text-[#fff] text-center transition-all duration-300 hover:bg-orange-200 hover:text-orange-100">
+                    Archive Account
+                </div>
+                <div data-modal-hide="archive-account-modal"
+                    class="flex items-center justify-center rounded-lg bg-white px-12 text-base ring-2 ring-inset ring-black/70 transition-all duration-300 hover:bg-black hover:text-white">
+                    Cancel
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Out Modal -->
+    <div id="sign-out-modal" tabindex="-1" aria-hidden="true" role="dialog" aria-labelledby="sign-out-modal"
+        class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-hidden overflow-y-auto overflow-x-hidden md:inset-0">
+        <div class="h- flex w-modal flex-col gap-6 rounded-[20px] bg-white p-8">
+            <div class="flex flex-row items-center justify-between">
+                <h2 class="text-4xl text-black" aria-label="Edit post" id="delete-post-title">
+                    Archive Account
+                </h2>
+                <div class="modal-close flex size-9 items-center justify-center rounded-md bg-white text-2xl text-black transition-all duration-300 hover:bg-pink-200 hover:text-pink-100"
+                    aria-label="Close modal" data-modal-hide="sign-out-modal">
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-2">
+                <ion-icon name="log-out-outline" class="text-7xl text-black/80"></ion-icon>
+                <h1 class="text-base text-black/70">
+                    Are you sure you want to <span class="text-error">Sign Out</span> this
+                    account?
+                </h1>
+            </div>
+            <form action="" class="flex flex-row gap-4">
+                <div id="delete-post-button"
+                    class="w-full rounded-lg bg-solidblack p-4 text-base text-[#fff] text-center transition-all duration-300 hover:bg-orange-200 hover:text-orange-100">
+                    Sign Out
+                </div>
+                <div data-modal-hide="sign-out-modal"
+                    class="flex items-center justify-center rounded-lg bg-white px-12 text-base ring-2 ring-inset ring-black/70 transition-all duration-300 hover:bg-black hover:text-white">
+                    Cancel
+                </div>
+            </form>
+        </div>
+    </div>
+
+
     <section class="min-h-lvh w-screen">
-        <div class="mx-auto my-24 flex h-full w-smContainer flex-col gap-6 sm:w-11/12">
+        <div
+            class="mx-auto my-24 flex h-full w-smContainer flex-col gap-10 sm:w-11/12 ring-black/50 ring-1 p-10 rounded-lg sm:p-3">
             <div class="">
-                <h1 class="mb-3 text-5xl text-black">User Account Setting</h1>
+                <h1 class="mb-3 text-5xl text-black sm:text-3xl">User Account Setting</h1>
                 <p class="text-black/80">
                     This is your private information so don't share it with anyone
                 </p>
             </div>
-            <div class="">
+
+            <!-- Account Information -->
+            <div class=" flex flex-col gap-8 pb-10 border-b-2 border-black/30">
                 <div class="">
-                    <h1>Basic Account Information</h1>
-                    <p>
+                    <h1 class="text-2xl text-black sm:text-xl">Basic Account Information</h1>
+                    <p class="text-black text-sm">
                         Basic Information about yourself, let the everyone know about you!
                     </p>
                 </div>
-                <div class="flex flex-row items-center gap-3">
-                    <div class="size-16 rounded-full bg-black">
+                <div class="flex flex-row items-center gap-3 sm:flex-col">
+                    <div class="size-16 aspect-square rounded-full bg-black sm:size-24">
                         <img id="profile-pic-preview" src="" class="aspect-square w-full rounded-full" />
                     </div>
                     <input type="file" id="profile-pic" accept="image/*" onchange="previewProfilePic(event)"
                         class="bg-white text-black" />
                 </div>
+
+                <div class="flex flex-col gap-3 w-1/2">
+                    <!--Username-->
+                    <div class="gap- flex flex-col">
+                        <label class="text-base text-black" for="username">Username</label>
+                        <div class="">
+                            <div
+                                class="group group mb-1 flex flex-row items-center gap-3 py-3  rounded-[10px]  text-black">
+                                <div id="user-name" class="grid place-items-center px-3 text-black">
+                                    <ion-icon name="person-outline" aria-hidden="true" class="text-xl"></ion-icon>
+                                </div>
+                                <span id="username">
+                                    UserName123
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="gap- flex flex-col">
+                        <label class="text-base text-black lg:text-sm" for="email">Email</label>
+                        <div class="">
+                            <div
+                                class="group group mb-1 flex flex-row items-center gap-3 py-3  rounded-[10px]  text-black">
+                                <div id="user-email" class="grid place-items-center px-3 text-black">
+                                    <ion-icon name="mail-outline" aria-hidden="true" class="text-xl"></ion-icon>
+                                </div>
+                                <span id="email">
+                                    userName123@gmail.com
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-modal-target="change-info-modal" data-modal-toggle="change-info-modal" id="edit-info-btn"
+                        class="flex items-center justify-items-start gap-3 rounded-md text-base text-white bg-black w-fit p-3">
+                        <ion-icon name="information-outline"></ion-icon>Change Info
+                    </div>
+                </div>
             </div>
+
+
+            <!-- Password -->
+            <div class="flex flex-col gap-4 pb-10 border-b-2 border-black/30">
+                <div class="">
+                    <h1 class="text-2xl text-black">Security</h1>
+                    <p class="text-black">
+                        Security is the most important information, please don’t let anyone know your password </p>
+                </div>
+                <div class="group group mb-1 flex flex-row items-center gap-3 py-3  rounded-[10px]  text-black">
+                    <div id="user-email" class="grid place-items-center px-3 text-black">
+                        <ion-icon name="lock-closed-outline" aria-hidden="true" class="text-xl"></ion-icon>
+                    </div>
+                    <span id="password">
+                        ********
+                    </span>
+
+                </div>
+
+                <div data-modal-target="change-pass-modal" data-modal-toggle="change-pass-modal" id="edit-post-button"
+                    class="flex items-center justify-items-start gap-3 rounded-md text-base text-white bg-black w-fit p-3">
+                    <ion-icon name="lock-closed-outline"></ion-icon>Change Password
+                </div>
+
+            </div>
+
+            <!-- Account -->
+            <div class="flex flex-col gap-4 pb-10 border-b-2 border-black/30">
+                <div class="">
+                    <h1 class="text-2xl text-black">Account</h1>
+                    <p class="text-black">
+                        Let temporary hide your profile or even make it vanish
+                </div>
+
+                <div data-modal-target="archive-account-modal" data-modal-toggle="archive-account-modal" id=""
+                    class="flex items-center justify-items-start gap-3 rounded-md text-base text-white bg-black w-fit p-3">
+                    <ion-icon name="archive-outline"></ion-icon>Archive Account
+                </div>
+                <div data-modal-target="sign-out-modal" data-modal-toggle="sign-out-modal" id=""
+                    class="flex items-center justify-items-start gap-3 rounded-md text-base text-[#fff] bg-error w-fit p-3">
+                    <ion-icon name="log-out-outline"></ion-icon>Sign Out
+                </div>
+
+            </div>
+            </form>
         </div>
     </section>
 
