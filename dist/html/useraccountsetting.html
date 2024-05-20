@@ -341,7 +341,7 @@
                         </div>
                     </div>
                     <div data-modal-target="change-info-modal" data-modal-toggle="change-info-modal" id="edit-info-btn"
-                        class="flex items-center justify-items-start gap-3 rounded-md text-base text-white bg-black w-fit p-3">
+                        class="flex cursor-pointer items-center justify-items-start gap-3 rounded-md text-base text-white bg-black w-fit p-3 hover:bg-white hover:text-black transition-all duration-200">
                         <ion-icon name="information-outline"></ion-icon>Change Info
                     </div>
                 </div>
@@ -366,7 +366,7 @@
                 </div>
 
                 <div data-modal-target="change-pass-modal" data-modal-toggle="change-pass-modal" id="edit-post-button"
-                    class="flex items-center justify-items-start gap-3 rounded-md text-base text-white bg-black w-fit p-3">
+                    class="flex  cursor-pointer items-center justify-items-start gap-3 rounded-md text-base text-white bg-black w-fit p-3 hover:bg-white hover:text-black transition-all duration-200">
                     <ion-icon name="lock-closed-outline"></ion-icon>Change Password
                 </div>
 
@@ -381,13 +381,26 @@
                 </div>
 
                 <div data-modal-target="archive-account-modal" data-modal-toggle="archive-account-modal" id=""
-                    class="flex items-center justify-items-start gap-3 rounded-md text-base text-white bg-black w-fit p-3">
+                    class="flex cursor-pointer items-center justify-items-start gap-3 rounded-md text-base text-white bg-black w-fit p-3 hover:bg-white hover:text-black transition-all duration-200">
                     <ion-icon name="archive-outline"></ion-icon>Archive Account
                 </div>
                 <div data-modal-target="sign-out-modal" data-modal-toggle="sign-out-modal" id=""
-                    class="flex items-center justify-items-start gap-3 rounded-md text-base text-[#fff] bg-error w-fit p-3">
+                    class="flex cursor-pointer items-center justify-items-start gap-3 rounded-md text-base text-[#fff] bg-error w-fit p-3 hover:bg-white hover:text-black transition-all duration-200">
                     <ion-icon name="log-out-outline"></ion-icon>Sign Out
                 </div>
+
+            </div>
+
+            <!-- Admin -->
+            <div class="flex flex-col gap-4 pb-10 border-b-2 border-black/30">
+                <div class="">
+                    <h1 class="text-2xl text-black">Admin</h1>
+                </div>
+
+                <a href="#" class=" flex items-center justify-items-start gap-3 rounded-md text-base text-white hover:bg-white hover:text-black transition-all duration-200
+                    bg-black w-fit p-3">
+                    Go to Dashboard
+                </a>
 
             </div>
             </form>
@@ -395,7 +408,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="flex w-full flex-col gap-10 bg-solidblack p-12 sm:gap-5 sm:p-10 sm:pb-28">
+    <footer class=" flex w-full flex-col gap-10 bg-solidblack p-12 sm:gap-5 sm:p-10 sm:pb-28">
         <div>
             <a href=""><ion-icon class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
                     name="logo-instagram"></ion-icon></a>
@@ -409,7 +422,8 @@
                 <p class="text-[#fff]/70">Resource</p>
                 <div class="flex flex-col gap-3">
                     <a href="https://github.com/RMIT-Vietnam-Teaching/group-project-cosc3060-2024a-muck.git"
-                        class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">Our github
+                        class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">Our
+                        github
                         repo</a>
                     <a href="https://www.figma.com/design/LlNaiGaV4zkrd18EGHROEH/Project-Studio-2?node-id=6%3A7&t=Al8yx4NQHUrzqioF-1"
                         class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">
