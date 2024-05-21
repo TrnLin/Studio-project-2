@@ -1,0 +1,296 @@
+<!--Responsive ready-->
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../font/fontface.css" />
+    <link rel="stylesheet" href="../../style/style.css" />
+    <title>Forum</title>
+</head>
+
+<body class="bg-white font-sans">
+
+
+    <!-- Section -->
+    <section class="min-h-lvh w-screen" aria-label="Forum Section">
+        <div class="mx-auto my-24 flex h-full w-storeContainer flex-col gap-6 sm:w-11/12">
+
+            <!-- Store nav bar -->
+            <div class="flex flex-row w-full justify-between">
+                <div class="flex flex-row gap-6 items-center">
+                    <form action="" role="search"
+                        class="group flex w-[370px] flex-row items-center justify-center rounded-[10px] text-black/50 ring-2 ring-inset ring-black/50 transition duration-200 hover:text-black hover:ring-black">
+                        <div class="flex aspect-square w-auto items-center justify-center size-[45px]"
+                            aria-label="Submit Search" role="button">
+                            <ion-icon name="search-outline" class=""></ion-icon>
+                        </div>
+                        <input type="text" name="" id="" placeholder="Looking for something?"
+                            class=" ring-0 w-full focus:ring-0 p-0  text-wrap rounded-[10px] border-none bg-transparent  text-[12px]  text-black outline-none transition-all  placeholder:text-black/50 lg:p-[8px] lg:text-[11px] sm:p-3 group-hover:placeholder:text-black"
+                            aria-label="Search Posts" />
+
+                    </form>
+                    <a href="" class="text-sm text-black hover:underline transition-all duration-200">Discover</a>
+                    <a href="" class="text-sm text-black hover:underline transition-all duration-200">Browse</a>
+                </div>
+                <a href="#"
+                    class=" flex items-center justify-items-start gap-3 rounded-md text-base text-white hover:bg-white hover:text-black hover:ring-2 hover:ring-inset hover:ring-black transition-all duration-200 bg-black w-fit px-5 ">
+                    <ion-icon name="cart"></ion-icon>Cart
+                </a>
+            </div>
+
+            <h1 class="text-5xl text-black font-hero font-semibold">Store</h1>
+
+            <!-- Main -->
+            <div class="flex flex-col gap-16">
+                <div>
+                    <div class=" flex flex-row justify-between mb-1">
+                        <a href="#"
+                            class=" flex items-center justify-items-start gap-1 rounded-md text-lg text-black group p-2 w-fit">
+                            Features<ion-icon name="chevron-forward"
+                                class="text-sm group-hover:translate-x-1 transition-all duration-200 "></ion-icon>
+                        </a>
+                        <div class="flex flex-row gap-3">
+                            <div id="prev"
+                                class="size-8 rounded-full bg-black grid place-items-center hover:bg-black/70 transition-all duration-200">
+                                <ion-icon class="text-white" name="chevron-back"></ion-icon>
+                            </div>
+                            <div id="next"
+                                class="size-8 rounded-full bg-black grid place-items-center hover:bg-black/70 transition-all duration-200">
+                                <ion-icon class="text-white" name="chevron-forward"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-container p-0 overflow-hidden relative z-[1] mx-auto ">
+                        <div
+                            class="slider-wrapper box-content flex h-full w-full transition-transform duration-500 relative">
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/gtav.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Grand Theft Auto V: Complete Edition</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm">40%</p>
+                                        <p class="text-black/70 line-through ">49.99$</p>
+                                        <p class="text-black">29.99$</p>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/hl.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Hogwart Legacy</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm">40%</p>
+                                        <p class="text-black/70 line-through ">49.99$</p>
+                                        <p class="text-black">29.99$</p>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/cp2077.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Cyberpunk 2077: Ultimate Edition</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm hidden"></p>
+                                        <p class="text-black/70 line-through hidden"></p>
+                                        <p class="text-black">79.99$</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/ac.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Assassin's Creed: Mirage</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm hidden"></p>
+                                        <p class="text-black/70 line-through hidden"></p>
+                                        <p class="text-black">29.99$</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/rd2.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Red Dead Redemption 2</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm hidden"></p>
+                                        <p class="text-black/70 line-through hidden"></p>
+                                        <p class="text-black">29.99$</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/di2.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Dead Island 2</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm hidden"></p>
+                                        <p class="text-black/70 line-through hidden"></p>
+                                        <p class="text-black">59.99$</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/gtav.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Grand Theft Auto V: Complete Edition</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm">40%</p>
+                                        <p class="text-black/70 line-through ">49.99$</p>
+                                        <p class="text-black">29.99$</p>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/hl.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Hogwart Legacy</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm">40%</p>
+                                        <p class="text-black/70 line-through ">49.99$</p>
+                                        <p class="text-black">29.99$</p>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/cp2077.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Cyberpunk 2077: Ultimate Edition</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm hidden"></p>
+                                        <p class="text-black/70 line-through hidden"></p>
+                                        <p class="text-black">79.99$</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/ac.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Assassin's Creed: Mirage</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm hidden"></p>
+                                        <p class="text-black/70 line-through hidden"></p>
+                                        <p class="text-black">29.99$</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/rd2.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Red Dead Redemption 2</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm hidden"></p>
+                                        <p class="text-black/70 line-through hidden"></p>
+                                        <p class="text-black">29.99$</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="slider">
+                                <div>
+                                    <img src=" ../../img/store/slider/di2.png"
+                                        class="aspect-[3/4] h-full w-full object-cover rounded-[10px]" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p class="text-xs text-black/70">Base game</p>
+                                        <p class=" text-black text-base">Dead Island 2</p>
+                                    </div>
+                                    <div class="flex flex-row gap-4">
+                                        <p class="text-xs  text-white bg-black w-fit p-1 rounded-sm hidden"></p>
+                                        <p class="text-black/70 line-through hidden"></p>
+                                        <p class="text-black">59.99$</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Material Ui -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <!--Lenis-->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <!--Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../../js/script.js"></script>
+    <script src="../../js/store.js"></script>
+</body>
+
+</html>

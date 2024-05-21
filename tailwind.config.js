@@ -13,10 +13,12 @@ module.exports = {
         container: "min(1400px, 100% - 4rem)",
         modal: "min(750px, 100% )",
       },
-
+      flexBasis: {
+        test: "calc(100% - (180px + 20px));",
+      },
       width: {
         container: "min(1400px, 100% - 4rem)",
-        storeContainer: "min(1400px, 100% - 20rem)",
+        storeContainer: "min(1280px, 100% - 15rem)",
         modal: "min(750px, 100% )",
         signForm: "min(380px, 100% - 1rem)",
         smContainer: "min(1000px, 100% - 4rem)",
