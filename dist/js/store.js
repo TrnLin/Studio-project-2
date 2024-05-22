@@ -75,8 +75,6 @@ setInterval(() => {
     nextBtn.style.cursor = "pointer";
     nextBtn.classList.add("hover:bg-black/70");
   }
-
-  console.log(track);
 }, 100);
 
 //resize image

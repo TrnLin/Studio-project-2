@@ -67,6 +67,35 @@ requestAnimationFrame(raf);
 let screenWidth = window.innerWidth;
 let navbar = document.querySelector("#navbar");
 
+window.addEventListener("resize", () => {
+  let screenWidth = window.innerWidth;
+  let navbar = document.querySelector("#navbar");
+
+  if (screenWidth > 639) {
+    var lastScrollTop;
+    window.addEventListener("scroll", function () {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-80px";
+      } else {
+        navbar.style.top = "12px";
+      }
+      lastScrollTop = scrollTop;
+    });
+  } else {
+    var lastScrollTop;
+    window.addEventListener("scroll", function () {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.style.bottom = "-100px";
+      } else {
+        navbar.style.bottom = "0px";
+      }
+      lastScrollTop = scrollTop;
+    });
+  }
+});
+
 if (screenWidth > 639) {
   var lastScrollTop;
   window.addEventListener("scroll", function () {

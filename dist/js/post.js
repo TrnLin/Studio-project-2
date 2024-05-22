@@ -6,7 +6,6 @@ const errorBorder = "ring-error";
 //create comment card func
 let userProfileImgFunc = () => {
   let userProfileImg = document.createElement("img");
-  userProfileImg = document.createElement("img");
   userProfileImg.classList.add("user-profile-picture");
 
   userProfileImg.setAttribute("src", "#"); //Todo: Add user profile picture url
@@ -121,7 +120,7 @@ let replyContainerFunc = () => {
   let readmore = document.createElement("div");
   readmore.classList.add("readmore");
   readmore.setAttribute("onclick", "javascript:readMoreFunc(this)");
-  readmore.textContent = "Hide Comments";
+  readmore.textContent = "Show Comments";
 
   replyHolder.appendChild(replyList);
   replyHolder.appendChild(readmore);
