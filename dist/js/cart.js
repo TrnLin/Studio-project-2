@@ -86,5 +86,5 @@ function updateTotal(total, oriPrice, discount) {
   }
   totalElement.textContent = "$" + total;
   totalPrice.textContent = "$" + oriPrice;
-  totalDiscount.textContent = "$" + discount;
+  totalDiscount.textContent = "-$" + discount;
 }
