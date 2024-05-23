@@ -24,15 +24,12 @@ function removeCard(element) {
   let id = card.dataset.id;
 
   let itemPrice = parseFloat(price - (price * sale) / 100);
+
   itemPrice = itemPrice.toFixed(2);
 
   total -= itemPrice;
   oriPrice -= price;
   discount = oriPrice - total;
-
-  total = total.toFixed(2);
-  oriPrice = oriPrice.toFixed(2);
-  discount = discount.toFixed(2);
 
   cardCount -= 1;
 
@@ -60,6 +57,11 @@ window.onload = () => {
 
     itemPrice = itemPrice.toFixed(2);
 
+    if (sale == 0) {
+      saleDes.style.display = "none";
+      oriDes.style.display = "none";
+    }
+
     saleDes.textContent = sale + "%";
     oriDes.textContent = "$" + price;
     finalDes.textContent = "$" + itemPrice;
@@ -68,10 +70,6 @@ window.onload = () => {
   });
   let discount = oriPrice - total;
 
-  total = total.toFixed(2);
-  oriPrice = oriPrice.toFixed(2);
-  discount = discount.toFixed(2);
-
   console.log(totalDiscount);
 
   updateTotal(total, oriPrice, discount);
@@ -79,6 +77,10 @@ window.onload = () => {
 };
 
 function updateTotal(total, oriPrice, discount) {
+  total = total.toFixed(2);
+  oriPrice = oriPrice.toFixed(2);
+  discount = discount.toFixed(2);
+
   if (total < 0 || oriPrice < 0 || discount < 0) {
     total = 0.0;
     oriPrice = 0.0;
