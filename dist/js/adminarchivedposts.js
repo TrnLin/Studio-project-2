@@ -30,9 +30,8 @@ document.body.addEventListener("click", function (event) {
     restorePostHandler(event);
   } else if (event.target.classList.contains("deletePostButton")) {
     deletePostHandler(event);
-  };
+  }
 });
-
 
 //Declair function to return the searched post
 async function returnPostSearch(postInput) {
@@ -60,10 +59,7 @@ async function returnPostSearch(postInput) {
 
     let contentHtml = "";
 
-
-
-    for (let key in data){
-
+    for (let key in data) {
       if (data[key].archived) {
         contentHtml += `<div class="postItem">
         <div class="flex flex-col gap-4 lg:gap-2">
@@ -106,7 +102,7 @@ async function returnPostSearch(postInput) {
           </div>
         </div>
       </div>`;
-      };
+      }
 
       //Display the innerHTML
       document.getElementById(postsContainer).innerHTML = contentHtml;
@@ -118,22 +114,15 @@ async function returnPostSearch(postInput) {
         let restoreElement = document.getElementById(elemIdPrefix + "Restore");
         restoreElement.dataset.postID = elemIdPrefix;
 
-
         let archiveElement = document.getElementById(elemIdPrefix + "Delete");
         archiveElement.dataset.postID = elemIdPrefix;
-      };
-        
-
-    };
-
-
-    } catch(error){
-        console.log("Error Occurred: ", error);
-        return null;
-    };
-
-};
-
+      }
+    }
+  } catch (error) {
+    console.log("Error Occurred: ", error);
+    return null;
+  }
+}
 
 // Return the post search
 document.getElementById(postForm).addEventListener("submit", function (event) {

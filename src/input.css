@@ -341,7 +341,7 @@
 }
 
 .card {
-  @apply relative flex shrink-0 flex-col gap-2 transition-transform;
+  @apply relative flex shrink-0 flex-col gap-2;
 }
 
 .filter {
