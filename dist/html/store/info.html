@@ -103,12 +103,12 @@
 
     <!-- Section -->
     <section class="min-h-lvh w-screen" aria-label="Forum Section">
-        <div class="mx-auto mt-20 flex h-full w-storeContainer flex-col gap-6 sm:w-11/12">
+        <div class="mx-auto mt-20 flex h-full w-storeContainer flex-col gap-6 sm:mt-14 sm:w-11/12">
             <!-- Store nav bar -->
-            <div class="sticky top-0 z-50 flex w-full flex-row justify-between bg-white py-5">
-                <div class="flex flex-row items-center gap-6">
+            <div class="sticky top-0 z-50 flex w-full flex-row justify-between bg-white py-5 sm:py-2 sm:pt-5">
+                <div class="flex flex-row items-center gap-6 sm:w-full sm:flex-col sm:gap-4">
                     <form action="" role="search"
-                        class="group flex w-[370px] flex-row items-center justify-center rounded-[10px] text-black/50 ring-2 ring-inset ring-black/50 transition duration-200 hover:text-black hover:ring-black">
+                        class="group flex w-[370px] flex-row items-center justify-center rounded-[10px] text-black/50 ring-2 ring-inset ring-black/50 transition duration-200 hover:text-black hover:ring-black ipad:w-[250px] sm:w-full">
                         <div class="flex aspect-square size-[45px] w-auto items-center justify-center"
                             aria-label="Submit Search" role="button">
                             <ion-icon name="search-outline" class=""></ion-icon>
@@ -117,57 +117,73 @@
                             class="w-full text-wrap rounded-[10px] border-none bg-transparent p-0 text-[12px] text-black outline-none ring-0 transition-all placeholder:text-black/50 focus:ring-0 group-hover:placeholder:text-black lg:p-[8px] lg:text-[11px] sm:p-3"
                             aria-label="Search Posts" />
                     </form>
-                    <a href="" class="text-sm text-black transition-all duration-200 hover:underline">Discover</a>
-                    <a href="" class="text-sm text-black transition-all duration-200 hover:underline">Browse</a>
+                    <div class="flex flex-row gap-6 sm:w-full sm:items-center sm:justify-between">
+                        <div class="flex h-full flex-row items-center gap-6">
+                            <a href="./store.html"
+                                class="text-sm text-black transition-all duration-200 hover:underline">
+                                Discover</a>
+                            <a href="./feature.html"
+                                class="text-sm text-black transition-all duration-200 hover:underline">Browse</a>
+                        </div>
+                        <a href="./cart.html"
+                            class="hidden h-full w-fit items-center justify-items-start gap-3 rounded-md p-2 text-base text-black transition-all duration-200 sm:flex">
+                            <span id="cart-count" class="">3</span>
+                            <ion-icon name="cart" class="text-2xl"></ion-icon>
+                        </a>
+                    </div>
                 </div>
-                <div class="flex items-center justify-center gap-5">
-                    <a href="./cart.html"
-                        class="flex h-full w-fit items-center justify-items-start gap-3 rounded-md bg-black px-5 text-base text-white transition-all duration-200 hover:bg-white hover:text-black hover:ring-2 hover:ring-inset hover:ring-black">
-                        <ion-icon name="cart"></ion-icon>Cart
-                    </a>
-                </div>
+                <a href="./cart.html"
+                    class="flex w-fit items-center justify-items-start gap-3 rounded-md bg-black px-5 text-base text-white transition-all duration-200 hover:bg-white hover:text-black hover:ring-2 hover:ring-inset hover:ring-black sm:hidden">
+                    <ion-icon name="cart"></ion-icon>Cart
+                </a>
             </div>
-
-
-
 
             <!-- Main -->
             <div class="mb-24 flex flex-col gap-4">
-                <p class="game-title text-black text-5xl leading-[100%]">Assassin's Creed Unity: Complete Edition</p>
+                <p class="game-title text-5xl leading-[100%] text-black sm:text-3xl">
+                    Assassin's Creed Unity: Complete Edition
+                </p>
 
-                <div class="grid w-full grid-cols-3 gap-8">
-                    <div class="col-span-2 flex flex-col gap-10">
-                        <div class="w-full aspect-video bg-black rounded-[20px]">
-                            <img src="" alt="" class="main-img">
+                <div class="grid w-full grid-cols-3 gap-8 ipad:grid-cols-1">
+                    <div class="ipad::col-span-1 col-span-2 flex flex-col gap-10">
+                        <div class="aspect-video w-full rounded-[20px] bg-black">
+                            <img src="" alt="" class="main-img" />
                         </div>
                         <p class="small-desc text-black">
-                            Experience the epic Horizon Forbidden West™ in its entirety with bonus content and the
-                            Burning Shores expansion. The Burning Shores add-on contains additional content, including
-                            new storylines, characters and experiences in a stunning yet hazardous new area.
+                            Experience the epic Horizon Forbidden West™ in its entirety
+                            with bonus content and the Burning Shores expansion. The Burning
+                            Shores add-on contains additional content, including new
+                            storylines, characters and experiences in a stunning yet
+                            hazardous new area.
                         </p>
-                        <div class="px-8 py-4 border-l-2 border-black/20 w-fit ">
-                            <p class="text-base text-black/50 leading-[100%] mb-1">Genres</p>
-                            <p class="genres text-base text-black leading-[100%] underline">Action</p>
+                        <div class="w-fit border-l-2 border-black/20 px-8 py-4">
+                            <p class="mb-1 text-base leading-[100%] text-black/50">
+                                Genres
+                            </p>
+                            <p class="genres text-base leading-[100%] text-black underline">
+                                Action
+                            </p>
                         </div>
                     </div>
                     <div class="sticky top-0 flex flex-col gap-6">
                         <div class="flex flex-col gap-3">
-                            <div class="w-full aspect-video bg-black rounded-xl flex justify-center items-center">
-                                <img src="" alt="" class="logo">
+                            <div class="flex aspect-video w-full items-center justify-center rounded-xl bg-black">
+                                <img src="" alt="" class="logo" />
                             </div>
-                            <p class="game-type uppercase text-white text-xs p-1 bg-black rounded w-fit">base game</p>
-                            <div class="flex flex-row let price-wrapper">
-
-                            </div>
+                            <p class="game-type w-fit rounded bg-black p-1 text-xs uppercase text-white">
+                                base game
+                            </p>
+                            <div class="let price-wrapper flex flex-row"></div>
                         </div>
                         <div class="h-[2px] w-full bg-black/50"></div>
-                        <div class="flex gap-3 flex-col">
+                        <div class="flex flex-col gap-3">
                             <a href=""
-                                class="text-center w-full block py-4 text-white bg-black rounded-md hover:bg-black/80  duration-200 transition-all">Buy
+                                class="block w-full rounded-md bg-black py-4 text-center text-white transition-all duration-200 hover:bg-black/80">Buy
                                 Now</a>
                             <div
-                                class="cart-btn w-full text-center py-4 text-black ring-1 ring-inset ring-black/80 bg-white rounded-md  hover:bg-black/10 transition-all duration-200">
-                                Add to Cart</div>
+                                class="cart-btn w-full rounded-md bg-white py-4 text-center text-black ring-1 ring-inset ring-black/80 transition-all duration-200 hover:bg-black/10">
+                                Add to Cart
+                            </div>
                         </div>
                         <div class="h-[2px] w-full bg-black/50"></div>
                         <div class="flex flex-col gap-3">
@@ -187,7 +203,6 @@
                                 <p class="text-black">Developer</p>
                                 <p class="developer text-black/70">Ubisoft</p>
                             </div>
-
                         </div>
                     </div>
                 </div>

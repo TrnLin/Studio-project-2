@@ -82,7 +82,7 @@ window.addEventListener("resize", () => {
       }
       lastScrollTop = scrollTop;
     });
-  } else {
+  } else if (screenWidth < 639) {
     var lastScrollTop;
     window.addEventListener("scroll", function () {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -96,26 +96,28 @@ window.addEventListener("resize", () => {
   }
 });
 
-if (screenWidth > 639) {
-  var lastScrollTop;
-  window.addEventListener("scroll", function () {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-      navbar.style.top = "-80px";
-    } else {
-      navbar.style.top = "12px";
-    }
-    lastScrollTop = scrollTop;
-  });
-} else {
-  var lastScrollTop;
-  window.addEventListener("scroll", function () {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-      navbar.style.bottom = "-100px";
-    } else {
-      navbar.style.bottom = "0px";
-    }
-    lastScrollTop = scrollTop;
-  });
-}
+setInterval(() => {
+  if (screenWidth > 639) {
+    var lastScrollTop;
+    window.addEventListener("scroll", function () {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-80px";
+      } else {
+        navbar.style.top = "12px";
+      }
+      lastScrollTop = scrollTop;
+    });
+  } else if (screenWidth < 639) {
+    var lastScrollTop;
+    window.addEventListener("scroll", function () {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.style.bottom = "-100px";
+      } else {
+        navbar.style.bottom = "0px";
+      }
+      lastScrollTop = scrollTop;
+    });
+  }
+}, 1000);

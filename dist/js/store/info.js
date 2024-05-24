@@ -154,3 +154,10 @@ let addToCart = () => {
 let cartBtn = document.querySelector(".cart-btn");
 
 cartBtn.addEventListener("click", addToCart);
+
+let cart = JSON.parse(localStorage.getItem("cart"));
+let cartLength = cart ? cart.length : 0;
+console.log(cartLength);
+
+let cardCount = document.querySelector("#cart-count");
+cardCount.textContent = cartLength;

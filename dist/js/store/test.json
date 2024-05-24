@@ -448,7 +448,7 @@
       "name": "Call of Duty: Warzone",
       "originalPrice": 0,
       "salePercentage": 0,
-      "finalPrice": 0,
+      "finalPrice": 100,
       "logo": "img/warzone/logo.png",
       "url": "img/warzone/main.jpg",
       "releaseDate": "2020-03-10",

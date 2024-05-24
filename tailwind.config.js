@@ -77,6 +77,8 @@ module.exports = {
       lg: { max: "1030px" },
       // => @media (max-width: 1023px) { ... }
 
+      ipad: { max: "900px" },
+
       md: { max: "768px" },
       // => @media (max-width: 768px) { ... }
 

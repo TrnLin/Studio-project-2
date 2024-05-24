@@ -95,23 +95,23 @@ cartItem.forEach((item) => {
   let cartItemContent = `
   <div class="cart-item flex flex-row p-5 rounded-lg ring-inset ring-2 ring-black/70 opacity-100 transition-all duration-200" data-id="${item.id}">
     <div class="h-full w-full flex flex-row gap-5">
-      <div class="aspect-3/4 max-h-[150px] h-full">
+      <div class="aspect-3/4 max-h-[150px] h-full sm:min-w-[112.5px]">
         <img src="../../img/store/slider/gtav.png" class="w-auto h-full" alt="">
       </div>
-      <div class="w-1/2">
+      <div class="w-1/2 sm:w-full sm:flex sm:justify-between sm:flex-col">
         <p class="text-xs p-1 bg-black text-white w-fit mb-1 rounded uppercase">
           ${item.type}
         </p>
-        <a href="" class="text-black text-2xl hover:underline">
+        <a href="" class="text-black text-2xl hover:underline sm:text-lg">
           ${item.name}
         </a>
-        <div class="hidden flex-row gap-3 ">
+        <div class="hidden flex-row gap-3 sm:flex">
           ${priceFunc(item.salePercentage, item.originalPrice, item.finalPrice)}
         </div>
       </div>
     </div>
     <div class="flex flex-col items-end justify-between ">
-      <div class="flex flex-row gap-3 items-center">
+      <div class="flex flex-row gap-3 items-center sm:hidden">
         ${priceFunc(item.salePercentage, item.originalPrice, item.finalPrice)}
       </div>
       <p class="underline text-black cursor-pointer hover:no-underline hover:text-black/70" onclick="javascript:removeCard(this)">

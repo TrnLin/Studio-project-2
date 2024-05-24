@@ -92,12 +92,12 @@
 
     <!-- Section -->
     <section class="min-h-lvh w-screen" aria-label="Forum Section">
-        <div class="mx-auto mb-24 mt-20 flex h-full w-storeContainer flex-col gap-6 sm:w-11/12">
+        <div class="mx-auto mb-24 mt-20 flex h-full w-storeContainer flex-col gap-6 sm:mt-14 sm:w-11/12">
             <!-- Store nav bar -->
-            <div class="sticky top-0 z-50 flex w-full flex-row justify-between bg-white py-5">
-                <div class="flex flex-row items-center gap-6">
+            <div class="sticky top-0 z-50 flex w-full flex-row justify-between bg-white py-5 sm:py-2 sm:pt-5">
+                <div class="flex flex-row items-center gap-6 sm:w-full sm:flex-col sm:gap-4">
                     <form action="" role="search"
-                        class="group flex w-[370px] flex-row items-center justify-center rounded-[10px] text-black/50 ring-2 ring-inset ring-black/50 transition duration-200 hover:text-black hover:ring-black">
+                        class="group flex w-[370px] flex-row items-center justify-center rounded-[10px] text-black/50 ring-2 ring-inset ring-black/50 transition duration-200 hover:text-black hover:ring-black ipad:w-[250px] sm:w-full">
                         <div class="flex aspect-square size-[45px] w-auto items-center justify-center"
                             aria-label="Submit Search" role="button">
                             <ion-icon name="search-outline" class=""></ion-icon>
@@ -106,11 +106,23 @@
                             class="w-full text-wrap rounded-[10px] border-none bg-transparent p-0 text-[12px] text-black outline-none ring-0 transition-all placeholder:text-black/50 focus:ring-0 group-hover:placeholder:text-black lg:p-[8px] lg:text-[11px] sm:p-3"
                             aria-label="Search Posts" />
                     </form>
-                    <a href="" class="text-sm text-black transition-all duration-200 hover:underline">Discover</a>
-                    <a href="" class="text-sm text-black transition-all duration-200 hover:underline">Browse</a>
+                    <div class="flex flex-row gap-6 sm:w-full sm:items-center sm:justify-between">
+                        <div class="flex h-full flex-row items-center gap-6">
+                            <a href="./store.html"
+                                class="text-sm text-black transition-all duration-200 hover:underline">
+                                Discover</a>
+                            <a href="./feature.html"
+                                class="text-sm text-black transition-all duration-200 hover:underline">Browse</a>
+                        </div>
+                        <a href="./cart.html"
+                            class="hidden h-full w-fit items-center justify-items-start gap-3 rounded-md p-2 text-base text-black transition-all duration-200 sm:flex">
+                            <span id="cart-count" class="">3</span>
+                            <ion-icon name="cart" class="text-2xl"></ion-icon>
+                        </a>
+                    </div>
                 </div>
                 <a href="./cart.html"
-                    class="flex w-fit items-center justify-items-start gap-3 rounded-md bg-black px-5 text-base text-white transition-all duration-200 hover:bg-white hover:text-black hover:ring-2 hover:ring-inset hover:ring-black">
+                    class="flex w-fit items-center justify-items-start gap-3 rounded-md bg-black px-5 text-base text-white transition-all duration-200 hover:bg-white hover:text-black hover:ring-2 hover:ring-inset hover:ring-black sm:hidden">
                     <ion-icon name="cart"></ion-icon>Cart
                 </a>
             </div>
@@ -118,15 +130,14 @@
             <h1 class="font-hero text-5xl font-semibold text-black">Features</h1>
 
             <!-- Main -->
-            <div class="flex flex-col gap-16 mb-20">
-
+            <div class="mb-20 flex flex-col gap-16">
                 <!-- List -->
 
-                <div class="store-list grid grid-cols-6 gap-7">
+                <div class="store-list grid grid-cols-6 gap-7 ipad:grid-cols-4 sm:grid-cols-2">
                     <a href="" class="card group">
                         <div>
                             <img src=" ../../img/store/slider/gtav.png"
-                                class="aspect-[3/4] h-full w-full rounded-[10px] object-cover group-hover:grayscale transition-all duration-200"
+                                class="aspect-[3/4] h-full w-full rounded-[10px] object-cover transition-all duration-200 group-hover:grayscale"
                                 alt="" />
                         </div>
                         <div class="flex flex-col gap-4">
@@ -146,7 +157,6 @@
                         </div>
                     </a>
                 </div>
-
             </div>
         </div>
     </section>

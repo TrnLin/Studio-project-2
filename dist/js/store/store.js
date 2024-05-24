@@ -7,6 +7,8 @@ fetch("../../js/store/test.json")
     let trendingGames = data.trending;
     let listGames = data.list;
     let mainGame = data.main;
+
+    console.log(games);
     // You can now use the 'games' array to display the game information in your application.
     // For example, you can loop through the array and create HTML elements dynamically to display the game details.
 
@@ -103,7 +105,7 @@ fetch("../../js/store/test.json")
       let exploreMore = `
       <a href="" class="flex flex-col gap-3">
           <div class="grid aspect-video min-h-24 place-items-center rounded-[10px] bg-black text-white">
-            <p class="text-3xl">
+            <p class="text-3xl ipad:text-xl">
               Explore More
             </p>
           </div>
@@ -156,6 +158,7 @@ fetch("../../js/store/test.json")
     let sliders = document.querySelectorAll(".slider");
     let sliderContainerWidth =
       document.querySelector(".slider-container").offsetWidth;
+    let screenWidth = window.innerWidth;
 
     //start check
     let sliderSpacing = 32;
@@ -167,7 +170,14 @@ fetch("../../js/store/test.json")
     }
 
     sliders.forEach((slider) => {
-      slider.style.width = `${sliderContainerWidth / 6 + sliderSpacing / 6 - sliderSpacing}px`;
+      if (screenWidth > 1030) {
+        slider.style.width = `${sliderContainerWidth / 6 + sliderSpacing / 6 - sliderSpacing}px`;
+      } else if (screenWidth < 1030 && screenWidth >= 768) {
+        slider.style.width = `${sliderContainerWidth / 4 + sliderSpacing / 4 - sliderSpacing}px`;
+      } else if (screenWidth < 768) {
+        slider.style.width = `${sliderContainerWidth / 2 + sliderSpacing / 2 - sliderSpacing}px`;
+      }
+
       slider.style.marginRight = `${sliderSpacing}px`;
 
       if (slider == sliders[sliders.length - 1]) {
@@ -237,6 +247,7 @@ fetch("../../js/store/test.json")
 
 window.addEventListener("resize", () => {
   let sliderContainer = document.querySelector(".slider-wrapper");
+  let screenWidth = window.innerWidth;
 
   let sliders = document.querySelectorAll(".slider");
   let sliderContainerWidth =
@@ -252,7 +263,12 @@ window.addEventListener("resize", () => {
   }
 
   sliders.forEach((slider) => {
-    slider.style.width = `${sliderContainerWidth / 6 + sliderSpacing / 6 - sliderSpacing}px`;
+    if (screenWidth > 1030) {
+      slider.style.width = `${sliderContainerWidth / 6 + sliderSpacing / 6 - sliderSpacing}px`;
+    } else if (screenWidth < 1030 && screenWidth >= 768) {
+      slider.style.width = `${sliderContainerWidth / 4 + sliderSpacing / 4 - sliderSpacing}px`;
+    }
+
     slider.style.marginRight = `${sliderSpacing}px`;
 
     if (slider == sliders[sliders.length - 1]) {
@@ -315,5 +331,9 @@ window.addEventListener("resize", () => {
   }, 100);
 });
 
-// You can now use the 'games' array to display the game information in your application.
-// For example, you can loop through the array and create HTML elements dynamically to display the game details.
+let cart = JSON.parse(localStorage.getItem("cart"));
+let cartLength = cart ? cart.length : 0;
+console.log(cartLength);
+
+let cardCount = document.querySelector("#cart-count");
+cardCount.textContent = cartLength;
