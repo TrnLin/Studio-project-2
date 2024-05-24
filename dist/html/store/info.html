@@ -89,6 +89,17 @@
             class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
             aria-label="Login"><ion-icon name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
     </nav>
+    <!-- Alert Success-->
+    <div id="alert-success" role="alert" aria-live="polite"
+        class="-translate-xy fixed left-1/2 top-12 z-[999] hidden items-center justify-between gap-4 rounded-md bg-green-100 px-5 py-4 text-base text-green-200 lg:gap-2 lg:text-sm">
+        <ion-icon name="checkmark" class="text-2xl"></ion-icon><span class="alert-sc-msg">a test msg</span>
+    </div>
+
+    <!-- Alert Error-->
+    <div id="alert-error" role="alert" aria-live="polite"
+        class="-translate-xy fixed left-1/2 top-12 z-[999] hidden items-center justify-between gap-4 rounded-md bg-pink-100 px-5 py-4 text-base text-pink-200 lg:gap-2 lg:text-sm">
+        <ion-icon name="warning" class="text-2xl"></ion-icon><span class="alert-er-msg">a test msg</span>
+    </div>
 
     <!-- Section -->
     <section class="min-h-lvh w-screen" aria-label="Forum Section">
@@ -117,13 +128,68 @@
                 </div>
             </div>
 
-            <h1 class="font-hero text-5xl font-semibold text-black">My Cart</h1>
+
+
 
             <!-- Main -->
-            <div class="mb-24 flex flex-col gap-16">
-                <div class="grid w-full grid-cols-3 gap-7">
-                    <div class="col-span-2 flex flex-col gap-5"></div>
-                    <div class="sticky top-0 flex flex-col gap-6"></div>
+            <div class="mb-24 flex flex-col gap-4">
+                <p class="game-title text-black text-5xl leading-[100%]">Assassin's Creed Unity: Complete Edition</p>
+
+                <div class="grid w-full grid-cols-3 gap-8">
+                    <div class="col-span-2 flex flex-col gap-10">
+                        <div class="w-full aspect-video bg-black rounded-[20px]">
+                            <img src="" alt="" class="main-img">
+                        </div>
+                        <p class="small-desc text-black">
+                            Experience the epic Horizon Forbidden West™ in its entirety with bonus content and the
+                            Burning Shores expansion. The Burning Shores add-on contains additional content, including
+                            new storylines, characters and experiences in a stunning yet hazardous new area.
+                        </p>
+                        <div class="px-8 py-4 border-l-2 border-black/20 w-fit ">
+                            <p class="text-base text-black/50 leading-[100%] mb-1">Genres</p>
+                            <p class="genres text-base text-black leading-[100%] underline">Action</p>
+                        </div>
+                    </div>
+                    <div class="sticky top-0 flex flex-col gap-6">
+                        <div class="flex flex-col gap-3">
+                            <div class="w-full aspect-video bg-black rounded-xl flex justify-center items-center">
+                                <img src="" alt="" class="logo">
+                            </div>
+                            <p class="game-type uppercase text-white text-xs p-1 bg-black rounded w-fit">base game</p>
+                            <div class="flex flex-row let price-wrapper">
+
+                            </div>
+                        </div>
+                        <div class="h-[2px] w-full bg-black/50"></div>
+                        <div class="flex gap-3 flex-col">
+                            <a href=""
+                                class="text-center w-full block py-4 text-white bg-black rounded-md hover:bg-black/80  duration-200 transition-all">Buy
+                                Now</a>
+                            <div
+                                class="cart-btn w-full text-center py-4 text-black ring-1 ring-inset ring-black/80 bg-white rounded-md  hover:bg-black/10 transition-all duration-200">
+                                Add to Cart</div>
+                        </div>
+                        <div class="h-[2px] w-full bg-black/50"></div>
+                        <div class="flex flex-col gap-3">
+                            <div class="flex flex-row justify-between">
+                                <p class="text-black">Release Date</p>
+                                <p class="release-date text-black/70">03/21/2024</p>
+                            </div>
+                            <div class="flex flex-row justify-between">
+                                <p class="text-black">Plaform</p>
+                                <p class="platform text-black/70">Win</p>
+                            </div>
+                            <div class="flex flex-row justify-between">
+                                <p class="text-black">Publisher</p>
+                                <p class="publisher text-black/70">Random Name</p>
+                            </div>
+                            <div class="flex flex-row justify-between">
+                                <p class="text-black">Developer</p>
+                                <p class="developer text-black/70">Ubisoft</p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,6 +259,7 @@
 
     <!-- Custom JS -->
     <script src="../../js/script.js"></script>
+    <script src="../../js/store/info.js"></script>
 </body>
 
 </html>

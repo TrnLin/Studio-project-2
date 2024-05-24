@@ -1307,6 +1307,10 @@ html.transition,
   margin-bottom: 0.5rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .mb-24 {
   margin-bottom: 6rem;
 }
@@ -1321,6 +1325,10 @@ html.transition,
 
 .ml-20 {
   margin-left: 5rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .mt-2 {
@@ -1682,8 +1690,8 @@ html.transition,
   min-width: 2.5rem;
 }
 
-.min-w-20 {
-  min-width: 5rem;
+.min-w-24 {
+  min-width: 6rem;
 }
 
 .min-w-36 {
@@ -1829,10 +1837,6 @@ html.transition,
 
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .grid-cols-6 {
@@ -2025,6 +2029,10 @@ html.transition,
   border-radius: 0.125rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .rounded-e-lg {
   border-start-end-radius: 0.5rem;
   border-end-end-radius: 0.5rem;
@@ -2073,6 +2081,10 @@ html.transition,
   border-bottom-width: 4px;
 }
 
+.border-l-2 {
+  border-left-width: 2px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -2087,6 +2099,10 @@ html.transition,
 
 .border-black {
   border-color: rgba(var(--black));
+}
+
+.border-black\/20 {
+  border-color: rgba(var(--black), 0.2);
 }
 
 .border-black\/30 {
@@ -2156,6 +2172,10 @@ html.transition,
 
 .bg-black {
   background-color: rgba(var(--black));
+}
+
+.bg-black\/50 {
+  background-color: rgba(var(--black), 0.5);
 }
 
 .bg-blue-100 {
@@ -2341,6 +2361,11 @@ html.transition,
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .px-\[15px\] {
@@ -2761,6 +2786,10 @@ html.transition,
 
 .ring-black\/70 {
   --tw-ring-color: rgba(var(--black), 0.7);
+}
+
+.ring-black\/80 {
+  --tw-ring-color: rgba(var(--black), 0.8);
 }
 
 .ring-error {
@@ -3706,8 +3735,16 @@ html.likeButton,
   background-color: rgba(var(--black));
 }
 
+.hover\:bg-black\/10:hover {
+  background-color: rgba(var(--black), 0.1);
+}
+
 .hover\:bg-black\/70:hover {
   background-color: rgba(var(--black), 0.7);
+}
+
+.hover\:bg-black\/80:hover {
+  background-color: rgba(var(--black), 0.8);
 }
 
 .hover\:bg-blue-100:hover {
