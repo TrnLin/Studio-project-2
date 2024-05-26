@@ -68,35 +68,20 @@ let screenWidth = window.innerWidth;
 let navbar = document.querySelector("#navbar");
 
 window.addEventListener("resize", () => {
-  let screenWidth = window.innerWidth;
-  let navbar = document.querySelector("#navbar");
+  screenWidth = window.innerWidth;
+  navbar = document.querySelector("#navbar");
 
-  if (screenWidth > 639) {
-    var lastScrollTop;
-    window.addEventListener("scroll", function () {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop > lastScrollTop) {
-        navbar.style.top = "-80px";
-      } else {
-        navbar.style.top = "12px";
-      }
-      lastScrollTop = scrollTop;
-    });
-  } else if (screenWidth < 639) {
-    var lastScrollTop;
-    window.addEventListener("scroll", function () {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop > lastScrollTop) {
-        navbar.style.bottom = "-100px";
-      } else {
-        navbar.style.bottom = "0px";
-      }
-      lastScrollTop = scrollTop;
-    });
-  }
+  navPosition(screenWidth, navbar);
 });
 
-setInterval(() => {
+window.onload = () => {
+  screenWidth = window.innerWidth;
+  navbar = document.querySelector("#navbar");
+
+  navPosition(screenWidth, navbar);
+};
+
+let navPosition = (screenWidth, navbar) => {
   if (screenWidth > 639) {
     var lastScrollTop;
     window.addEventListener("scroll", function () {
@@ -120,4 +105,4 @@ setInterval(() => {
       lastScrollTop = scrollTop;
     });
   }
-}, 1000);
+};
