@@ -1,640 +1,408 @@
 <!doctype html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./font/fontface.css" />
-    <link rel="stylesheet" href="style/style.css" />
-    <title>Darkmode test</title>
-  </head>
 
-  <!--  TODO: Remember to add disable-scroll to body tag-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./font/fontface.css" />
+  <link rel="stylesheet" href="style/style.css" />
+  <title>MuckTeam</title>
+</head>
 
-  <body class="disable-scroll bg-white font-sans">
-    <!-- Nav Bar -->
-    <nav
-      id="navbar"
-      role="navigation"
-      aria-label="Main navigation"
-      class="fixed right-1/2 top-3 z-[900] flex h-fit w-container translate-x-1/2 flex-row gap-5 text-[#ffffff] transition-all duration-300 sm:bottom-0 sm:top-[inherit] sm:w-[100vw]"
-    >
-      <div
-        class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6"
-      >
-        <ul
-          class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between"
-        >
-          <li class="md:hidden">
-            <a href="./index.html" class="" aria-label="MUCK logo"
-              ><img src="./img/MUCK.svg" class="lg:w-[80%]" alt="MUCK logo" />
-            </a>
-          </li>
-          <li>
-            <a
-              href=" ./index.html"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
-              aria-label="Home"
-            >
+<!--  TODO: Remember to add disable-scroll to body tag-->
+
+<body class="disable-scroll bg-white font-sans">
+  <!-- Nav Bar -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation"
+    class="fixed right-1/2 top-3 z-[900] flex h-fit w-container translate-x-1/2 flex-row gap-5 text-[#ffffff] transition-all duration-300 sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
+    <div
+      class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6">
+      <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
+        <li class="md:hidden">
+          <a href="./index.html" class="" aria-label="MUCK logo"><img src="./img/MUCK.svg" class="lg:w-[80%]"
+              alt="MUCK logo" />
+          </a>
+        </li>
+        <li>
+          <a href=" ./index.html"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Home">
+            Home
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="home" aria-hidden="true"></ion-icon>
               Home
-              <div
-                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col"
-              >
-                <ion-icon
-                  class="text-2xl"
-                  name="home"
-                  aria-hidden="true"
-                ></ion-icon>
-                Home
-              </div>
-            </a>
-          </li>
-          <li>
-            <a
-              href="./html/store/store.html"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
-              aria-label="Store"
-            >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./html/store/store.html"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Store">
+            Store
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="cart-outline" aria-hidden="true"></ion-icon>
               Store
-              <div
-                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col"
-              >
-                <ion-icon
-                  class="text-2xl"
-                  name="cart-outline"
-                  aria-hidden="true"
-                ></ion-icon>
-                Store
-              </div>
-            </a>
-          </li>
-          <li>
-            <a
-              href="./html/forum.html"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
-              aria-label="Forum"
-            >
-              forum
-              <div
-                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col"
-              >
-                <ion-icon
-                  class="text-2xl"
-                  name="chatbubbles-outline"
-                  aria-hidden="true"
-                ></ion-icon>
-                Forum
-              </div>
-            </a>
-          </li>
-          <li class="sm:hidden">
-            <a
-              href="./html/contact.html"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
-              aria-label="Contact"
-            >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./html/forum.html"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Forum">
+            forum
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="chatbubbles-outline" aria-hidden="true"></ion-icon>
+              Forum
+            </div>
+          </a>
+        </li>
+        <li class="sm:hidden">
+          <a href="./html/contact.html"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Contact">
+            Contact
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="call-outline" aria-hidden="true"></ion-icon>
               Contact
-              <div
-                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col"
-              >
-                <ion-icon
-                  class="text-2xl"
-                  name="call-outline"
-                  aria-hidden="true"
-                ></ion-icon>
-                Contact
-              </div>
-            </a>
-          </li>
-          <li class="hidden sm:block">
-            <a
-              href="./html/login.html"
-              class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
-              aria-label="Login"
-            >
-              Login
-              <div
-                class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col"
-              >
-                <ion-icon
-                  class="text-2xl"
-                  name="person-outline"
-                  aria-hidden="true"
-                ></ion-icon>
-                Account
-              </div>
-            </a>
-          </li>
-        </ul>
+            </div>
+          </a>
+        </li>
+        <li class="hidden sm:block">
+          <a href="./html/login.html"
+            class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+            aria-label="Login">
+            Login
+            <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+              <ion-icon class="text-2xl" name="person-outline" aria-hidden="true"></ion-icon>
+              Account
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div id="theme-toggle"
+        class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden"
+        aria-label="Theme toggle">
+        <ion-icon name="sunny" class="text-[20px]" aria-hidden="true"></ion-icon>
+        Light
+      </div>
+    </div>
+
+    <a href="./html/login.html"
+      class=" group flex flex-row items-center justify-start  gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
+      aria-label="Login">
+      <ion-icon name="person" class="text-[20px] lg:text-sm " aria-hidden="true"></ion-icon>
+      <span class="max-w-16 overflow-hidden text-ellipsis whitespace-nowrap text-[#fff] group-hover:text-inherit">This
+        is
+        a long as name</span>
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="relative overflow-x-hidden sm:pt-[80px]">
+    <div class="scroll-container flex w-[400vw] sm:min-h-[400lvw] sm:w-full sm:flex-col sm:gap-[40px]">
+      <!-- Hero -->
+      <section class="m-h-lvh hero-section w-screen bg-white" aria-label="Hero section">
         <div
-          id="theme-toggle"
-          class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden"
-          aria-label="Theme toggle"
-        >
-          <ion-icon
-            name="sunny"
-            class="text-[20px]"
-            aria-hidden="true"
-          ></ion-icon>
-          Light
-        </div>
-      </div>
-
-      <a
-        href="./html/login.html"
-        class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
-        aria-label="Login"
-      >
-        <ion-icon
-          name="person"
-          class="text-[20px] lg:text-sm"
-          aria-hidden="true"
-        ></ion-icon>
-        Login
-      </a>
-    </nav>
-
-    <!-- Hero Section -->
-    <main class="relative overflow-x-hidden sm:pt-[80px]">
-      <div
-        class="scroll-container flex w-[400vw] sm:min-h-[400lvw] sm:w-full sm:flex-col sm:gap-[40px]"
-      >
-        <!-- Hero -->
-        <section
-          class="m-h-lvh hero-section w-screen bg-white"
-          aria-label="Hero section"
-        >
-          <div
-            class="mx-auto my-0 grid min-h-screen w-[90%] max-w-container grid-cols-3 place-items-center sm:w-full sm:grid-cols-1"
-          >
-            <div class="hero-card flex flex-col gap-10 lg:gap-7 sm:gap-7">
-              <h1
-                class="hero-content text-[4rem] font-bold leading-[100%] text-black xl:text-5xl lg:text-[2.5rem] sm:text-5xl"
-              >
-                A FORUM <br />
-                FOR GAMERS BY GAMERS
-              </h1>
-              <div class="hidden items-center justify-center sm:flex">
-                <div
-                  class="group hidden size-[38vh] items-center justify-center sm:flex"
-                >
-                  <div
-                    class="absolute rounded-[20px] bg-blue-100 shadow-lg sm:size-[330px]"
-                  ></div>
-                  <div
-                    class="absolute size-[285px] rounded-full bg-white"
-                  ></div>
-                  <div class="absolute">
-                    <img
-                      src="./img/switch.png"
-                      alt=""
-                      class="animate-floatting sm:w-[350px]"
-                    />
-                  </div>
+          class="mx-auto my-0 grid min-h-screen w-[90%] max-w-container grid-cols-3 place-items-center sm:w-full sm:grid-cols-1">
+          <div class="hero-card flex flex-col gap-10 lg:gap-7 sm:gap-7">
+            <h1
+              class="hero-content text-[4rem] font-bold leading-[100%] text-black xl:text-5xl lg:text-[2.5rem] sm:text-5xl">
+              A FORUM <br />
+              FOR GAMERS BY GAMERS
+            </h1>
+            <div class="hidden items-center justify-center sm:flex">
+              <div class="group hidden size-[38vh] items-center justify-center sm:flex">
+                <div class="absolute rounded-[20px] bg-blue-100 shadow-lg sm:size-[330px]"></div>
+                <div class="absolute size-[285px] rounded-full bg-white"></div>
+                <div class="absolute">
+                  <img src="./img/switch.png" alt="" class="animate-floatting sm:w-[350px]" />
                 </div>
               </div>
-              <p
-                class="word hero-content w-[85%] text-justify text-sm text-black xl:text-sm sm:w-full"
-              >
-                Welcome, gamers, to the ultimate digital playground! Whether
-                you're a seasoned strategist or a casual button-masher, this
-                forum is your hub for all things gaming. Let the games begin!
+            </div>
+            <p class="word hero-content w-[85%] text-justify text-sm text-black xl:text-sm sm:w-full">
+              Welcome, gamers, to the ultimate digital playground! Whether
+              you're a seasoned strategist or a casual button-masher, this
+              forum is your hub for all things gaming. Let the games begin!
+            </p>
+            <a href="./html/forum.html" aria-label="Get Started"
+              class="hero-content w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] transition-all duration-200 hover:bg-blue-100 hover:text-blue-200 xl:px-3 xl:py-3 xl:text-xs sm:text-sm">Get
+              Started</a>
+          </div>
+          <div class="hero-card group relative flex w-[38vw] items-center justify-center sm:hidden"
+            aria-label="Hero card image">
+            <div class="hero-mid-card absolute h-[70vh] w-[30vw] rounded-[20px] bg-blue-100 shadow-lg"></div>
+            <div class="absolute size-[400px] rounded-full bg-white xl:size-80 lg:size-72"></div>
+            <div class="absolute">
+              <img src="./img/switch.png" alt="hero image" class="w-full max-w-[548px] animate-floatting" />
+            </div>
+            <div class="loader absolute -bottom-[20vw] border-8 border-solid border-white"></div>
+          </div>
+          <div
+            class="hero-card ml-20 flex w-[70%] flex-col gap-[40px] xl:w-10/12 lg:ml-14 lg:w-full lg:gap-7 sm:ml-0 sm:mt-12 sm:w-full sm:gap-6">
+            <div class="hero-content flex flex-col gap-2 rounded-2xl bg-blue-100 px-4 py-5 shadow-md lg:gap-1">
+              <h1 class="text-2xl font-semibold leading-[24px] text-[#ffffff] xl:text-lg">
+                Free to Use
+              </h1>
+              <p class="text-[#ffffff] xl:text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </p>
-              <a
-                href="./html/forum.html"
-                aria-label="Get Started"
-                class="hero-content w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] transition-all duration-200 hover:bg-blue-100 hover:text-blue-200 xl:px-3 xl:py-3 xl:text-xs sm:text-sm"
-                >Get Started</a
-              >
             </div>
-            <div
-              class="hero-card group relative flex w-[38vw] items-center justify-center sm:hidden"
-              aria-label="Hero card image"
-            >
-              <div
-                class="hero-mid-card absolute h-[70vh] w-[30vw] rounded-[20px] bg-blue-100 shadow-lg"
-              ></div>
-              <div
-                class="absolute size-[400px] rounded-full bg-white xl:size-80 lg:size-72"
-              ></div>
-              <div class="absolute">
-                <img
-                  src="./img/switch.png"
-                  alt="hero image"
-                  class="w-full max-w-[548px] animate-floatting"
-                />
-              </div>
-              <div
-                class="loader absolute -bottom-[20vw] border-8 border-solid border-white"
-              ></div>
+            <div class="hero-content flex flex-col gap-2 rounded-2xl px-4 py-5 lg:gap-1">
+              <h1 class="w-full text-2xl font-semibold leading-[24px] text-black xl:text-lg lg:text-lg">
+                Large community
+              </h1>
+              <p class="text-black xl:text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              </p>
             </div>
-            <div
-              class="hero-card ml-20 flex w-[70%] flex-col gap-[40px] xl:w-10/12 lg:ml-14 lg:w-full lg:gap-7 sm:ml-0 sm:mt-12 sm:w-full sm:gap-6"
-            >
-              <div
-                class="hero-content flex flex-col gap-2 rounded-2xl bg-blue-100 px-4 py-5 shadow-md lg:gap-1"
-              >
-                <h1
-                  class="text-2xl font-semibold leading-[24px] text-[#ffffff] xl:text-lg"
-                >
-                  Free to Use
-                </h1>
-                <p class="text-[#ffffff] xl:text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
-              </div>
-              <div
-                class="hero-content flex flex-col gap-2 rounded-2xl px-4 py-5 lg:gap-1"
-              >
-                <h1
-                  class="w-full text-2xl font-semibold leading-[24px] text-black xl:text-lg lg:text-lg"
-                >
-                  Large community
-                </h1>
-                <p class="text-black xl:text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
-              </div>
-              <div
-                class="hero-content flex flex-col gap-2 rounded-2xl px-4 py-5 lg:gap-1"
-              >
-                <h1
-                  class="text-2xl font-semibold leading-[24px] text-black xl:text-lg lg:text-lg"
-                >
-                  Quick and easy to <br />
-                  get started
-                </h1>
-                <p class="text-black xl:text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
-              </div>
+            <div class="hero-content flex flex-col gap-2 rounded-2xl px-4 py-5 lg:gap-1">
+              <h1 class="text-2xl font-semibold leading-[24px] text-black xl:text-lg lg:text-lg">
+                Quick and easy to <br />
+                get started
+              </h1>
+              <p class="text-black xl:text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Features -->
-        <section
-          class="m-h-lvh about-section hero-section w-screen bg-white"
-          aria-labelledby="Features"
-        >
+      <!-- Features -->
+      <section class="m-h-lvh about-section hero-section w-screen bg-white" aria-labelledby="Features">
+        <div
+          class="mx-auto my-0 grid min-h-lvh max-w-container grid-cols-3 place-items-center gap-[20px] sm:flex sm:w-full sm:flex-col">
           <div
-            class="mx-auto my-0 grid min-h-lvh max-w-container grid-cols-3 place-items-center gap-[20px] sm:flex sm:w-full sm:flex-col"
-          >
+            class="about-card relative flex h-[70%] max-h-[712px] items-center justify-center rounded-[20px] bg-pink-100 sm:hidden">
+            <div class="-translate-xy absolute left-1/2 top-1/2 z-0 size-[332px] rounded-full bg-white lg:size-60">
+            </div>
+            <div class="z-[1] grid place-items-center">
+              <img src="./img/chatbot.png" alt="" class="w-[70%] animate-floatting" />
+            </div>
+          </div>
+          <div class="col-span-2 flex flex-col gap-8 px-5 xl:gap-6 sm:px-0">
+            <h1 class="about-header text-[64px] font-bold text-black xl:text-5xl">
+              So why us?
+            </h1>
             <div
-              class="about-card relative flex h-[70%] max-h-[712px] items-center justify-center rounded-[20px] bg-pink-100 sm:hidden"
-            >
-              <div
-                class="-translate-xy absolute left-1/2 top-1/2 z-0 size-[332px] rounded-full bg-white lg:size-60"
-              ></div>
+              class="about-card relative hidden aspect-square size-full items-center justify-center rounded-[20px] bg-pink-100 sm:flex">
+              <div class="-translate-xy absolute left-1/2 top-1/2 z-0 size-72 rounded-full bg-white lg:size-56"></div>
               <div class="z-[1] grid place-items-center">
-                <img
-                  src="./img/chatbot.png"
-                  alt=""
-                  class="w-[70%] animate-floatting"
-                />
+                <img src="./img/chatbot.png" alt="" class="w-[70%] animate-floatting" />
               </div>
             </div>
-            <div class="col-span-2 flex flex-col gap-8 px-5 xl:gap-6 sm:px-0">
-              <h1
-                class="about-header text-[64px] font-bold text-black xl:text-5xl"
-              >
-                So why us?
+            <div class="flex flex-col gap-10 xl:gap-6">
+              <div
+                class="sm:w-ful l about-text flex w-[96%] flex-col gap-2 rounded-[20px] bg-pink-100 p-5 text-[#ffffff] lg:gap-2">
+                <h2 class="text-2xl font-semibold leading-[24px] xl:text-xl">
+                  1. Free to use
+                </h2>
+                <p class="text-sm sm:text-xs">
+                  We've made sure that our forum is always up to date with the
+                  latest trends, releases, and developments. Stay informed,
+                  stay connected, and stay ahead of the curve—all without
+                  spending a single penny.
+                </p>
+              </div>
+              <div class="about-text flex w-[96%] flex-col gap-2 text-black lg:gap-2 sm:w-full">
+                <h2 class="text-2xl font-semibold leading-[24px] xl:text-xl">
+                  2. Large community
+                </h2>
+                <p class="text-sm sm:text-sm">
+                  Once you're in, you'll discover a thriving community of
+                  like-minded individuals, eager to share their experiences,
+                  strategies, and tips. From casual gamers to hardcore
+                  enthusiasts, everyone has a place here, and everyone's voice
+                  is valued.
+                </p>
+              </div>
+              <div class="about-text flex w-[96%] flex-col gap-2 text-black lg:gap-2 sm:w-full">
+                <h2 class="text-2xl font-semibold leading-[24px] xl:text-xl">
+                  3. Quick and easy
+                </h2>
+                <p class="text-sm lg:text-xs">
+                  Once you're in, you'll discover a thriving community of
+                  like-minded individuals, eager to share their experiences,
+                  strategies, and tips. From casual gamers to hardcore
+                  enthusiasts, everyone has a place here, and everyone's voice
+                  is valued.
+                </p>
+              </div>
+            </div>
+            <a href="#"
+              class="about-text w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] transition-all duration-200 hover:bg-pink-100 hover:text-pink-200 xl:p-3 xl:text-xs"
+              aria-label="About Us" role="button">About Us</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Forum -->
+      <section class="m-h-lvh forum-section w-screen bg-white" aria-labelledby="Forum">
+        <div class="flex min-h-lvh w-full items-center justify-center">
+          <div
+            class="mx-auto my-0 grid max-w-container grid-cols-2 place-items-end gap-5 px-6 sm:w-full sm:grid-cols-1 sm:gap-8 sm:px-0">
+            <div class="flex flex-col gap-14">
+              <h1 class="forum-text-right text-[64px] font-bold leading-[64px] text-black xl:text-6xl lg:text-5xl">
+                A forum created for gamer...
               </h1>
               <div
-                class="about-card relative hidden aspect-square size-full items-center justify-center rounded-[20px] bg-pink-100 sm:flex"
-              >
-                <div
-                  class="-translate-xy absolute left-1/2 top-1/2 z-0 size-72 rounded-full bg-white lg:size-56"
-                ></div>
-                <div class="z-[1] grid place-items-center">
-                  <img
-                    src="./img/chatbot.png"
-                    alt=""
-                    class="w-[70%] animate-floatting"
-                  />
-                </div>
-              </div>
-              <div class="flex flex-col gap-10 xl:gap-6">
-                <div
-                  class="sm:w-ful l about-text flex w-[96%] flex-col gap-2 rounded-[20px] bg-pink-100 p-5 text-[#ffffff] lg:gap-2"
-                >
-                  <h2 class="text-2xl font-semibold leading-[24px] xl:text-xl">
-                    1. Free to use
-                  </h2>
-                  <p class="text-sm sm:text-xs">
-                    We've made sure that our forum is always up to date with the
-                    latest trends, releases, and developments. Stay informed,
-                    stay connected, and stay ahead of the curve—all without
-                    spending a single penny.
-                  </p>
-                </div>
-                <div
-                  class="about-text flex w-[96%] flex-col gap-2 text-black lg:gap-2 sm:w-full"
-                >
-                  <h2 class="text-2xl font-semibold leading-[24px] xl:text-xl">
-                    2. Large community
-                  </h2>
-                  <p class="text-sm sm:text-sm">
-                    Once you're in, you'll discover a thriving community of
-                    like-minded individuals, eager to share their experiences,
-                    strategies, and tips. From casual gamers to hardcore
-                    enthusiasts, everyone has a place here, and everyone's voice
-                    is valued.
-                  </p>
-                </div>
-                <div
-                  class="about-text flex w-[96%] flex-col gap-2 text-black lg:gap-2 sm:w-full"
-                >
-                  <h2 class="text-2xl font-semibold leading-[24px] xl:text-xl">
-                    3. Quick and easy
-                  </h2>
-                  <p class="text-sm lg:text-xs">
-                    Once you're in, you'll discover a thriving community of
-                    like-minded individuals, eager to share their experiences,
-                    strategies, and tips. From casual gamers to hardcore
-                    enthusiasts, everyone has a place here, and everyone's voice
-                    is valued.
-                  </p>
-                </div>
-              </div>
-              <a
-                href="#"
-                class="about-text w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] transition-all duration-200 hover:bg-pink-100 hover:text-pink-200 xl:p-3 xl:text-xs"
-                aria-label="About Us"
-                role="button"
-                >About Us</a
-              >
-            </div>
-          </div>
-        </section>
-
-        <!-- Forum -->
-        <section
-          class="m-h-lvh forum-section w-screen bg-white"
-          aria-labelledby="Forum"
-        >
-          <div class="flex min-h-lvh w-full items-center justify-center">
-            <div
-              class="mx-auto my-0 grid max-w-container grid-cols-2 place-items-end gap-5 px-6 sm:w-full sm:grid-cols-1 sm:gap-8 sm:px-0"
-            >
-              <div class="flex flex-col gap-14">
-                <h1
-                  class="forum-text-right text-[64px] font-bold leading-[64px] text-black xl:text-6xl lg:text-5xl"
-                >
-                  A forum created for gamer...
-                </h1>
-                <div
-                  class="mockup forum-card-right relative min-h-[25rem] w-full rounded-[20px] bg-green-100 xl:min-h-80 lg:min-h-72 sm:hidden"
-                >
-                  <div
-                    class="absolute left-5 top-5 size-[22rem] overflow-hidden rounded-full bg-white"
-                  ></div>
-                  <div
-                    class="absolute bottom-0 left-[20%] right-0 top-[20%] overflow-hidden rounded-br-[20px] pt-[5%]"
-                  >
-                    <img
-                      src="./img/MacBook Pro 16.png"
-                      alt="Mockup"
-                      class="translate3d w-full max-w-none transition-all"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col gap-5">
-                <div
-                  class="forum-card-left relative flex min-h-[25rem] items-center justify-center rounded-[20px] bg-green-200 xl:min-h-80 lg:min-h-72"
-                >
-                  <div
-                    class="-translate-xy absolute left-1/2 top-1/2 size-[22rem] rounded-full bg-white xl:size-72 lg:size-64"
-                  ></div>
-                  <div class="absolute bottom-0">
-                    <img
-                      src="./img/Saly-39.svg"
-                      alt="A Robot"
-                      class="animate-floatting xl:h-96 lg:h-[22rem]"
-                    />
-                  </div>
-                </div>
-                <div class="flex flex-col gap-8 p-5 sm:mt-6 sm:p-0">
-                  <p class="forum-text-left text-sm text-black lg:text-xs">
-                    A game forum serves as a virtual hub where gamers from
-                    diverse backgrounds converge to discuss their passion for
-                    gaming. Within its digital corridors, users exchange
-                    strategies, share experiences, and forge connections with
-                    like-minded individuals, fostering a sense of community and
-                    camaraderie.
-                  </p>
-                  <a
-                    href="./html/forum.html"
-                    class="forum-text-left w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] transition-all duration-200 xl:px-4 xl:py-4 xl:text-xs"
-                    aria-label="Get Started"
-                    >Get Started</a
-                  >
+                class="mockup forum-card-right relative min-h-[25rem] w-full rounded-[20px] bg-green-100 xl:min-h-80 lg:min-h-72 sm:hidden">
+                <div class="absolute left-5 top-5 size-[22rem] overflow-hidden rounded-full bg-white"></div>
+                <div class="absolute bottom-0 left-[20%] right-0 top-[20%] overflow-hidden rounded-br-[20px] pt-[5%]">
+                  <img src="./img/MacBook Pro 16.png" alt="Mockup"
+                    class="translate3d w-full max-w-none transition-all" />
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <!-- Contact -->
-        <section class="m-h-lvh w-screen" aria-labelledby="Contact">
-          <div class="flex min-h-lvh w-full items-center justify-center">
-            <div class="flex flex-col gap-4 sm:p-6">
-              <p
-                class="text-[64px] font-bold leading-[64px] text-black xl:text-5xl"
-              >
-                Contact
-              </p>
-              <div class="text-black">
-                <p class="xl:text-sm">
-                  It is better to know more about each other. Let get in touch!
+            <div class="flex flex-col gap-5">
+              <div
+                class="forum-card-left relative flex min-h-[25rem] items-center justify-center rounded-[20px] bg-green-200 xl:min-h-80 lg:min-h-72">
+                <div
+                  class="-translate-xy absolute left-1/2 top-1/2 size-[22rem] rounded-full bg-white xl:size-72 lg:size-64">
+                </div>
+                <div class="absolute bottom-0">
+                  <img src="./img/Saly-39.svg" alt="A Robot" class="animate-floatting xl:h-96 lg:h-[22rem]" />
+                </div>
+              </div>
+              <div class="flex flex-col gap-8 p-5 sm:mt-6 sm:p-0">
+                <p class="forum-text-left text-sm text-black lg:text-xs">
+                  A game forum serves as a virtual hub where gamers from
+                  diverse backgrounds converge to discuss their passion for
+                  gaming. Within its digital corridors, users exchange
+                  strategies, share experiences, and forge connections with
+                  like-minded individuals, fostering a sense of community and
+                  camaraderie.
                 </p>
-                <p class="lg:text-sm">You can easily find us at:</p>
-              </div>
-              <div class="flex flex-col gap-5">
-                <div class="">
-                  <a
-                    href="#"
-                    aria-label="Call us at 1234 - 5678 - 0890"
-                    target="_blank"
-                    class="flex flex-row items-center gap-5 rounded-[20px] border border-green-200 bg-green-100 p-5 text-xl text-green-200 transition-all hover:border-green-100 hover:bg-green-200 hover:text-green-100 lg:text-sm sm:text-sm"
-                  >
-                    <ion-icon class="text-3xl lg:text-xl" name="call"></ion-icon
-                    >1234 - 5678 - 0890
-                  </a>
-                </div>
-                <div class="">
-                  <a
-                    href="#"
-                    aria-label="Follow us on Instagram"
-                    target="_blank"
-                    class="flex flex-row items-center gap-5 rounded-[20px] border border-orange-200 bg-orange-100 p-5 text-xl text-orange-200 transition-all hover:border-orange-100 hover:bg-orange-200 hover:text-orange-100 lg:text-sm sm:text-sm"
-                  >
-                    <ion-icon
-                      class="text-3xl lg:text-xl"
-                      name="logo-instagram"
-                    ></ion-icon
-                    >Instagram</a
-                  >
-                </div>
-                <div class="">
-                  <a
-                    href="#"
-                    aria-label="Follow us on Facebook"
-                    target="_blank"
-                    class="flex flex-row items-center gap-5 rounded-[20px] border border-blue-200 bg-blue-100 p-5 text-xl text-blue-200 transition-all hover:border-blue-100 hover:bg-blue-200 hover:text-blue-100 lg:text-sm sm:text-sm"
-                  >
-                    <ion-icon
-                      class="text-3xl lg:text-xl"
-                      name="logo-facebook"
-                    ></ion-icon
-                    >Facebook</a
-                  >
-                </div>
-                <div class="">
-                  <a
-                    href="#"
-                    aria-label="Email us"
-                    target="_blank"
-                    class="flex flex-row items-center gap-5 rounded-[20px] border border-pink-200 bg-pink-100 p-5 text-xl text-pink-200 transition-all hover:border-pink-100 hover:bg-pink-200 hover:text-pink-100 lg:text-sm sm:text-sm"
-                  >
-                    <ion-icon class="text-3xl lg:text-xl" name="mail"></ion-icon
-                    >Email</a
-                  >
-                </div>
+                <a href="./html/forum.html"
+                  class="forum-text-left w-fit rounded-md bg-solidblack px-[20px] py-[15px] text-[#ffffff] transition-all duration-200 xl:px-4 xl:py-4 xl:text-xs"
+                  aria-label="Get Started">Get Started</a>
               </div>
             </div>
           </div>
-          <div class="area" aria-hidden="true">
-            <ul class="circles">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </main>
-    <!-- Footer -->
-    <footer
-      class="flex w-full flex-col gap-10 bg-solidblack p-12 sm:gap-5 sm:p-10 sm:pb-28"
-    >
-      <div>
-        <a href="#" aria-label="Follow us on Instagram"
-          ><ion-icon
-            class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
-            name="logo-instagram"
-          ></ion-icon
-        ></a>
-        <a href="#" aria-label="Follow us on Facebook"
-          ><ion-icon
-            class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
-            name="logo-facebook"
-          ></ion-icon
-        ></a>
-        <a href="#" aria-label="Email us"
-          ><ion-icon
-            class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
-            name="mail"
-          ></ion-icon
-        ></a>
-      </div>
-      <div class="flex flex-row gap-36 sm:flex-col sm:gap-12">
-        <div class="flex flex-col gap-7">
-          <p class="text-[#fff]/70">Resource</p>
-          <div class="flex flex-col gap-3">
-            <a
-              href="https://github.com/RMIT-Vietnam-Teaching/group-project-cosc3060-2024a-muck.git"
-              class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
-              >Our github repo</a
-            >
-            <a
-              href="https://www.figma.com/design/LlNaiGaV4zkrd18EGHROEH/Project-Studio-2?node-id=6%3A7&t=Al8yx4NQHUrzqioF-1"
-              class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
-            >
-              Our design document</a
-            >
-          </div>
         </div>
-        <div class="flex flex-col gap-7">
-          <p class="text-[#fff]/70">About MUCK</p>
-          <div class="flex flex-col gap-3">
-            <a
-              class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
-              href="./index.html"
-              >About MUCK</a
-            >
-            <a
-              class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
-              href="#"
-              >Store</a
-            >
-            <a
-              class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
-              href="./html/forum.html"
-              >Forum</a
-            >
-            <a
-              class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
-              href="./html/contact.html"
-              >Contact Us</a
-            >
-          </div>
-        </div>
-        <div class="flex flex-col gap-7">
-          <p class="text-[#fff]/70">Account Management</p>
-          <div class="flex flex-col gap-3">
-            <a
-              class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
-              href="./index.html"
-              >Login</a
-            >
-            <a
-              class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
-              href="#"
-              >Become a Member</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="flex w-full flex-row justify-between sm:flex-col sm:gap-10">
-        <p class="text-[#fff]/70">© 2024 MuckTeam All rights reserved</p>
-        <img src="./img/MUCK.svg" alt="Muck logo" class="sm:w-24" />
-      </div>
-    </footer>
+      </section>
 
-    <!--GSAP-->
-    <script
-      src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
-      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
-      integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!--Lenis-->
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-    <!--Ionicons-->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <!--Custom JS-->
-    <script src="./js/landingpage.js"></script>
-    <script src="./js/script.js"></script>
-  </body>
+      <!-- Contact -->
+      <section class="m-h-lvh w-screen" aria-labelledby="Contact">
+        <div class="flex min-h-lvh w-full items-center justify-center">
+          <div class="flex flex-col gap-4 sm:p-6">
+            <p class="text-[64px] font-bold leading-[64px] text-black xl:text-5xl">
+              Contact
+            </p>
+            <div class="text-black">
+              <p class="xl:text-sm">
+                It is better to know more about each other. Let get in touch!
+              </p>
+              <p class="lg:text-sm">You can easily find us at:</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <div class="">
+                <a href="#" aria-label="Call us at 1234 - 5678 - 0890" target="_blank"
+                  class="flex flex-row items-center gap-5 rounded-[20px] border border-green-200 bg-green-100 p-5 text-xl text-green-200 transition-all hover:border-green-100 hover:bg-green-200 hover:text-green-100 lg:text-sm sm:text-sm">
+                  <ion-icon class="text-3xl lg:text-xl" name="call"></ion-icon>1234 - 5678 - 0890
+                </a>
+              </div>
+              <div class="">
+                <a href="#" aria-label="Follow us on Instagram" target="_blank"
+                  class="flex flex-row items-center gap-5 rounded-[20px] border border-orange-200 bg-orange-100 p-5 text-xl text-orange-200 transition-all hover:border-orange-100 hover:bg-orange-200 hover:text-orange-100 lg:text-sm sm:text-sm">
+                  <ion-icon class="text-3xl lg:text-xl" name="logo-instagram"></ion-icon>Instagram</a>
+              </div>
+              <div class="">
+                <a href="#" aria-label="Follow us on Facebook" target="_blank"
+                  class="flex flex-row items-center gap-5 rounded-[20px] border border-blue-200 bg-blue-100 p-5 text-xl text-blue-200 transition-all hover:border-blue-100 hover:bg-blue-200 hover:text-blue-100 lg:text-sm sm:text-sm">
+                  <ion-icon class="text-3xl lg:text-xl" name="logo-facebook"></ion-icon>Facebook</a>
+              </div>
+              <div class="">
+                <a href="#" aria-label="Email us" target="_blank"
+                  class="flex flex-row items-center gap-5 rounded-[20px] border border-pink-200 bg-pink-100 p-5 text-xl text-pink-200 transition-all hover:border-pink-100 hover:bg-pink-200 hover:text-pink-100 lg:text-sm sm:text-sm">
+                  <ion-icon class="text-3xl lg:text-xl" name="mail"></ion-icon>Email</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="area" aria-hidden="true">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="flex w-full flex-col gap-10 bg-solidblack p-12 sm:gap-5 sm:p-10 sm:pb-28">
+    <div>
+      <a href="#" aria-label="Follow us on Instagram"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
+          name="logo-instagram"></ion-icon></a>
+      <a href="#" aria-label="Follow us on Facebook"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]"
+          name="logo-facebook"></ion-icon></a>
+      <a href="#" aria-label="Email us"><ion-icon
+          class="text-3xl text-[#fff]/70 transition-all duration-200 hover:text-[#fff]" name="mail"></ion-icon></a>
+    </div>
+    <div class="flex flex-row gap-36 sm:flex-col sm:gap-12">
+      <div class="flex flex-col gap-7">
+        <p class="text-[#fff]/70">Resource</p>
+        <div class="flex flex-col gap-3">
+          <a href="https://github.com/RMIT-Vietnam-Teaching/group-project-cosc3060-2024a-muck.git"
+            class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">Our github repo</a>
+          <a href="https://www.figma.com/design/LlNaiGaV4zkrd18EGHROEH/Project-Studio-2?node-id=6%3A7&t=Al8yx4NQHUrzqioF-1"
+            class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline">
+            Our design document</a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-7">
+        <p class="text-[#fff]/70">About MUCK</p>
+        <div class="flex flex-col gap-3">
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="./index.html">About
+            MUCK</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="#">Store</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
+            href="./html/forum.html">Forum</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
+            href="./html/contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-7">
+        <p class="text-[#fff]/70">Account Management</p>
+        <div class="flex flex-col gap-3">
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline"
+            href="./index.html">Login</a>
+          <a class="text-sm text-[#fff] transition-all hover:text-[#fff]/70 hover:underline" href="#">Become a
+            Member</a>
+        </div>
+      </div>
+    </div>
+    <div class="flex w-full flex-row justify-between sm:flex-col sm:gap-10">
+      <p class="text-[#fff]/70">© 2024 MuckTeam All rights reserved</p>
+      <img src="./img/MUCK.svg" alt="Muck logo" class="sm:w-24" />
+    </div>
+  </footer>
+
+  <!--GSAP-->
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+    integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+    integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--Lenis-->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+  <!--Ionicons-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!--Custom JS-->
+  <script src="./js/landingpage.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>

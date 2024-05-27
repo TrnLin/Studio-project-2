@@ -1,54 +1,3 @@
-// const cartItem = [
-//   {
-//     poster: "../../img/store/slider/ac.png",
-//     name: "Game 0",
-//     type: "Adventure",
-//     originalPrice: 19.99,
-//     salePercentage: 0,
-//     finalPrice: 19.99,
-//     url: "https://example.com/game5",
-//   },
-//   {
-//     poster: "../../img/store/slider/game1.png",
-//     name: "Game 1",
-//     type: "Action",
-//     originalPrice: 29.99,
-//     salePercentage: 10,
-//     finalPrice: 26.99,
-//     url: "https://example.com/game1",
-//   },
-//   {
-//     poster: "../../img/store/slider/game2.png",
-//     name: "Game 2",
-//     type: "RPG",
-//     originalPrice: 39.99,
-//     salePercentage: 20,
-//     finalPrice: 31.99,
-//     url: "https://example.com/game2",
-//   },
-//   {
-//     poster: "../../img/store/slider/game3.png",
-//     name: "Game 3",
-//     type: "Strategy",
-//     originalPrice: 24.99,
-//     salePercentage: 15,
-//     finalPrice: 21.24,
-//     url: "https://example.com/game3",
-//   },
-//   {
-//     poster: "../../img/store/slider/game4.png",
-//     name: "Game 4",
-//     type: "Puzzle",
-//     originalPrice: 14.99,
-//     salePercentage: 5,
-//     finalPrice: 14.24,
-//     url: "https://example.com/game4",
-//   },
-// ];
-
-// Add cartItem to local storage
-
-// Retrieve cartItem from local storage
 const storedCart = localStorage.getItem("cart");
 const cartItem = storedCart ? JSON.parse(storedCart) : [];
 
@@ -131,9 +80,12 @@ let discount = oriPrice - total;
 updateTotal(total, oriPrice, discount);
 
 let cards = document.querySelectorAll(".cart-item");
-let cartNum = document.querySelector("#cart-num");
+let cartNum = document.querySelectorAll(".cart-num");
 let cardCount = cards.length;
-cartNum.textContent = cards.length;
+
+cartNum.forEach((num) => {
+  num.textContent = cardCount;
+});
 
 function removeCard(element) {
   let card = element.parentElement.parentElement;
@@ -183,7 +135,9 @@ function removeCard(element) {
     cardCount = 0;
   }
 
-  cartNum.textContent = cardCount;
+  cartNum.forEach((num) => {
+    num.textContent = cardCount;
+  });
 }
 
 function updateTotal(total, oriPrice, discount) {

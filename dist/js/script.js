@@ -83,6 +83,7 @@ window.onload = () => {
 
 let navPosition = (screenWidth, navbar) => {
   if (screenWidth > 639) {
+    navbar.style.top = "12px";
     var lastScrollTop;
     window.addEventListener("scroll", function () {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -94,6 +95,7 @@ let navPosition = (screenWidth, navbar) => {
       lastScrollTop = scrollTop;
     });
   } else if (screenWidth < 639) {
+    navbar.style.bottom = "0px";
     var lastScrollTop;
     window.addEventListener("scroll", function () {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;

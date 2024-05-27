@@ -14,7 +14,7 @@ if (!localStorage.getItem("cart")) {
 }
 
 let gameInfo = {
-  id: "4",
+  id: "22",
   name: "Assassin's Creed Syndicate",
   originalPrice: 59.99,
   salePercentage: 10,
@@ -110,19 +110,34 @@ window.onload = () => {
 };
 
 let addToCart = () => {
+  let wait = true;
+  itemToCart(wait);
+};
+
+let buyNowFunc = () => {
+  let wait = false;
+  itemToCart(wait);
+
+  window.location.href = "./cart.html";
+};
+
+let itemToCart = (test) => {
   let cart = JSON.parse(localStorage.getItem("cart"));
   if (cart.length === 0) {
     cart.push(gameInfo);
 
-    alertSuccess.style.display = "flex";
-    alertScMsg.innerHTML = "Game added to cart!";
+    if (test === true) {
+      alertSuccess.style.display = "flex";
+      alertScMsg.innerHTML = "Game added to cart!";
 
-    setTimeout(() => {
-      alertSuccess.style.display = "none";
-      alertScMsg.innerHTML = "";
-    }, 3000);
+      setTimeout(() => {
+        alertSuccess.style.display = "none";
+        alertScMsg.innerHTML = "";
+      }, 3000);
+    }
   } else {
     let found = false;
+
     cart.forEach((game) => {
       if (game.id === gameInfo.id) {
         found = true;
@@ -131,29 +146,37 @@ let addToCart = () => {
     if (!found) {
       cart.push(gameInfo);
 
-      alertSuccess.style.display = "flex";
-      alertScMsg.innerHTML = "Game added to cart!";
+      if (test === true) {
+        alertSuccess.style.display = "flex";
+        alertScMsg.innerHTML = "Game added to cart!";
 
-      setTimeout(() => {
-        alertSuccess.style.display = "none";
-        alertScMsg.innerHTML = "";
-      }, 3000);
+        setTimeout(() => {
+          alertSuccess.style.display = "none";
+          alertScMsg.innerHTML = "";
+        }, 3000);
+      }
     } else {
-      alertError.style.display = "flex";
-      alertErMsg.innerHTML = "Game already in cart!";
+      if (test === true) {
+        alertError.style.display = "flex";
+        alertErMsg.innerHTML = "Game already in cart!";
 
-      setTimeout(() => {
-        alertError.style.display = "none";
-        alertErMsg.innerHTML = "";
-      }, 3000);
+        setTimeout(() => {
+          alertError.style.display = "none";
+          alertErMsg.innerHTML = "";
+        }, 3000);
+      }
     }
   }
   localStorage.setItem("cart", JSON.stringify(cart));
 };
 
+let buyNowbtn = document.querySelector(".buy-now-btn");
+
 let cartBtn = document.querySelector(".cart-btn");
 
 cartBtn.addEventListener("click", addToCart);
+
+buyNowbtn.addEventListener("click", buyNowFunc);
 
 let cart = JSON.parse(localStorage.getItem("cart"));
 let cartLength = cart ? cart.length : 0;
