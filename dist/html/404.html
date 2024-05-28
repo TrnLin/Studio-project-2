@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../font/fontface.css" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Post</title>
+</head>
+
+<body class="bg-white font-sans">
+    <!-- Nav Bar -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation"
+        class="fixed right-1/2 top-3 z-[900] flex h-fit w-container translate-x-1/2 flex-row gap-5 text-[#ffffff] transition-all duration-300 sm:bottom-0 sm:top-[inherit] sm:w-[100vw]">
+        <div
+            class="flex h-full w-full flex-row justify-between rounded-[10px] bg-solidblack px-5 py-[10px] font-normal lg:py-1 md:gap-5 sm:rounded-none sm:pb-6">
+            <ul class="flex flex-row items-center gap-5 lg:gap-2 sm:w-full sm:justify-between">
+                <li class="md:hidden">
+                    <a href="../index.html" class="" aria-label="MUCK logo"><img src="../img/MUCK.svg"
+                            class="lg:w-[80%]" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href=" ../index.html"
+                        class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+                        aria-label="Home">Home
+                        <div
+                            class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+                            <ion-icon class="text-2xl" name="home-outline"></ion-icon>
+                            Home
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+                        aria-label="Store">Store
+                        <div
+                            class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+                            <ion-icon class="text-2xl" name="cart-outline"></ion-icon>
+                            Store
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./forum.html"
+                        class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+                        aria-label="Forum">
+                        forum
+                        <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+                            <ion-icon class="text-2xl" name="chatbubbles"></ion-icon>
+                            Forum
+                        </div>
+                    </a>
+                </li>
+                <li class="sm:hidden">
+                    <a href="#"
+                        class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+                        aria-label="Contact">Contact
+                        <div class="hidden items-center justify-end gap-1 text-xs text-[#ffffff] sm:flex sm:flex-col">
+                            <ion-icon class="text-2xl" name="call-outline"></ion-icon>
+                            Contact
+                        </div>
+                    </a>
+                </li>
+                <li class="hidden sm:block">
+                    <a href="./login.html"
+                        class="block rounded-md px-[15px] py-[10px] text-[14px] leading-[10px] transition hover:bg-[#ffffff] hover:text-solidblack sm:py-0 sm:pb-2 sm:text-[0]"
+                        aria-label="Login">Login
+                        <div
+                            class="hidden items-center justify-end gap-1 text-xs text-[#ffffff]/70 sm:flex sm:flex-col">
+                            <ion-icon class="text-2xl" name="person-outline"></ion-icon>
+                            Account
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div id="theme-toggle"
+                class="flex h-[30px] w-24 flex-row items-center gap-2 rounded-md px-3 py-4 leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack lg:w-20 lg:text-[13px] sm:hidden"
+                aria-label="Theme toggle">
+                <ion-icon name="sunny" class="text-[20px]"></ion-icon>
+                Light
+            </div>
+        </div>
+
+        <a href="./login.html"
+            class="flex flex-row items-center justify-center gap-3 rounded-[10px] bg-solidblack px-[20px] py-4 font-medium leading-[20px] transition hover:bg-[#ffffff] hover:text-solidblack hover:ring-1 hover:ring-gray-300 lg:px-3 lg:py-1 lg:text-[13px] lg:font-normal sm:hidden"
+            aria-label="Login"><ion-icon name="person" class="text-[20px] lg:text-sm"></ion-icon>Login</a>
+    </nav>
+    <!-- Section -->
+    <section class="min-h-lvh w-screen" aria-label="Post section">
+        <div class="flex gap-6 flex-col justify-center min-h-lvh w-container mx-auto sm:-translate-y-6">
+            <div>
+                <p class=" text-black text-3xl font-semibold">Oops! You've reached the unknown! 👾</p>
+                <p class="text-black">The page you are looking doesn't seem to exist.</p>
+            </div>
+            <p class="font-script text-black text-[200px] font-semibold leading-[100%] sm:text-9xl">404</p>
+            <p class="text-black">Let's get back to the <a href="./forum.html" aria-label="Forum"
+                    class="cursor-auto px-5 py-3 rounded bg-black w-fit text-white ml-4">Forum</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Material Ui -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <!--Lenis-->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <!--Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/post.js"></script>
+    <!-- <script src="../js/postoption.js"></script> -->
+</body>
+
+</html>

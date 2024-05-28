@@ -91,11 +91,11 @@ let replyButtonFunc = () => {
   <div
     class="group flex w-full flex-row items-center justify-center rounded-[10px] text-black/50 ring-2 ring-inset ring-black/50 transition duration-200 hover:text-black hover:ring-black">
     <input type="text" name="reply" class="input-box reply-input sm:text-sm" placeholder="Reply to..."
-      required />
+      onkeydown="javascript:enterCheck(this, event)" required />
   </div>
-  <div class="shadow-box reply-btn flex justify-center items-center sm:w-full "
+  <div class="reply-btn shadow-box reply-btn flex items-center justify-center sm:w-full"
     onclick="javascript:replyFunc(this)">
-    <ion-icon name="send" class="-rotate-45 -translate-y-[2px]"></ion-icon>Reply
+    <ion-icon name="send" class="-translate-y-[2px] -rotate-45"></ion-icon>Reply
   </div>
 </form>`;
 
@@ -137,8 +137,12 @@ submitButton.addEventListener("click", function (event) {
     return;
   } else {
     userInput.classList.remove(errorBorder);
-  }
 
+    commentCardFunc();
+  }
+});
+
+let commentCardFunc = () => {
   let commentHolder = document.createElement("div");
   commentHolder.classList.add("comment-holder");
 
@@ -155,10 +159,9 @@ submitButton.addEventListener("click", function (event) {
 
   commentList.appendChild(commentHolder);
 
-  console.log(commentHolder);
+  userInput.value = "";
   event.preventDefault();
-});
-
+};
 //Like button functionality
 let likeButton = document.querySelectorAll(".likeButton");
 
@@ -304,6 +307,10 @@ function replyFunc(element) {
   let replyList =
     element.parentNode.parentNode.parentNode.querySelector(".reply-list");
 
+  replyCardFunc(replyInput, replyList);
+}
+
+let replyCardFunc = (replyInput, replyList) => {
   if (replyInput.value === "") {
     replyInput.classList.add(errorBorder);
     return;
@@ -319,4 +326,20 @@ function replyFunc(element) {
   replyList.appendChild(replyCard);
 
   replyInput.value = "";
+};
+
+userInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter" || event.keyCode === 13 || event.which === 13) {
+    commentCardFunc();
+    event.preventDefault();
+  }
+});
+
+function enterCheck(idk, event) {
+  let btn = idk.parentNode.parentNode.querySelector(".reply-btn");
+  console.log(btn);
+  if (event.key === "Enter" || event.keyCode === 13 || event.which === 13) {
+    replyFunc(btn);
+    event.preventDefault();
+  }
 }

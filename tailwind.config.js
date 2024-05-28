@@ -65,6 +65,7 @@ module.exports = {
         hero: ["Chopin", "sans-serif"],
         sans: ["Poppins", "sans-serif", defautTheme.fontFamily.sans],
         logo: ["Transforma Mix", "sans-serif"],
+        script: ["Transforma Script", "sans-serif"],
       },
     },
     screens: {

@@ -81,3 +81,23 @@
     url(./Transformat/TransformaMix_Trial-SemiBold.woff2) format("woff2"),
     url(./Transformat/TransformaMix_Trial-SemiBold.woff) format("woff");
 }
+
+@font-face {
+  font-family: "Transforma Script";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url(./Transformat/TransformaScript_Trial-Regular.woff2) format("woff2"),
+    url(./Transformat/TransformaScript_Trial-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Transforma Script";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url(./Transformat/TransformaScript_Trial-SemiBold.woff2) format("woff2"),
+    url(./Transformat/TransformaScript_Trial-SemiBold.woff) format("woff");
+}

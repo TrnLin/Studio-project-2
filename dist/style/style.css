@@ -1347,6 +1347,10 @@ html.transition,
   margin-top: 1rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .box-content {
   box-sizing: content-box;
 }
@@ -1588,6 +1592,10 @@ html.transition,
   min-height: 100vh;
 }
 
+.min-h-full {
+  min-height: 100%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1684,6 +1692,10 @@ html.transition,
 
 .w-storeContainer {
   width: min(1280px, 100% - 15rem);
+}
+
+.w-10\/12 {
+  width: 83.333333%;
 }
 
 .min-w-10 {
@@ -1817,6 +1829,10 @@ html.transition,
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.cursor-auto {
+  cursor: auto;
 }
 
 .resize-none {
@@ -2480,6 +2496,10 @@ html.transition,
   font-family: Poppins, sans-serif, ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
+.font-script {
+  font-family: Transforma Script, sans-serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -2560,6 +2580,23 @@ html.transition,
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.text-\[128px\] {
+  font-size: 128px;
+}
+
+.text-\[150px\] {
+  font-size: 150px;
+}
+
+.text-\[200px\] {
+  font-size: 200px;
 }
 
 .font-bold {
@@ -4552,6 +4589,10 @@ html.likeButton,
     margin-top: 1.5rem;
   }
 
+  .sm\:mb-11 {
+    margin-bottom: 2.75rem;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -4613,6 +4654,21 @@ html.likeButton,
 
   .sm\:min-w-\[112\.5px\] {
     min-width: 112.5px;
+  }
+
+  .sm\:translate-x-6 {
+    --tw-translate-x: 1.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:translate-y-6 {
+    --tw-translate-y: 1.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:-translate-y-6 {
+    --tw-translate-y: -1.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .sm\:grid-cols-1 {
@@ -4814,6 +4870,11 @@ html.likeButton,
   .sm\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+
+  .sm\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
   }
 
   .sm\:text-white {
